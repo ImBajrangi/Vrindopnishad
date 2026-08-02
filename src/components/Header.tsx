@@ -93,8 +93,8 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="main-nav">
           <ul>
             <li><a href="#home" className="active">Home</a></li>
-            <li><a href="Vrindopnishad%20Web/about%20code/main/about.html">About</a></li>
-            <li><a href="Vrindopnishad%20Web/Pictures/main/Gallery.html">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://pic.vrindopnishad.in/" target="_blank" rel="noopener noreferrer">Gallery</a></li>
           </ul>
         </div>
 
@@ -161,23 +161,23 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
           </li>
           <li>
-            <a href="Vrindopnishad%20Web/Pictures/main/Gallery.html" onClick={closeMenu}>
+            <a href="https://pic.vrindopnishad.in/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
               Gallery
             </a>
           </li>
           <li>
-            <a href="Vrindopnishad%20Web/Pictures/main/photos.html" onClick={closeMenu}>
-              Photos
+            <a href="https://to.vrindopnishad.in/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+              Vrinda Tours
             </a>
           </li>
           <li>
-            <a href="Vrindopnishad%20Web/about%20code/main/about.html" onClick={closeMenu}>
+            <a href="#about" onClick={closeMenu}>
               About
             </a>
           </li>
           <li>
-            <a href="Vrindopnishad%20Web/pdf/main/pdf-viewer.html" onClick={closeMenu}>
-              PDF Library
+            <a href="https://path.vrindopnishad.in/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+              Bhajan Path
             </a>
           </li>
           <li>

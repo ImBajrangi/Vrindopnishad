@@ -23,10 +23,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDevGuide }) => {
           <h3>Navigate</h3>
           <ul className="staggered-list">
             <li className="staggered-item"><a href="#home" className="text-hover">Home</a></li>
-            <li className="staggered-item"><a href="Vrindopnishad%20Web/Pictures/main/Gallery.html" className="text-hover">Gallery</a></li>
+            <li className="staggered-item"><a href="https://pic.vrindopnishad.in/" className="text-hover" target="_blank" rel="noopener noreferrer">Gallery</a></li>
             <li className="staggered-item"><a href="#projects" className="text-hover">Collection</a></li>
-            <li className="staggered-item"><a href="Vrindopnishad%20Web/Pictures/main/photos.html" className="text-hover">Photos</a></li>
-            <li className="staggered-item"><a href="Vrindopnishad%20Web/about%20code/main/about.html" className="text-hover">About</a></li>
+            <li className="staggered-item"><a href="https://to.vrindopnishad.in/" className="text-hover" target="_blank" rel="noopener noreferrer">Vrinda Tours</a></li>
+            <li className="staggered-item"><a href="#about" className="text-hover">About</a></li>
           </ul>
         </div>
 
@@ -40,10 +40,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDevGuide }) => {
               <a href="Projects/Cloud-Kitchen/kitchen.html" className="text-hover">Foody Vrinda</a>
             </li>
             <li className="staggered-item">
-              <a href="Vrindopnishad%20Web/Pictures/main/Gallery.html" className="text-hover">Chitra Vrinda</a>
+              <a href="https://pic.vrindopnishad.in/" className="text-hover" target="_blank" rel="noopener noreferrer">Chitra Vrinda</a>
             </li>
             <li className="staggered-item">
-              <a href="Projects/Vrinda-Tours/vrinda-tours.html" className="footer-link">Vrinda Tours</a>
+              <a href="https://to.vrindopnishad.in/" className="footer-link" target="_blank" rel="noopener noreferrer">Vrinda Tours</a>
             </li>
             <li className="staggered-item">
               <a href="Projects/Web%20dev/vrinda%20web%20dev.html" className="text-hover">Web Development</a>

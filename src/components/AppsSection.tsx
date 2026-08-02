@@ -62,7 +62,7 @@ export const AppsSection: React.FC = () => {
             <div className="apps-cta"><span>↓</span></div>
           </a>
 
-          <a href="Projects/Vrinda-Tours/vrinda-tours.html" className="apps-card staggered-item">
+          <a href="https://to.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="apps-icon">
               <img 
                 src="/logo/vrindaTours-logo.svg" 
@@ -80,7 +80,7 @@ export const AppsSection: React.FC = () => {
             <div className="apps-cta"><span>→</span></div>
           </a>
 
-          <a href="Vrindopnishad%20Web/Pictures/main/photos.html" className="apps-card staggered-item">
+          <a href="https://pic.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="apps-icon">
               <img 
                 src="/v-logo-rounded/android-chrome-192x192.png" 

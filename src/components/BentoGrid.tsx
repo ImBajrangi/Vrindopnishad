@@ -22,7 +22,7 @@ export const BentoGrid: React.FC = () => {
             <div className="bento-arrow">→</div>
           </a>
 
-          <a href="Vrindopnishad%20Web/Pictures/main/Gallery.html" className="bento-card staggered-item">
+          <a href="https://pic.vrindopnishad.in/" className="bento-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="bento-number">02</div>
             <div className="bento-content">
               <h3>Gallery</h3>
@@ -31,7 +31,7 @@ export const BentoGrid: React.FC = () => {
             <div className="bento-arrow">→</div>
           </a>
 
-          <a href="Projects/Vrinda-Tours/vrinda-tours.html" className="bento-card staggered-item">
+          <a href="https://to.vrindopnishad.in/" className="bento-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="bento-number">03</div>
             <div className="bento-content">
               <h3>Vrinda Tours</h3>
@@ -40,7 +40,7 @@ export const BentoGrid: React.FC = () => {
             <div className="bento-arrow">→</div>
           </a>
 
-          <a href="Vrindopnishad%20Web/sketch/main/new-read-me.html" className="bento-card bento-wide staggered-item">
+          <a href="https://path.vrindopnishad.in/" className="bento-card bento-wide staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="bento-number">04</div>
             <div className="bento-content">
               <h3>Sacred Texts</h3>
@@ -83,7 +83,7 @@ export const BentoGrid: React.FC = () => {
             More Creations
           </h3>
           <div className="more-grid staggered-list">
-            <a href="Vrindopnishad%20Web/Pictures/main/Gallery.html" className="more-item staggered-item">
+            <a href="https://pic.vrindopnishad.in/" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
               <span className="more-num">08</span>
               <div className="more-info">
                 <span className="more-name">Photo Gallery</span>
@@ -91,7 +91,7 @@ export const BentoGrid: React.FC = () => {
               </div>
               <span className="more-arrow">→</span>
             </a>
-            <a href="Vrindopnishad%20Web/sketch/main/new-read-me.html" className="more-item staggered-item">
+            <a href="https://path.vrindopnishad.in/" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
               <span className="more-num">09</span>
               <div className="more-info">
                 <span className="more-name">Vrindopnishad App</span>
@@ -115,7 +115,7 @@ export const BentoGrid: React.FC = () => {
               </div>
               <span className="more-arrow">→</span>
             </a>
-            <a href="https://path.vrindopnishad.in" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
+            <a href="https://path.vrindopnishad.in/" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
               <span className="more-num">12</span>
               <div className="more-info">
                 <span className="more-name">Sant-Vaani</span>

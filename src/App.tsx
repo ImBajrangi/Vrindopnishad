@@ -28,7 +28,7 @@ const INITIAL_PROJECTS = [
     description: 'Authentic Stotras, Mantras & Sacred Spiritual Wisdom',
     descriptionHindi: 'प्रामाणिक वैदिक पाठ, स्तोत्र एवं आध्यात्मिक साधना',
     imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
-    link: 'Vrindopnishad Web/sketch/main/new-read-me.html',
+    link: 'https://path.vrindopnishad.in/',
     isFlagship: true
   },
   {
@@ -46,7 +46,7 @@ const INITIAL_PROJECTS = [
     category: 'Digital Art',
     description: 'Artistic photography & digital creations',
     imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
-    link: 'Vrindopnishad Web/Pictures/main/Gallery.html',
+    link: 'https://pic.vrindopnishad.in/',
     isFlagship: false
   },
   {
@@ -55,7 +55,7 @@ const INITIAL_PROJECTS = [
     category: 'Pilgrimage',
     description: 'Sacred journeys to holy destinations',
     imageUrl: '/images/projects/vrinda_tours_hero.jpg',
-    link: 'Projects/Vrinda-Tours/vrinda-tours.html',
+    link: 'https://to.vrindopnishad.in/',
     isFlagship: false
   }
 ];
