@@ -21,11 +21,20 @@ const buildKeyframes = (
   from: Record<string, string | number>,
   steps: Array<Record<string, string | number>>
 ): Record<string, Array<string | number>> => {
-  const keys = new Set<string>([...Object.keys(from), ...steps.flatMap(s => Object.keys(s))]);
+  const keys = Array.from(new Set<string>([...Object.keys(from), ...steps.flatMap(s => Object.keys(s))]));
 
   const keyframes: Record<string, Array<string | number>> = {};
   keys.forEach(k => {
-    keyframes[k] = [from[k], ...steps.map(s => s[k])];
+    let lastVal: string | number = from[k] ?? 0;
+    keyframes[k] = [
+      lastVal,
+      ...steps.map(s => {
+        if (s[k] !== undefined) {
+          lastVal = s[k];
+        }
+        return lastVal;
+      })
+    ];
   });
   return keyframes;
 };
@@ -73,6 +82,7 @@ const BlurText: React.FC<BlurTextProps> = ({
     () => [
       {
         opacity: 0.6,
+        filter: 'blur(5px)',
         y: direction === 'top' ? 3 : -3
       },
       { opacity: 1, y: 0, filter: 'blur(0px)' }
