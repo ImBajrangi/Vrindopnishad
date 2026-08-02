@@ -17,6 +17,7 @@ import { ToolsMenuModal } from './components/ToolsMenuModal';
 import { DeveloperGuideModal } from './components/DeveloperGuideModal';
 import { MasterNavigationModal } from './components/MasterNavigationModal';
 import { DigitalUniverseSection } from './components/DigitalUniverseSection';
+import MouseEffects from './components/MouseEffects';
 
 const INITIAL_PROJECTS = [
   {
@@ -154,6 +155,7 @@ export const App: React.FC = () => {
       )}
 
       <CustomCursor />
+      <MouseEffects color="#38bdf8" interactionMode="sniper" effectSize={35} />
       <OfflineOverlay />
       <NotificationToast />
 
