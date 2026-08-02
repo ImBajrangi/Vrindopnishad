@@ -6495,6 +6495,10 @@ footer {
     .bento-wide {
         grid-column: span 2;
     }
+
+    .bento-grid > .bento-card:last-child:nth-child(2n + 1) {
+        grid-column: auto;
+    }
 }
 
 /* ========== Modern Apps Section ========== */
