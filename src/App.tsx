@@ -105,19 +105,22 @@ export const App: React.FC = () => {
   const [loadingDone, setLoadingDone] = useState(false);
 
   useEffect(() => {
-    const updateCounter = () => {
-      setLoadingCount(prev => {
-        if (prev < 100) {
-          return prev + 1;
-        } else {
-          setTimeout(() => setLoadingDone(true), 50);
-          return 100;
-        }
-      });
+    const handleReady = () => {
+      setLoadingCount(100);
+      setTimeout(() => setLoadingDone(true), 100);
     };
 
-    const interval = setInterval(updateCounter, 20);
-    return () => clearInterval(interval);
+    if (document.readyState === 'complete') {
+      handleReady();
+    } else {
+      window.addEventListener('load', handleReady, { once: true });
+      // Fallback timer if load event already fired or delayed
+      const fallback = setTimeout(handleReady, 400);
+      return () => {
+        window.removeEventListener('load', handleReady);
+        clearTimeout(fallback);
+      };
+    }
   }, []);
 
   return (
