@@ -4,6 +4,7 @@ import { Wrench, Globe, User } from 'lucide-react';
 interface HeaderProps {
   onOpenTools: () => void;
   onOpenDevGuide: () => void;
+  onOpenNavMenu?: () => void;
   lang: 'english' | 'hindi';
   onLanguageChange: (lang: 'english' | 'hindi') => void;
 }
@@ -11,6 +12,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   onOpenTools,
   onOpenDevGuide,
+  onOpenNavMenu,
   lang,
   onLanguageChange
 }) => {
@@ -51,13 +53,17 @@ export const Header: React.FC<HeaderProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    const nextState = !isMenuOpen;
-    setIsMenuOpen(nextState);
-    if (nextState) {
-      document.body.classList.add('menu-open');
+  const handleMenuClick = () => {
+    if (onOpenNavMenu) {
+      onOpenNavMenu();
     } else {
-      document.body.classList.remove('menu-open');
+      const nextState = !isMenuOpen;
+      setIsMenuOpen(nextState);
+      if (nextState) {
+        document.body.classList.add('menu-open');
+      } else {
+        document.body.classList.remove('menu-open');
+      }
     }
   };
 
@@ -94,6 +100,21 @@ export const Header: React.FC<HeaderProps> = ({
           <ul>
             <li><a href="#home" className="active">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li>
+              <button 
+                onClick={onOpenNavMenu}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: 'inherit', 
+                  font: 'inherit', 
+                  cursor: 'pointer',
+                  padding: 0
+                }}
+              >
+                Menu Hub
+              </button>
+            </li>
             <li><a href="https://pic.vrindopnishad.in/" target="_blank" rel="noopener noreferrer">Gallery</a></li>
           </ul>
         </div>
@@ -137,7 +158,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* SVG Animated Hamburger Button */}
           <button
             className={`menu ${isMenuOpen ? 'active' : ''}`}
-            onClick={toggleMenu}
+            onClick={handleMenuClick}
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
             role="button"

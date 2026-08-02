@@ -39,13 +39,13 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ projects, la
       <div className="showcase-container">
         <div className="showcase-header text-center">
           <span className="showcase-label">
-            {lang === 'english' ? 'OUR ESSENCE' : 'हमारा स्वरूप'}
+            {lang === 'english' ? 'EXPLORE & NAVIGATE' : 'अन्वेषण एवं मार्गदर्शन'}
           </span>
           <div className="showcase-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
-            <LEDTicker items={["Projects"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+            <LEDTicker items={["Navigation Hub"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
           </div>
           <p className="showcase-subtitle">
-            {lang === 'english' ? 'The Vrinda family of services crafted for you' : 'आपकी सेवा में समर्पित वृंदोपनिषद के मुख्य आयाम'}
+            {lang === 'english' ? 'Navigate to any service or destination in the Vrindopnishad universe' : 'वृंदोपनिषद मंडल के प्रत्येक आयाम तक सरलता से पहुंचे'}
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', marginTop: '1.25rem', flexWrap: 'wrap' }}>

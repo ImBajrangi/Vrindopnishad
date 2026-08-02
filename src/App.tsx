@@ -15,8 +15,7 @@ import { OfflineOverlay } from './components/OfflineOverlay';
 import { NotificationToast } from './components/NotificationToast';
 import { ToolsMenuModal } from './components/ToolsMenuModal';
 import { DeveloperGuideModal } from './components/DeveloperGuideModal';
-import { useScrollTextEffects } from './hooks/useScrollTextEffects';
-
+import { MasterNavigationModal } from './components/MasterNavigationModal';
 import { DigitalUniverseSection } from './components/DigitalUniverseSection';
 
 const INITIAL_PROJECTS = [
@@ -34,8 +33,10 @@ const INITIAL_PROJECTS = [
   {
     id: 'foody-vrinda',
     title: 'Foody Vrinda',
+    titleHindi: 'फुडी वृंदा',
     category: 'Cloud Kitchen',
     description: 'Delicious homemade meals delivered fresh to your doorstep',
+    descriptionHindi: 'स्वादिष्ट सात्विक भोजन आपके द्वार तक',
     imageUrl: '/images/projects/foody_vrinda_hero.jpg',
     link: '#services',
     isFlagship: false
@@ -43,8 +44,10 @@ const INITIAL_PROJECTS = [
   {
     id: 'chitra-vrinda',
     title: 'Chitra Vrinda',
+    titleHindi: 'चित्र वृंदा',
     category: 'Digital Art',
     description: 'Artistic photography & digital creations',
+    descriptionHindi: 'दिव्य चित्रकला एवं कलात्मक डिजिटल संग्रह',
     imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
     link: 'https://pic.vrindopnishad.in/',
     isFlagship: false
@@ -52,10 +55,42 @@ const INITIAL_PROJECTS = [
   {
     id: 'vrinda-tours',
     title: 'Vrinda Tours',
+    titleHindi: 'वृंदा टूर्स',
     category: 'Pilgrimage',
-    description: 'Sacred journeys to holy destinations',
+    description: 'Sacred journeys to holy destinations & Brij Dham yatra',
+    descriptionHindi: 'ब्रज धाम यात्रा मार्गदर्शन एवं तीर्थ दर्शन',
     imageUrl: '/images/projects/vrinda_tours_hero.jpg',
     link: 'https://to.vrindopnishad.in/',
+    isFlagship: false
+  },
+  {
+    id: 'pdf-library',
+    title: 'PDF Sacred Archive',
+    titleHindi: 'पीडीएफ ग्रन्थागार',
+    category: 'Document Archive',
+    description: 'Digital library of ancient manuscripts & publications',
+    imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
+    link: 'https://vrindopnishad.in/Vrindopnishad%20Web/pdf/main/pdf-viewer.html',
+    isFlagship: false
+  },
+  {
+    id: 'sant-vaani',
+    title: 'Sant-Vaani',
+    titleHindi: 'संत-वाणी',
+    category: 'Spiritual Discourses',
+    description: 'Sacred shlokas & spiritual saint discourses',
+    imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
+    link: 'https://path.vrindopnishad.in/',
+    isFlagship: false
+  },
+  {
+    id: 'get-apps',
+    title: 'Vrindopnishad Apps',
+    titleHindi: 'वृंदोपनिषद ऐप्स',
+    category: 'Mobile Applications',
+    description: 'Android apps for Foody Vrinda, Bhajan Path & guides',
+    imageUrl: '/images/projects/foody_vrinda_hero.jpg',
+    link: '#download-apps',
     isFlagship: false
   }
 ];
@@ -63,6 +98,7 @@ const INITIAL_PROJECTS = [
 export const App: React.FC = () => {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isDevGuideOpen, setIsDevGuideOpen] = useState(false);
+  const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
   const [lang, setLang] = useState<'english' | 'hindi'>('english');
   const [loadingCount, setLoadingCount] = useState(10);
   const [loadingDone, setLoadingDone] = useState(false);
@@ -124,6 +160,7 @@ export const App: React.FC = () => {
       <Header
         onOpenTools={() => setIsToolsOpen(true)}
         onOpenDevGuide={() => setIsDevGuideOpen(true)}
+        onOpenNavMenu={() => setIsNavMenuOpen(true)}
         lang={lang}
         onLanguageChange={setLang}
       />
@@ -144,6 +181,12 @@ export const App: React.FC = () => {
 
       <Footer
         onOpenDevGuide={() => setIsDevGuideOpen(true)}
+        lang={lang}
+      />
+
+      <MasterNavigationModal
+        isOpen={isNavMenuOpen}
+        onClose={() => setIsNavMenuOpen(false)}
         lang={lang}
       />
 
