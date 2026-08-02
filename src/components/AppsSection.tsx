@@ -21,7 +21,7 @@ export const AppsSection: React.FC = () => {
             <div className="apps-tag">FEATURED</div>
             <div className="apps-icon">
               <img 
-                src="/logo/foodyVrinda-logo.svg" 
+                src="Vrindopnishad%20Web/class/logo/vrinda%20foods%20logo1.png" 
                 alt="Foody Vrinda"
                 loading="lazy" 
               />
@@ -46,7 +46,7 @@ export const AppsSection: React.FC = () => {
           >
             <div className="apps-icon">
               <img 
-                src="/v-logo-rounded/official-logo.svg" 
+                src="Vrindopnishad%20Web/class/v-logo-rounded/android-chrome-512x512.png" 
                 alt="Vrindopnishad App"
                 loading="lazy" 
               />
@@ -65,7 +65,7 @@ export const AppsSection: React.FC = () => {
           <a href="https://to.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="apps-icon">
               <img 
-                src="/logo/vrindaTours-logo.svg" 
+                src="Vrindopnishad%20Web/class/vrindaTours-logo-rounded/android-chrome-512x512.png" 
                 alt="Vrinda Tours"
                 loading="lazy" 
               />
@@ -83,7 +83,7 @@ export const AppsSection: React.FC = () => {
           <a href="https://pic.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="apps-icon">
               <img 
-                src="/v-logo-rounded/android-chrome-192x192.png" 
+                src="Vrindopnishad%20Web/class/v-logo-rounded/android-chrome-512x512.png" 
                 alt="Photo Gallery"
                 loading="lazy" 
               />
