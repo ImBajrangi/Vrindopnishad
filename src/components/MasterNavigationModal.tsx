@@ -153,16 +153,16 @@ export const MasterNavigationModal: React.FC<MasterNavigationModalProps> = ({
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', pointerEvents: 'auto' }}>
           <img 
-            src="/v-logo-rounded/official-logo.svg" 
-            alt="Logo" 
-            style={{ width: '44px', height: '44px' }}
+            src="/v-logo-rounded/official-logo-dark.svg" 
+            alt="Vrindopnishad Logo" 
+            style={{ width: '44px', height: '44px', objectFit: 'contain' }}
           />
           <div>
-            <div style={{ fontSize: '1.25rem', fontWeight: 800, letterSpacing: '0.06em', color: '#fff' }}>
+            <div style={{ fontSize: '1.2rem', fontWeight: 800, letterSpacing: '0.06em', color: '#ffffff' }}>
               VRINDOPNISHAD
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#38bdf8', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600 }}>
-              Interactive 3D Sphere Navigation
+            <div style={{ fontSize: '0.7rem', color: 'rgba(255, 255, 255, 0.45)', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600 }}>
+              NAVIGATION HUB
             </div>
           </div>
         </div>
@@ -170,25 +170,26 @@ export const MasterNavigationModal: React.FC<MasterNavigationModalProps> = ({
         {/* Close Button */}
         <button
           onClick={onClose}
+          className="master-nav-close-btn"
           aria-label="Close Navigation Menu"
           style={{
             pointerEvents: 'auto',
-            background: 'rgba(255, 255, 255, 0.1)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            color: '#fff',
-            width: '46px',
-            height: '46px',
+            background: 'rgba(255, 255, 255, 0.08)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            color: '#ffffff',
+            width: '44px',
+            height: '44px',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
             transition: 'all 0.25s ease'
           }}
         >
-          <X size={24} />
+          <X size={22} />
         </button>
       </div>
 

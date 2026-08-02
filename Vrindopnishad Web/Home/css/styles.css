@@ -8387,3 +8387,9 @@ h6,
     border-color: rgba(56, 189, 248, 0.5) !important;
     box-shadow: 0 12px 30px rgba(56, 189, 248, 0.18);
 }
+
+.master-nav-close-btn:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    transform: scale(1.05);
+}
