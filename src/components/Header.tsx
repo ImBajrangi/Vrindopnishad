@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Wrench, Globe } from 'lucide-react';
+import { Compass, Globe } from 'lucide-react';
 
 interface HeaderProps {
   onOpenTools: () => void;
@@ -128,12 +128,12 @@ export const Header: React.FC<HeaderProps> = ({
             <span style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.04em' }}>{lang === 'english' ? 'EN' : 'HI'}</span>
           </button>
 
-          {/* Tools Menu Icon */}
+          {/* 3D Navigation Menu Icon */}
           <button
-            onClick={onOpenTools}
-            className="tools-icon header-icon"
-            title="Spiritual Tools"
-            aria-label="Spiritual Tools Menu"
+            onClick={onOpenNavMenu}
+            className="nav-menu-icon header-icon"
+            title="3D Navigation Menu"
+            aria-label="3D Navigation Menu"
             style={{ 
               background: 'rgba(255, 255, 255, 0.05)', 
               border: '1px solid rgba(255, 255, 255, 0.12)', 
@@ -148,7 +148,7 @@ export const Header: React.FC<HeaderProps> = ({
               transition: 'all 0.25s ease'
             }}
           >
-            <Wrench size={16} />
+            <Compass size={18} />
           </button>
 
           {/* SVG Animated Hamburger Button */}
