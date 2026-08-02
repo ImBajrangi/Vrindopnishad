@@ -83,25 +83,23 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
             {lang === 'english' ? 'SACRED SANCTUARY' : 'पवित्र आश्रम'}
           </span>
 
-          {/* Pixel LED Display Heading */}
-          <div
+          {/* Section Heading */}
+          <h2
+            className="philosophy-title"
             style={{
-              width: '100%',
-              height: '85px',
-              margin: '0.5rem 0 0.8rem 0',
-              display: 'flex',
-              justifyContent: 'flex-start',
-              alignItems: 'center'
+              fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"bitcount-grid-single-square", sans-serif',
+              fontWeight: 600,
+              fontStyle: 'normal',
+              fontSize: 'clamp(2.5rem, 6.5vw, 5.2rem)',
+              letterSpacing: '0.04em',
+              textTransform: 'uppercase',
+              color: '#ffffff',
+              margin: '0.4rem 0 0.8rem 0',
+              lineHeight: 1.1
             }}
           >
-            <LEDTicker
-              items={[lang === 'english' ? 'Eternal Wisdom' : 'सनातन ज्ञान']}
-              separator=""
-              speed={0}
-              onColor="#FFFFFF"
-              offColor="transparent"
-            />
-          </div>
+            {lang === 'english' ? 'Eternal Wisdom' : 'सनातन ज्ञान'}
+          </h2>
 
           <p
             style={{
