@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Wrench, Globe, User } from 'lucide-react';
+import { Wrench, Globe } from 'lucide-react';
 
 interface HeaderProps {
   onOpenTools: () => void;
@@ -100,48 +100,32 @@ export const Header: React.FC<HeaderProps> = ({
           <ul>
             <li><a href="#home" className="active">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li>
-              <button 
-                onClick={onOpenNavMenu}
-                style={{ 
-                  background: 'none', 
-                  border: 'none', 
-                  color: 'inherit', 
-                  font: 'inherit', 
-                  cursor: 'pointer',
-                  padding: 0
-                }}
-              >
-                Menu Hub
-              </button>
-            </li>
             <li><a href="https://pic.vrindopnishad.in/" target="_blank" rel="noopener noreferrer">Gallery</a></li>
           </ul>
         </div>
 
         <div className="header-right">
-          {/* User Auth Button */}
-          <div 
-            id="user-auth-btn" 
-            className="header-icon" 
-            aria-label="User Account" 
-            role="button" 
-            tabIndex={0}
-            style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-          >
-            <User size={20} />
-          </div>
-
           {/* Language Toggle */}
           <button
             onClick={() => onLanguageChange(lang === 'english' ? 'hindi' : 'english')}
             className="btn-icon header-icon"
             title="Switch Language"
             aria-label="Language Selector"
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', display: 'flex', alignItems: 'center', gap: '0.2rem' }}
+            style={{ 
+              background: 'rgba(255, 255, 255, 0.05)', 
+              border: '1px solid rgba(255, 255, 255, 0.12)', 
+              borderRadius: '999px',
+              padding: '0.35rem 0.75rem',
+              cursor: 'pointer', 
+              color: 'inherit', 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '0.35rem',
+              transition: 'all 0.25s ease'
+            }}
           >
-            <Globe size={18} />
-            <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>{lang === 'english' ? 'EN' : 'HI'}</span>
+            <Globe size={16} />
+            <span style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.04em' }}>{lang === 'english' ? 'EN' : 'HI'}</span>
           </button>
 
           {/* Tools Menu Icon */}
@@ -150,16 +134,28 @@ export const Header: React.FC<HeaderProps> = ({
             className="tools-icon header-icon"
             title="Spiritual Tools"
             aria-label="Spiritual Tools Menu"
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit' }}
+            style={{ 
+              background: 'rgba(255, 255, 255, 0.05)', 
+              border: '1px solid rgba(255, 255, 255, 0.12)', 
+              borderRadius: '50%',
+              width: '38px',
+              height: '38px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer', 
+              color: 'inherit',
+              transition: 'all 0.25s ease'
+            }}
           >
-            <Wrench size={18} />
+            <Wrench size={16} />
           </button>
 
           {/* SVG Animated Hamburger Button */}
           <button
             className={`menu ${isMenuOpen ? 'active' : ''}`}
             onClick={handleMenuClick}
-            aria-label="Toggle menu"
+            aria-label="Toggle 3D Menu"
             aria-expanded={isMenuOpen}
             role="button"
             tabIndex={0}
