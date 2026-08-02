@@ -1,13 +1,9 @@
 // Enhanced image hover effect with custom cursor tracking
 document.addEventListener('DOMContentLoaded', () => {
-    const imageHover = document.querySelector('.image-hover');
-    const projectItems = document.querySelectorAll('.project-item');
-    const cursor = document.querySelector('.cursor-dot') || document.querySelector('.cursor-circle');
-
-    if (!imageHover) {
-        // Silent return if image hover container is not present on this page
-        return;
-    }
+    // Disabled image hover preview popup in favor of Originkit UserCursor
+    return;
+});
+/*
 
     // Clear any existing content
     imageHover.innerHTML = '';
@@ -98,3 +94,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+*/

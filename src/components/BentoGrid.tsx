@@ -1,4 +1,5 @@
 import React from 'react';
+import LEDTicker from './originkit/ui/pixel-led-display';
 
 export const BentoGrid: React.FC = () => {
   return (
@@ -6,7 +7,9 @@ export const BentoGrid: React.FC = () => {
       <div className="bento-container">
         <div className="bento-header">
           <span className="bento-label fade-up-off">EXPLORE</span>
-          <h2 className="bento-title content__title" data-splitting data-effect10>For You</h2>
+          <div className="bento-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
+            <LEDTicker items={["For You"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+          </div>
         </div>
 
         <div className="bento-grid staggered-list">

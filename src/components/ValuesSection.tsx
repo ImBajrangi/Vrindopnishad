@@ -1,4 +1,6 @@
 import React from 'react';
+import LEDTicker from './originkit/ui/pixel-led-display';
+import OnScrollTypography from './OnScrollTypography';
 
 export const ValuesSection: React.FC = () => {
   return (
@@ -6,7 +8,9 @@ export const ValuesSection: React.FC = () => {
       <div className="values-container">
         <div className="values-header">
           <span className="values-label fade-up-off">OUR PILLARS</span>
-          <h2 className="values-title content__title" data-splitting data-effect5>Core Values</h2>
+          <div className="values-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
+            <LEDTicker items={["Core Values"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+          </div>
         </div>
 
         <div className="values-grid staggered-list">
@@ -17,7 +21,9 @@ export const ValuesSection: React.FC = () => {
               </svg>
             </div>
             <div className="value-num">01</div>
-            <h3>Innovation</h3>
+            <h3>
+              <OnScrollTypography effect={6} text="Innovation" />
+            </h3>
             <p>We embrace modern technology to create seamless digital experiences. From mobile apps to web platforms, we build solutions that make life easier.</p>
           </div>
 

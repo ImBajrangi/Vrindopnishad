@@ -160,5 +160,5 @@ class CustomCursor {
     }
 }
 
-// Initialize cursor
-new CustomCursor();
+// Legacy cursor disabled in favor of React UserCursor (active on picture hover only)
+// new CustomCursor();

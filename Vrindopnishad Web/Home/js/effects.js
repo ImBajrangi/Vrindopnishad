@@ -3,116 +3,13 @@
  * Inspired by cydstumpel.nl, iheartcomix.com, and fiddle.digital
  */
 
-// Initialize WebGL effects when DOM is loaded
+// Completely remove webgl-background canvas
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if WebGL is supported
-    if (!document.querySelector('canvas')) {
-        const canvas = document.createElement('canvas');
-        canvas.classList.add('webgl-background');
-        document.body.appendChild(canvas);
-    }
-
-    initParticleField();
+    document.querySelectorAll('.webgl-background, canvas.webgl-background').forEach(el => el.remove());
 });
 
-// Create a particle field effect
 function initParticleField() {
-    const canvas = document.querySelector('canvas.webgl-background') || document.createElement('canvas');
-    if (!canvas.classList.contains('webgl-background')) {
-        canvas.classList.add('webgl-background');
-        document.body.appendChild(canvas);
-    }
-
-    // Set canvas to full screen
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    // Style the canvas
-    canvas.style.position = 'fixed';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.zIndex = '-1';
-    canvas.style.pointerEvents = 'none';
-
-    // Get WebGL context
-    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if (!gl) {
-        console.error('WebGL not supported');
-        return;
-    }
-
-    // Vertex shader program
-    const vsSource = `
-        attribute vec4 aVertexPosition;
-        attribute vec4 aVertexColor;
-        
-        uniform mat4 uModelViewMatrix;
-        uniform mat4 uProjectionMatrix;
-        
-        varying lowp vec4 vColor;
-        
-        void main(void) {
-            gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
-            gl_PointSize = 2.0;
-            vColor = aVertexColor;
-        }
-    `;
-
-    // Fragment shader program
-    const fsSource = `
-        varying lowp vec4 vColor;
-        
-        void main(void) {
-            gl_FragColor = vColor;
-        }
-    `;
-
-    // Initialize a shader program
-    const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
-
-    // Collect all the info needed to use the shader program
-    const programInfo = {
-        program: shaderProgram,
-        attribLocations: {
-            vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-            vertexColor: gl.getAttribLocation(shaderProgram, 'aVertexColor'),
-        },
-        uniformLocations: {
-            projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-            modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-        },
-    };
-
-    // Create the particle buffers
-    const buffers = initBuffers(gl);
-
-    // Draw the scene
-    let then = 0;
-
-    // Render loop
-    function render(now) {
-        now *= 0.001;  // convert to seconds
-        const deltaTime = now - then;
-        then = now;
-
-        drawScene(gl, programInfo, buffers, deltaTime);
-
-        requestAnimationFrame(render);
-    }
-    requestAnimationFrame(render);
-
-    // Aspect ratio cache to avoid forced reflows
-    let aspect = window.innerWidth / window.innerHeight;
-
-    // Handle window resize
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-        aspect = canvas.width / canvas.height;
-    });
+    document.querySelectorAll('.webgl-background, canvas.webgl-background').forEach(el => el.remove());
 }
 
 // Initialize the buffers for the particles
@@ -177,6 +74,10 @@ function drawScene(gl, programInfo, buffers, deltaTime) {
     const zNear = 0.1;
     const zFar = 100.0;
     const projectionMatrix = mat4.create();
+
+    const aspect = (gl.canvas && gl.canvas.clientHeight > 0)
+        ? gl.canvas.clientWidth / gl.canvas.clientHeight
+        : (window.innerWidth / (window.innerHeight || 1));
 
     mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import LEDTicker from './originkit/ui/pixel-led-display';
 
 export const StorySection: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ export const StorySection: React.FC = () => {
         <div className="story-visual staggered-item">
           <div className="story-image-wrapper">
             <img 
-              src="Vrindopnishad%20Web/class/image/KRSHN/optimized/vrindopnishad-story.jpg"
+              src="/images/projects/chitra_vrinda_hero.jpg"
               alt="Vrindopnishad Story" 
               loading="lazy" 
             />
@@ -23,7 +24,9 @@ export const StorySection: React.FC = () => {
         {/* Right: Content */}
         <div className="story-content">
           <span className="story-label">THE JOURNEY</span>
-          <h2 className="story-title content__title" data-splitting data-effect6>Our Story</h2>
+          <div className="story-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
+            <LEDTicker items={["Our Story"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+          </div>
 
           <div className="story-blocks">
             <div className="story-block">

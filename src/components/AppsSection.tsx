@@ -1,4 +1,5 @@
 import React from 'react';
+import LEDTicker from './originkit/ui/pixel-led-display';
 
 export const AppsSection: React.FC = () => {
   return (
@@ -6,7 +7,9 @@ export const AppsSection: React.FC = () => {
       <div className="apps-container">
         <div className="apps-header">
           <span className="apps-label fade-up-off">DOWNLOAD</span>
-          <h2 className="apps-title content__title" data-splitting data-effect6>Get Apps</h2>
+          <div className="apps-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
+            <LEDTicker items={["Get Apps"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+          </div>
         </div>
 
         <div className="apps-bento staggered-list">
@@ -15,10 +18,10 @@ export const AppsSection: React.FC = () => {
             className="apps-card apps-featured staggered-item" 
             download
           >
-            <div className="apps-tag">★ FEATURED</div>
+            <div className="apps-tag">FEATURED</div>
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/logo/foodyVrinda-logo.svg" 
+                src="Vrindopnishad%20Web/class/v-logo-rounded/official-logo.svg" 
                 alt="Foody Vrinda"
                 loading="lazy" 
               />
@@ -43,7 +46,7 @@ export const AppsSection: React.FC = () => {
           >
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/v-logo-rounded/official-logo.svg" 
+                src="Vrindopnishad%20Web/class/v-logo-rounded/android-chrome-192x192.png" 
                 alt="Vrindopnishad App"
                 loading="lazy" 
               />
@@ -62,7 +65,7 @@ export const AppsSection: React.FC = () => {
           <a href="Projects/Vrinda-Tours/vrinda-tours.html" className="apps-card staggered-item">
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/logo/vrindaTours-logo.svg" 
+                src="Vrindopnishad%20Web/class/v-logo-rounded/official-logo.svg" 
                 alt="Vrinda Tours"
                 loading="lazy" 
               />
@@ -80,7 +83,7 @@ export const AppsSection: React.FC = () => {
           <a href="Vrindopnishad%20Web/Pictures/main/photos.html" className="apps-card staggered-item">
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/v-logo-rounded/official-logo.svg" 
+                src="Vrindopnishad%20Web/class/v-logo-rounded/android-chrome-192x192.png" 
                 alt="Photo Gallery"
                 loading="lazy" 
               />

@@ -1,6 +1,6 @@
 /* Custom Cursor Styles */
-* {
-    cursor: none;
+*, *::before, *::after, body, html, a, button, input, textarea, select {
+    cursor: none !important;
 }
 
 /* Main Cursor Dot */

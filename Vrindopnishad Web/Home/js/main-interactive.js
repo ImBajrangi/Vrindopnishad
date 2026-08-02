@@ -64,37 +64,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScroll = 0;
     const header = document.querySelector('header');
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll <= 0) { header.classList.remove('hide'); return; }
-        if (currentScroll > lastScroll && !header.classList.contains('hide')) {
-            header.classList.add('hide');
-        } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
-            header.classList.remove('hide');
-        }
-        lastScroll = currentScroll;
-    });
-
-    // Custom Cursor
-    const dot = document.querySelector('.cursor-dot');
-    const circle = document.querySelector('.cursor-circle');
-    let mouseX = 0, mouseY = 0, circleX = 0, circleY = 0;
-    document.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
-    function animateCursor() {
-        if (dot) { dot.style.left = `${mouseX}px`; dot.style.top = `${mouseY}px`; }
-        circleX += (mouseX - circleX) * 0.15;
-        circleY += (mouseY - circleY) * 0.15;
-        if (circle) { circle.style.left = `${circleX}px`; circle.style.top = `${circleY}px`; }
-        requestAnimationFrame(animateCursor);
+    if (header) {
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) { header.classList.remove('hide'); return; }
+            if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+                header.classList.add('hide');
+            } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+                header.classList.remove('hide');
+            }
+            lastScroll = currentScroll;
+        });
     }
-    animateCursor();
 
-    document.querySelectorAll('a, button, .magnetic, .tools-icon').forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-    document.addEventListener('mousedown', () => document.body.classList.add('cursor-click'));
-    document.addEventListener('mouseup', () => document.body.classList.remove('cursor-click'));
+    // Custom Cursor disabled in favor of React UserCursor
+    // const dot = document.querySelector('.cursor-dot');
+    // const circle = document.querySelector('.cursor-circle');
+    // ... disabled
 
     // Mobile Menu
     const mobileMenuBtn = document.querySelector('.menu');
@@ -133,10 +119,13 @@ const wrapElements = (elems, wrapType, wrapClass) => {
     elems.forEach(char => { const wrapEl = document.createElement(wrapType); wrapEl.classList = wrapClass; char.parentNode.appendChild(wrapEl); wrapEl.appendChild(char); });
 };
 
+let typographyRetries = 0;
 const initTypography = () => {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined' || typeof Splitting === 'undefined') {
-        console.warn('GSAP, ScrollTrigger, or Splitting not loaded yet. Retrying...');
-        setTimeout(initTypography, 100);
+        typographyRetries++;
+        if (typographyRetries < 10) {
+            setTimeout(initTypography, 100);
+        }
         return;
     }
 
