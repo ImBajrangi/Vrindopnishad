@@ -62,7 +62,16 @@ export const BentoGrid: React.FC = () => {
             <div className="bento-number">06</div>
             <div className="bento-content">
               <h3>Web Dev</h3>
-              <p>Custom websites</p>
+              <p>Custom websites & digital solutions</p>
+            </div>
+            <div className="bento-arrow">→</div>
+          </a>
+
+          <a href="https://path.vrindopnishad.in/" className="bento-card staggered-item" target="_blank" rel="noopener noreferrer">
+            <div className="bento-number">07</div>
+            <div className="bento-content">
+              <h3>Bhajan Path</h3>
+              <p>Sacred Shlokas & Vedic Guidance</p>
             </div>
             <div className="bento-arrow">→</div>
           </a>
@@ -75,7 +84,7 @@ export const BentoGrid: React.FC = () => {
           </h3>
           <div className="more-grid staggered-list">
             <a href="Vrindopnishad%20Web/Pictures/main/Gallery.html" className="more-item staggered-item">
-              <span className="more-num">04</span>
+              <span className="more-num">08</span>
               <div className="more-info">
                 <span className="more-name">Photo Gallery</span>
                 <span className="more-cat">Digital Art Collection</span>
@@ -83,7 +92,7 @@ export const BentoGrid: React.FC = () => {
               <span className="more-arrow">→</span>
             </a>
             <a href="Vrindopnishad%20Web/sketch/main/new-read-me.html" className="more-item staggered-item">
-              <span className="more-num">05</span>
+              <span className="more-num">09</span>
               <div className="more-info">
                 <span className="more-name">Vrindopnishad App</span>
                 <span className="more-cat">Spiritual Wisdom & App</span>
@@ -91,7 +100,7 @@ export const BentoGrid: React.FC = () => {
               <span className="more-arrow">→</span>
             </a>
             <a href="Vrindopnishad%20Web/pdf/main/pdf-viewer.html" className="more-item staggered-item">
-              <span className="more-num">06</span>
+              <span className="more-num">10</span>
               <div className="more-info">
                 <span className="more-name">PDF Library</span>
                 <span className="more-cat">Document Archive</span>
@@ -99,7 +108,7 @@ export const BentoGrid: React.FC = () => {
               <span className="more-arrow">→</span>
             </a>
             <a href="Projects/Web%20dev/vrinda%20web%20dev.html" className="more-item staggered-item">
-              <span className="more-num">07</span>
+              <span className="more-num">11</span>
               <div className="more-info">
                 <span className="more-name">Web Development</span>
                 <span className="more-cat">Custom Digital Solutions</span>
@@ -107,7 +116,7 @@ export const BentoGrid: React.FC = () => {
               <span className="more-arrow">→</span>
             </a>
             <a href="https://path.vrindopnishad.in" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
-              <span className="more-num">08</span>
+              <span className="more-num">12</span>
               <div className="more-info">
                 <span className="more-name">Sant-Vaani</span>
                 <span className="more-cat">Sacred Shlokas & Spiritual Content</span>
@@ -115,7 +124,7 @@ export const BentoGrid: React.FC = () => {
               <span className="more-arrow">→</span>
             </a>
             <a href="https://path.vrindopnishad.in/" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
-              <span className="more-num">09</span>
+              <span className="more-num">13</span>
               <div className="more-info">
                 <span className="more-name">Bhajan Path</span>
                 <span className="more-cat">Vedic Path & Spiritual Guidance</span>
