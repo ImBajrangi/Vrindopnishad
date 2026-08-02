@@ -99,8 +99,8 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="main-nav">
           <ul>
             <li><a href="#home" className="active">Home</a></li>
+            <li><a href="https://path.vrindopnishad.in/" target="_blank" rel="noopener noreferrer">Path</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="https://pic.vrindopnishad.in/" target="_blank" rel="noopener noreferrer">Gallery</a></li>
           </ul>
         </div>
 
@@ -111,15 +111,15 @@ export const Header: React.FC<HeaderProps> = ({
             className="btn-icon header-icon"
             title="Switch Language"
             aria-label="Language Selector"
-            style={{ 
-              background: 'rgba(255, 255, 255, 0.05)', 
-              border: '1px solid rgba(255, 255, 255, 0.12)', 
+            style={{
+              background: 'rgba(255, 255, 255, 0.05)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: '999px',
               padding: '0.35rem 0.75rem',
-              cursor: 'pointer', 
-              color: 'inherit', 
-              display: 'flex', 
-              alignItems: 'center', 
+              cursor: 'pointer',
+              color: 'inherit',
+              display: 'flex',
+              alignItems: 'center',
               gap: '0.35rem',
               transition: 'all 0.25s ease'
             }}
@@ -134,16 +134,16 @@ export const Header: React.FC<HeaderProps> = ({
             className="nav-menu-icon header-icon"
             title="3D Navigation Menu"
             aria-label="3D Navigation Menu"
-            style={{ 
-              background: 'rgba(255, 255, 255, 0.05)', 
-              border: '1px solid rgba(255, 255, 255, 0.12)', 
+            style={{
+              background: 'rgba(255, 255, 255, 0.05)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: '50%',
               width: '38px',
               height: '38px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              cursor: 'pointer', 
+              cursor: 'pointer',
               color: 'inherit',
               transition: 'all 0.25s ease'
             }}

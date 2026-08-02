@@ -97,7 +97,7 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
               lineHeight: 1.05
             }}
           >
-            {lang === 'english' ? 'Eternal Wisdom' : 'सनातन ज्ञान'}
+            {lang === 'english' ? 'Our Services' : 'हमारी सेवाएं'}
           </h2>
 
           <p
