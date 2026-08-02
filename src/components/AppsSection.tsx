@@ -14,9 +14,9 @@ export const AppsSection: React.FC = () => {
 
         <div className="apps-bento staggered-list">
           <a 
-            href="https://vrindopnishad.in/" 
+            href="Vrindopnishad%20Web/web-extentions/apk/foodyVrinda.apk" 
             className="apps-card apps-featured staggered-item" 
-            target="_blank" rel="noopener noreferrer"
+            download
           >
             <div className="apps-tag">FEATURED</div>
             <div className="apps-icon">
@@ -32,7 +32,7 @@ export const AppsSection: React.FC = () => {
             </div>
             <div className="apps-meta">
               <span className="apps-platform">Android</span>
-              <span className="apps-size">73 MB</span>
+              <span className="apps-size">81 MB</span>
             </div>
             <div className="apps-cta">
               <span>↓ Download APK</span>
@@ -40,9 +40,9 @@ export const AppsSection: React.FC = () => {
           </a>
 
           <a 
-            href="https://path.vrindopnishad.in/" 
+            href="Vrindopnishad%20Web/web-extentions/apk/vrindaRead.apk" 
             className="apps-card staggered-item"
-            target="_blank" rel="noopener noreferrer"
+            download
           >
             <div className="apps-icon">
               <img 
@@ -57,7 +57,7 @@ export const AppsSection: React.FC = () => {
             </div>
             <div className="apps-meta">
               <span className="apps-platform">Android</span>
-              <span className="apps-size">55 MB</span>
+              <span className="apps-size">81 MB</span>
             </div>
             <div className="apps-cta"><span>↓</span></div>
           </a>
