@@ -1128,9 +1128,15 @@ export const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 })
 
           <p className={`face-description ${isMoving ? 'inactive' : 'active'}`}>{activeItem.description}</p>
 
-          <div onClick={handleButtonClick} className={`action-button ${isMoving ? 'inactive' : 'active'}`}>
+          <a 
+            href={activeItem.link} 
+            target={activeItem.link.startsWith('http') ? '_blank' : '_self'} 
+            rel="noopener noreferrer" 
+            className={`action-button ${isMoving ? 'inactive' : 'active'}`}
+            style={{ textDecoration: 'none', cursor: 'pointer' }}
+          >
             <p className="action-button-icon">&#x2197;</p>
-          </div>
+          </a>
         </>
       )}
     </div>

@@ -37,7 +37,7 @@ const INITIAL_PROJECTS = [
     category: 'Cloud Kitchen',
     description: 'Delicious homemade meals delivered fresh to your doorstep',
     imageUrl: '/images/projects/foody_vrinda_hero.jpg',
-    link: 'Projects/Cloud-Kitchen/kitchen.html',
+    link: '#services',
     isFlagship: false
   },
   {

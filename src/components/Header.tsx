@@ -181,7 +181,7 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
           </li>
           <li>
-            <a href="Projects/Cloud-Kitchen/kitchen.html" onClick={closeMenu}>
+            <a href="#services" onClick={closeMenu}>
               Cloud Kitchen
             </a>
           </li>

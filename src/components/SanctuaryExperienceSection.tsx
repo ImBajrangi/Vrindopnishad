@@ -490,7 +490,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
               whileTap={{ scale: 0.96 }}
               onClick={() => setIsPlaying(!isPlaying)}
               style={{
-                padding: '0.9rem 2.5rem',
+                padding: '0.9rem 2.2rem',
                 borderRadius: '999px',
                 background: `linear-gradient(135deg, ${activeVerse.color} 0%, #3b82f6 100%)`,
                 color: '#ffffff',
@@ -509,6 +509,32 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
               <span style={{ fontSize: '1.1rem' }}>{isPlaying ? '⏸' : '▶'}</span>
               <span>{isPlaying ? 'Pause Recitation' : 'Listen Recitation'}</span>
             </motion.button>
+
+            <a
+              href="https://path.vrindopnishad.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Open Bhajan Path Recitation Hub"
+              style={{
+                padding: '0.9rem 1.4rem',
+                borderRadius: '999px',
+                background: 'rgba(255, 255, 255, 0.06)',
+                border: '1px solid rgba(255, 255, 255, 0.18)',
+                color: '#ffffff',
+                fontWeight: 600,
+                fontSize: '0.88rem',
+                fontFamily: '"sama-latin", sans-serif',
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+                backdropFilter: 'blur(16px)',
+                transition: 'all 0.25s ease'
+              }}
+            >
+              <span>Recitation Hub</span>
+              <span style={{ fontSize: '1.05rem' }}>↗</span>
+            </a>
 
             <button
               onClick={handleNextVerse}

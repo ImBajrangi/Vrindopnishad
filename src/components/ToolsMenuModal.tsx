@@ -39,7 +39,7 @@ export const ToolsMenuModal: React.FC<ToolsMenuModalProps> = ({ isOpen, onClose 
       title: '84 Kos Route Guide',
       description: 'Interactive pilgrimage calculator for Brij Dham yatra',
       icon: <Compass size={22} />,
-      link: 'Projects/Vrinda-Tours/vrinda-tours.html',
+      link: 'https://to.vrindopnishad.in/',
       bgColor: '#161b22'
     },
     {
@@ -47,7 +47,7 @@ export const ToolsMenuModal: React.FC<ToolsMenuModalProps> = ({ isOpen, onClose 
       title: 'Foody Vrinda Menu',
       description: 'Pure Satvik cloud kitchen ordering and meal planner',
       icon: <Utensils size={22} />,
-      link: 'Projects/Cloud-Kitchen/kitchen.html',
+      link: '#services',
       bgColor: '#161b22'
     }
   ];

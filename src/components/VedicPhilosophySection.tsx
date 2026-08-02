@@ -125,7 +125,10 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
           className="philosophy-cards-grid"
         >
           {/* Pillar 1: Vrindopnishad Path */}
-          <div
+          <a
+            href="https://path.vrindopnishad.in/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="philosophy-card"
             style={
               {
@@ -141,7 +144,8 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                textDecoration: 'none'
               } as React.CSSProperties
             }
           >
@@ -177,10 +181,13 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
               <span>{lang === 'english' ? 'Recitation Hub' : 'पाठ अनुष्ठान'}</span>
               <span>→</span>
             </div>
-          </div>
+          </a>
 
           {/* Pillar 2: Chitra Vrinda */}
-          <div
+          <a
+            href="https://pic.vrindopnishad.in/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="philosophy-card"
             style={
               {
@@ -196,7 +203,8 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                textDecoration: 'none'
               } as React.CSSProperties
             }
           >
@@ -232,10 +240,11 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
               <span>{lang === 'english' ? 'Art Gallery' : 'कला दीर्घा'}</span>
               <span>→</span>
             </div>
-          </div>
+          </a>
 
           {/* Pillar 3: Foody Vrinda */}
-          <div
+          <a
+            href="#services"
             className="philosophy-card"
             style={
               {
@@ -251,7 +260,8 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                textDecoration: 'none'
               } as React.CSSProperties
             }
           >
@@ -287,10 +297,13 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
               <span>{lang === 'english' ? 'Satvic Culinary' : 'सात्विक आहार'}</span>
               <span>→</span>
             </div>
-          </div>
+          </a>
 
           {/* Pillar 4: Vrinda Tours */}
-          <div
+          <a
+            href="https://to.vrindopnishad.in/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="philosophy-card"
             style={
               {
@@ -306,7 +319,8 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                textDecoration: 'none'
               } as React.CSSProperties
             }
           >
@@ -342,7 +356,7 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
               <span>{lang === 'english' ? 'Pilgrimage Journey' : 'पावन यात्रा'}</span>
               <span>→</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

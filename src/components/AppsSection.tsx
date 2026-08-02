@@ -14,9 +14,9 @@ export const AppsSection: React.FC = () => {
 
         <div className="apps-bento staggered-list">
           <a 
-            href="Projects/VrindopnishadApps/foodyVrindaApp/foodyVrinda.apk" 
+            href="https://vrindopnishad.in/" 
             className="apps-card apps-featured staggered-item" 
-            download
+            target="_blank" rel="noopener noreferrer"
           >
             <div className="apps-tag">FEATURED</div>
             <div className="apps-icon">
@@ -40,9 +40,9 @@ export const AppsSection: React.FC = () => {
           </a>
 
           <a 
-            href="Projects/VrindopnishadApps/santVaani/vrindopnishad.apk" 
+            href="https://path.vrindopnishad.in/" 
             className="apps-card staggered-item"
-            download
+            target="_blank" rel="noopener noreferrer"
           >
             <div className="apps-icon">
               <img 

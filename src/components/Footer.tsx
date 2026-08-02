@@ -37,7 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDevGuide }) => {
               <a href="https://path.vrindopnishad.in/" className="text-hover" target="_blank" rel="noopener noreferrer">Bhajan Path</a>
             </li>
             <li className="staggered-item">
-              <a href="Projects/Cloud-Kitchen/kitchen.html" className="text-hover">Foody Vrinda</a>
+              <a href="#services" className="text-hover">Foody Vrinda</a>
             </li>
             <li className="staggered-item">
               <a href="https://pic.vrindopnishad.in/" className="text-hover" target="_blank" rel="noopener noreferrer">Chitra Vrinda</a>
@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDevGuide }) => {
               <a href="https://to.vrindopnishad.in/" className="footer-link" target="_blank" rel="noopener noreferrer">Vrinda Tours</a>
             </li>
             <li className="staggered-item">
-              <a href="Projects/Web%20dev/vrinda%20web%20dev.html" className="text-hover">Web Development</a>
+              <a href="https://vrindopnishad.in/" className="text-hover" target="_blank" rel="noopener noreferrer">Web Development</a>
             </li>
           </ul>
           <h3 style={{ marginTop: '1.5rem' }}>E-commerce</h3>

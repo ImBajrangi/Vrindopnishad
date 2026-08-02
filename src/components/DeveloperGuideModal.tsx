@@ -44,7 +44,7 @@ export const DeveloperGuideModal: React.FC<DeveloperGuideModalProps> = ({ isOpen
   const endpoints = [
     'https://api.vrindopnishad.in/api/collections/featured',
     'https://api.vrindopnishad.in/api/auth/verify',
-    'Vrindopnishad%20Web/class/json/books-data.json'
+    'https://vrindopnishad.in/Vrindopnishad%20Web/class/json/books-data.json'
   ];
 
   return (
