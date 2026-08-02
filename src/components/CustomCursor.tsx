@@ -269,12 +269,12 @@ export function __OriginkitBase_UserCursor(props: Props) {
                 return
             }
 
-            const picContainer = target?.closest('img, picture, .showcase-card, .project-item, .showcase-image, .apps-card, .bento-card, [data-image]') as HTMLElement | null
+            const picContainer = target?.closest('img, picture, .showcase-card, .project-item, .showcase-image, .apps-card, .bento-card, .more-item, [data-image]') as HTMLElement | null
 
             if (picContainer) {
                 setHoveringPicture(true)
-                const cardEl = picContainer.closest('.showcase-card, .project-item, .apps-card, .bento-card, [data-image]') || picContainer
-                const headingEl = cardEl.querySelector('h3, .project-title, .apps-info h3')
+                const cardEl = picContainer.closest('.showcase-card, .project-item, .apps-card, .bento-card, .more-item, [data-image]') || picContainer
+                const headingEl = cardEl.querySelector('h3, .project-title, .apps-info h3, .more-name')
                 const imgEl = cardEl.querySelector('img')
                 const labelText = headingEl?.textContent?.trim() || imgEl?.alt || cardEl.getAttribute('data-image') || undefined
                 if (labelText) setPictureName(labelText)
@@ -294,7 +294,7 @@ export function __OriginkitBase_UserCursor(props: Props) {
             const target = e.target as HTMLElement
             if (!target || !dot || !circle) return
 
-            if (target.closest('img, picture, .showcase-card, .project-item, .showcase-image, .apps-card, .bento-card, [data-image]')) return
+            if (target.closest('img, picture, .showcase-card, .project-item, .showcase-image, .apps-card, .bento-card, .more-item, [data-image]')) return
 
             const hoverable = target.closest('a, button, .btn, .tools-icon, .tree-node, .value-card, input[type="submit"]')
             if (hoverable) {
