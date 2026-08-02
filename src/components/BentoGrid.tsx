@@ -67,11 +67,11 @@ export const BentoGrid: React.FC = () => {
             <div className="bento-arrow">→</div>
           </a>
 
-          <a href="https://path.vrindopnishad.in/" className="bento-card staggered-item" target="_blank" rel="noopener noreferrer">
+          <a href="https://path.vrindopnishad.in/" className="bento-card bento-wide staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="bento-number">07</div>
             <div className="bento-content">
               <h3>Bhajan Path</h3>
-              <p>Sacred Shlokas & Vedic Guidance</p>
+              <p>Sacred Shlokas & Vedic Guidance — Dive into timeless spiritual wisdom</p>
             </div>
             <div className="bento-arrow">→</div>
           </a>

@@ -97,6 +97,24 @@ export const AppsSection: React.FC = () => {
             </div>
             <div className="apps-cta"><span>→</span></div>
           </a>
+
+          <a href="https://path.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
+            <div className="apps-icon">
+              <img 
+                src="/v-logo-rounded/official-logo.svg" 
+                alt="Bhajan Path"
+                loading="lazy" 
+              />
+            </div>
+            <div className="apps-info">
+              <h3>Bhajan Path</h3>
+              <p>Sacred shlokas & spiritual guidance</p>
+            </div>
+            <div className="apps-meta">
+              <span className="apps-platform apps-web">Web</span>
+            </div>
+            <div className="apps-cta"><span>→</span></div>
+          </a>
         </div>
       </div>
     </section>

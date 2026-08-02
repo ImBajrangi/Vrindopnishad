@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        padding: '2.5rem 1.5rem 3rem',
+        padding: '85px 1.5rem 3rem',
         boxSizing: 'border-box'
       }}
     >
