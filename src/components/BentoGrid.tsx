@@ -67,6 +67,63 @@ export const BentoGrid: React.FC = () => {
             <div className="bento-arrow">→</div>
           </a>
         </div>
+
+        {/* More Creations - Continuous Connected Minimal List */}
+        <div className="more-section" style={{ padding: '4rem 0 0 0' }}>
+          <h3 className="more-title content__title fade-up-off" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700, margin: '0 0 2rem 0' }}>
+            More Creations
+          </h3>
+          <div className="more-grid staggered-list">
+            <a href="Vrindopnishad%20Web/Pictures/main/Gallery.html" className="more-item staggered-item">
+              <span className="more-num">04</span>
+              <div className="more-info">
+                <span className="more-name">Photo Gallery</span>
+                <span className="more-cat">Digital Art Collection</span>
+              </div>
+              <span className="more-arrow">→</span>
+            </a>
+            <a href="Vrindopnishad%20Web/sketch/main/new-read-me.html" className="more-item staggered-item">
+              <span className="more-num">05</span>
+              <div className="more-info">
+                <span className="more-name">Vrindopnishad App</span>
+                <span className="more-cat">Spiritual Wisdom & App</span>
+              </div>
+              <span className="more-arrow">→</span>
+            </a>
+            <a href="Vrindopnishad%20Web/pdf/main/pdf-viewer.html" className="more-item staggered-item">
+              <span className="more-num">06</span>
+              <div className="more-info">
+                <span className="more-name">PDF Library</span>
+                <span className="more-cat">Document Archive</span>
+              </div>
+              <span className="more-arrow">→</span>
+            </a>
+            <a href="Projects/Web%20dev/vrinda%20web%20dev.html" className="more-item staggered-item">
+              <span className="more-num">07</span>
+              <div className="more-info">
+                <span className="more-name">Web Development</span>
+                <span className="more-cat">Custom Digital Solutions</span>
+              </div>
+              <span className="more-arrow">→</span>
+            </a>
+            <a href="https://path.vrindopnishad.in" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
+              <span className="more-num">08</span>
+              <div className="more-info">
+                <span className="more-name">Sant-Vaani</span>
+                <span className="more-cat">Sacred Shlokas & Spiritual Content</span>
+              </div>
+              <span className="more-arrow">→</span>
+            </a>
+            <a href="https://path.vrindopnishad.in/" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
+              <span className="more-num">09</span>
+              <div className="more-info">
+                <span className="more-name">Bhajan Path</span>
+                <span className="more-cat">Vedic Path & Spiritual Guidance</span>
+              </div>
+              <span className="more-arrow">→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

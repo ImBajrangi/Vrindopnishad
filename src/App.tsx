@@ -131,11 +131,11 @@ export const App: React.FC = () => {
       <main>
         <Hero />
         <StorySection />
-        <DigitalUniverseSection lang={lang} />
         <HorizontalScrollText />
         <VedicPhilosophySection lang={lang} />
         <ProjectsShowcase projects={INITIAL_PROJECTS} lang={lang} />
         <SanctuaryExperienceSection lang={lang} />
+        <DigitalUniverseSection lang={lang} />
         <ValuesSection />
         <BentoGrid />
         <AppsSection />
