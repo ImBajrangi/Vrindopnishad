@@ -75,14 +75,14 @@ export const Header: React.FC<HeaderProps> = ({
       <header className={`${isScrolled ? 'scrolled' : ''} ${isHide ? 'hide' : ''}`}>
         <a href="index.html" className="logo">
           <img
-            src="Vrindopnishad%20Web/class/v-logo-rounded/official-logo.svg"
+            src="/v-logo-rounded/official-logo.svg"
             alt="Vrindopnishad Logo"
             className="header-logo-img logo-light-theme"
             width="70"
             height="70"
           />
           <img
-            src="Vrindopnishad%20Web/class/v-logo-rounded/official-logo-dark.svg"
+            src="/v-logo-rounded/official-logo-dark.svg"
             alt="Vrindopnishad Logo"
             className="header-logo-img logo-dark-theme"
             width="70"
