@@ -87,8 +87,8 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
           <h2
             className="philosophy-title"
             style={{
-              fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"bitcount-grid-single-square", sans-serif',
-              fontWeight: 400,
+              fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif',
+              fontWeight: 600,
               fontStyle: 'normal',
               fontSize: 'clamp(2.5rem, 6.5vw, 5.2rem)',
               letterSpacing: '0.04em',
