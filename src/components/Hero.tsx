@@ -13,8 +13,8 @@ export const Hero: React.FC = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
-        padding: '6rem 1.5rem 4rem',
+        justifyContent: 'flex-start',
+        padding: '2.5rem 1.5rem 3rem',
         boxSizing: 'border-box'
       }}
     >
@@ -42,11 +42,11 @@ export const Hero: React.FC = () => {
           zIndex: 1,
           maxWidth: '920px',
           width: '100%',
-          margin: '0 auto',
+          margin: '1rem auto 0',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'flex-start',
           textAlign: 'center'
         }}
       >

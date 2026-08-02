@@ -17,6 +17,8 @@ import { ToolsMenuModal } from './components/ToolsMenuModal';
 import { DeveloperGuideModal } from './components/DeveloperGuideModal';
 import { useScrollTextEffects } from './hooks/useScrollTextEffects';
 
+import { DigitalUniverseSection } from './components/DigitalUniverseSection';
+
 const INITIAL_PROJECTS = [
   {
     id: 'vrindopnishad-path',
@@ -129,6 +131,7 @@ export const App: React.FC = () => {
       <main>
         <Hero />
         <StorySection />
+        <DigitalUniverseSection lang={lang} />
         <HorizontalScrollText />
         <VedicPhilosophySection lang={lang} />
         <ProjectsShowcase projects={INITIAL_PROJECTS} lang={lang} />

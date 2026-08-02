@@ -15,13 +15,13 @@ export const AppsSection: React.FC = () => {
         <div className="apps-bento staggered-list">
           <a 
             href="Projects/VrindopnishadApps/foodyVrindaApp/foodyVrinda.apk" 
-            className="apps-card apps-featured staggered-item"
+            className="apps-card apps-featured staggered-item" 
             download
           >
             <div className="apps-tag">FEATURED</div>
             <div className="apps-icon">
               <img 
-                src="/v-logo-rounded/official-logo.svg" 
+                src="/logo/foodyVrinda-logo.svg" 
                 alt="Foody Vrinda"
                 loading="lazy" 
               />
@@ -46,7 +46,7 @@ export const AppsSection: React.FC = () => {
           >
             <div className="apps-icon">
               <img 
-                src="/v-logo-rounded/android-chrome-192x192.png" 
+                src="/v-logo-rounded/official-logo.svg" 
                 alt="Vrindopnishad App"
                 loading="lazy" 
               />
@@ -65,7 +65,7 @@ export const AppsSection: React.FC = () => {
           <a href="Projects/Vrinda-Tours/vrinda-tours.html" className="apps-card staggered-item">
             <div className="apps-icon">
               <img 
-                src="/v-logo-rounded/official-logo.svg" 
+                src="/logo/vrindaTours-logo.svg" 
                 alt="Vrinda Tours"
                 loading="lazy" 
               />

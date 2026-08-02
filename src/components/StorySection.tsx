@@ -9,7 +9,7 @@ export const StorySection: React.FC = () => {
         <div className="story-visual staggered-item">
           <div className="story-image-wrapper">
             <img 
-              src="/images/projects/chitra_vrinda_hero.jpg"
+              src="/images/krshn/vrindopnishad-story.jpg"
               alt="Vrindopnishad Story" 
               loading="lazy" 
             />
