@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://vrindopnishad.in/sitemap.xml
+Sitemap: https://vrindopnishad.in/sitemap-main.xml

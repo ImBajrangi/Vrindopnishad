@@ -1,0 +1,16 @@
+{
+  "name": "Vrindopnishad — Authentic Spiritual & Vedic Digital Sanctuary",
+  "short_name": "Vrindopnishad",
+  "icons": [
+    {
+      "src": "https://vrindopnishad.in/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#030509",
+  "theme_color": "#030509",
+  "display": "standalone"
+}
