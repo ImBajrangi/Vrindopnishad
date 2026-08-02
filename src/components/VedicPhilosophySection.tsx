@@ -152,7 +152,7 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                 position: 'absolute',
                 bottom: '0px',
                 right: '0px',
-                opacity: 0.12,
+                opacity: 0.14,
                 pointerEvents: 'none',
                 zIndex: 0
               }}
@@ -184,9 +184,9 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
             className="philosophy-card"
             style={
               {
-                '--card-glow': '#f59e0b',
-                '--card-glow-border': 'rgba(245, 158, 11, 0.4)',
-                '--card-glow-shadow': 'rgba(245, 158, 11, 0.15)',
+                '--card-glow': '#0ea5e9',
+                '--card-glow-border': 'rgba(14, 165, 233, 0.4)',
+                '--card-glow-shadow': 'rgba(14, 165, 233, 0.15)',
                 background: 'rgba(255, 255, 255, 0.02)',
                 border: '1px solid rgba(255, 255, 255, 0.07)',
                 backdropFilter: 'blur(16px)',
@@ -207,17 +207,17 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                 position: 'absolute',
                 bottom: '0px',
                 right: '0px',
-                opacity: 0.12,
+                opacity: 0.14,
                 pointerEvents: 'none',
                 zIndex: 0
               }}
             >
-              <PixelIcon name="art" color="#f59e0b" size={84} />
+              <PixelIcon name="art" color="#0ea5e9" size={84} />
             </div>
 
             <div style={{ position: 'relative', zIndex: 1 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
-                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#f59e0b', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>02 / ART</span>
+                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#0ea5e9', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>02 / ART</span>
               </div>
               <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.6rem', color: '#fff', lineHeight: '1.3', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
                 {lang === 'english' ? 'Chitra Vrinda' : 'चित्र वृंदा'}
@@ -228,7 +228,7 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                   : 'दिव्य कलाकृतियों और कलात्मक अनुभूतियों का अनोखा संग्रह।'}
               </p>
             </div>
-            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#f59e0b', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#0ea5e9', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
               <span>{lang === 'english' ? 'Art Gallery' : 'कला दीर्घा'}</span>
               <span>→</span>
             </div>
@@ -239,9 +239,9 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
             className="philosophy-card"
             style={
               {
-                '--card-glow': '#10b981',
-                '--card-glow-border': 'rgba(16, 185, 129, 0.4)',
-                '--card-glow-shadow': 'rgba(16, 185, 129, 0.15)',
+                '--card-glow': '#60a5fa',
+                '--card-glow-border': 'rgba(96, 165, 250, 0.4)',
+                '--card-glow-shadow': 'rgba(96, 165, 250, 0.15)',
                 background: 'rgba(255, 255, 255, 0.02)',
                 border: '1px solid rgba(255, 255, 255, 0.07)',
                 backdropFilter: 'blur(16px)',
@@ -262,17 +262,17 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                 position: 'absolute',
                 bottom: '0px',
                 right: '0px',
-                opacity: 0.12,
+                opacity: 0.14,
                 pointerEvents: 'none',
                 zIndex: 0
               }}
             >
-              <PixelIcon name="food" color="#10b981" size={84} />
+              <PixelIcon name="food" color="#60a5fa" size={84} />
             </div>
 
             <div style={{ position: 'relative', zIndex: 1 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
-                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#10b981', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>03 / SATVIC</span>
+                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#60a5fa', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>03 / SATVIC</span>
               </div>
               <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.6rem', color: '#fff', lineHeight: '1.3', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
                 {lang === 'english' ? 'Foody Vrinda' : 'फूडी वृंदा'}
@@ -283,7 +283,7 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                   : 'सात्विक आहार और पवित्र व्यंजनों की प्राचीन परंपरा।'}
               </p>
             </div>
-            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#10b981', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#60a5fa', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
               <span>{lang === 'english' ? 'Satvic Culinary' : 'सात्विक आहार'}</span>
               <span>→</span>
             </div>
@@ -294,9 +294,9 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
             className="philosophy-card"
             style={
               {
-                '--card-glow': '#ef4444',
-                '--card-glow-border': 'rgba(239, 68, 68, 0.4)',
-                '--card-glow-shadow': 'rgba(239, 68, 68, 0.15)',
+                '--card-glow': '#818cf8',
+                '--card-glow-border': 'rgba(129, 140, 248, 0.4)',
+                '--card-glow-shadow': 'rgba(129, 140, 248, 0.15)',
                 background: 'rgba(255, 255, 255, 0.02)',
                 border: '1px solid rgba(255, 255, 255, 0.07)',
                 backdropFilter: 'blur(16px)',
@@ -317,17 +317,17 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                 position: 'absolute',
                 bottom: '0px',
                 right: '0px',
-                opacity: 0.12,
+                opacity: 0.14,
                 pointerEvents: 'none',
                 zIndex: 0
               }}
             >
-              <PixelIcon name="tours" color="#ef4444" size={84} />
+              <PixelIcon name="tours" color="#818cf8" size={84} />
             </div>
 
             <div style={{ position: 'relative', zIndex: 1 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
-                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#ef4444', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>04 / TOURS</span>
+                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#818cf8', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>04 / TOURS</span>
               </div>
               <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.6rem', color: '#fff', lineHeight: '1.3', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
                 {lang === 'english' ? 'Vrinda Tours' : 'वृंदा टूर्स'}
@@ -338,7 +338,7 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
                   : 'तीर्थ यात्राएं और पावन धामों के अलौकिक दर्शन।'}
               </p>
             </div>
-            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#ef4444', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#818cf8', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
               <span>{lang === 'english' ? 'Pilgrimage Journey' : 'पावन यात्रा'}</span>
               <span>→</span>
             </div>
