@@ -172,7 +172,6 @@ export const App: React.FC = () => {
         <StorySection />
         <HorizontalScrollText />
         <VedicPhilosophySection lang={lang} />
-        <ProjectsShowcase projects={INITIAL_PROJECTS} lang={lang} />
         <SanctuaryExperienceSection lang={lang} />
         <DigitalUniverseSection lang={lang} />
         <ValuesSection />
