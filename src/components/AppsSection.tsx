@@ -101,7 +101,7 @@ export const AppsSection: React.FC = () => {
           <a href="https://path.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="apps-icon">
               <img 
-                src="/v-logo-rounded/official-logo.svg" 
+                src="Vrindopnishad%20Web/class/v-logo-rounded/official-logo.svg" 
                 alt="Bhajan Path"
                 loading="lazy" 
               />
