@@ -23,33 +23,43 @@ export const NotificationToast: React.FC = () => {
   }, []);
 
   const animations = {
-    initial: { scale: 0.7, opacity: 0, y: -12 },
-    animate: { scale: 1, opacity: 1, y: 0, originY: 0 },
-    exit: { scale: 0.7, opacity: 0, y: -12 },
+    initial: { scale: 0.4, opacity: 0, y: 20 },
+    animate: { scale: 1, opacity: 1, y: 0 },
+    exit: { scale: 0.4, opacity: 0, y: 20 },
     transition: { type: "spring", stiffness: 140, damping: 18, mass: 0.9 },
   };
 
   return (
     <div 
-      className="notifications"
+      className="notifications-center-overlay"
       style={{
         position: 'fixed',
-        top: '98px',
-        right: '24px',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
         zIndex: 2147483647,
-        maxWidth: '360px',
-        width: 'calc(100% - 48px)',
-        pointerEvents: 'none'
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        pointerEvents: 'none',
+        padding: '1.5rem'
       }}
     >
       <AnimatePresence mode="wait">
         {toastMessage && (
           <motion.div 
-            key="vrinda-toast-item"
+            key="vrinda-center-toast"
             className="notification success" 
-            style={{ position: 'relative', pointerEvents: 'auto', width: '100%' }}
+            style={{ 
+              position: 'relative', 
+              pointerEvents: 'auto', 
+              width: '100%',
+              maxWidth: '380px',
+              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.35)'
+            }}
             {...animations}
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: 1.04 }}
           >
             <button 
               className="notification-close" 
