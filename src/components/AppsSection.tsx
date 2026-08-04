@@ -8,7 +8,7 @@ export const AppsSection: React.FC = () => {
         <div className="apps-header">
           <span className="apps-label fade-up-off">DOWNLOAD</span>
           <div className="apps-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
-            <LEDTicker items={["Get Apps"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+            <LEDTicker items={["Get Apps"]} separator="" speed={0} onColor="currentColor" offColor="transparent" />
           </div>
         </div>
 

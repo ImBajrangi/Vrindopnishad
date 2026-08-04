@@ -110,12 +110,12 @@ export const Header: React.FC<HeaderProps> = ({
             title="Switch Language"
             aria-label="Language Selector"
             style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
+              background: 'var(--glass-bg)',
+              border: '1px solid var(--glass-border)',
               borderRadius: '999px',
               padding: '0.35rem 0.75rem',
               cursor: 'pointer',
-              color: 'inherit',
+              color: 'var(--text-color)',
               display: 'flex',
               alignItems: 'center',
               gap: '0.35rem',
@@ -133,8 +133,8 @@ export const Header: React.FC<HeaderProps> = ({
             title="3D Navigation Menu"
             aria-label="3D Navigation Menu"
             style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
+              background: 'var(--glass-bg)',
+              border: '1px solid var(--glass-border)',
               borderRadius: '50%',
               width: '38px',
               height: '38px',
@@ -142,7 +142,7 @@ export const Header: React.FC<HeaderProps> = ({
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
-              color: 'inherit',
+              color: 'var(--text-color)',
               transition: 'all 0.25s ease'
             }}
           >

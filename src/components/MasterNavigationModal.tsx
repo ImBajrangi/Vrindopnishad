@@ -127,7 +127,8 @@ export const MasterNavigationModal: React.FC<MasterNavigationModalProps> = ({
         left: 0,
         width: '100vw',
         height: '100vh',
-        backgroundColor: '#05070c',
+        backgroundColor: 'var(--bg-color)',
+        color: 'var(--text-color)',
         zIndex: 99999,
         display: 'flex',
         flexDirection: 'column',
@@ -147,21 +148,21 @@ export const MasterNavigationModal: React.FC<MasterNavigationModalProps> = ({
           justifyContent: 'space-between',
           padding: '1.25rem 2.5rem',
           zIndex: 20,
-          background: 'linear-gradient(to bottom, rgba(5,7,12,0.95) 0%, rgba(5,7,12,0) 100%)',
+          background: 'linear-gradient(to bottom, rgba(var(--bg-color-rgb), 0.95) 0%, rgba(var(--bg-color-rgb), 0) 100%)',
           pointerEvents: 'none'
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', pointerEvents: 'auto' }}>
           <img 
-            src="/v-logo-rounded/official-logo-dark.svg" 
+            src="/v-logo-rounded/official-logo.svg" 
             alt="Vrindopnishad Logo" 
             style={{ width: '44px', height: '44px', objectFit: 'contain' }}
           />
           <div>
-            <div style={{ fontSize: '1.2rem', fontWeight: 800, letterSpacing: '0.06em', color: '#ffffff' }}>
+            <div style={{ fontSize: '1.2rem', fontWeight: 800, letterSpacing: '0.06em', color: 'var(--text-color)' }}>
               VRINDOPNISHAD
             </div>
-            <div style={{ fontSize: '0.7rem', color: 'rgba(255, 255, 255, 0.45)', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <div style={{ fontSize: '0.7rem', color: 'var(--secondary-color)', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600 }}>
               NAVIGATION HUB
             </div>
           </div>
@@ -174,9 +175,9 @@ export const MasterNavigationModal: React.FC<MasterNavigationModalProps> = ({
           aria-label="Close Navigation Menu"
           style={{
             pointerEvents: 'auto',
-            background: 'rgba(255, 255, 255, 0.08)',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
-            color: '#ffffff',
+            background: 'var(--glass-bg)',
+            border: '1px solid var(--glass-border)',
+            color: 'var(--text-color)',
             width: '44px',
             height: '44px',
             borderRadius: '50%',

@@ -9,7 +9,7 @@ export const ValuesSection: React.FC = () => {
         <div className="values-header">
           <span className="values-label fade-up-off">OUR PILLARS</span>
           <div className="values-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
-            <LEDTicker items={["Core Values"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+            <LEDTicker items={["Core Values"]} separator="" speed={0} onColor="currentColor" offColor="transparent" />
           </div>
         </div>
 

@@ -5,22 +5,24 @@
 
 /* ========== CSS Variables ========== */
 :root {
-    /* Pure Black & White - Light Mode */
+    /* Modern High-Contrast Light Theme */
     --bg-color: #ffffff;
     --bg-color-rgb: 255, 255, 255;
-    --text-color: #000000;
-    --text-color-rgb: 0, 0, 0;
-    --accent-color: #000000;
-    --accent-color-rgb: 0, 0, 0;
-    --secondary-color: #333333;
-    --tertiary-color: #666666;
+    --text-color: #0f172a;
+    --text-color-rgb: 15, 23, 42;
+    --accent-color: #0f172a;
+    --accent-color-rgb: 15, 23, 42;
+    --secondary-color: #475569;
+    --tertiary-color: #64748b;
 
     /* UI Colors */
-    --glass-bg: rgba(255, 255, 255, 0.9);
-    --glass-border: rgba(0, 0, 0, 0.1);
-    --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --card-bg: #ffffff;
-    --card-border: rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.88);
+    --glass-border: rgba(15, 23, 42, 0.12);
+    --glass-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+    --card-bg: #f8fafc;
+    --card-border: rgba(15, 23, 42, 0.12);
+    --button-bg: rgba(15, 23, 42, 0.05);
+    --button-border: rgba(15, 23, 42, 0.14);
 
     /* No Gradients - Pure Minimal */
     --gradient-primary: none;
@@ -6001,7 +6003,7 @@ body.tools-menu-open {
     background: var(--card-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(var(--text-color-rgb), 0.08);
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-md);
     transition: all 0.3s var(--transition-smooth);
@@ -6133,9 +6135,9 @@ body.tools-menu-open {
 .glass-input {
     width: 100%;
     padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(var(--text-color-rgb), 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(var(--text-color-rgb), 0.1);
     border-radius: var(--border-radius-md);
     color: var(--text-color);
     font-size: var(--font-size-md);
@@ -6193,14 +6195,14 @@ header {
     background: rgba(var(--bg-color-rgb), 0.7) !important;
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(var(--text-color-rgb), 0.08);
 }
 
 /* Enhanced Footer */
 footer {
     background: rgba(var(--bg-color-rgb), 0.8);
     backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(var(--text-color-rgb), 0.08);
 }
 
 /* Tools Menu Glass Enhancement - Works with new bento design */
@@ -6212,7 +6214,7 @@ footer {
     background: var(--card-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(var(--text-color-rgb), 0.08);
     border-radius: var(--border-radius-lg);
 }
 

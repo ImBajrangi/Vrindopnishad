@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useId, useMemo } from "react";
+import React, { useId, useMemo, useState, useEffect } from "react";
 
 function mapEaseToCSS(ease: any): string {
     if (Array.isArray(ease) && ease.length === 4) {
@@ -77,7 +77,36 @@ export function TextMorph(props: TextMorphProps) {
     const mHold = pct(morph + hold);
     const mOut = pct(2 * morph + hold);
 
-    const keyframes = `
+    // Detect low-perf devices: mobile touch OR prefers-reduced-motion
+    const [isLowPerf, setIsLowPerf] = useState(false);
+    useEffect(() => {
+        const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const prefersReduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+        setIsLowPerf(isMobile || prefersReduced);
+    }, []);
+
+    const keyframes = isLowPerf
+        ? `
+@keyframes ${animName} {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95) translateZ(0);
+  }
+  ${mIn}% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) translateZ(0);
+  }
+  ${mHold}% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) translateZ(0);
+  }
+  ${mOut}%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.05) translateZ(0);
+  }
+}
+`
+        : `
 @keyframes ${animName} {
   0% {
     opacity: 0;
@@ -160,7 +189,7 @@ export function TextMorph(props: TextMorphProps) {
             <div
                 style={{
                     position: "relative",
-                    filter: `url(#${filterId})`,
+                    filter: isLowPerf ? undefined : `url(#${filterId})`,
                     width: "100%",
                     height: "100%",
                     display: "flex",
@@ -183,8 +212,10 @@ export function TextMorph(props: TextMorphProps) {
                     <span
                         style={{
                             visibility: "hidden",
-                            whiteSpace: "nowrap",
+                            whiteSpace: "pre-wrap" as const,
+                            wordBreak: "break-word" as const,
                             display: "inline-block",
+                            maxWidth: "100%",
                         }}
                     >
                         {longest || " "}
@@ -201,8 +232,9 @@ export function TextMorph(props: TextMorphProps) {
                                 opacity: 0,
                                 color,
                                 whiteSpace: "nowrap",
+                                maxWidth: "100%",
                                 animation: `${animName} ${cycle}s ${(slot * i).toFixed(3)}s infinite ${easeCSS}`,
-                                willChange: "opacity, filter, transform",
+                                willChange: "opacity, transform",
                             }}
                         >
                             {word}

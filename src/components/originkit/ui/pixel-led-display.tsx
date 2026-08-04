@@ -224,7 +224,7 @@ export default function LEDTicker({
   dotQuantity = 10,
   spread = 1,
   dotShape = "round",
-  onColor = "#FFFFFF",
+  onColor = "currentColor",
   offColor = "transparent",
   glow = false,
   glowOptions = { strength: 60, size: 10 },
@@ -339,19 +339,25 @@ export default function LEDTicker({
         flickerStrength > 0
           ? 1 - flickerStrength * flickerNoise((time / 1000) * flickerSpeed)
           : 1;
+
+      let activeOnColor = onColor;
+      if (!activeOnColor || activeOnColor === "currentColor" || activeOnColor.startsWith("var(")) {
+        activeOnColor = (canvas && getComputedStyle(canvas).color) || "#000000";
+      }
+
       ctx.globalAlpha = wobble;
-      ctx.fillStyle = onColor;
+      ctx.fillStyle = activeOnColor;
 
       if (glowStrength > 0) {
         ctx.save();
         ctx.globalCompositeOperation = "lighter";
-        ctx.shadowColor = onColor;
+        ctx.shadowColor = activeOnColor;
         ctx.shadowBlur = radius * 2 * glowSize;
         ctx.globalAlpha = wobble * glowStrength;
         ctx.fill();
         ctx.restore();
         ctx.globalAlpha = wobble;
-        ctx.fillStyle = onColor;
+        ctx.fillStyle = activeOnColor;
       }
       ctx.fill();
       ctx.globalAlpha = 1;

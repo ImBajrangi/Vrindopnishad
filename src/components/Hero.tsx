@@ -82,7 +82,7 @@ export const Hero: React.FC = () => {
 
         {/* Description */}
         <div className="hero-description" style={{ maxWidth: '680px', margin: '1.2rem auto 2rem', textAlign: 'center' }}>
-          <p style={{ fontSize: 'clamp(0.98rem, 1.8vw, 1.12rem)', lineHeight: 1.6, color: 'rgba(255, 255, 255, 0.72)' }}>
+          <p style={{ fontSize: 'clamp(0.98rem, 1.8vw, 1.12rem)', lineHeight: 1.6, color: 'var(--secondary-color)' }}>
             We craft digital experiences that connect food, art, travel, and spirituality under one purpose — serving you better.
           </p>
         </div>

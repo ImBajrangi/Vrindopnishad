@@ -8,7 +8,7 @@ export const BentoGrid: React.FC = () => {
         <div className="bento-header">
           <span className="bento-label fade-up-off">EXPLORE</span>
           <div className="bento-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
-            <LEDTicker items={["For You"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+            <LEDTicker items={["For You"]} separator="" speed={0} onColor="currentColor" offColor="transparent" />
           </div>
         </div>
 

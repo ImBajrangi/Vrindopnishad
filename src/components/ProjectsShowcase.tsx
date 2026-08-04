@@ -42,7 +42,7 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ projects, la
             {lang === 'english' ? 'EXPLORE & NAVIGATE' : 'अन्वेषण एवं मार्गदर्शन'}
           </span>
           <div className="showcase-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
-            <LEDTicker items={["Navigation Hub"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+            <LEDTicker items={["Navigation Hub"]} separator="" speed={0} onColor="currentColor" offColor="transparent" />
           </div>
           <p className="showcase-subtitle">
             {lang === 'english' ? 'Navigate to any service or destination in the Vrindopnishad universe' : 'वृंदोपनिषद मंडल के प्रत्येक आयाम तक सरलता से पहुंचे'}
@@ -54,13 +54,14 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ projects, la
               style={{
                 padding: '0.5rem 1.25rem',
                 borderRadius: '999px',
-                border: '1px solid rgba(255,255,255,0.2)',
-                background: viewMode === '3d' ? 'rgba(255,255,255,0.2)' : 'transparent',
-                color: '#fff',
+                border: '1px solid var(--card-border)',
+                background: viewMode === '3d' ? 'var(--text-color)' : 'var(--glass-bg)',
+                color: viewMode === '3d' ? 'var(--bg-color)' : 'var(--text-color)',
                 fontWeight: 600,
                 fontSize: '0.85rem',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
+                boxShadow: viewMode === '3d' ? '0 4px 12px rgba(0,0,0,0.15)' : 'none'
               }}
             >
               🌐 3D Sphere
@@ -70,13 +71,14 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ projects, la
               style={{
                 padding: '0.5rem 1.25rem',
                 borderRadius: '999px',
-                border: '1px solid rgba(255,255,255,0.2)',
-                background: viewMode === 'wheel' ? 'rgba(255,255,255,0.2)' : 'transparent',
-                color: '#fff',
+                border: '1px solid var(--card-border)',
+                background: viewMode === 'wheel' ? 'var(--text-color)' : 'var(--glass-bg)',
+                color: viewMode === 'wheel' ? 'var(--bg-color)' : 'var(--text-color)',
                 fontWeight: 600,
                 fontSize: '0.85rem',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
+                boxShadow: viewMode === 'wheel' ? '0 4px 12px rgba(0,0,0,0.15)' : 'none'
               }}
             >
               🎡 Curved Wheel
@@ -86,13 +88,14 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ projects, la
               style={{
                 padding: '0.5rem 1.25rem',
                 borderRadius: '999px',
-                border: '1px solid rgba(255,255,255,0.2)',
-                background: viewMode === 'grid' ? 'rgba(255,255,255,0.2)' : 'transparent',
-                color: '#fff',
+                border: '1px solid var(--card-border)',
+                background: viewMode === 'grid' ? 'var(--text-color)' : 'var(--glass-bg)',
+                color: viewMode === 'grid' ? 'var(--bg-color)' : 'var(--text-color)',
                 fontWeight: 600,
                 fontSize: '0.85rem',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
+                boxShadow: viewMode === 'grid' ? '0 4px 12px rgba(0,0,0,0.15)' : 'none'
               }}
             >
               ☰ Grid View

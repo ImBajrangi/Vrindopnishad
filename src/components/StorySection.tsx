@@ -25,7 +25,7 @@ export const StorySection: React.FC = () => {
         <div className="story-content">
           <span className="story-label">THE JOURNEY</span>
           <div className="story-title-pixel" style={{ width: '100%', height: '80px', margin: '0.5rem 0 1rem 0' }}>
-            <LEDTicker items={["Our Story"]} separator="" speed={0} onColor="#FFFFFF" offColor="transparent" />
+            <LEDTicker items={["Our Story"]} separator="" speed={0} onColor="currentColor" offColor="transparent" />
           </div>
 
           <div className="story-blocks">
