@@ -14,7 +14,6 @@ import { CustomCursor } from './components/CustomCursor';
 import { OfflineOverlay } from './components/OfflineOverlay';
 import { NotificationToast } from './components/NotificationToast';
 import { ToolsMenuModal } from './components/ToolsMenuModal';
-import { DeveloperGuideModal } from './components/DeveloperGuideModal';
 import { MasterNavigationModal } from './components/MasterNavigationModal';
 import { DigitalUniverseSection } from './components/DigitalUniverseSection';
 import MouseEffects from './components/MouseEffects';
@@ -71,7 +70,7 @@ const INITIAL_PROJECTS = [
     category: 'Document Archive',
     description: 'Digital library of ancient manuscripts & publications',
     imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
-    link: 'https://vrindopnishad.in/Vrindopnishad%20Web/pdf/main/pdf-viewer.html',
+    link: 'https://path.vrindopnishad.in/',
     isFlagship: false
   },
   {
@@ -98,7 +97,6 @@ const INITIAL_PROJECTS = [
 
 export const App: React.FC = () => {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
-  const [isDevGuideOpen, setIsDevGuideOpen] = useState(false);
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
   const [lang, setLang] = useState<'english' | 'hindi'>('english');
   const [loadingCount, setLoadingCount] = useState(10);
@@ -114,7 +112,6 @@ export const App: React.FC = () => {
       handleReady();
     } else {
       window.addEventListener('load', handleReady, { once: true });
-      // Fallback timer if load event already fired or delayed
       const fallback = setTimeout(handleReady, 400);
       return () => {
         window.removeEventListener('load', handleReady);
@@ -125,10 +122,8 @@ export const App: React.FC = () => {
 
   return (
     <div style={{ minHeight: '100vh', position: 'relative' }}>
-      {/* Scroll progress bar */}
       <div className="scroll-progress"></div>
 
-      {/* Preloader counter with morphing jumping cube animation */}
       {!loadingDone && (
         <div className="loader" style={{
           position: 'fixed',
@@ -164,7 +159,6 @@ export const App: React.FC = () => {
 
       <Header
         onOpenTools={() => setIsToolsOpen(true)}
-        onOpenDevGuide={() => setIsDevGuideOpen(true)}
         onOpenNavMenu={() => setIsNavMenuOpen(true)}
         lang={lang}
         onLanguageChange={setLang}
@@ -182,11 +176,7 @@ export const App: React.FC = () => {
         <AppsSection />
       </main>
 
-
-      <Footer
-        onOpenDevGuide={() => setIsDevGuideOpen(true)}
-        lang={lang}
-      />
+      <Footer lang={lang} />
 
       <MasterNavigationModal
         isOpen={isNavMenuOpen}
@@ -197,11 +187,6 @@ export const App: React.FC = () => {
       <ToolsMenuModal
         isOpen={isToolsOpen}
         onClose={() => setIsToolsOpen(false)}
-      />
-
-      <DeveloperGuideModal
-        isOpen={isDevGuideOpen}
-        onClose={() => setIsDevGuideOpen(false)}
       />
     </div>
   );

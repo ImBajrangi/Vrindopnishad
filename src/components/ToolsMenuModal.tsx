@@ -56,7 +56,14 @@ export const ToolsMenuModal: React.FC<ToolsMenuModalProps> = ({ isOpen, onClose 
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal-content tools-menu active glass-panel" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '700px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 800 }}>Spiritual Utilities</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <img 
+              src="/v-logo-rounded/official-logo.svg" 
+              alt="Vrindopnishad Logo" 
+              style={{ width: '36px', height: '36px' }} 
+            />
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 800 }}>Spiritual Utilities</h2>
+          </div>
           <button className="tools-menu-close btn-icon" onClick={onClose}>
             <X size={18} />
           </button>

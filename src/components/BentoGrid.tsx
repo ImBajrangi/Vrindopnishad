@@ -49,7 +49,7 @@ export const BentoGrid: React.FC = () => {
             <div className="bento-arrow">→</div>
           </a>
 
-          <a href="https://vrindopnishad.in/Vrindopnishad%20Web/pdf/main/pdf-viewer.html" className="bento-card staggered-item" target="_blank" rel="noopener noreferrer">
+          <a href="https://path.vrindopnishad.in/" className="bento-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="bento-number">05</div>
             <div className="bento-content">
               <h3>PDF Library</h3>
@@ -99,7 +99,7 @@ export const BentoGrid: React.FC = () => {
               </div>
               <span className="more-arrow">→</span>
             </a>
-            <a href="https://vrindopnishad.in/Vrindopnishad%20Web/pdf/main/pdf-viewer.html" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
+            <a href="https://path.vrindopnishad.in/" className="more-item staggered-item" target="_blank" rel="noopener noreferrer">
               <span className="more-num">10</span>
               <div className="more-info">
                 <span className="more-name">PDF Library</span>

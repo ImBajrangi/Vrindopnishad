@@ -1,16 +1,29 @@
 import React from 'react';
 
 interface FooterProps {
-  onOpenDevGuide: () => void;
   lang: 'english' | 'hindi';
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenDevGuide }) => {
+export const Footer: React.FC<FooterProps> = () => {
   return (
     <footer id="contact">
       <div className="footer-content">
         <div>
-          <div className="footer-logo text-gradient">Vrindopnishad</div>
+          <div className="footer-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+            <img 
+              src="/v-logo-rounded/official-logo.svg" 
+              alt="Vrindopnishad Logo" 
+              className="logo-light-theme" 
+              style={{ width: '42px', height: '42px', filter: 'drop-shadow(0 0 6px rgba(231,195,84,0.4))' }} 
+            />
+            <img 
+              src="/v-logo-rounded/official-logo-dark.svg" 
+              alt="Vrindopnishad Logo" 
+              className="logo-dark-theme" 
+              style={{ width: '42px', height: '42px', filter: 'drop-shadow(0 0 6px rgba(231,195,84,0.4))' }} 
+            />
+            <div className="footer-logo text-gradient" style={{ margin: 0, fontSize: '1.8rem', fontWeight: 800 }}>Vrindopnishad</div>
+          </div>
           <p className="fade-up-off">
             A digital sanctuary where art, technology, and spirituality converge in harmonic resonance.
           </p>
@@ -78,12 +91,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDevGuide }) => {
 
       <div className="footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <p>&copy; {new Date().getFullYear()} Vrindopnishad. All rights reserved.</p>
-        <button 
-          onClick={onOpenDevGuide}
-          style={{ background: 'none', border: '1px solid rgba(255,255,255,0.2)', color: 'inherit', padding: '0.3rem 0.8rem', borderRadius: '4px', cursor: 'pointer', fontSize: '0.8rem' }}
-        >
-          Developer Details
-        </button>
       </div>
     </footer>
   );

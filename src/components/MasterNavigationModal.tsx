@@ -57,7 +57,7 @@ const DESTINATIONS = [
     description: 'Digital library of ancient manuscripts & spiritual publications',
     descriptionHindi: 'प्राचीन ग्रंथों एवं वैदिक साहित्य का डिजिटल संग्रह',
     imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
-    link: 'https://vrindopnishad.in/Vrindopnishad%20Web/pdf/main/pdf-viewer.html'
+    link: 'https://path.vrindopnishad.in/'
   },
   {
     id: 'sant-vaani',

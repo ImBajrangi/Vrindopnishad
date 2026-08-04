@@ -3,7 +3,6 @@ import { Compass, Globe } from 'lucide-react';
 
 interface HeaderProps {
   onOpenTools: () => void;
-  onOpenDevGuide: () => void;
   onOpenNavMenu?: () => void;
   lang: 'english' | 'hindi';
   onLanguageChange: (lang: 'english' | 'hindi') => void;
@@ -11,7 +10,6 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({
   onOpenTools,
-  onOpenDevGuide,
   onOpenNavMenu,
   lang,
   onLanguageChange

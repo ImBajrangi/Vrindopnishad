@@ -3,5 +3,20 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
+User-agent: Googlebot
+Allow: /
+Allow: /favicon*
+Allow: /android-chrome*
+Allow: /apple-touch-icon*
+Allow: /v-logo-rounded/
+Allow: /logo/
+Allow: /images/
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /v-logo-rounded/
+Allow: /logo/
+Allow: /images/
+
 Sitemap: https://vrindopnishad.in/sitemap.xml
 Sitemap: https://vrindopnishad.in/sitemap-main.xml

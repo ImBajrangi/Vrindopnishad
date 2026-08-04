@@ -14,14 +14,14 @@ export const AppsSection: React.FC = () => {
 
         <div className="apps-bento staggered-list">
           <a 
-            href="Vrindopnishad%20Web/web-extentions/apk/foodyVrinda.apk" 
+            href="/web-extentions/apk/foodyVrinda.apk" 
             className="apps-card apps-featured staggered-item" 
             download
           >
             <div className="apps-tag">FEATURED</div>
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/logo/vrinda%20foods%20logo1.png" 
+                src="/logo/foody-vrinda-logo.png" 
                 alt="Foody Vrinda"
                 loading="lazy" 
               />
@@ -40,13 +40,13 @@ export const AppsSection: React.FC = () => {
           </a>
 
           <a 
-            href="Vrindopnishad%20Web/web-extentions/apk/vrindaRead.apk" 
+            href="/web-extentions/apk/vrindaRead.apk" 
             className="apps-card staggered-item"
             download
           >
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/v-logo-rounded/android-chrome-512x512.png" 
+                src="/v-logo-rounded/android-chrome-512x512.png" 
                 alt="Vrindopnishad App"
                 loading="lazy" 
               />
@@ -65,7 +65,7 @@ export const AppsSection: React.FC = () => {
           <a href="https://to.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/vrindaTours-logo-rounded/android-chrome-512x512.png" 
+                src="/logo/vrinda-tours-logo.png" 
                 alt="Vrinda Tours"
                 loading="lazy" 
               />
@@ -83,7 +83,7 @@ export const AppsSection: React.FC = () => {
           <a href="https://pic.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/v-logo-rounded/android-chrome-512x512.png" 
+                src="/v-logo-rounded/android-chrome-512x512.png" 
                 alt="Photo Gallery"
                 loading="lazy" 
               />
@@ -101,7 +101,7 @@ export const AppsSection: React.FC = () => {
           <a href="https://path.vrindopnishad.in/" className="apps-card staggered-item" target="_blank" rel="noopener noreferrer">
             <div className="apps-icon">
               <img 
-                src="Vrindopnishad%20Web/class/v-logo-rounded/official-logo.svg" 
+                src="/v-logo-rounded/official-logo.svg" 
                 alt="Bhajan Path"
                 loading="lazy" 
               />
