@@ -17,10 +17,17 @@ export const NotificationToast: React.FC = () => {
 
     const timer = setTimeout(() => {
       setToastMessage(null);
-    }, 6000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
+
+  const animations = {
+    initial: { scale: 0, opacity: 0 },
+    animate: { scale: 1, opacity: 1, originY: 0 },
+    exit: { scale: 0, opacity: 0 },
+    transition: { type: "spring", stiffness: 350, damping: 25 },
+  };
 
   return (
     <div 
@@ -35,17 +42,14 @@ export const NotificationToast: React.FC = () => {
         pointerEvents: 'none'
       }}
     >
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {toastMessage && (
           <motion.div 
-            key="toast-1"
+            key="vrinda-toast-item"
             className="notification success" 
-            style={{ position: 'relative', pointerEvents: 'auto' }}
-            initial={{ scale: 0, opacity: 0, y: -20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0, opacity: 0, y: -20 }}
-            transition={{ type: "spring", stiffness: 350, damping: 25 }}
-            whileHover={{ scale: 1.02 }}
+            style={{ position: 'relative', pointerEvents: 'auto', width: '100%' }}
+            {...animations}
+            whileHover={{ scale: 1.03 }}
           >
             <button 
               className="notification-close" 
