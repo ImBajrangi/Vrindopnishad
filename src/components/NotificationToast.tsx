@@ -36,8 +36,8 @@ export const NotificationToast: React.FC = () => {
         position: 'fixed',
         top: '20px',
         right: '20px',
-        zIndex: 99999,
-        maxWidth: '340px',
+        zIndex: 2147483647,
+        maxWidth: '360px',
         width: 'calc(100% - 40px)',
         pointerEvents: 'none'
       }}

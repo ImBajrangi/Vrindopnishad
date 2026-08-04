@@ -3145,15 +3145,16 @@ footer {
 /* Notifications container */
 .notifications {
     position: fixed;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
+    top: 20px;
+    right: 20px;
+    left: auto;
+    transform: none;
+    z-index: 2147483647;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    width: 100%;
-    max-width: 320px;
+    width: calc(100% - 40px);
+    max-width: 360px;
     pointer-events: none;
 }
 
