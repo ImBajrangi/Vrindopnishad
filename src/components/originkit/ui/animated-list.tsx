@@ -58,10 +58,10 @@ AnimatedList.displayName = "AnimatedList";
 
 export function AnimatedListItem({ children }: { children: React.ReactNode }) {
   const animations = {
-    initial: { scale: 0, opacity: 0 },
-    animate: { scale: 1, opacity: 1, originY: 0 },
-    exit: { scale: 0, opacity: 0 },
-    transition: { type: "spring", stiffness: 350, damping: 25 },
+    initial: { scale: 0.7, opacity: 0, y: -12 },
+    animate: { scale: 1, opacity: 1, y: 0, originY: 0 },
+    exit: { scale: 0.7, opacity: 0, y: -12 },
+    transition: { type: "spring", stiffness: 140, damping: 18, mass: 0.9 },
   };
 
   return (
