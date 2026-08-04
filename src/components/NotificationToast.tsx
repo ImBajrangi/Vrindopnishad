@@ -1,26 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-export const NotificationToast: React.FC = () => {
+interface NotificationToastProps {
+  isReady?: boolean;
+}
+
+export const NotificationToast: React.FC<NotificationToastProps> = ({ isReady = true }) => {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [timeStr, setTimeStr] = useState<string>('now');
 
   useEffect(() => {
-    const hours = new Date().getHours();
-    let timeGreeting = 'Good Day';
-    if (hours >= 5 && hours < 12) timeGreeting = 'Good Morning';
-    else if (hours >= 12 && hours < 17) timeGreeting = 'Good Afternoon';
-    else if (hours >= 17 && hours < 22) timeGreeting = 'Good Evening';
+    if (!isReady) return;
 
-    setToastMessage(`${timeGreeting}! Welcome to Vrindopnishad 🙏`);
-    setTimeStr('now');
+    // Small delay after loader finishes so entry is smooth & clear
+    const showTimer = setTimeout(() => {
+      const hours = new Date().getHours();
+      let timeGreeting = 'Good Day';
+      if (hours >= 5 && hours < 12) timeGreeting = 'Good Morning';
+      else if (hours >= 12 && hours < 17) timeGreeting = 'Good Afternoon';
+      else if (hours >= 17 && hours < 22) timeGreeting = 'Good Evening';
 
-    const timer = setTimeout(() => {
+      setToastMessage(`${timeGreeting}! Welcome to Vrindopnishad 🙏`);
+      setTimeStr('now');
+    }, 400);
+
+    const autoHideTimer = setTimeout(() => {
       setToastMessage(null);
-    }, 6000);
+    }, 7500);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(autoHideTimer);
+    };
+  }, [isReady]);
 
   const animations = {
     initial: { scale: 0.85, opacity: 0, y: -16 },
@@ -30,29 +42,18 @@ export const NotificationToast: React.FC = () => {
   };
 
   return (
-    <div 
-      className="notifications"
-      style={{
-        position: 'fixed',
-        top: '95px',
-        right: '24px',
-        zIndex: 9999,
-        maxWidth: '340px',
-        width: 'calc(100% - 48px)',
-        pointerEvents: 'none'
-      }}
-    >
+    <div className="notifications">
       <AnimatePresence mode="wait">
         {toastMessage && (
-          <motion.div 
+          <motion.div
             key="vrinda-toast-item"
-            className="notification success" 
+            className="notification success"
             style={{ position: 'relative', pointerEvents: 'auto', width: '100%' }}
             {...animations}
             whileHover={{ scale: 1.02 }}
           >
-            <button 
-              className="notification-close" 
+            <button
+              className="notification-close"
               onClick={() => setToastMessage(null)}
               aria-label="Close notification"
             >

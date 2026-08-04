@@ -3158,12 +3158,15 @@ footer {
     pointer-events: none;
 }
 
-/* Mobile adjustments for notifications */
+/* Mobile adjustments for notifications - Centered horizontally below mobile header */
 @media (max-width: 768px) {
     .notifications {
-        top: 80px;
-        right: 16px;
-        max-width: calc(100% - 32px);
+        top: 75px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: calc(100% - 32px);
+        max-width: 360px;
     }
 }
 

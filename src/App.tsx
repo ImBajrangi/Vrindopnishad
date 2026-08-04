@@ -155,7 +155,7 @@ export const App: React.FC = () => {
       <CustomCursor />
       <MouseEffects color="#38bdf8" interactionMode="sniper" effectSize={35} />
       <OfflineOverlay />
-      <NotificationToast />
+      <NotificationToast isReady={loadingDone} />
 
       <Header
         onOpenTools={() => setIsToolsOpen(true)}
