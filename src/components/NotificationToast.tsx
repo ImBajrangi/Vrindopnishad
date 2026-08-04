@@ -17,49 +17,39 @@ export const NotificationToast: React.FC = () => {
 
     const timer = setTimeout(() => {
       setToastMessage(null);
-    }, 8000);
+    }, 6000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const animations = {
-    initial: { scale: 0.4, opacity: 0, y: 20 },
-    animate: { scale: 1, opacity: 1, y: 0 },
-    exit: { scale: 0.4, opacity: 0, y: 20 },
-    transition: { type: "spring", stiffness: 140, damping: 18, mass: 0.9 },
+    initial: { scale: 0.85, opacity: 0, y: -16 },
+    animate: { scale: 1, opacity: 1, y: 0, originY: 0 },
+    exit: { scale: 0.85, opacity: 0, y: -16 },
+    transition: { type: "spring", stiffness: 160, damping: 20, mass: 0.9 },
   };
 
   return (
     <div 
-      className="notifications-center-overlay"
+      className="notifications"
       style={{
         position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        zIndex: 2147483647,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        pointerEvents: 'none',
-        padding: '1.5rem'
+        top: '95px',
+        right: '24px',
+        zIndex: 9999,
+        maxWidth: '340px',
+        width: 'calc(100% - 48px)',
+        pointerEvents: 'none'
       }}
     >
       <AnimatePresence mode="wait">
         {toastMessage && (
           <motion.div 
-            key="vrinda-center-toast"
+            key="vrinda-toast-item"
             className="notification success" 
-            style={{ 
-              position: 'relative', 
-              pointerEvents: 'auto', 
-              width: '100%',
-              maxWidth: '380px',
-              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.35)'
-            }}
+            style={{ position: 'relative', pointerEvents: 'auto', width: '100%' }}
             {...animations}
-            whileHover={{ scale: 1.04 }}
+            whileHover={{ scale: 1.02 }}
           >
             <button 
               className="notification-close" 
