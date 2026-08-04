@@ -3145,15 +3145,15 @@ footer {
 /* Notifications container */
 .notifications {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 98px;
+    right: 24px;
     left: auto;
     transform: none;
     z-index: 2147483647;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    width: calc(100% - 40px);
+    width: calc(100% - 48px);
     max-width: 360px;
     pointer-events: none;
 }
@@ -3161,8 +3161,9 @@ footer {
 /* Mobile adjustments for notifications */
 @media (max-width: 768px) {
     .notifications {
-        top: 70px;
-        max-width: 90%;
+        top: 80px;
+        right: 16px;
+        max-width: calc(100% - 32px);
     }
 }
 

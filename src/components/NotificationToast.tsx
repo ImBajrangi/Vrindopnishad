@@ -34,11 +34,11 @@ export const NotificationToast: React.FC = () => {
       className="notifications"
       style={{
         position: 'fixed',
-        top: '20px',
-        right: '20px',
+        top: '98px',
+        right: '24px',
         zIndex: 2147483647,
         maxWidth: '360px',
-        width: 'calc(100% - 40px)',
+        width: 'calc(100% - 48px)',
         pointerEvents: 'none'
       }}
     >
