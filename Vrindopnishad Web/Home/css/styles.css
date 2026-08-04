@@ -3156,6 +3156,7 @@ footer {
     width: calc(100% - 48px);
     max-width: 340px;
     pointer-events: none;
+    transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Mobile adjustments for notifications - Centered horizontally below mobile header */

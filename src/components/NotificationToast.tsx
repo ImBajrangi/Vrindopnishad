@@ -8,6 +8,29 @@ interface NotificationToastProps {
 export const NotificationToast: React.FC<NotificationToastProps> = ({ isReady = true }) => {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [timeStr, setTimeStr] = useState<string>('now');
+  const [topOffset, setTopOffset] = useState<number>(95);
+
+  // Dynamic vertical response relative to header state and available free space
+  useEffect(() => {
+    let lastScroll = 0;
+
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll <= 0) {
+        setTopOffset(95); // Default top bar space
+      } else if (currentScroll > lastScroll && currentScroll > 60) {
+        setTopOffset(18); // Header hidden -> smoothly glides up into free top space!
+      } else {
+        setTopOffset(76); // Compact scrolled header
+      }
+
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     if (!isReady) return;
@@ -26,7 +49,7 @@ export const NotificationToast: React.FC<NotificationToastProps> = ({ isReady = 
 
     const autoHideTimer = setTimeout(() => {
       setToastMessage(null);
-    }, 7500);
+    }, 8000);
 
     return () => {
       clearTimeout(showTimer);
@@ -42,7 +65,13 @@ export const NotificationToast: React.FC<NotificationToastProps> = ({ isReady = 
   };
 
   return (
-    <div className="notifications">
+    <div 
+      className="notifications"
+      style={{
+        top: `${topOffset}px`,
+        transition: 'top 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
+      }}
+    >
       <AnimatePresence mode="wait">
         {toastMessage && (
           <motion.div
