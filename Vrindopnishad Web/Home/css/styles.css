@@ -73,8 +73,36 @@
 }
 
 /* Dark Mode */
+:root.dark,
+html.dark,
+html.dark :root,
+body.dark-mode {
+    --bg-color: #000000;
+    --bg-color-rgb: 0, 0, 0;
+    --text-color: #ffffff;
+    --text-color-rgb: 255, 255, 255;
+    --accent-color: #ffffff;
+    --accent-color-rgb: 255, 255, 255;
+    --secondary-color: #cccccc;
+    --tertiary-color: #999999;
+
+    /* Dark UI */
+    --glass-bg: rgba(0, 0, 0, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --card-bg: #111111;
+    --card-border: rgba(255, 255, 255, 0.1);
+
+    /* Text Highlight Effect Colors - Dark Theme */
+    --hx6-bg-highlight: #dc764c;
+    --hx6-text-color: #fadabd;
+    --hx13-select-bg: rgba(109, 215, 230, 0.08);
+    --hx13-select-color: #6dd7e6;
+    --hx13-glow-color: #ffdbf5;
+}
+
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(.light) {
         --bg-color: #000000;
         --bg-color-rgb: 0, 0, 0;
         --text-color: #ffffff;
@@ -8412,4 +8440,17 @@ h6,
 /* Scoped to AnimatedThemeToggler — the toggler sets the data-attribute and the variable only during a theme toggle. */
 html[data-magicui-theme-vt="active"]::view-transition-group(root) {
   animation-duration: var(--magicui-theme-toggle-vt-duration);
+}
+
+/* Screen reader accessible utility class */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }

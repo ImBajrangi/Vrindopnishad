@@ -8,7 +8,13 @@ interface SideRaysProps {
   speed?: number;
   rayColor1?: string;
   rayColor2?: string;
+  darkRayColor1?: string;
+  darkRayColor2?: string;
+  lightRayColor1?: string;
+  lightRayColor2?: string;
   intensity?: number;
+  darkIntensity?: number;
+  lightIntensity?: number;
   spread?: number;
   origin?: Origin;
   tilt?: number;
@@ -16,6 +22,8 @@ interface SideRaysProps {
   blend?: number;
   falloff?: number;
   opacity?: number;
+  darkOpacity?: number;
+  lightOpacity?: number;
   className?: string;
 }
 
@@ -35,16 +43,24 @@ const originToFlip = (origin: Origin): [number, number] => {
 
 export const SideRays = ({
   speed = 2.5,
-  rayColor1 = '#EAB308',
-  rayColor2 = '#96c8ff',
-  intensity = 2,
+  rayColor1,
+  rayColor2,
+  darkRayColor1 = '#e7c354',
+  darkRayColor2 = '#96c8ff',
+  lightRayColor1 = '#ca8a04',
+  lightRayColor2 = '#2563eb',
+  intensity,
+  darkIntensity = 0.6,
+  lightIntensity = 0.4,
   spread = 2,
   origin = 'top-right',
   tilt = 0,
   saturation = 1.5,
   blend = 0.75,
   falloff = 1.6,
-  opacity = 1.0,
+  opacity,
+  darkOpacity = 0.85,
+  lightOpacity = 0.6,
   className = ''
 }: SideRaysProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -55,6 +71,106 @@ export const SideRays = ({
   const cleanupFunctionRef = useRef<(() => void) | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
+
+  // Initial Theme Detection
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof document === 'undefined') return true;
+    return (
+      document.documentElement.classList.contains('dark') ||
+      document.body.classList.contains('dark-mode') ||
+      (!document.documentElement.classList.contains('light') &&
+        !document.body.classList.contains('light-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    );
+  });
+
+  // Compute active colors based on theme
+  const activeRayColor1 = isDark
+    ? (rayColor1 || darkRayColor1)
+    : (lightRayColor1 || rayColor1 || '#ca8a04');
+
+  const activeRayColor2 = isDark
+    ? (rayColor2 || darkRayColor2)
+    : (lightRayColor2 || rayColor2 || '#2563eb');
+
+  const activeIntensity = isDark
+    ? (intensity ?? darkIntensity)
+    : (lightIntensity ?? intensity ?? 0.4);
+
+  const activeOpacity = isDark
+    ? (opacity ?? darkOpacity)
+    : (lightOpacity ?? opacity ?? 0.6);
+
+  // Refs for real-time WebGL loop synchronization without re-initializing WebGL context
+  const activeRayColor1Ref = useRef(activeRayColor1);
+  const activeRayColor2Ref = useRef(activeRayColor2);
+  const activeIntensityRef = useRef(activeIntensity);
+  const activeOpacityRef = useRef(activeOpacity);
+
+  activeRayColor1Ref.current = activeRayColor1;
+  activeRayColor2Ref.current = activeRayColor2;
+  activeIntensityRef.current = activeIntensity;
+  activeOpacityRef.current = activeOpacity;
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const darkActive =
+        document.documentElement.classList.contains('dark') ||
+        document.body.classList.contains('dark-mode') ||
+        (!document.documentElement.classList.contains('light') &&
+          !document.body.classList.contains('light-mode') &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+      const col1 = darkActive ? (rayColor1 || darkRayColor1) : (lightRayColor1 || rayColor1 || '#ca8a04');
+      const col2 = darkActive ? (rayColor2 || darkRayColor2) : (lightRayColor2 || rayColor2 || '#2563eb');
+      const intVal = darkActive ? (intensity ?? darkIntensity) : (lightIntensity ?? intensity ?? 0.4);
+      const opVal = darkActive ? (opacity ?? darkOpacity) : (lightOpacity ?? opacity ?? 0.6);
+
+      activeRayColor1Ref.current = col1;
+      activeRayColor2Ref.current = col2;
+      activeIntensityRef.current = intVal;
+      activeOpacityRef.current = opVal;
+
+      if (uniformsRef.current) {
+        uniformsRef.current.iRayColor1.value = hexToRgb(col1);
+        uniformsRef.current.iRayColor2.value = hexToRgb(col2);
+        uniformsRef.current.iIntensity.value = intVal;
+        uniformsRef.current.iOpacity.value = opVal;
+      }
+
+      // Synchronous immediate WebGL render frame for View Transitions API snapshotting
+      if (rendererRef.current && meshRef.current) {
+        try {
+          rendererRef.current.render({ scene: meshRef.current });
+        } catch (e) {}
+      }
+
+      setIsDark(darkActive);
+    };
+
+    checkTheme();
+
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemChange = () => checkTheme();
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleSystemChange);
+    } else {
+      mediaQuery.addListener(handleSystemChange);
+    }
+
+    return () => {
+      observer.disconnect();
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener('change', handleSystemChange);
+      } else {
+        mediaQuery.removeListener(handleSystemChange);
+      }
+    };
+  }, [rayColor1, darkRayColor1, lightRayColor1, rayColor2, darkRayColor2, lightRayColor2, intensity, darkIntensity, lightIntensity, opacity, darkOpacity, lightOpacity]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -179,9 +295,9 @@ void main() {
         iTime: { value: 0 },
         iResolution: { value: [1, 1] as number[] },
         iSpeed: { value: speed },
-        iRayColor1: { value: hexToRgb(rayColor1) as number[] },
-        iRayColor2: { value: hexToRgb(rayColor2) as number[] },
-        iIntensity: { value: intensity },
+        iRayColor1: { value: hexToRgb(activeRayColor1Ref.current) as number[] },
+        iRayColor2: { value: hexToRgb(activeRayColor2Ref.current) as number[] },
+        iIntensity: { value: activeIntensityRef.current },
         iSpread: { value: spread },
         iFlipX: { value: flipX },
         iFlipY: { value: flipY },
@@ -189,7 +305,7 @@ void main() {
         iSaturation: { value: saturation },
         iBlend: { value: blend },
         iFalloff: { value: falloff },
-        iOpacity: { value: opacity }
+        iOpacity: { value: activeOpacityRef.current }
       };
       uniformsRef.current = uniforms;
 
@@ -215,8 +331,11 @@ void main() {
         const dynamicLightingFactor = 1.0 + 0.28 * Math.sin(timeSec * 0.95) + 0.14 * Math.cos(timeSec * 1.6);
         const dynamicSpreadFactor = 1.0 + 0.18 * Math.sin(timeSec * 0.75);
 
-        uniforms.iIntensity.value = intensity * dynamicLightingFactor;
+        uniforms.iIntensity.value = activeIntensityRef.current * dynamicLightingFactor;
+        uniforms.iOpacity.value = activeOpacityRef.current;
         uniforms.iSpread.value = spread * dynamicSpreadFactor;
+        uniforms.iRayColor1.value = hexToRgb(activeRayColor1Ref.current);
+        uniforms.iRayColor2.value = hexToRgb(activeRayColor2Ref.current);
 
         try {
           renderer.render({ scene: mesh });
@@ -258,25 +377,7 @@ void main() {
         cleanupFunctionRef.current = null;
       }
     };
-  }, [isVisible, speed, rayColor1, rayColor2, intensity, spread, origin, tilt, saturation, blend, falloff, opacity]);
-
-  useEffect(() => {
-    if (!uniformsRef.current) return;
-    const u = uniformsRef.current;
-    u.iSpeed.value = speed;
-    u.iRayColor1.value = hexToRgb(rayColor1);
-    u.iRayColor2.value = hexToRgb(rayColor2);
-    u.iIntensity.value = intensity;
-    u.iSpread.value = spread;
-    const [flipX, flipY] = originToFlip(origin);
-    u.iFlipX.value = flipX;
-    u.iFlipY.value = flipY;
-    u.iTilt.value = tilt;
-    u.iSaturation.value = saturation;
-    u.iBlend.value = blend;
-    u.iFalloff.value = falloff;
-    u.iOpacity.value = opacity;
-  }, [speed, rayColor1, rayColor2, intensity, spread, origin, tilt, saturation, blend, falloff, opacity]);
+  }, [isVisible, speed, spread, origin, tilt, saturation, blend, falloff]);
 
   return <div ref={containerRef} className={`side-rays-container ${className}`.trim()} />;
 };

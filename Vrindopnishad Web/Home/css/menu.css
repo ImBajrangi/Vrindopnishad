@@ -23,7 +23,7 @@
 /* ============================================
    Modern Fullscreen Mobile Navigation Menu
    ============================================ */
-nav:not(.main-nav) {
+nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer) {
     position: fixed !important;
     top: 60px !important;
     left: 0 !important;
@@ -48,13 +48,18 @@ nav:not(.main-nav) {
     overflow-y: auto;
 }
 
+html.light nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer),
+body.light-mode nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer) {
+    background: #ffffff !important;
+}
+
 @media (prefers-color-scheme: light) {
-    nav:not(.main-nav) {
+    html:not(.dark) nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer) {
         background: #ffffff !important;
     }
 }
 
-nav:not(.main-nav).active {
+nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer).active {
     opacity: 1;
     visibility: visible;
 }
@@ -77,8 +82,16 @@ nav::before {
     transition: opacity 0.6s ease 0.3s;
 }
 
+html.light nav::before,
+body.light-mode nav::before {
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(0, 0, 0, 0.3),
+            transparent);
+}
+
 @media (prefers-color-scheme: light) {
-    nav::before {
+    html:not(.dark) nav::before {
         background: linear-gradient(90deg,
                 transparent,
                 rgba(0, 0, 0, 0.3),
@@ -152,8 +165,13 @@ nav ul li a {
     text-align: center;
 }
 
+html.light nav ul li a,
+body.light-mode nav ul li a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
 @media (prefers-color-scheme: light) {
-    nav ul li a {
+    html:not(.dark) nav ul li a {
         color: rgba(0, 0, 0, 0.6);
     }
 }
@@ -165,10 +183,16 @@ nav ul li a:focus {
     transform: scale(1.08);
 }
 
-@media (prefers-color-scheme: light) {
+html.light nav ul li a:hover,
+html.light nav ul li a:focus,
+body.light-mode nav ul li a:hover,
+body.light-mode nav ul li a:focus {
+    color: #000000;
+}
 
-    nav ul li a:hover,
-    nav ul li a:focus {
+@media (prefers-color-scheme: light) {
+    html:not(.dark) nav ul li a:hover,
+    html:not(.dark) nav ul li a:focus {
         color: #000000;
     }
 }
@@ -190,8 +214,16 @@ nav ul li a::after {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+html.light nav ul li a::after,
+body.light-mode nav ul li a::after {
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(0, 0, 0, 0.6),
+            transparent);
+}
+
 @media (prefers-color-scheme: light) {
-    nav ul li a::after {
+    html:not(.dark) nav ul li a::after {
         background: linear-gradient(90deg,
                 transparent,
                 rgba(0, 0, 0, 0.6),
@@ -210,10 +242,16 @@ nav ul li a[aria-current="page"] {
     font-weight: 600;
 }
 
-@media (prefers-color-scheme: light) {
+html.light nav ul li a.active,
+html.light nav ul li a[aria-current="page"],
+body.light-mode nav ul li a.active,
+body.light-mode nav ul li a[aria-current="page"] {
+    color: #000000;
+}
 
-    nav ul li a.active,
-    nav ul li a[aria-current="page"] {
+@media (prefers-color-scheme: light) {
+    html:not(.dark) nav ul li a.active,
+    html:not(.dark) nav ul li a[aria-current="page"] {
         color: #000000;
     }
 }
@@ -234,10 +272,17 @@ nav ul li a[aria-current="page"]::before {
     animation: pulseGlow 2s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: light) {
+html.light nav ul li a.active::before,
+html.light nav ul li a[aria-current="page"]::before,
+body.light-mode nav ul li a.active::before,
+body.light-mode nav ul li a[aria-current="page"]::before {
+    background: #000000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
 
-    nav ul li a.active::before,
-    nav ul li a[aria-current="page"]::before {
+@media (prefers-color-scheme: light) {
+    html:not(.dark) nav ul li a.active::before,
+    html:not(.dark) nav ul li a[aria-current="page"]::before {
         background: #000000;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
@@ -289,8 +334,13 @@ nav::after {
     transition: opacity 0.5s ease 0.5s;
 }
 
+html.light nav::after,
+body.light-mode nav::after {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 @media (prefers-color-scheme: light) {
-    nav::after {
+    html:not(.dark) nav::after {
         color: rgba(0, 0, 0, 0.3);
     }
 }

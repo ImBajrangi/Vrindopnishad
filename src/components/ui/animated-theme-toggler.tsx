@@ -1,10 +1,34 @@
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
-import { Moon, Sun } from "lucide-react"
 import { flushSync } from "react-dom"
 
 import { cn } from "@/lib/utils"
+
+export const SolidMoonIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    width="1.15em"
+    height="1.15em"
+    {...props}
+  >
+    <path d="M21.64 13a1 1 0 0 0-1.05-.14 8.05 8.05 0 0 1-3.37.73A8.15 8.15 0 0 1 9.08 5.44a8.59 8.59 0 0 1 .73-3.37 1 1 0 0 0-1.29-1.29A10.16 10.16 0 0 0 2 10.7a10.15 10.15 0 0 0 10.15 10.15c4.74 0 8.78-3.26 9.87-7.85a1 1 0 0 0-.38-1z" />
+  </svg>
+)
+
+export const SolidSunIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    width="1.15em"
+    height="1.15em"
+    {...props}
+  >
+    <circle cx="12" cy="12" r="5.5" />
+    <path d="M12 1.5a1.25 1.25 0 0 1 1.25 1.25v1.5a1.25 1.25 0 0 1-2.5 0v-1.5A1.25 1.25 0 0 1 12 1.5zM12 18.5a1.25 1.25 0 0 1 1.25 1.25v1.5a1.25 1.25 0 0 1-2.5 0v-1.5A1.25 1.25 0 0 1 12 18.5zM4.05 4.05a1.25 1.25 0 0 1 1.77 0l1.06 1.06a1.25 1.25 0 1 1-1.77 1.77L4.05 5.82a1.25 1.25 0 0 1 0-1.77zM17.12 17.12a1.25 1.25 0 0 1 1.77 0l1.06 1.06a1.25 1.25 0 0 1-1.77 1.77l-1.06-1.06a1.25 1.25 0 0 1 0-1.77zM1.5 12a1.25 1.25 0 0 1 1.25-1.25h1.5a1.25 1.25 0 0 1 0 2.5h-1.5A1.25 1.25 0 0 1 1.5 12zM18.5 12a1.25 1.25 0 0 1 1.25-1.25h1.5a1.25 1.25 0 0 1 0 2.5h-1.5A1.25 1.25 0 0 1 18.5 12zM4.05 19.95a1.25 1.25 0 0 1 0-1.77l1.06-1.06a1.25 1.25 0 1 1 1.77 1.77l-1.06 1.06a1.25 1.25 0 0 1-1.77 0zM17.12 6.88a1.25 1.25 0 0 1 0-1.77l1.06-1.06a1.25 1.25 0 1 1 1.77 1.77l-1.06 1.06a1.25 1.25 0 0 1-1.77 0z" />
+  </svg>
+)
 
 export type TransitionVariant =
   | "circle"
@@ -27,6 +51,10 @@ interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"butt
   theme?: "light" | "dark"
   /** Called on toggle. Pair with `theme` for controlled usage. */
   onThemeChange?: (theme: "light" | "dark") => void
+  /** Custom Sun icon */
+  sunIcon?: React.ReactNode
+  /** Custom Moon icon */
+  moonIcon?: React.ReactNode
 }
 
 function polygonCollapsed(point: string, vertexCount: number): string {
@@ -157,6 +185,8 @@ export const AnimatedThemeToggler = ({
   fromCenter = false,
   theme,
   onThemeChange,
+  sunIcon,
+  moonIcon,
   ...props
 }: AnimatedThemeTogglerProps) => {
   const shape = variant ?? "circle"
@@ -169,19 +199,60 @@ export const AnimatedThemeToggler = ({
   useEffect(() => {
     if (isControlled) return
 
-    const updateTheme = () => {
-      setInternalIsDark(document.documentElement.classList.contains("dark"))
+    const applyClassTheme = (isDarkTheme: boolean) => {
+      document.documentElement.classList.toggle("dark", isDarkTheme)
+      document.documentElement.classList.toggle("light", !isDarkTheme)
+      document.body.classList.toggle("dark-mode", isDarkTheme)
+      document.body.classList.toggle("light-mode", !isDarkTheme)
+      setInternalIsDark(isDarkTheme)
     }
 
-    updateTheme()
+    const savedTheme = localStorage.getItem("theme")
+    if (savedTheme) {
+      applyClassTheme(savedTheme === "dark")
+    } else {
+      const isSystemDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+      applyClassTheme(isSystemDark)
+    }
+
+    const updateTheme = () => {
+      const isCurrentlyDark =
+        document.documentElement.classList.contains("dark") ||
+        document.body.classList.contains("dark-mode")
+      setInternalIsDark(isCurrentlyDark)
+    }
 
     const observer = new MutationObserver(updateTheme)
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["class"],
     })
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
 
-    return () => observer.disconnect()
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+    const handleSystemChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem("theme")) {
+        applyClassTheme(e.matches)
+      }
+    }
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleSystemChange)
+    } else {
+      mediaQuery.addListener(handleSystemChange)
+    }
+
+    return () => {
+      observer.disconnect()
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", handleSystemChange)
+      } else {
+        mediaQuery.removeListener(handleSystemChange)
+      }
+    }
   }, [isControlled])
 
   const toggleTheme = useCallback(() => {
@@ -216,9 +287,13 @@ export const AnimatedThemeToggler = ({
 
     const applyTheme = () => {
       const newTheme = !isDark
-      // Always toggle the class synchronously so the View Transitions API
+      // Always toggle the classes synchronously so the View Transitions API
       // snapshots the new theme inside the startViewTransition callback.
-      document.documentElement.classList.toggle("dark")
+      document.documentElement.classList.toggle("dark", newTheme)
+      document.documentElement.classList.toggle("light", !newTheme)
+      document.body.classList.toggle("dark-mode", newTheme)
+      document.body.classList.toggle("light-mode", !newTheme)
+
       if (isControlled) {
         onThemeChange?.(newTheme ? "dark" : "light")
       } else {
@@ -294,11 +369,37 @@ export const AnimatedThemeToggler = ({
       type="button"
       ref={buttonRef}
       onClick={toggleTheme}
-      className={cn(className)}
+      className={cn("inline-flex items-center justify-center relative cursor-pointer select-none", className)}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        cursor: 'pointer',
+        userSelect: 'none',
+        ...props.style
+      }}
       {...props}
     >
-      {isDark ? <Sun /> : <Moon />}
-      <span className="sr-only">Toggle theme</span>
+      <span className="theme-toggle-icon-wrap" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.25s ease, color 0.25s ease' }}>
+        {isDark ? (sunIcon ?? <SolidSunIcon />) : (moonIcon ?? <SolidMoonIcon />)}
+      </span>
+      <span
+        className="sr-only"
+        style={{
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          padding: '0',
+          margin: '-1px',
+          overflow: 'hidden',
+          clip: 'rect(0, 0, 0, 0)',
+          whiteSpace: 'nowrap',
+          border: '0'
+        }}
+      >
+        Toggle theme
+      </span>
     </button>
   )
 }

@@ -19,19 +19,23 @@ export const Hero: React.FC = () => {
       }}
     >
       {/* Background SideRays WebGL Light Effect */}
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0, opacity: 0.85 }}>
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0 }}>
         <SideRays
           speed={1.5}
-          rayColor1="#e7c354"
-          rayColor2="#96c8ff"
-          intensity={0.6}
+          darkRayColor1="#e7c354"
+          darkRayColor2="#96c8ff"
+          lightRayColor1="#ca8a04"
+          lightRayColor2="#2563eb"
+          darkIntensity={0.6}
+          lightIntensity={0.38}
+          darkOpacity={0.85}
+          lightOpacity={0.5}
           spread={2.3}
           origin="top-right"
           tilt={0}
           saturation={1.7}
           blend={0.85}
           falloff={1.6}
-          opacity={1.0}
         />
       </div>
 
