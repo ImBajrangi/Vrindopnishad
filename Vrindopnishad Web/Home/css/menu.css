@@ -23,7 +23,7 @@
 /* ============================================
    Modern Fullscreen Mobile Navigation Menu
    ============================================ */
-nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer) {
+nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer):not(.hm-editorial-nav) {
     position: fixed !important;
     top: 60px !important;
     left: 0 !important;
@@ -48,18 +48,18 @@ nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer) {
     overflow-y: auto;
 }
 
-html.light nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer),
-body.light-mode nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer) {
+html.light nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer):not(.hm-editorial-nav),
+body.light-mode nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer):not(.hm-editorial-nav) {
     background: #ffffff !important;
 }
 
 @media (prefers-color-scheme: light) {
-    html:not(.dark) nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer) {
+    html:not(.dark) nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer):not(.hm-editorial-nav) {
         background: #ffffff !important;
     }
 }
 
-nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer).active {
+nav:not(.main-nav):not(.consensys-pill-bar):not(.consensys-mobile-drawer):not(.hm-editorial-nav).active {
     opacity: 1;
     visibility: visible;
 }
@@ -191,6 +191,7 @@ body.light-mode nav ul li a:focus {
 }
 
 @media (prefers-color-scheme: light) {
+
     html:not(.dark) nav ul li a:hover,
     html:not(.dark) nav ul li a:focus {
         color: #000000;
@@ -250,6 +251,7 @@ body.light-mode nav ul li a[aria-current="page"] {
 }
 
 @media (prefers-color-scheme: light) {
+
     html:not(.dark) nav ul li a.active,
     html:not(.dark) nav ul li a[aria-current="page"] {
         color: #000000;
@@ -281,6 +283,7 @@ body.light-mode nav ul li a[aria-current="page"]::before {
 }
 
 @media (prefers-color-scheme: light) {
+
     html:not(.dark) nav ul li a.active::before,
     html:not(.dark) nav ul li a[aria-current="page"]::before {
         background: #000000;

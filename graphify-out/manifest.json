@@ -1,0 +1,1857 @@
+{
+  "Vrindopnishad Web/Home/js/animations.js": {
+    "mtime": 1785511360.9287796,
+    "ast_hash": "4263f476e5c5034f8822a0022e5c69bb",
+    "semantic_hash": "4263f476e5c5034f8822a0022e5c69bb"
+  },
+  "Vrindopnishad Web/Home/js/effects.js": {
+    "mtime": 1785568671.1457613,
+    "ast_hash": "75f254ae78f2728ca98a895108a54c01",
+    "semantic_hash": "75f254ae78f2728ca98a895108a54c01"
+  },
+  "Vrindopnishad Web/Home/js/image-hover.js": {
+    "mtime": 1785560792.272257,
+    "ast_hash": "63d8ebcc386c32a072eac35e5abf0766",
+    "semantic_hash": "63d8ebcc386c32a072eac35e5abf0766"
+  },
+  "Vrindopnishad Web/Home/js/main-interactive.js": {
+    "mtime": 1785563526.1673067,
+    "ast_hash": "6095d651192c447f3cbe8f005e8e71d8",
+    "semantic_hash": "6095d651192c447f3cbe8f005e8e71d8"
+  },
+  "Vrindopnishad Web/Home/js/main.js": {
+    "mtime": 1785511360.9394443,
+    "ast_hash": "9c3c0fdce6e3737ad92179992f02be75",
+    "semantic_hash": "9c3c0fdce6e3737ad92179992f02be75"
+  },
+  "Vrindopnishad Web/class/data/content.db.js": {
+    "mtime": 1785671249.4081779,
+    "ast_hash": "88442dece628d3c592da116c24f167e5",
+    "semantic_hash": "88442dece628d3c592da116c24f167e5"
+  },
+  "Vrindopnishad Web/class/json/2025-09-19_13-34-42_legacy-unified-data.json": {
+    "mtime": 1785671249.585411,
+    "ast_hash": "980ea0ad10fbbfd0fcd979d63c87a423",
+    "semantic_hash": "980ea0ad10fbbfd0fcd979d63c87a423"
+  },
+  "Vrindopnishad Web/class/json/Default Collection-2025-09-24T15-20-20.json": {
+    "mtime": 1785671249.5901296,
+    "ast_hash": "6089bb1112671e6ca3f960b19d375860",
+    "semantic_hash": "6089bb1112671e6ca3f960b19d375860"
+  },
+  "Vrindopnishad Web/class/json/Shri Harivansh Chandr-2025-09-21T12-02-46.json": {
+    "mtime": 1785671249.5842533,
+    "ast_hash": "af95f32282fd769dd8f4f63f40aa562f",
+    "semantic_hash": "af95f32282fd769dd8f4f63f40aa562f"
+  },
+  "Vrindopnishad Web/class/json/audio-data.json": {
+    "mtime": 1785671249.5891688,
+    "ast_hash": "89aedddcd2fcf26dd6baa36a5e3cdb53",
+    "semantic_hash": "89aedddcd2fcf26dd6baa36a5e3cdb53"
+  },
+  "Vrindopnishad Web/class/json/books-audio-data.json": {
+    "mtime": 1785671249.5887165,
+    "ast_hash": "e2565eb95a59b1675f81027e76e46aaf",
+    "semantic_hash": "e2565eb95a59b1675f81027e76e46aaf"
+  },
+  "Vrindopnishad Web/class/json/books-data.json": {
+    "mtime": 1785671249.5875597,
+    "ast_hash": "2a2966efece8a3503df3cd337ad03ec5",
+    "semantic_hash": "2a2966efece8a3503df3cd337ad03ec5"
+  },
+  "Vrindopnishad Web/class/json/collection_data_price.json": {
+    "mtime": 1785671249.5881763,
+    "ast_hash": "46993f91366b1175ac9e1695ffa45ba4",
+    "semantic_hash": "46993f91366b1175ac9e1695ffa45ba4"
+  },
+  "Vrindopnishad Web/class/json/collections_data.json": {
+    "mtime": 1785671249.5860612,
+    "ast_hash": "3de98480c363de56eb545c3c14e7fa28",
+    "semantic_hash": "3de98480c363de56eb545c3c14e7fa28"
+  },
+  "Vrindopnishad Web/class/json/images.json": {
+    "mtime": 1785671249.5865974,
+    "ast_hash": "df7f905696b95b0bfe597e90ac57ee11",
+    "semantic_hash": "df7f905696b95b0bfe597e90ac57ee11"
+  },
+  "Vrindopnishad Web/class/json/pdf-links.json": {
+    "mtime": 1785671249.5870068,
+    "ast_hash": "d9bf306faf8b8e185e2d1d7fcc584b62",
+    "semantic_hash": "d9bf306faf8b8e185e2d1d7fcc584b62"
+  },
+  "Vrindopnishad Web/class/json/ye dekho shyam audio-file.json": {
+    "mtime": 1785671249.5896215,
+    "ast_hash": "1e57c13e4488220968821bd271c1a198",
+    "semantic_hash": "1e57c13e4488220968821bd271c1a198"
+  },
+  "Vrindopnishad Web/web-extentions/Cookie Consent/cookie-consent.js": {
+    "mtime": 1785511396.2543116,
+    "ast_hash": "06aef8b3cdc94aa8e33cf02b687584ef",
+    "semantic_hash": "06aef8b3cdc94aa8e33cf02b687584ef"
+  },
+  "Vrindopnishad Web/web-extentions/Custom Cursor/Advanced Custom Cursor/Advanced-cc.js": {
+    "mtime": 1785511396.278305,
+    "ast_hash": "bb10f72352ba465f0a5b65ca6e4e7a94",
+    "semantic_hash": "bb10f72352ba465f0a5b65ca6e4e7a94"
+  },
+  "Vrindopnishad Web/web-extentions/Custom Cursor/custom-cursor.js": {
+    "mtime": 1785560039.8193018,
+    "ast_hash": "9ff127321d2e8554c1e6f674fcd32066",
+    "semantic_hash": "9ff127321d2e8554c1e6f674fcd32066"
+  },
+  "Vrindopnishad Web/web-extentions/Ripple btn/btn-ripple.js": {
+    "mtime": 1785511396.2748978,
+    "ast_hash": "fa0c3c171867d5c4335b46545d334ea4",
+    "semantic_hash": "fa0c3c171867d5c4335b46545d334ea4"
+  },
+  "Vrindopnishad Web/web-extentions/links/link-handler.js": {
+    "mtime": 1785511396.2583447,
+    "ast_hash": "651f9fd0bb642763ee5ce7805d1cde10",
+    "semantic_hash": "651f9fd0bb642763ee5ce7805d1cde10"
+  },
+  "Vrindopnishad Web/web-extentions/links/linkme.js": {
+    "mtime": 1785511396.261716,
+    "ast_hash": "aecb7ca4420ff8347eb12a1907d5118d",
+    "semantic_hash": "aecb7ca4420ff8347eb12a1907d5118d"
+  },
+  "Vrindopnishad Web/web-extentions/loader/loader.js": {
+    "mtime": 1785511396.2693124,
+    "ast_hash": "616bb9b83d89ca1ba62bfba25bd16baf",
+    "semantic_hash": "616bb9b83d89ca1ba62bfba25bd16baf"
+  },
+  "Vrindopnishad Web/web-extentions/loader/random-loader.js": {
+    "mtime": 1785511396.268501,
+    "ast_hash": "26b44899a7546600323be38e6585c9ea",
+    "semantic_hash": "26b44899a7546600323be38e6585c9ea"
+  },
+  "package.json": {
+    "mtime": 1786003647.3725612,
+    "ast_hash": "602aa3115cb94762ae33bf53155bb034",
+    "semantic_hash": ""
+  },
+  "src/App.tsx": {
+    "mtime": 1786166342.5350845,
+    "ast_hash": "030f6e6349b9851821290a6afc9b88a0",
+    "semantic_hash": ""
+  },
+  "src/components/AppsSection.tsx": {
+    "mtime": 1785864408.251278,
+    "ast_hash": "f66f3d7e350d4701a5872bccf526abff",
+    "semantic_hash": "f66f3d7e350d4701a5872bccf526abff"
+  },
+  "src/components/BentoGrid.tsx": {
+    "mtime": 1785864399.9850278,
+    "ast_hash": "3c0567e6339abe7c9b846f88ca14a00b",
+    "semantic_hash": "3c0567e6339abe7c9b846f88ca14a00b"
+  },
+  "src/components/BlurText.tsx": {
+    "mtime": 1785652511.6070085,
+    "ast_hash": "7aa5874da376d85d2e4b4f07e769a40b",
+    "semantic_hash": "7aa5874da376d85d2e4b4f07e769a40b"
+  },
+  "src/components/ConsensysMegaNav.tsx": {
+    "mtime": 1786162914.1039307,
+    "ast_hash": "943c5892b301077f2d6edaaf825c6c0a",
+    "semantic_hash": ""
+  },
+  "src/components/CustomCursor.tsx": {
+    "mtime": 1785644826.6463506,
+    "ast_hash": "2f3df640dee28a1c1b0b20b0529230c8",
+    "semantic_hash": "2f3df640dee28a1c1b0b20b0529230c8"
+  },
+  "src/components/DigitalUniverseSection.tsx": {
+    "mtime": 1785643966.5311153,
+    "ast_hash": "29885670c6bbdabced878709bdcb6047",
+    "semantic_hash": "29885670c6bbdabced878709bdcb6047"
+  },
+  "src/components/Footer.tsx": {
+    "mtime": 1785853666.2442167,
+    "ast_hash": "07280193228ae514997c294591aea0dd",
+    "semantic_hash": "07280193228ae514997c294591aea0dd"
+  },
+  "src/components/GradualBlur.tsx": {
+    "mtime": 1785572779.5505247,
+    "ast_hash": "1a0a64dac75488c9b4f13129496392fe",
+    "semantic_hash": "1a0a64dac75488c9b4f13129496392fe"
+  },
+  "src/components/Header.tsx": {
+    "mtime": 1786004192.3278103,
+    "ast_hash": "92bc641f29ad85a5d60a1a54fde8df94",
+    "semantic_hash": ""
+  },
+  "src/components/Hero.tsx": {
+    "mtime": 1786162765.3594875,
+    "ast_hash": "33fec169e7b3dcdabef5539502c9f469",
+    "semantic_hash": ""
+  },
+  "src/components/HorizontalScrollText.tsx": {
+    "mtime": 1785865087.695615,
+    "ast_hash": "5db7ddcacbfb4b38cd3f148aa5fd5ca0",
+    "semantic_hash": "5db7ddcacbfb4b38cd3f148aa5fd5ca0"
+  },
+  "src/components/InfiniteMenu.tsx": {
+    "mtime": 1785865979.4963505,
+    "ast_hash": "2b82cc74a8311d37923939ec075da4ad",
+    "semantic_hash": "2b82cc74a8311d37923939ec075da4ad"
+  },
+  "src/components/MasterNavigationModal.tsx": {
+    "mtime": 1785865990.503676,
+    "ast_hash": "b03db70fa5aba6d53bb6c8b00e6b1ba8",
+    "semantic_hash": "b03db70fa5aba6d53bb6c8b00e6b1ba8"
+  },
+  "src/components/MouseEffects.tsx": {
+    "mtime": 1785650411.8241851,
+    "ast_hash": "8a39fed2e5b1f4438cec8047c6b4cf25",
+    "semantic_hash": "8a39fed2e5b1f4438cec8047c6b4cf25"
+  },
+  "src/components/NotificationToast.tsx": {
+    "mtime": 1786112895.022778,
+    "ast_hash": "1234117e62cf66bb77ca70ede8c44fa1",
+    "semantic_hash": ""
+  },
+  "src/components/OfflineOverlay.tsx": {
+    "mtime": 1785865103.4520392,
+    "ast_hash": "e75ffe1821343f5a0975dda061a8aaec",
+    "semantic_hash": "e75ffe1821343f5a0975dda061a8aaec"
+  },
+  "src/components/OnScrollTypography.tsx": {
+    "mtime": 1785586532.3398342,
+    "ast_hash": "29740c67e9f635e80ecc155225cb67f5",
+    "semantic_hash": "29740c67e9f635e80ecc155225cb67f5"
+  },
+  "src/components/OptionWheel.tsx": {
+    "mtime": 1785572078.3228674,
+    "ast_hash": "7f894b1f48eca1f5c6968660e8403c74",
+    "semantic_hash": "7f894b1f48eca1f5c6968660e8403c74"
+  },
+  "src/components/PixelIcon.tsx": {
+    "mtime": 1785639701.5144017,
+    "ast_hash": "0010ecbd3f5a1b5fb278cdef3e86f33b",
+    "semantic_hash": "0010ecbd3f5a1b5fb278cdef3e86f33b"
+  },
+  "src/components/ProjectsShowcase.tsx": {
+    "mtime": 1785864419.1973147,
+    "ast_hash": "ee24b514a81375b6a0b81b807fdc24a8",
+    "semantic_hash": "ee24b514a81375b6a0b81b807fdc24a8"
+  },
+  "src/components/RotatingText.tsx": {
+    "mtime": 1785586208.1291122,
+    "ast_hash": "6f66d0df7b0226a315e723f98f588e1b",
+    "semantic_hash": "6f66d0df7b0226a315e723f98f588e1b"
+  },
+  "src/components/SanctuaryExperienceSection.tsx": {
+    "mtime": 1786121046.3677113,
+    "ast_hash": "6767526d97781ff42a73053153e5e940",
+    "semantic_hash": ""
+  },
+  "src/components/ScrollBlurText.tsx": {
+    "mtime": 1785586529.5318356,
+    "ast_hash": "f946720894c4572732a63632c5ad261b",
+    "semantic_hash": "f946720894c4572732a63632c5ad261b"
+  },
+  "src/components/SideRays.tsx": {
+    "mtime": 1786115970.0621195,
+    "ast_hash": "0c9d6d38d0aa2fc64b2ca7c606ad5c3b",
+    "semantic_hash": ""
+  },
+  "src/components/StorySection.tsx": {
+    "mtime": 1785864395.0662863,
+    "ast_hash": "7fc9090e8f67e5f81f1730f23666756f",
+    "semantic_hash": "7fc9090e8f67e5f81f1730f23666756f"
+  },
+  "src/components/TextPressure.tsx": {
+    "mtime": 1785638190.7570767,
+    "ast_hash": "32276f2953dbd43b23f18a96acb509c2",
+    "semantic_hash": "32276f2953dbd43b23f18a96acb509c2"
+  },
+  "src/components/ToolsMenuModal.tsx": {
+    "mtime": 1785853513.4536736,
+    "ast_hash": "cf78915fa86c0d538e2367ab472ea25e",
+    "semantic_hash": "cf78915fa86c0d538e2367ab472ea25e"
+  },
+  "src/components/ValuesSection.tsx": {
+    "mtime": 1785864404.1007555,
+    "ast_hash": "11caf9aea1e90fd5728431c654847cff",
+    "semantic_hash": "11caf9aea1e90fd5728431c654847cff"
+  },
+  "src/components/VedicPhilosophySection.tsx": {
+    "mtime": 1785865074.353934,
+    "ast_hash": "566d9f144e96c31c0021663a4c63bdfe",
+    "semantic_hash": "566d9f144e96c31c0021663a4c63bdfe"
+  },
+  "src/components/originkit/ui/animated-list.tsx": {
+    "mtime": 1785867131.9532542,
+    "ast_hash": "814d2c0da1cdecde8f5c3eedae5a5580",
+    "semantic_hash": "814d2c0da1cdecde8f5c3eedae5a5580"
+  },
+  "src/components/originkit/ui/dot-scatter.tsx": {
+    "mtime": 1785563134.6848488,
+    "ast_hash": "7472522830df5278c80ad1fa6d598730",
+    "semantic_hash": "7472522830df5278c80ad1fa6d598730"
+  },
+  "src/components/originkit/ui/pixel-led-display.tsx": {
+    "mtime": 1785864389.7440434,
+    "ast_hash": "671cd5e2487566b0713c89c6752d39e8",
+    "semantic_hash": "671cd5e2487566b0713c89c6752d39e8"
+  },
+  "src/components/originkit/ui/text-carousel.tsx": {
+    "mtime": 1785567921.862412,
+    "ast_hash": "8eef07d299ec0b76de1ba04c865ab978",
+    "semantic_hash": "8eef07d299ec0b76de1ba04c865ab978"
+  },
+  "src/components/originkit/ui/text-morph.tsx": {
+    "mtime": 1785865339.6846128,
+    "ast_hash": "1ea0f9f8828f79579054e98274d676fc",
+    "semantic_hash": "1ea0f9f8828f79579054e98274d676fc"
+  },
+  "src/components/originkit/ui/text-vaporize.tsx": {
+    "mtime": 1785638933.6844425,
+    "ast_hash": "9447044a4480bdb3efc896c92b93a275",
+    "semantic_hash": "9447044a4480bdb3efc896c92b93a275"
+  },
+  "src/components/originkit/ui/usercursor.tsx": {
+    "mtime": 1785561315.1925657,
+    "ast_hash": "10fc807d0b505c6adfb1363194fe79fa",
+    "semantic_hash": "10fc807d0b505c6adfb1363194fe79fa"
+  },
+  "src/components/ui/animated-theme-toggler-next-themes-demo.tsx": {
+    "mtime": 1785930951.8981185,
+    "ast_hash": "532b0fc4dca4287e59bc962fe09a9d88",
+    "semantic_hash": "532b0fc4dca4287e59bc962fe09a9d88"
+  },
+  "src/components/ui/animated-theme-toggler.tsx": {
+    "mtime": 1785953442.3686054,
+    "ast_hash": "cd9246f8e520726e4bcf7bcbb113fea2",
+    "semantic_hash": "cd9246f8e520726e4bcf7bcbb113fea2"
+  },
+  "src/hooks/useAnimations.ts": {
+    "mtime": 1785568589.543068,
+    "ast_hash": "2f840b2cc8c87c085be1f681f44296b1",
+    "semantic_hash": "2f840b2cc8c87c085be1f681f44296b1"
+  },
+  "src/hooks/useScrollTextEffects.ts": {
+    "mtime": 1785586523.7222657,
+    "ast_hash": "3627d58d28cafee9b4cacf0f6ac21e68",
+    "semantic_hash": "3627d58d28cafee9b4cacf0f6ac21e68"
+  },
+  "src/lib/utils.ts": {
+    "mtime": 1785930569.202302,
+    "ast_hash": "31fa0e2304a5e68eddcd0ae8fac8995f",
+    "semantic_hash": "31fa0e2304a5e68eddcd0ae8fac8995f"
+  },
+  "src/main.tsx": {
+    "mtime": 1785511360.8601644,
+    "ast_hash": "630ea3322e7a999da3e52d743ebb4749",
+    "semantic_hash": "630ea3322e7a999da3e52d743ebb4749"
+  },
+  "src/types/firebase.d.ts": {
+    "mtime": 1785511360.8610525,
+    "ast_hash": "b79303161e316472208b9774c8f23716",
+    "semantic_hash": "b79303161e316472208b9774c8f23716"
+  },
+  "src/types/index.ts": {
+    "mtime": 1785567578.1273072,
+    "ast_hash": "522538c79a5593c1fee19d1c627ac6b8",
+    "semantic_hash": "522538c79a5593c1fee19d1c627ac6b8"
+  },
+  "tsconfig.json": {
+    "mtime": 1785511360.89876,
+    "ast_hash": "e918da0a3e8f2a5f1f7213577d48d04c",
+    "semantic_hash": "e918da0a3e8f2a5f1f7213577d48d04c"
+  },
+  "vercel.json": {
+    "mtime": 1785654268.5878665,
+    "ast_hash": "6c4e6238f64162b60118d19a81227240",
+    "semantic_hash": "6c4e6238f64162b60118d19a81227240"
+  },
+  "vite.config.ts": {
+    "mtime": 1785511360.8966458,
+    "ast_hash": "0f18d5711f69693a7e65c4ad5f0bfe38",
+    "semantic_hash": "0f18d5711f69693a7e65c4ad5f0bfe38"
+  },
+  "AGENTS.md": {
+    "mtime": 1785649720.7772563,
+    "ast_hash": "63e01e72353f93c42c85e2bd65c7a1c6",
+    "semantic_hash": "63e01e72353f93c42c85e2bd65c7a1c6"
+  },
+  "Vrindopnishad Web/Home/main/BigIndex.html": {
+    "mtime": 1785670915.715173,
+    "ast_hash": "59fa41890bba75aed9237ac47722f40e",
+    "semantic_hash": "59fa41890bba75aed9237ac47722f40e"
+  },
+  "Vrindopnishad Web/web-extentions/Custom Cursor/Advanced Custom Cursor/Advanced-cc.html": {
+    "mtime": 1785511396.2814257,
+    "ast_hash": "df19206986c59753cba15a00891cf378",
+    "semantic_hash": "df19206986c59753cba15a00891cf378"
+  },
+  "Vrindopnishad Web/web-extentions/Custom Cursor/custom-cursor.html": {
+    "mtime": 1785511396.2844186,
+    "ast_hash": "f9eff8061521f6d8c788bd603757431a",
+    "semantic_hash": "f9eff8061521f6d8c788bd603757431a"
+  },
+  "Vrindopnishad Web/web-extentions/Ripple btn/docs/ripple-documentation.md": {
+    "mtime": 1785511396.2723477,
+    "ast_hash": "97b55b813829db1ec1bde5ddbbf6681f",
+    "semantic_hash": "97b55b813829db1ec1bde5ddbbf6681f"
+  },
+  "Vrindopnishad Web/web-extentions/Ripple btn/ripple.html": {
+    "mtime": 1785511396.2734191,
+    "ast_hash": "653d4b29dc98ddc92fd04eab68493c5c",
+    "semantic_hash": "653d4b29dc98ddc92fd04eab68493c5c"
+  },
+  "Vrindopnishad Web/web-extentions/links/linking.html": {
+    "mtime": 1785511396.2632058,
+    "ast_hash": "6525250d4fff6d651968f320b79f6b87",
+    "semantic_hash": "6525250d4fff6d651968f320b79f6b87"
+  },
+  "Vrindopnishad Web/web-extentions/loader/loader.html": {
+    "mtime": 1785511396.2663858,
+    "ast_hash": "ede26bd91eb5fcf9c633395a61be0568",
+    "semantic_hash": "ede26bd91eb5fcf9c633395a61be0568"
+  },
+  "index.html": {
+    "mtime": 1785853547.123227,
+    "ast_hash": "824bd261a9aeecf98b59800e05ac26d2",
+    "semantic_hash": "824bd261a9aeecf98b59800e05ac26d2"
+  },
+  "public/robots.txt": {
+    "mtime": 1785853583.5484202,
+    "ast_hash": "fd1f387743f7a48def33e2f24fc844c7",
+    "semantic_hash": "fd1f387743f7a48def33e2f24fc844c7"
+  },
+  "Vrindopnishad Web/Home/main/image/vrinda-projects/chitra_vrinda_hero.jpg": {
+    "mtime": 1785511360.9547598,
+    "ast_hash": "4d0984aec6cb8a60e6fa99ec95fcbb12",
+    "semantic_hash": "4d0984aec6cb8a60e6fa99ec95fcbb12"
+  },
+  "Vrindopnishad Web/Home/main/image/vrinda-projects/foody_vrinda_hero.png": {
+    "mtime": 1785511360.9512775,
+    "ast_hash": "5024dfe3445b2886a019cca0a3517612",
+    "semantic_hash": "5024dfe3445b2886a019cca0a3517612"
+  },
+  "Vrindopnishad Web/Home/main/image/vrinda-projects/optimized/chitra_vrinda_hero.jpg": {
+    "mtime": 1785511360.9594696,
+    "ast_hash": "79898b9dc71dbcd6ad221a6f5dfe3453",
+    "semantic_hash": "79898b9dc71dbcd6ad221a6f5dfe3453"
+  },
+  "Vrindopnishad Web/Home/main/image/vrinda-projects/optimized/foody_vrinda_hero.jpg": {
+    "mtime": 1785511360.956871,
+    "ast_hash": "331b6d88ea7a3cba9efd0ccce17326d3",
+    "semantic_hash": "331b6d88ea7a3cba9efd0ccce17326d3"
+  },
+  "Vrindopnishad Web/Home/main/image/vrinda-projects/optimized/foody_vrinda_hero.png": {
+    "mtime": 1785511360.9581141,
+    "ast_hash": "5c6d467728bd74bbb7230f5461aafb3b",
+    "semantic_hash": "5c6d467728bd74bbb7230f5461aafb3b"
+  },
+  "Vrindopnishad Web/Home/main/image/vrinda-projects/optimized/vrinda_tours_hero.jpg": {
+    "mtime": 1785511360.955873,
+    "ast_hash": "482778d979b5166bd12c84103f54e62b",
+    "semantic_hash": "482778d979b5166bd12c84103f54e62b"
+  },
+  "Vrindopnishad Web/Home/main/image/vrinda-projects/vrinda_tours_hero.jpg": {
+    "mtime": 1785511360.947343,
+    "ast_hash": "d538d3c78eb9730a9f4cfe5131252708",
+    "semantic_hash": "d538d3c78eb9730a9f4cfe5131252708"
+  },
+  "Vrindopnishad Web/class/Team picture/hariom.png": {
+    "mtime": 1785671249.406493,
+    "ast_hash": "df606a70965bf4ccf2ecbb9ea89369e2",
+    "semantic_hash": "df606a70965bf4ccf2ecbb9ea89369e2"
+  },
+  "Vrindopnishad Web/class/Team picture/hemraj.png": {
+    "mtime": 1785671249.4050953,
+    "ast_hash": "5de32c76b311b4fb3de64f8397373730",
+    "semantic_hash": "5de32c76b311b4fb3de64f8397373730"
+  },
+  "Vrindopnishad Web/class/Team picture/punit.png": {
+    "mtime": 1785671249.4057515,
+    "ast_hash": "d58a013c534bf65c4810e533cbc68d64",
+    "semantic_hash": "d58a013c534bf65c4810e533cbc68d64"
+  },
+  "Vrindopnishad Web/class/Team picture/scooter wale maharaj ji.png": {
+    "mtime": 1785671249.4041133,
+    "ast_hash": "accbe2096c09504f0528a24c710ce714",
+    "semantic_hash": "accbe2096c09504f0528a24c710ce714"
+  },
+  "Vrindopnishad Web/class/Team picture/yash.png": {
+    "mtime": 1785671249.4072413,
+    "ast_hash": "3668db13e9f380aa71aff6dcd069e5f5",
+    "semantic_hash": "3668db13e9f380aa71aff6dcd069e5f5"
+  },
+  "Vrindopnishad Web/class/favicon-foodyVrinda/android-chrome-192x192.png": {
+    "mtime": 1785671249.4114494,
+    "ast_hash": "53d876e843712d9607821c2fe9ed5b4d",
+    "semantic_hash": "53d876e843712d9607821c2fe9ed5b4d"
+  },
+  "Vrindopnishad Web/class/favicon-foodyVrinda/android-chrome-512x512.png": {
+    "mtime": 1785671249.4132774,
+    "ast_hash": "70c4876e2990006837cccbe720e6aaca",
+    "semantic_hash": "70c4876e2990006837cccbe720e6aaca"
+  },
+  "Vrindopnishad Web/class/favicon-foodyVrinda/apple-touch-icon.png": {
+    "mtime": 1785671249.4124737,
+    "ast_hash": "338e3a1bf4a6ec0957052b784004c10f",
+    "semantic_hash": "338e3a1bf4a6ec0957052b784004c10f"
+  },
+  "Vrindopnishad Web/class/favicon-foodyVrinda/favicon-16x16.png": {
+    "mtime": 1785671249.409298,
+    "ast_hash": "be43a06354ae10efdf1a10b8647fc564",
+    "semantic_hash": "be43a06354ae10efdf1a10b8647fc564"
+  },
+  "Vrindopnishad Web/class/favicon-foodyVrinda/favicon-32x32.png": {
+    "mtime": 1785671249.4148378,
+    "ast_hash": "992bc3c8dd27cd6a126383861a7df7cc",
+    "semantic_hash": "992bc3c8dd27cd6a126383861a7df7cc"
+  },
+  "Vrindopnishad Web/class/favicon-vrindaTours/android-chrome-192x192.png": {
+    "mtime": 1785671249.417415,
+    "ast_hash": "a2f9c9428c338e2179422d3cc2e712c2",
+    "semantic_hash": "a2f9c9428c338e2179422d3cc2e712c2"
+  },
+  "Vrindopnishad Web/class/favicon-vrindaTours/android-chrome-512x512.png": {
+    "mtime": 1785671249.419122,
+    "ast_hash": "86eaf223efe235762c77e7a5edbe6125",
+    "semantic_hash": "86eaf223efe235762c77e7a5edbe6125"
+  },
+  "Vrindopnishad Web/class/favicon-vrindaTours/apple-touch-icon.png": {
+    "mtime": 1785671249.418469,
+    "ast_hash": "2d71fd16ff42ffe56014ae0536bb3b5e",
+    "semantic_hash": "2d71fd16ff42ffe56014ae0536bb3b5e"
+  },
+  "Vrindopnishad Web/class/favicon-vrindaTours/favicon-16x16.png": {
+    "mtime": 1785671249.4157667,
+    "ast_hash": "0d563f7c7127062e052f6c8b8268a899",
+    "semantic_hash": "0d563f7c7127062e052f6c8b8268a899"
+  },
+  "Vrindopnishad Web/class/favicon-vrindaTours/favicon-32x32.png": {
+    "mtime": 1785671249.4205651,
+    "ast_hash": "4cd734c6b2de6f375221c528e9d0fef8",
+    "semantic_hash": "4cd734c6b2de6f375221c528e9d0fef8"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/android-chrome-192x192-dark-theme.png": {
+    "mtime": 1785671249.4221504,
+    "ast_hash": "57d0c4db3a2e4843076d0c5df375805f",
+    "semantic_hash": "57d0c4db3a2e4843076d0c5df375805f"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/android-chrome-192x192-light-theme.png": {
+    "mtime": 1785671249.429235,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/android-chrome-192x192.png": {
+    "mtime": 1785671249.4254427,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/android-chrome-512x512-dark-theme.png": {
+    "mtime": 1785671249.4239533,
+    "ast_hash": "a3a92753c8f39c5a51cdccf4aab4bab7",
+    "semantic_hash": "a3a92753c8f39c5a51cdccf4aab4bab7"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/android-chrome-512x512-light-theme.png": {
+    "mtime": 1785671249.4282742,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/android-chrome-512x512.png": {
+    "mtime": 1785671249.4320505,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/apple-touch-icon-dark-theme.png": {
+    "mtime": 1785671249.431027,
+    "ast_hash": "5fd73bed6a0fcf50afd0a63758d26195",
+    "semantic_hash": "5fd73bed6a0fcf50afd0a63758d26195"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/apple-touch-icon-light-theme.png": {
+    "mtime": 1785671249.4332292,
+    "ast_hash": "f98d846304cdbf9da40ab5b846b2f2e5",
+    "semantic_hash": "f98d846304cdbf9da40ab5b846b2f2e5"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/apple-touch-icon.png": {
+    "mtime": 1785671249.4260895,
+    "ast_hash": "f98d846304cdbf9da40ab5b846b2f2e5",
+    "semantic_hash": "f98d846304cdbf9da40ab5b846b2f2e5"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/favicon-16x16-dark-theme.png": {
+    "mtime": 1785671249.4344687,
+    "ast_hash": "b44b6191db3999fbe9583c41817ff56a",
+    "semantic_hash": "b44b6191db3999fbe9583c41817ff56a"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/favicon-16x16-light-theme.png": {
+    "mtime": 1785671249.4358191,
+    "ast_hash": "7f150084af187d60d2314c28fa6e27a1",
+    "semantic_hash": "7f150084af187d60d2314c28fa6e27a1"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/favicon-16x16.png": {
+    "mtime": 1785671249.4230607,
+    "ast_hash": "7f150084af187d60d2314c28fa6e27a1",
+    "semantic_hash": "7f150084af187d60d2314c28fa6e27a1"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/favicon-32x32-dark-theme.png": {
+    "mtime": 1785671249.4315197,
+    "ast_hash": "25e6efb1e6735fc0c54d01f70351ef91",
+    "semantic_hash": "25e6efb1e6735fc0c54d01f70351ef91"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/favicon-32x32-light-theme.png": {
+    "mtime": 1785671249.427464,
+    "ast_hash": "a71582b800ccf8596ac15075a1f304b7",
+    "semantic_hash": "a71582b800ccf8596ac15075a1f304b7"
+  },
+  "Vrindopnishad Web/class/favicon-vrindopnishad/favicon-32x32.png": {
+    "mtime": 1785671249.43382,
+    "ast_hash": "a71582b800ccf8596ac15075a1f304b7",
+    "semantic_hash": "a71582b800ccf8596ac15075a1f304b7"
+  },
+  "Vrindopnishad Web/class/foodyVrinda-logo-rounded/android-chrome-192x192.png": {
+    "mtime": 1785671249.4383903,
+    "ast_hash": "bc9a8b46fb648e3ff78e0fa7c5c20c97",
+    "semantic_hash": "bc9a8b46fb648e3ff78e0fa7c5c20c97"
+  },
+  "Vrindopnishad Web/class/foodyVrinda-logo-rounded/android-chrome-512x512.png": {
+    "mtime": 1785671249.4396195,
+    "ast_hash": "cebce38604e9ecf41246eae0f336d73b",
+    "semantic_hash": "cebce38604e9ecf41246eae0f336d73b"
+  },
+  "Vrindopnishad Web/class/foodyVrinda-logo-rounded/apple-touch-icon.png": {
+    "mtime": 1785671249.4389594,
+    "ast_hash": "96e6afec537e4e2d0028df47f0c134f5",
+    "semantic_hash": "96e6afec537e4e2d0028df47f0c134f5"
+  },
+  "Vrindopnishad Web/class/foodyVrinda-logo-rounded/favicon-16x16.png": {
+    "mtime": 1785671249.4370933,
+    "ast_hash": "235e523282487c3ef206102b3e099939",
+    "semantic_hash": "235e523282487c3ef206102b3e099939"
+  },
+  "Vrindopnishad Web/class/foodyVrinda-logo-rounded/favicon-32x32.png": {
+    "mtime": 1785671249.4406629,
+    "ast_hash": "fbbe865fd8fdf258c6b3bc8c5462ad02",
+    "semantic_hash": "fbbe865fd8fdf258c6b3bc8c5462ad02"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img1.jpg": {
+    "mtime": 1785671249.5685084,
+    "ast_hash": "31dfbfd176b1fc84e4722069b8097f6f",
+    "semantic_hash": "31dfbfd176b1fc84e4722069b8097f6f"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img2.jpg": {
+    "mtime": 1785671249.5655851,
+    "ast_hash": "5a9074a7179abcfcd5e2ba486d83b841",
+    "semantic_hash": "5a9074a7179abcfcd5e2ba486d83b841"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img3.jpg": {
+    "mtime": 1785671249.5647397,
+    "ast_hash": "35874a195e0a924b390c044908886c67",
+    "semantic_hash": "35874a195e0a924b390c044908886c67"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img4.jpg": {
+    "mtime": 1785671249.5615888,
+    "ast_hash": "20c99ad6c6729c3bcb6ebf4aaa6ef980",
+    "semantic_hash": "20c99ad6c6729c3bcb6ebf4aaa6ef980"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img5.jpg": {
+    "mtime": 1785671249.5607483,
+    "ast_hash": "2ec83f12dfa6a4302a59a29b4f9d81c2",
+    "semantic_hash": "2ec83f12dfa6a4302a59a29b4f9d81c2"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img6.jpg": {
+    "mtime": 1785671249.5632482,
+    "ast_hash": "113d463f9a9a5c3b87058966c0bb5974",
+    "semantic_hash": "113d463f9a9a5c3b87058966c0bb5974"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img_rv04.png": {
+    "mtime": 1785671249.5591965,
+    "ast_hash": "2a24ccab1a83bf241e2f0f4034468ed4",
+    "semantic_hash": "2a24ccab1a83bf241e2f0f4034468ed4"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img_rv05.png": {
+    "mtime": 1785671249.55586,
+    "ast_hash": "ea74d3621acca1864641345552014e6e",
+    "semantic_hash": "ea74d3621acca1864641345552014e6e"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img_sn01.png": {
+    "mtime": 1785671249.579467,
+    "ast_hash": "a28c8d962b109ff2ca1ba6fa9c5c978d",
+    "semantic_hash": "a28c8d962b109ff2ca1ba6fa9c5c978d"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img_sn02.png": {
+    "mtime": 1785671249.5675488,
+    "ast_hash": "ac812c352017bddad495e101e7c6ed7f",
+    "semantic_hash": "ac812c352017bddad495e101e7c6ed7f"
+  },
+  "Vrindopnishad Web/class/image/Home Pics/img_vas.jpg": {
+    "mtime": 1785671249.552698,
+    "ast_hash": "ebf6efed4b50b57b7a911c54e4e75dc2",
+    "semantic_hash": "ebf6efed4b50b57b7a911c54e4e75dc2"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/Blue_Krishna_as_synesthesia_visualization_with_sound_waves_crystallized_into_colors.png": {
+    "mtime": 1785671249.5450172,
+    "ast_hash": "0de51225e520f4a38909467aa4802129",
+    "semantic_hash": "0de51225e520f4a38909467aa4802129"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/Blue_Krishna_personified_as_living_aurora_borealis_with_cosmic_celestial_colors.png": {
+    "mtime": 1785671249.4770305,
+    "ast_hash": "05d333944014b833c1a95a69b54800a4",
+    "semantic_hash": "05d333944014b833c1a95a69b54800a4"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/Blue_Krishna_with_experimental_liquid_element_fusion_and_kaleidoscope_patterns.png": {
+    "mtime": 1785671249.471497,
+    "ast_hash": "c33c7f8cc757fd5054f6d3ec59529d0e",
+    "semantic_hash": "c33c7f8cc757fd5054f6d3ec59529d0e"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (1).png": {
+    "mtime": 1785671249.5063248,
+    "ast_hash": "2c13e93aceb21c8d66733decb7883904",
+    "semantic_hash": "2c13e93aceb21c8d66733decb7883904"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (108).png": {
+    "mtime": 1785671249.4960046,
+    "ast_hash": "4130390421de3d78fcbdc5c3e836804d",
+    "semantic_hash": "4130390421de3d78fcbdc5c3e836804d"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (119).png": {
+    "mtime": 1785671249.4745383,
+    "ast_hash": "7e30d510ad6a44d85a9c93b3a7dd685c",
+    "semantic_hash": "7e30d510ad6a44d85a9c93b3a7dd685c"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (12).png": {
+    "mtime": 1785671249.537104,
+    "ast_hash": "144d41c776db9ef9b5e08a3deb5f0bcb",
+    "semantic_hash": "144d41c776db9ef9b5e08a3deb5f0bcb"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (124).png": {
+    "mtime": 1785671249.5037293,
+    "ast_hash": "8f31ec57a36f5ea7197a1ef829642aee",
+    "semantic_hash": "8f31ec57a36f5ea7197a1ef829642aee"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (141).png": {
+    "mtime": 1785671249.5397642,
+    "ast_hash": "8349bf54758ca73e5c524e8f853b2cc1",
+    "semantic_hash": "8349bf54758ca73e5c524e8f853b2cc1"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (143).png": {
+    "mtime": 1785671249.479659,
+    "ast_hash": "13a6bf7d296a10686d71a48b0121b68c",
+    "semantic_hash": "13a6bf7d296a10686d71a48b0121b68c"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (144).png": {
+    "mtime": 1785671249.4878578,
+    "ast_hash": "d83da1bb1144ad06aff1de3f158f5c1c",
+    "semantic_hash": "d83da1bb1144ad06aff1de3f158f5c1c"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (151).png": {
+    "mtime": 1785671249.5197785,
+    "ast_hash": "484e30220f17aa4d606514241c936a7a",
+    "semantic_hash": "484e30220f17aa4d606514241c936a7a"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (19).png": {
+    "mtime": 1785671249.5114148,
+    "ast_hash": "a4de5ae38261f308cbd1f189056c5ff2",
+    "semantic_hash": "a4de5ae38261f308cbd1f189056c5ff2"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (37).png": {
+    "mtime": 1785671249.4932888,
+    "ast_hash": "803069af056566ef397821ae2e61dcef",
+    "semantic_hash": "803069af056566ef397821ae2e61dcef"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (40).png": {
+    "mtime": 1785671249.4907808,
+    "ast_hash": "c80af7bdf4d05541c6426578b22b2fe1",
+    "semantic_hash": "c80af7bdf4d05541c6426578b22b2fe1"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (44).png": {
+    "mtime": 1785671249.5287232,
+    "ast_hash": "bf6c1b86c8a2d4e16c6120499ba72aca",
+    "semantic_hash": "bf6c1b86c8a2d4e16c6120499ba72aca"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (53).png": {
+    "mtime": 1785671249.5422816,
+    "ast_hash": "e4c1aaa4ab93ac2e7a0325c22e79cd77",
+    "semantic_hash": "e4c1aaa4ab93ac2e7a0325c22e79cd77"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (69).png": {
+    "mtime": 1785671249.5347924,
+    "ast_hash": "e88405001bc03a9cc75228076d8f6823",
+    "semantic_hash": "e88405001bc03a9cc75228076d8f6823"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (71).png": {
+    "mtime": 1785671249.4849772,
+    "ast_hash": "3972960552f12206e9697521e24e4e7f",
+    "semantic_hash": "3972960552f12206e9697521e24e4e7f"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (72).png": {
+    "mtime": 1785671249.525671,
+    "ast_hash": "58f1c9356c8e8bd046e8556d000c8293",
+    "semantic_hash": "58f1c9356c8e8bd046e8556d000c8293"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (75).png": {
+    "mtime": 1785671249.5143473,
+    "ast_hash": "76b6c4d4a6e0d17aac1deba1f98173b1",
+    "semantic_hash": "76b6c4d4a6e0d17aac1deba1f98173b1"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/generated-image (77).png": {
+    "mtime": 1785671249.5008578,
+    "ast_hash": "791b9a00743e26358be8ee76efefcff7",
+    "semantic_hash": "791b9a00743e26358be8ee76efefcff7"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/image (19).png": {
+    "mtime": 1785671249.5169337,
+    "ast_hash": "7f245e96af799b471e587a0a415a5055",
+    "semantic_hash": "7f245e96af799b471e587a0a415a5055"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/image (21).png": {
+    "mtime": 1785671249.4983876,
+    "ast_hash": "e6adb14b3b021ea5f30114599e665515",
+    "semantic_hash": "e6adb14b3b021ea5f30114599e665515"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/image (24).png": {
+    "mtime": 1785671249.5226605,
+    "ast_hash": "99118b4b55d5bba55e2b6ff94dc5fca3",
+    "semantic_hash": "99118b4b55d5bba55e2b6ff94dc5fca3"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/image-3.png": {
+    "mtime": 1785671249.531467,
+    "ast_hash": "9de686725a6b98687e08a5ccc2f82cd4",
+    "semantic_hash": "9de686725a6b98687e08a5ccc2f82cd4"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/optimized/vrindopnishad-story.jpg": {
+    "mtime": 1785671249.518372,
+    "ast_hash": "b962707649c3be98766714a30c71f8e8",
+    "semantic_hash": "b962707649c3be98766714a30c71f8e8"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/vrindopnishad-digital-universe.jpg": {
+    "mtime": 1785671249.4821856,
+    "ast_hash": "99118b4b55d5bba55e2b6ff94dc5fca3",
+    "semantic_hash": "99118b4b55d5bba55e2b6ff94dc5fca3"
+  },
+  "Vrindopnishad Web/class/image/KRSHN/vrindopnishad-story.jpg": {
+    "mtime": 1785671249.508922,
+    "ast_hash": "e6adb14b3b021ea5f30114599e665515",
+    "semantic_hash": "e6adb14b3b021ea5f30114599e665515"
+  },
+  "Vrindopnishad Web/class/image/Premium/krishna.png": {
+    "mtime": 1785671249.5828438,
+    "ast_hash": "5c78b96cc2f4c1d02424426f20ede776",
+    "semantic_hash": "5c78b96cc2f4c1d02424426f20ede776"
+  },
+  "Vrindopnishad Web/class/image/Premium/temple.png": {
+    "mtime": 1785671249.5819764,
+    "ast_hash": "bb77a0e9ceb03afe85fcdf3db7d54cc1",
+    "semantic_hash": "bb77a0e9ceb03afe85fcdf3db7d54cc1"
+  },
+  "Vrindopnishad Web/class/image/icons/angle-small-left.svg": {
+    "mtime": 1785671249.551273,
+    "ast_hash": "5978d0217c7a30a4f06be4aa648d9620",
+    "semantic_hash": "5978d0217c7a30a4f06be4aa648d9620"
+  },
+  "Vrindopnishad Web/class/image/icons/angle-small-right.svg": {
+    "mtime": 1785671249.545951,
+    "ast_hash": "cd7423f07a1e3cec670d638e60d8cf80",
+    "semantic_hash": "cd7423f07a1e3cec670d638e60d8cf80"
+  },
+  "Vrindopnishad Web/class/image/icons/book-open-cover-bold.svg": {
+    "mtime": 1785671249.5487177,
+    "ast_hash": "f079cc2811dd13b1ae52b854f6323370",
+    "semantic_hash": "f079cc2811dd13b1ae52b854f6323370"
+  },
+  "Vrindopnishad Web/class/image/icons/book-open-cover.svg": {
+    "mtime": 1785671249.5504184,
+    "ast_hash": "50d05db2cd6a0a7451a069ed1f8b1445",
+    "semantic_hash": "50d05db2cd6a0a7451a069ed1f8b1445"
+  },
+  "Vrindopnishad Web/class/image/icons/collection-bold.svg": {
+    "mtime": 1785671249.5470037,
+    "ast_hash": "740e8dd1c7268acfa25049971c55bcfa",
+    "semantic_hash": "740e8dd1c7268acfa25049971c55bcfa"
+  },
+  "Vrindopnishad Web/class/image/icons/collection.svg": {
+    "mtime": 1785671249.5499573,
+    "ast_hash": "d72baf4db4ca903748166a093c2ca954",
+    "semantic_hash": "d72baf4db4ca903748166a093c2ca954"
+  },
+  "Vrindopnishad Web/class/image/icons/house-bold.svg": {
+    "mtime": 1785671249.5491428,
+    "ast_hash": "4b425c555065eccef0f902e407b6e459",
+    "semantic_hash": "4b425c555065eccef0f902e407b6e459"
+  },
+  "Vrindopnishad Web/class/image/icons/house.svg": {
+    "mtime": 1785671249.546521,
+    "ast_hash": "dc02fdf02c5b8ecbcfdeb7a2beb78d5d",
+    "semantic_hash": "dc02fdf02c5b8ecbcfdeb7a2beb78d5d"
+  },
+  "Vrindopnishad Web/class/image/icons/image-bold.svg": {
+    "mtime": 1785671249.5474248,
+    "ast_hash": "f56fe19f845df7765210f1b4f82fb049",
+    "semantic_hash": "f56fe19f845df7765210f1b4f82fb049"
+  },
+  "Vrindopnishad Web/class/image/icons/image.svg": {
+    "mtime": 1785671249.548289,
+    "ast_hash": "1fc22d2ab76f7a5038510bd3e6c74267",
+    "semantic_hash": "1fc22d2ab76f7a5038510bd3e6c74267"
+  },
+  "Vrindopnishad Web/class/image/icons/people-bold.svg": {
+    "mtime": 1785671249.5508099,
+    "ast_hash": "edbfebeb417f645f7710a8672d6a5fb6",
+    "semantic_hash": "edbfebeb417f645f7710a8672d6a5fb6"
+  },
+  "Vrindopnishad Web/class/image/icons/people.svg": {
+    "mtime": 1785671249.5478435,
+    "ast_hash": "f3a6cf3b66d74a4dbb462fc520165b2d",
+    "semantic_hash": "f3a6cf3b66d74a4dbb462fc520165b2d"
+  },
+  "Vrindopnishad Web/class/image/icons/youtube.svg": {
+    "mtime": 1785671249.5495389,
+    "ast_hash": "f59d477bc4ea342a0f6de57e73d024e3",
+    "semantic_hash": "f59d477bc4ea342a0f6de57e73d024e3"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/Shrinathji.jpg": {
+    "mtime": 1785671249.4685519,
+    "ast_hash": "77e326fb172a810746b8c947e937708c",
+    "semantic_hash": "77e326fb172a810746b8c947e937708c"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/bg.png": {
+    "mtime": 1785671249.4673955,
+    "ast_hash": "26ed90cc296066dcd1e6bdf12131665f",
+    "semantic_hash": "26ed90cc296066dcd1e6bdf12131665f"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/img_bs1.jpg": {
+    "mtime": 1785671249.4549034,
+    "ast_hash": "d2da1987880b084c19547b5b6f70b517",
+    "semantic_hash": "d2da1987880b084c19547b5b6f70b517"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/img_n1.jpg": {
+    "mtime": 1785671249.4532042,
+    "ast_hash": "18948351c4b5332affe2e6a68926d5b0",
+    "semantic_hash": "18948351c4b5332affe2e6a68926d5b0"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/img_n2.jpg": {
+    "mtime": 1785671249.4469414,
+    "ast_hash": "e40c041ab7a21718fbc5725a8332c0d3",
+    "semantic_hash": "e40c041ab7a21718fbc5725a8332c0d3"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/img_rv2.jpg": {
+    "mtime": 1785671249.4668682,
+    "ast_hash": "9c4e34625f31ebab023bc03795251ebd",
+    "semantic_hash": "9c4e34625f31ebab023bc03795251ebd"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/img_rv3.jpg": {
+    "mtime": 1785671249.4608727,
+    "ast_hash": "1b1eee1822eb08c04825b6477d7b96dc",
+    "semantic_hash": "1b1eee1822eb08c04825b6477d7b96dc"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/model_k3.png": {
+    "mtime": 1785671249.44224,
+    "ast_hash": "9156cf51401a461b8adb17858876aec5",
+    "semantic_hash": "9156cf51401a461b8adb17858876aec5"
+  },
+  "Vrindopnishad Web/class/image/images_page_02/remove.photos-removed-background-2.png": {
+    "mtime": 1785671249.4562154,
+    "ast_hash": "b71c4d891946eb87f82f53f2d071d02e",
+    "semantic_hash": "b71c4d891946eb87f82f53f2d071d02e"
+  },
+  "Vrindopnishad Web/class/logo/Project V-TextLogo.png": {
+    "mtime": 1785671249.6149046,
+    "ast_hash": "d85246e315a4960ef34495a5b0f271a2",
+    "semantic_hash": "d85246e315a4960ef34495a5b0f271a2"
+  },
+  "Vrindopnishad Web/class/logo/Project v1.png": {
+    "mtime": 1785671249.6244042,
+    "ast_hash": "ed7c52dec48025efc61dc3109bbfd443",
+    "semantic_hash": "ed7c52dec48025efc61dc3109bbfd443"
+  },
+  "Vrindopnishad Web/class/logo/Project v11.png": {
+    "mtime": 1785671249.6121776,
+    "ast_hash": "8a8f2fcb84a1228f42cfc09f78476e9f",
+    "semantic_hash": "8a8f2fcb84a1228f42cfc09f78476e9f"
+  },
+  "Vrindopnishad Web/class/logo/Project_v1-removebg-preview.png": {
+    "mtime": 1785671249.6050785,
+    "ast_hash": "998bce09921f8921912a7ed1ddda44eb",
+    "semantic_hash": "998bce09921f8921912a7ed1ddda44eb"
+  },
+  "Vrindopnishad Web/class/logo/favicon logo.svg": {
+    "mtime": 1785671249.6007247,
+    "ast_hash": "1462f61c29f8f792dbb743755e7e0c00",
+    "semantic_hash": "1462f61c29f8f792dbb743755e7e0c00"
+  },
+  "Vrindopnishad Web/class/logo/favicon.svg": {
+    "mtime": 1785671249.6237874,
+    "ast_hash": "9a1f3e5591d9093d3a73823235cc077a",
+    "semantic_hash": "9a1f3e5591d9093d3a73823235cc077a"
+  },
+  "Vrindopnishad Web/class/logo/foodyVrinda-fav.png": {
+    "mtime": 1785671249.6205935,
+    "ast_hash": "8519c77798b54deef9632b17ec8762ac",
+    "semantic_hash": "8519c77798b54deef9632b17ec8762ac"
+  },
+  "Vrindopnishad Web/class/logo/foodyVrinda-logo-rounded.png": {
+    "mtime": 1785671249.619049,
+    "ast_hash": "199e2818dec5713379969790bc359211",
+    "semantic_hash": "199e2818dec5713379969790bc359211"
+  },
+  "Vrindopnishad Web/class/logo/foodyVrinda-logo-small.png": {
+    "mtime": 1785671249.625259,
+    "ast_hash": "be31513817a4267537def90197ac6f7c",
+    "semantic_hash": "be31513817a4267537def90197ac6f7c"
+  },
+  "Vrindopnishad Web/class/logo/foodyVrinda-logo.png": {
+    "mtime": 1785671249.615942,
+    "ast_hash": "be31513817a4267537def90197ac6f7c",
+    "semantic_hash": "be31513817a4267537def90197ac6f7c"
+  },
+  "Vrindopnishad Web/class/logo/foodyVrinda-logo.svg": {
+    "mtime": 1785671249.6018176,
+    "ast_hash": "29fada808746081eef87d3e95c3dd118",
+    "semantic_hash": "29fada808746081eef87d3e95c3dd118"
+  },
+  "Vrindopnishad Web/class/logo/official-logo-dark.svg": {
+    "mtime": 1785671249.6031015,
+    "ast_hash": "f39734d45b1bac769e2bb7ba77b63077",
+    "semantic_hash": "f39734d45b1bac769e2bb7ba77b63077"
+  },
+  "Vrindopnishad Web/class/logo/official-logo.svg": {
+    "mtime": 1785671249.6224236,
+    "ast_hash": "504afa8666d7a3ed9f4ada3926cb2e11",
+    "semantic_hash": "504afa8666d7a3ed9f4ada3926cb2e11"
+  },
+  "Vrindopnishad Web/class/logo/path1.png": {
+    "mtime": 1785671249.604414,
+    "ast_hash": "e76c9300c2a6d8596219a90bd73cd2a1",
+    "semantic_hash": "e76c9300c2a6d8596219a90bd73cd2a1"
+  },
+  "Vrindopnishad Web/class/logo/v-logo-rounded.png": {
+    "mtime": 1785671249.6091034,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "Vrindopnishad Web/class/logo/v-logo-small.png": {
+    "mtime": 1785671249.6197562,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "Vrindopnishad Web/class/logo/v-logo-transparent-small.png": {
+    "mtime": 1785671249.6232784,
+    "ast_hash": "57d0c4db3a2e4843076d0c5df375805f",
+    "semantic_hash": "57d0c4db3a2e4843076d0c5df375805f"
+  },
+  "Vrindopnishad Web/class/logo/v-logo-transparent.png": {
+    "mtime": 1785671249.60674,
+    "ast_hash": "a3a92753c8f39c5a51cdccf4aab4bab7",
+    "semantic_hash": "a3a92753c8f39c5a51cdccf4aab4bab7"
+  },
+  "Vrindopnishad Web/class/logo/v-logo.png": {
+    "mtime": 1785671249.6134238,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "Vrindopnishad Web/class/logo/v.png": {
+    "mtime": 1785671249.621909,
+    "ast_hash": "0753cab54b6c7c47a5a0aca7e645b5a8",
+    "semantic_hash": "0753cab54b6c7c47a5a0aca7e645b5a8"
+  },
+  "Vrindopnishad Web/class/logo/vrinda foods logo.png": {
+    "mtime": 1785671249.610732,
+    "ast_hash": "a9ed6bcbd546f9f8d6e1bf84dfe4d326",
+    "semantic_hash": "a9ed6bcbd546f9f8d6e1bf84dfe4d326"
+  },
+  "Vrindopnishad Web/class/logo/vrinda foods logo1.png": {
+    "mtime": 1785671249.6180565,
+    "ast_hash": "1957dad6a0032f7b2fa9318383643b62",
+    "semantic_hash": "1957dad6a0032f7b2fa9318383643b62"
+  },
+  "Vrindopnishad Web/class/logo/vrindaChat-fav.png": {
+    "mtime": 1785671249.616839,
+    "ast_hash": "e821ff69e3c567473574ce811a2424bb",
+    "semantic_hash": "e821ff69e3c567473574ce811a2424bb"
+  },
+  "Vrindopnishad Web/class/logo/vrindaChat-logo-rounded.png": {
+    "mtime": 1785671249.614179,
+    "ast_hash": "26f600693edc73f2b214f34a6a3f5c4c",
+    "semantic_hash": "26f600693edc73f2b214f34a6a3f5c4c"
+  },
+  "Vrindopnishad Web/class/logo/vrindaChat-logo.png": {
+    "mtime": 1785671249.608151,
+    "ast_hash": "2a22f582b6b6133dc3f2a7f710fb6175",
+    "semantic_hash": "2a22f582b6b6133dc3f2a7f710fb6175"
+  },
+  "Vrindopnishad Web/class/logo/vrindaChat-logo.svg": {
+    "mtime": 1785671249.6115158,
+    "ast_hash": "acd563d62da4756e2f40ad011506b9c3",
+    "semantic_hash": "acd563d62da4756e2f40ad011506b9c3"
+  },
+  "Vrindopnishad Web/class/logo/vrindaTours-logo-rounded.png": {
+    "mtime": 1785671249.6213224,
+    "ast_hash": "d93b7c5316317ec137e9fe7dfa5c688d",
+    "semantic_hash": "d93b7c5316317ec137e9fe7dfa5c688d"
+  },
+  "Vrindopnishad Web/class/logo/vrindaTours-logo-small.png": {
+    "mtime": 1785671249.609969,
+    "ast_hash": "fe2acca36e6491ddd2954bfb806e3388",
+    "semantic_hash": "fe2acca36e6491ddd2954bfb806e3388"
+  },
+  "Vrindopnishad Web/class/logo/vrindaTours-logo.png": {
+    "mtime": 1785671249.605885,
+    "ast_hash": "fe2acca36e6491ddd2954bfb806e3388",
+    "semantic_hash": "fe2acca36e6491ddd2954bfb806e3388"
+  },
+  "Vrindopnishad Web/class/logo/vrindaTours-logo.svg": {
+    "mtime": 1785671249.6129458,
+    "ast_hash": "08775c88967c8c57cd0a32c720349daf",
+    "semantic_hash": "08775c88967c8c57cd0a32c720349daf"
+  },
+  "Vrindopnishad Web/class/marker/flag-2.png": {
+    "mtime": 1785671249.630886,
+    "ast_hash": "561fb2e7cebfd3e0e16e18a6705b2fee",
+    "semantic_hash": "561fb2e7cebfd3e0e16e18a6705b2fee"
+  },
+  "Vrindopnishad Web/class/marker/flag-3.png": {
+    "mtime": 1785671249.6293035,
+    "ast_hash": "9f76a4a734f7df219b771297e50bee65",
+    "semantic_hash": "9f76a4a734f7df219b771297e50bee65"
+  },
+  "Vrindopnishad Web/class/marker/flag.png": {
+    "mtime": 1785671249.6264508,
+    "ast_hash": "f30eac47f1fc8698987ff097c6dabbd8",
+    "semantic_hash": "f30eac47f1fc8698987ff097c6dabbd8"
+  },
+  "Vrindopnishad Web/class/marker/map-pin.png": {
+    "mtime": 1785671249.6379592,
+    "ast_hash": "1ddc597a33d9f68b94a8f6f4f71cc624",
+    "semantic_hash": "1ddc597a33d9f68b94a8f6f4f71cc624"
+  },
+  "Vrindopnishad Web/class/marker/marker-ink/icons8-marker-100.png": {
+    "mtime": 1785671249.6344235,
+    "ast_hash": "c0eb4adbd49edea9b4fad4a9c4921f12",
+    "semantic_hash": "c0eb4adbd49edea9b4fad4a9c4921f12"
+  },
+  "Vrindopnishad Web/class/marker/marker-ink/icons8-marker-48.png": {
+    "mtime": 1785671249.6338706,
+    "ast_hash": "2682eef3ec00cd648a6f9158a43f9c8f",
+    "semantic_hash": "2682eef3ec00cd648a6f9158a43f9c8f"
+  },
+  "Vrindopnishad Web/class/marker/marker-ink/icons8-marker-96.png": {
+    "mtime": 1785671249.6349208,
+    "ast_hash": "7cc35ff61368bc305b7752fb48673988",
+    "semantic_hash": "7cc35ff61368bc305b7752fb48673988"
+  },
+  "Vrindopnishad Web/class/marker/marker-ios-17-outlined/icons8-marker-100.gif": {
+    "mtime": 1785671249.639367,
+    "ast_hash": "651b7d8d8ea3ddfbe96cf56efcc0efaf",
+    "semantic_hash": "651b7d8d8ea3ddfbe96cf56efcc0efaf"
+  },
+  "Vrindopnishad Web/class/marker/marker-ios-17-outlined/icons8-marker-50.gif": {
+    "mtime": 1785671249.6387303,
+    "ast_hash": "785da0fb2e963d3c616260488c9fc00b",
+    "semantic_hash": "785da0fb2e963d3c616260488c9fc00b"
+  },
+  "Vrindopnishad Web/class/marker/marker-pastel-glyph/icons8-marker-100.png": {
+    "mtime": 1785671249.6360898,
+    "ast_hash": "a489b5567eb96d75a3b6cd5f24fa6838",
+    "semantic_hash": "a489b5567eb96d75a3b6cd5f24fa6838"
+  },
+  "Vrindopnishad Web/class/marker/marker-pastel-glyph/icons8-marker-64.png": {
+    "mtime": 1785671249.6356924,
+    "ast_hash": "8d68f7df0990a1b2e0867f6117575e1f",
+    "semantic_hash": "8d68f7df0990a1b2e0867f6117575e1f"
+  },
+  "Vrindopnishad Web/class/marker/marker.gif": {
+    "mtime": 1785671249.6367905,
+    "ast_hash": "7d066413930a29975969e8a4d9db849a",
+    "semantic_hash": "7d066413930a29975969e8a4d9db849a"
+  },
+  "Vrindopnishad Web/class/marker/pin-2.png": {
+    "mtime": 1785671249.6303616,
+    "ast_hash": "2dfdc148851941b99f0363f24c0d9d08",
+    "semantic_hash": "2dfdc148851941b99f0363f24c0d9d08"
+  },
+  "Vrindopnishad Web/class/marker/pin-3.png": {
+    "mtime": 1785671249.6298232,
+    "ast_hash": "e30de6fbbb990206f147353ab0999e6e",
+    "semantic_hash": "e30de6fbbb990206f147353ab0999e6e"
+  },
+  "Vrindopnishad Web/class/marker/pin.png": {
+    "mtime": 1785671249.6270154,
+    "ast_hash": "92521320b4a0a1043840b5d956395f4f",
+    "semantic_hash": "92521320b4a0a1043840b5d956395f4f"
+  },
+  "Vrindopnishad Web/class/marker/place-marker-ios-17-filled/icons8-place-marker-100.gif": {
+    "mtime": 1785671249.6281826,
+    "ast_hash": "980779d696b79c18e0465960d1300fb5",
+    "semantic_hash": "980779d696b79c18e0465960d1300fb5"
+  },
+  "Vrindopnishad Web/class/marker/place-marker-ios-17-filled/icons8-place-marker-50.gif": {
+    "mtime": 1785671249.6287484,
+    "ast_hash": "1740fc3ce9e96fd2b91e98398f9aff8e",
+    "semantic_hash": "1740fc3ce9e96fd2b91e98398f9aff8e"
+  },
+  "Vrindopnishad Web/class/marker/place-marker-ios-17-outlined/icons8-place-marker-100.gif": {
+    "mtime": 1785671249.632171,
+    "ast_hash": "a37d97d76c4d370ac62cc9a4ddc837dc",
+    "semantic_hash": "a37d97d76c4d370ac62cc9a4ddc837dc"
+  },
+  "Vrindopnishad Web/class/marker/place-marker-ios-17-outlined/icons8-place-marker-50.gif": {
+    "mtime": 1785671249.632878,
+    "ast_hash": "3b0e52a23ef3517dd465710d31242def",
+    "semantic_hash": "3b0e52a23ef3517dd465710d31242def"
+  },
+  "Vrindopnishad Web/class/marker/pushpin.png": {
+    "mtime": 1785671249.637245,
+    "ast_hash": "74a9aecf60b5b967d5e7848ecc4716c8",
+    "semantic_hash": "74a9aecf60b5b967d5e7848ecc4716c8"
+  },
+  "Vrindopnishad Web/class/svg/ArrPointer.svg": {
+    "mtime": 1785671249.6400712,
+    "ast_hash": "c85d20f7dadf1906e8e7284c6782fcd5",
+    "semantic_hash": "c85d20f7dadf1906e8e7284c6782fcd5"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/android-chrome-192x192-dark-theme.png": {
+    "mtime": 1785671249.6412597,
+    "ast_hash": "57d0c4db3a2e4843076d0c5df375805f",
+    "semantic_hash": "57d0c4db3a2e4843076d0c5df375805f"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/android-chrome-192x192-light-theme.png": {
+    "mtime": 1785671249.648383,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/android-chrome-192x192.png": {
+    "mtime": 1785671249.6448102,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/android-chrome-512x512-dark-theme.png": {
+    "mtime": 1785671249.643485,
+    "ast_hash": "a3a92753c8f39c5a51cdccf4aab4bab7",
+    "semantic_hash": "a3a92753c8f39c5a51cdccf4aab4bab7"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/android-chrome-512x512-light-theme.png": {
+    "mtime": 1785671249.6476822,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/android-chrome-512x512.png": {
+    "mtime": 1785671249.6513002,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/apple-touch-icon-dark-theme.png": {
+    "mtime": 1785671249.6503017,
+    "ast_hash": "5fd73bed6a0fcf50afd0a63758d26195",
+    "semantic_hash": "5fd73bed6a0fcf50afd0a63758d26195"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/apple-touch-icon-light-theme.png": {
+    "mtime": 1785671249.6522756,
+    "ast_hash": "f98d846304cdbf9da40ab5b846b2f2e5",
+    "semantic_hash": "f98d846304cdbf9da40ab5b846b2f2e5"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/apple-touch-icon.png": {
+    "mtime": 1785671249.6454906,
+    "ast_hash": "f98d846304cdbf9da40ab5b846b2f2e5",
+    "semantic_hash": "f98d846304cdbf9da40ab5b846b2f2e5"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/favicon-16x16-dark-theme.png": {
+    "mtime": 1785671249.6539328,
+    "ast_hash": "b44b6191db3999fbe9583c41817ff56a",
+    "semantic_hash": "b44b6191db3999fbe9583c41817ff56a"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/favicon-16x16-light-theme.png": {
+    "mtime": 1785671249.655021,
+    "ast_hash": "7f150084af187d60d2314c28fa6e27a1",
+    "semantic_hash": "7f150084af187d60d2314c28fa6e27a1"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/favicon-16x16.png": {
+    "mtime": 1785671249.6420677,
+    "ast_hash": "7f150084af187d60d2314c28fa6e27a1",
+    "semantic_hash": "7f150084af187d60d2314c28fa6e27a1"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/favicon-32x32-dark-theme.png": {
+    "mtime": 1785671249.6508105,
+    "ast_hash": "25e6efb1e6735fc0c54d01f70351ef91",
+    "semantic_hash": "25e6efb1e6735fc0c54d01f70351ef91"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/favicon-32x32-light-theme.png": {
+    "mtime": 1785671249.6469502,
+    "ast_hash": "a71582b800ccf8596ac15075a1f304b7",
+    "semantic_hash": "a71582b800ccf8596ac15075a1f304b7"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/favicon-32x32.png": {
+    "mtime": 1785671249.6533947,
+    "ast_hash": "a71582b800ccf8596ac15075a1f304b7",
+    "semantic_hash": "a71582b800ccf8596ac15075a1f304b7"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/official-logo-dark.svg": {
+    "mtime": 1785671249.642692,
+    "ast_hash": "f39734d45b1bac769e2bb7ba77b63077",
+    "semantic_hash": "f39734d45b1bac769e2bb7ba77b63077"
+  },
+  "Vrindopnishad Web/class/v-logo-rounded/official-logo.svg": {
+    "mtime": 1785671249.6529026,
+    "ast_hash": "504afa8666d7a3ed9f4ada3926cb2e11",
+    "semantic_hash": "504afa8666d7a3ed9f4ada3926cb2e11"
+  },
+  "Vrindopnishad Web/class/vrindaChat-logo-rounded/android-chrome-192x192.png": {
+    "mtime": 1785671249.6572242,
+    "ast_hash": "a5720b815820b9fa7fb58292ea0cfdd8",
+    "semantic_hash": "a5720b815820b9fa7fb58292ea0cfdd8"
+  },
+  "Vrindopnishad Web/class/vrindaChat-logo-rounded/android-chrome-512x512.png": {
+    "mtime": 1785671249.6585312,
+    "ast_hash": "e0a2b04b28d50f41eba02a232b557848",
+    "semantic_hash": "e0a2b04b28d50f41eba02a232b557848"
+  },
+  "Vrindopnishad Web/class/vrindaChat-logo-rounded/apple-touch-icon.png": {
+    "mtime": 1785671249.65785,
+    "ast_hash": "9c4823741950210de9f3114ea01fbfe2",
+    "semantic_hash": "9c4823741950210de9f3114ea01fbfe2"
+  },
+  "Vrindopnishad Web/class/vrindaChat-logo-rounded/favicon-16x16.png": {
+    "mtime": 1785671249.6558323,
+    "ast_hash": "a34a2086048771f521131531bbc22f5e",
+    "semantic_hash": "a34a2086048771f521131531bbc22f5e"
+  },
+  "Vrindopnishad Web/class/vrindaChat-logo-rounded/favicon-32x32.png": {
+    "mtime": 1785671249.659578,
+    "ast_hash": "d131fcabd23ee09eef77431a133c3a0a",
+    "semantic_hash": "d131fcabd23ee09eef77431a133c3a0a"
+  },
+  "Vrindopnishad Web/class/vrindaTours-logo-rounded/android-chrome-192x192.png": {
+    "mtime": 1785671249.6614974,
+    "ast_hash": "59371a9ae9ef187dd0a891d20b43558d",
+    "semantic_hash": "59371a9ae9ef187dd0a891d20b43558d"
+  },
+  "Vrindopnishad Web/class/vrindaTours-logo-rounded/android-chrome-512x512.png": {
+    "mtime": 1785671249.6626315,
+    "ast_hash": "74d6ffbc6e09c19d93b169b4e9c52435",
+    "semantic_hash": "74d6ffbc6e09c19d93b169b4e9c52435"
+  },
+  "Vrindopnishad Web/class/vrindaTours-logo-rounded/apple-touch-icon.png": {
+    "mtime": 1785671249.6620646,
+    "ast_hash": "8c41350a7816236457e334e4427b85ff",
+    "semantic_hash": "8c41350a7816236457e334e4427b85ff"
+  },
+  "Vrindopnishad Web/class/vrindaTours-logo-rounded/favicon-16x16.png": {
+    "mtime": 1785671249.6603734,
+    "ast_hash": "ebb739a49ac541b43d1ee4bcd2160e4f",
+    "semantic_hash": "ebb739a49ac541b43d1ee4bcd2160e4f"
+  },
+  "Vrindopnishad Web/class/vrindaTours-logo-rounded/favicon-32x32.png": {
+    "mtime": 1785671249.663497,
+    "ast_hash": "651cf6800fcc992331e9c660a2c0ca4f",
+    "semantic_hash": "651cf6800fcc992331e9c660a2c0ca4f"
+  },
+  "public/android-chrome-192x192.png": {
+    "mtime": 1785853416.1908944,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "public/android-chrome-512x512.png": {
+    "mtime": 1785654520.6200223,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "public/apple-touch-icon.png": {
+    "mtime": 1785654520.6374593,
+    "ast_hash": "f98d846304cdbf9da40ab5b846b2f2e5",
+    "semantic_hash": "f98d846304cdbf9da40ab5b846b2f2e5"
+  },
+  "public/favicon-48x48.png": {
+    "mtime": 1785853412.355325,
+    "ast_hash": "4e20377772730d5a60063c88756f0e96",
+    "semantic_hash": "4e20377772730d5a60063c88756f0e96"
+  },
+  "public/favicon-96x96.png": {
+    "mtime": 1785853412.3770587,
+    "ast_hash": "7a12396dfb547290908c8306e2eca797",
+    "semantic_hash": "7a12396dfb547290908c8306e2eca797"
+  },
+  "public/favicon.svg": {
+    "mtime": 1785654520.5949228,
+    "ast_hash": "504afa8666d7a3ed9f4ada3926cb2e11",
+    "semantic_hash": "504afa8666d7a3ed9f4ada3926cb2e11"
+  },
+  "public/images/home-pics/img1.jpg": {
+    "mtime": 1785643394.3351192,
+    "ast_hash": "31dfbfd176b1fc84e4722069b8097f6f",
+    "semantic_hash": "31dfbfd176b1fc84e4722069b8097f6f"
+  },
+  "public/images/home-pics/img2.jpg": {
+    "mtime": 1785643394.3358684,
+    "ast_hash": "5a9074a7179abcfcd5e2ba486d83b841",
+    "semantic_hash": "5a9074a7179abcfcd5e2ba486d83b841"
+  },
+  "public/images/home-pics/img3.jpg": {
+    "mtime": 1785643394.336442,
+    "ast_hash": "35874a195e0a924b390c044908886c67",
+    "semantic_hash": "35874a195e0a924b390c044908886c67"
+  },
+  "public/images/home-pics/img4.jpg": {
+    "mtime": 1785643394.3369198,
+    "ast_hash": "20c99ad6c6729c3bcb6ebf4aaa6ef980",
+    "semantic_hash": "20c99ad6c6729c3bcb6ebf4aaa6ef980"
+  },
+  "public/images/home-pics/img5.jpg": {
+    "mtime": 1785643394.337662,
+    "ast_hash": "2ec83f12dfa6a4302a59a29b4f9d81c2",
+    "semantic_hash": "2ec83f12dfa6a4302a59a29b4f9d81c2"
+  },
+  "public/images/home-pics/img6.jpg": {
+    "mtime": 1785643394.3385851,
+    "ast_hash": "113d463f9a9a5c3b87058966c0bb5974",
+    "semantic_hash": "113d463f9a9a5c3b87058966c0bb5974"
+  },
+  "public/images/home-pics/img_rv04.png": {
+    "mtime": 1785643394.3414717,
+    "ast_hash": "2a24ccab1a83bf241e2f0f4034468ed4",
+    "semantic_hash": "2a24ccab1a83bf241e2f0f4034468ed4"
+  },
+  "public/images/home-pics/img_rv05.png": {
+    "mtime": 1785643394.3450515,
+    "ast_hash": "ea74d3621acca1864641345552014e6e",
+    "semantic_hash": "ea74d3621acca1864641345552014e6e"
+  },
+  "public/images/home-pics/img_sn01.png": {
+    "mtime": 1785643394.3541462,
+    "ast_hash": "a28c8d962b109ff2ca1ba6fa9c5c978d",
+    "semantic_hash": "a28c8d962b109ff2ca1ba6fa9c5c978d"
+  },
+  "public/images/home-pics/img_sn02.png": {
+    "mtime": 1785643394.3565073,
+    "ast_hash": "ac812c352017bddad495e101e7c6ed7f",
+    "semantic_hash": "ac812c352017bddad495e101e7c6ed7f"
+  },
+  "public/images/home-pics/img_vas.jpg": {
+    "mtime": 1785643394.3586016,
+    "ast_hash": "ebf6efed4b50b57b7a911c54e4e75dc2",
+    "semantic_hash": "ebf6efed4b50b57b7a911c54e4e75dc2"
+  },
+  "public/images/krshn/optimized/vrindopnishad-story.jpg": {
+    "mtime": 1785643394.3231974,
+    "ast_hash": "b962707649c3be98766714a30c71f8e8",
+    "semantic_hash": "b962707649c3be98766714a30c71f8e8"
+  },
+  "public/images/krshn/vrindopnishad-digital-universe.jpg": {
+    "mtime": 1785643394.3259616,
+    "ast_hash": "99118b4b55d5bba55e2b6ff94dc5fca3",
+    "semantic_hash": "99118b4b55d5bba55e2b6ff94dc5fca3"
+  },
+  "public/images/krshn/vrindopnishad-story.jpg": {
+    "mtime": 1785643394.3292425,
+    "ast_hash": "e6adb14b3b021ea5f30114599e665515",
+    "semantic_hash": "e6adb14b3b021ea5f30114599e665515"
+  },
+  "public/images/projects/chitra_vrinda_hero.jpg": {
+    "mtime": 1785643093.5542202,
+    "ast_hash": "4d0984aec6cb8a60e6fa99ec95fcbb12",
+    "semantic_hash": "4d0984aec6cb8a60e6fa99ec95fcbb12"
+  },
+  "public/images/projects/foody_vrinda_hero.jpg": {
+    "mtime": 1785569670.6718795,
+    "ast_hash": "331b6d88ea7a3cba9efd0ccce17326d3",
+    "semantic_hash": "331b6d88ea7a3cba9efd0ccce17326d3"
+  },
+  "public/images/projects/foody_vrinda_hero.png": {
+    "mtime": 1785643093.558827,
+    "ast_hash": "5024dfe3445b2886a019cca0a3517612",
+    "semantic_hash": "5024dfe3445b2886a019cca0a3517612"
+  },
+  "public/images/projects/vrinda_tours_hero.jpg": {
+    "mtime": 1785643093.55564,
+    "ast_hash": "d538d3c78eb9730a9f4cfe5131252708",
+    "semantic_hash": "d538d3c78eb9730a9f4cfe5131252708"
+  },
+  "public/logo/Project V-TextLogo.png": {
+    "mtime": 1785643394.3646142,
+    "ast_hash": "d85246e315a4960ef34495a5b0f271a2",
+    "semantic_hash": "d85246e315a4960ef34495a5b0f271a2"
+  },
+  "public/logo/Project v1.png": {
+    "mtime": 1785643394.3662217,
+    "ast_hash": "ed7c52dec48025efc61dc3109bbfd443",
+    "semantic_hash": "ed7c52dec48025efc61dc3109bbfd443"
+  },
+  "public/logo/Project v11.png": {
+    "mtime": 1785643394.366853,
+    "ast_hash": "8a8f2fcb84a1228f42cfc09f78476e9f",
+    "semantic_hash": "8a8f2fcb84a1228f42cfc09f78476e9f"
+  },
+  "public/logo/Project_v1-removebg-preview.png": {
+    "mtime": 1785643394.3676627,
+    "ast_hash": "998bce09921f8921912a7ed1ddda44eb",
+    "semantic_hash": "998bce09921f8921912a7ed1ddda44eb"
+  },
+  "public/logo/favicon logo.svg": {
+    "mtime": 1785643394.3765948,
+    "ast_hash": "1462f61c29f8f792dbb743755e7e0c00",
+    "semantic_hash": "1462f61c29f8f792dbb743755e7e0c00"
+  },
+  "public/logo/favicon.svg": {
+    "mtime": 1785643394.3776257,
+    "ast_hash": "9a1f3e5591d9093d3a73823235cc077a",
+    "semantic_hash": "9a1f3e5591d9093d3a73823235cc077a"
+  },
+  "public/logo/foody-vrinda-logo.png": {
+    "mtime": 1785853418.5649831,
+    "ast_hash": "1957dad6a0032f7b2fa9318383643b62",
+    "semantic_hash": "1957dad6a0032f7b2fa9318383643b62"
+  },
+  "public/logo/foodyVrinda-fav.png": {
+    "mtime": 1785643394.3790388,
+    "ast_hash": "8519c77798b54deef9632b17ec8762ac",
+    "semantic_hash": "8519c77798b54deef9632b17ec8762ac"
+  },
+  "public/logo/foodyVrinda-logo-rounded.png": {
+    "mtime": 1785643394.3801196,
+    "ast_hash": "199e2818dec5713379969790bc359211",
+    "semantic_hash": "199e2818dec5713379969790bc359211"
+  },
+  "public/logo/foodyVrinda-logo-small.png": {
+    "mtime": 1785643394.381075,
+    "ast_hash": "be31513817a4267537def90197ac6f7c",
+    "semantic_hash": "be31513817a4267537def90197ac6f7c"
+  },
+  "public/logo/foodyVrinda-logo.png": {
+    "mtime": 1785643394.3824477,
+    "ast_hash": "be31513817a4267537def90197ac6f7c",
+    "semantic_hash": "be31513817a4267537def90197ac6f7c"
+  },
+  "public/logo/foodyVrinda-logo.svg": {
+    "mtime": 1785643394.3833838,
+    "ast_hash": "29fada808746081eef87d3e95c3dd118",
+    "semantic_hash": "29fada808746081eef87d3e95c3dd118"
+  },
+  "public/logo/official-logo-dark.svg": {
+    "mtime": 1785643394.384032,
+    "ast_hash": "f39734d45b1bac769e2bb7ba77b63077",
+    "semantic_hash": "f39734d45b1bac769e2bb7ba77b63077"
+  },
+  "public/logo/official-logo.svg": {
+    "mtime": 1785643394.3845894,
+    "ast_hash": "504afa8666d7a3ed9f4ada3926cb2e11",
+    "semantic_hash": "504afa8666d7a3ed9f4ada3926cb2e11"
+  },
+  "public/logo/path1.png": {
+    "mtime": 1785643394.3852959,
+    "ast_hash": "e76c9300c2a6d8596219a90bd73cd2a1",
+    "semantic_hash": "e76c9300c2a6d8596219a90bd73cd2a1"
+  },
+  "public/logo/v-logo-rounded.png": {
+    "mtime": 1785643394.3859942,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "public/logo/v-logo-small.png": {
+    "mtime": 1785643394.386903,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "public/logo/v-logo-transparent-small.png": {
+    "mtime": 1785643394.387913,
+    "ast_hash": "57d0c4db3a2e4843076d0c5df375805f",
+    "semantic_hash": "57d0c4db3a2e4843076d0c5df375805f"
+  },
+  "public/logo/v-logo-transparent.png": {
+    "mtime": 1785643394.3886137,
+    "ast_hash": "a3a92753c8f39c5a51cdccf4aab4bab7",
+    "semantic_hash": "a3a92753c8f39c5a51cdccf4aab4bab7"
+  },
+  "public/logo/v-logo.png": {
+    "mtime": 1785643394.3893268,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "public/logo/v.png": {
+    "mtime": 1785643394.389941,
+    "ast_hash": "0753cab54b6c7c47a5a0aca7e645b5a8",
+    "semantic_hash": "0753cab54b6c7c47a5a0aca7e645b5a8"
+  },
+  "public/logo/vrinda foods logo.png": {
+    "mtime": 1785643394.390613,
+    "ast_hash": "a9ed6bcbd546f9f8d6e1bf84dfe4d326",
+    "semantic_hash": "a9ed6bcbd546f9f8d6e1bf84dfe4d326"
+  },
+  "public/logo/vrinda foods logo1.png": {
+    "mtime": 1785643394.3916323,
+    "ast_hash": "1957dad6a0032f7b2fa9318383643b62",
+    "semantic_hash": "1957dad6a0032f7b2fa9318383643b62"
+  },
+  "public/logo/vrinda-tours-logo.png": {
+    "mtime": 1785853418.5728583,
+    "ast_hash": "d93b7c5316317ec137e9fe7dfa5c688d",
+    "semantic_hash": "d93b7c5316317ec137e9fe7dfa5c688d"
+  },
+  "public/logo/vrindaChat-fav.png": {
+    "mtime": 1785643394.3933506,
+    "ast_hash": "e821ff69e3c567473574ce811a2424bb",
+    "semantic_hash": "e821ff69e3c567473574ce811a2424bb"
+  },
+  "public/logo/vrindaChat-logo-rounded.png": {
+    "mtime": 1785643394.3945575,
+    "ast_hash": "26f600693edc73f2b214f34a6a3f5c4c",
+    "semantic_hash": "26f600693edc73f2b214f34a6a3f5c4c"
+  },
+  "public/logo/vrindaChat-logo.png": {
+    "mtime": 1785643394.395456,
+    "ast_hash": "2a22f582b6b6133dc3f2a7f710fb6175",
+    "semantic_hash": "2a22f582b6b6133dc3f2a7f710fb6175"
+  },
+  "public/logo/vrindaChat-logo.svg": {
+    "mtime": 1785643394.3960195,
+    "ast_hash": "acd563d62da4756e2f40ad011506b9c3",
+    "semantic_hash": "acd563d62da4756e2f40ad011506b9c3"
+  },
+  "public/logo/vrindaTours-logo-rounded.png": {
+    "mtime": 1785643394.3967724,
+    "ast_hash": "d93b7c5316317ec137e9fe7dfa5c688d",
+    "semantic_hash": "d93b7c5316317ec137e9fe7dfa5c688d"
+  },
+  "public/logo/vrindaTours-logo-small.png": {
+    "mtime": 1785643394.3976278,
+    "ast_hash": "fe2acca36e6491ddd2954bfb806e3388",
+    "semantic_hash": "fe2acca36e6491ddd2954bfb806e3388"
+  },
+  "public/logo/vrindaTours-logo.png": {
+    "mtime": 1785643394.3985267,
+    "ast_hash": "fe2acca36e6491ddd2954bfb806e3388",
+    "semantic_hash": "fe2acca36e6491ddd2954bfb806e3388"
+  },
+  "public/logo/vrindaTours-logo.svg": {
+    "mtime": 1785643394.4004204,
+    "ast_hash": "08775c88967c8c57cd0a32c720349daf",
+    "semantic_hash": "08775c88967c8c57cd0a32c720349daf"
+  },
+  "public/logo/vrindopnishad-logo-rounded.png": {
+    "mtime": 1785853418.5773926,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "public/v-logo-rounded/android-chrome-192x192-dark-theme.png": {
+    "mtime": 1785643085.120657,
+    "ast_hash": "57d0c4db3a2e4843076d0c5df375805f",
+    "semantic_hash": "57d0c4db3a2e4843076d0c5df375805f"
+  },
+  "public/v-logo-rounded/android-chrome-192x192-light-theme.png": {
+    "mtime": 1785643085.123784,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "public/v-logo-rounded/android-chrome-192x192.png": {
+    "mtime": 1785643085.1252081,
+    "ast_hash": "594f8d301734ccf87698b96271468818",
+    "semantic_hash": "594f8d301734ccf87698b96271468818"
+  },
+  "public/v-logo-rounded/android-chrome-512x512-dark-theme.png": {
+    "mtime": 1785643085.1270554,
+    "ast_hash": "a3a92753c8f39c5a51cdccf4aab4bab7",
+    "semantic_hash": "a3a92753c8f39c5a51cdccf4aab4bab7"
+  },
+  "public/v-logo-rounded/android-chrome-512x512-light-theme.png": {
+    "mtime": 1785643085.128474,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "public/v-logo-rounded/android-chrome-512x512.png": {
+    "mtime": 1785643085.1299648,
+    "ast_hash": "83fb2ac3f18a2dd5d91d9f8abe446782",
+    "semantic_hash": "83fb2ac3f18a2dd5d91d9f8abe446782"
+  },
+  "public/v-logo-rounded/apple-touch-icon-dark-theme.png": {
+    "mtime": 1785643085.131326,
+    "ast_hash": "5fd73bed6a0fcf50afd0a63758d26195",
+    "semantic_hash": "5fd73bed6a0fcf50afd0a63758d26195"
+  },
+  "public/v-logo-rounded/apple-touch-icon-light-theme.png": {
+    "mtime": 1785643085.132823,
+    "ast_hash": "f98d846304cdbf9da40ab5b846b2f2e5",
+    "semantic_hash": "f98d846304cdbf9da40ab5b846b2f2e5"
+  },
+  "public/v-logo-rounded/apple-touch-icon.png": {
+    "mtime": 1785643085.1339679,
+    "ast_hash": "f98d846304cdbf9da40ab5b846b2f2e5",
+    "semantic_hash": "f98d846304cdbf9da40ab5b846b2f2e5"
+  },
+  "public/v-logo-rounded/favicon-16x16-dark-theme.png": {
+    "mtime": 1785643085.13519,
+    "ast_hash": "b44b6191db3999fbe9583c41817ff56a",
+    "semantic_hash": "b44b6191db3999fbe9583c41817ff56a"
+  },
+  "public/v-logo-rounded/favicon-16x16-light-theme.png": {
+    "mtime": 1785643085.1366477,
+    "ast_hash": "7f150084af187d60d2314c28fa6e27a1",
+    "semantic_hash": "7f150084af187d60d2314c28fa6e27a1"
+  },
+  "public/v-logo-rounded/favicon-16x16.png": {
+    "mtime": 1785643085.1382337,
+    "ast_hash": "7f150084af187d60d2314c28fa6e27a1",
+    "semantic_hash": "7f150084af187d60d2314c28fa6e27a1"
+  },
+  "public/v-logo-rounded/favicon-32x32-dark-theme.png": {
+    "mtime": 1785643085.1395087,
+    "ast_hash": "25e6efb1e6735fc0c54d01f70351ef91",
+    "semantic_hash": "25e6efb1e6735fc0c54d01f70351ef91"
+  },
+  "public/v-logo-rounded/favicon-32x32-light-theme.png": {
+    "mtime": 1785643085.1406927,
+    "ast_hash": "a71582b800ccf8596ac15075a1f304b7",
+    "semantic_hash": "a71582b800ccf8596ac15075a1f304b7"
+  },
+  "public/v-logo-rounded/favicon-32x32.png": {
+    "mtime": 1785643085.1418023,
+    "ast_hash": "a71582b800ccf8596ac15075a1f304b7",
+    "semantic_hash": "a71582b800ccf8596ac15075a1f304b7"
+  },
+  "public/v-logo-rounded/official-logo-dark.svg": {
+    "mtime": 1785643085.1469378,
+    "ast_hash": "f39734d45b1bac769e2bb7ba77b63077",
+    "semantic_hash": "f39734d45b1bac769e2bb7ba77b63077"
+  },
+  "public/v-logo-rounded/official-logo.svg": {
+    "mtime": 1785643085.1479979,
+    "ast_hash": "504afa8666d7a3ed9f4ada3926cb2e11",
+    "semantic_hash": "504afa8666d7a3ed9f4ada3926cb2e11"
+  },
+  "Vrindopnishad Web/Home/sounds/alert1.wav": {
+    "mtime": 1785511360.9444838,
+    "ast_hash": "e414eb9da516acf8009acc1fe6cb7094",
+    "semantic_hash": "e414eb9da516acf8009acc1fe6cb7094"
+  },
+  "Vrindopnishad Web/Home/sounds/alert2.wav": {
+    "mtime": 1785511360.9413645,
+    "ast_hash": "dceeb3804769b87af5ffdec2ba1a10d3",
+    "semantic_hash": "dceeb3804769b87af5ffdec2ba1a10d3"
+  },
+  "Vrindopnishad Web/Home/sounds/alert3.wav": {
+    "mtime": 1785511360.943142,
+    "ast_hash": "2a7201bcfe0539db02888d75a64216d8",
+    "semantic_hash": "2a7201bcfe0539db02888d75a64216d8"
+  },
+  "Vrindopnishad Web/Home/sounds/alert4.mp3": {
+    "mtime": 1785511360.9453666,
+    "ast_hash": "48466fe2f54d837ffa3ca235792083e2",
+    "semantic_hash": "48466fe2f54d837ffa3ca235792083e2"
+  },
+  "src/components/AuthModal.tsx": {
+    "mtime": 1786003976.460719,
+    "ast_hash": "3fef274e980ef098e4616cce0f044aa7",
+    "semantic_hash": ""
+  },
+  "src/components/AuthPage.tsx": {
+    "mtime": 1786121031.8861122,
+    "ast_hash": "9d675dedc76df0dc922bb45093ab2380",
+    "semantic_hash": ""
+  },
+  "src/components/ui/button.tsx": {
+    "mtime": 1786003639.368237,
+    "ast_hash": "34339411ff15e0d03e81c97ef78bf353",
+    "semantic_hash": ""
+  },
+  "src/components/ui/confetti.tsx": {
+    "mtime": 1786003650.8570113,
+    "ast_hash": "4ad0faf53dd7a0ad83b661bafe3d916b",
+    "semantic_hash": ""
+  },
+  "src/context/AuthContext.tsx": {
+    "mtime": 1786121057.935912,
+    "ast_hash": "49c382738cfefe267e999582619b2a19",
+    "semantic_hash": ""
+  },
+  "src/lib/authCache.ts": {
+    "mtime": 1786003664.803073,
+    "ast_hash": "f93f1bc3e3b8c18afb828a31dd3338a1",
+    "semantic_hash": ""
+  },
+  "src/components/VedicAskInputBar.tsx": {
+    "mtime": 1786162900.8790357,
+    "ast_hash": "dd0c1fde66a192db0e459a417a751c28",
+    "semantic_hash": ""
+  },
+  "src/components/OpenAIAcademySection.tsx": {
+    "mtime": 1786163192.5887218,
+    "ast_hash": "076523c63ae0a3f12745c165f83fd6d6",
+    "semantic_hash": ""
+  },
+  "src/components/OpenAISubNav.tsx": {
+    "mtime": 1786162927.0008786,
+    "ast_hash": "69560862567696681317ac0ff3b5d8ee",
+    "semantic_hash": ""
+  },
+  "src/components/ui/avatar.tsx": {
+    "mtime": 1786116403.3303964,
+    "ast_hash": "4660f299da1b19381d2e5d768def5c41",
+    "semantic_hash": ""
+  },
+  "src/components/ui/card.tsx": {
+    "mtime": 1786116525.1418262,
+    "ast_hash": "e10b7ef505704935a2d8c79cda924710",
+    "semantic_hash": ""
+  },
+  "src/components/ui/infinite-slider.tsx": {
+    "mtime": 1786116409.0722325,
+    "ast_hash": "4cbd122d801ce786b223b8f946675f28",
+    "semantic_hash": ""
+  },
+  "src/components/ui/logo-cloud-2.tsx": {
+    "mtime": 1786117282.287262,
+    "ast_hash": "5307e1661f232b7e0682bffe23acc490",
+    "semantic_hash": ""
+  },
+  "src/components/ui/logo-cloud-3.tsx": {
+    "mtime": 1786120982.6742787,
+    "ast_hash": "13d4d2250dd8f4f7e85fb7f35f9ace40",
+    "semantic_hash": ""
+  },
+  "src/components/ui/marquee-01-utils/marquee.tsx": {
+    "mtime": 1786116534.8744848,
+    "ast_hash": "6e4102e99c8478abcb1573aba802d05c",
+    "semantic_hash": ""
+  },
+  "src/components/ui/marquee-01.tsx": {
+    "mtime": 1786121017.8347623,
+    "ast_hash": "d0c44421d95855bf3ad8550f4653c1a2",
+    "semantic_hash": ""
+  },
+  "src/components/ui/testimonials-13.tsx": {
+    "mtime": 1786120971.1779275,
+    "ast_hash": "b4dc21380182c15372d2b97ac578b035",
+    "semantic_hash": ""
+  },
+  "src/components/ui/testimonials-6.tsx": {
+    "mtime": 1786121004.7683666,
+    "ast_hash": "ce34e31cd58515a65440632a8083344a",
+    "semantic_hash": ""
+  },
+  "src/components/ui/typing-animation.tsx": {
+    "mtime": 1786119991.25704,
+    "ast_hash": "f7fabbc5063ee66743f08805499bb69d",
+    "semantic_hash": ""
+  },
+  "src/components/AmbientSoundPlayer.tsx": {
+    "mtime": 1786163354.073353,
+    "ast_hash": "71499743bb26264aacd04cf95c6b45f9",
+    "semantic_hash": ""
+  },
+  "src/components/DailyInsightCard.tsx": {
+    "mtime": 1786162940.8515089,
+    "ast_hash": "d7770eb372a7516131ad04c38f0f2ec8",
+    "semantic_hash": ""
+  },
+  "src/components/QuoteBuilderModal.tsx": {
+    "mtime": 1786161698.7942567,
+    "ast_hash": "1021c3f053837c8527f4ff70077eff53",
+    "semantic_hash": ""
+  },
+  "src/components/VedicSageModal.tsx": {
+    "mtime": 1786161688.3638759,
+    "ast_hash": "7bf6040185a649c23a0afd39d33d056a",
+    "semantic_hash": ""
+  },
+  "src/components/WisdomPathwayModal.tsx": {
+    "mtime": 1786161657.0809722,
+    "ast_hash": "dc22abd9d5020975a3cecfa77a2893f1",
+    "semantic_hash": ""
+  },
+  "src/components/CurvedElasticDrawer.tsx": {
+    "mtime": 1786169574.7909932,
+    "ast_hash": "5fae5eda9fc370290d4a6890b0715b68",
+    "semantic_hash": ""
+  }
+}

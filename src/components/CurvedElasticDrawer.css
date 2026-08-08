@@ -1,0 +1,221 @@
+/* CurvedElasticDrawer.css - Hello Monday Signature Inverted Curve Handle & Editorial Typography Overlay */
+
+.hello-monday-handle-wrapper {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 140px !important;
+  height: 100vh !important;
+  z-index: 10030 !important;
+  /* Highest layer so handle is clickable when open & closed */
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+  transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hello-monday-handle-wrapper.scroll-hidden {
+  transform: translateX(120%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.hello-monday-svg {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 140px !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  filter: none !important;
+  transition: fill 0.35s ease !important;
+}
+
+/* Centered Icon inside Curve Apex */
+.hello-monday-icon-center {
+  position: absolute !important;
+  top: 50% !important;
+  right: 28px !important;
+  transform: translateY(-50%) !important;
+  z-index: 10035 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: none !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hello-monday-icon-center.closed-icon svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.hello-monday-icon-center.open-icon svg {
+  color: #000000 !important;
+  stroke: #000000 !important;
+  opacity: 1 !important;
+}
+
+.hello-monday-handle-wrapper:hover .hello-monday-icon-center {
+  transform: translateY(-50%) scale(1.15) translateX(-1px) !important;
+}
+
+/* Pitch Black Menu Overlay (Z-index 10010, underneath Handle z-index 10030) */
+.hello-monday-menu-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 10010 !important;
+  background: #050508 !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hello-monday-menu-overlay.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Top Left Editorial Logo */
+.hm-editorial-logo {
+  position: absolute !important;
+  top: 2.5rem !important;
+  left: 3rem !important;
+  z-index: 10015 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  color: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.15 !important;
+}
+
+.hm-logo-line1 {
+  color: #ffffff !important;
+}
+
+.hm-logo-line2 {
+  color: #ffffff !important;
+}
+
+/* Center-Right Stacked Serif Navigation Links (Exact Hello Monday Reference) */
+.hm-editorial-nav {
+  position: absolute !important;
+  top: 50% !important;
+  right: 22vw !important;
+  transform: translateY(-50%) !important;
+  z-index: 10015 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 1.2rem !important;
+  pointer-events: auto !important;
+}
+
+.hm-editorial-link {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.15 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.85rem !important;
+  opacity: 0.9 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease !important;
+}
+
+.hm-editorial-link:hover {
+  opacity: 1 !important;
+  transform: translateX(-14px) !important;
+  color: #ffffff !important;
+}
+
+.hm-bullet {
+  color: #ffffff !important;
+  font-size: 1.8rem !important;
+  line-height: 0 !important;
+}
+
+/* Bottom Right Footer Links */
+.hm-editorial-footer {
+  position: absolute !important;
+  bottom: 2.8rem !important;
+  right: 22vw !important;
+  z-index: 10015 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 2.5rem !important;
+  font-size: 0.82rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  color: #71717a !important;
+}
+
+.hm-editorial-footer button {
+  background: transparent !important;
+  border: none !important;
+  color: #71717a !important;
+  -webkit-text-fill-color: #71717a !important;
+  cursor: pointer !important;
+  font-size: 0.82rem !important;
+  transition: color 0.2s ease !important;
+}
+
+.hm-editorial-footer button:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Professional Responsive Breakpoints for Mobile & Tablet */
+@media (max-width: 768px) {
+  .hello-monday-handle-wrapper {
+    width: 75px !important;
+  }
+
+  .hello-monday-svg {
+    width: 75px !important;
+  }
+
+  .hello-monday-icon-center {
+    right: 16px !important;
+  }
+
+  .hm-editorial-logo {
+    top: 1.5rem !important;
+    left: 1.5rem !important;
+  }
+
+  .hm-editorial-nav {
+    right: 8vw !important;
+    gap: 0.75rem !important;
+  }
+
+  .hm-editorial-link {
+    font-size: clamp(1.8rem, 6.5vw, 2.8rem) !important;
+  }
+
+  .hm-editorial-footer {
+    right: 8vw !important;
+    bottom: 1.8rem !important;
+    gap: 1rem !important;
+    font-size: 0.75rem !important;
+    flex-wrap: wrap !important;
+  }
+}

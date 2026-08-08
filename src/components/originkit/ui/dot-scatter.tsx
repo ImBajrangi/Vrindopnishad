@@ -1385,7 +1385,7 @@ const GlyphMark = ({ target, index, scattered, band, color, reducedMotion }: Gly
 
 export default function ScatterText({
   text = "Scatter",
-  color = "#FFFFFF",
+  color = "#c3f53c",
   background = "transparent",
   letterGap = 0.9,
   variant = "word",

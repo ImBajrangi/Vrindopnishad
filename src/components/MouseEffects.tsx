@@ -29,7 +29,7 @@ interface Props {
 }
 
 export default function MouseEffects({
-    color = "#ffffff",
+    color = "#c3f53c",
     interactionMode = "sniper",
     duration = 0.3,
     strokeWidth = 0.5,
@@ -106,11 +106,12 @@ export default function MouseEffects({
             ref={containerRef}
             style={{
                 position: "fixed",
-                inset: 0,
-                width: "100vw",
-                height: "100vh",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
                 pointerEvents: "none",
-                zIndex: 999999,
+                zIndex: 9999,
                 overflow: "hidden",
             }}
         >

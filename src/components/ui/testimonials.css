@@ -1,0 +1,714 @@
+/* Comprehensive Scoped CSS for Logo Clouds & Testimonials Components */
+
+/* ====================================================
+   1. LOGO CLOUD 3 (Horizontal Marquee)
+   ==================================================== */
+.lc3-container {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0;
+  text-align: center;
+  overflow: hidden;
+  background-color: #0c0c0e;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.lc3-title {
+  font-family: monospace;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.lc3-marquee-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lc3-logo-box {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 240px !important;
+  min-width: 240px !important;
+  height: 140px !important;
+  padding: 1.25rem !important;
+  color: #94a3b8 !important;
+  transition: color 0.3s cubic-bezier(0.1, 0.7, 0.5, 1) !important;
+}
+
+.lc3-logo-box:hover {
+  color: #ffffff !important;
+}
+
+.lc3-brand-svg {
+  width: 130px !important;
+  height: 36px !important;
+  display: block !important;
+}
+
+.lc3-testimonial-box {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  width: 280px !important;
+  min-width: 280px !important;
+  height: 140px !important;
+  padding: 1rem 1.15rem !important;
+  box-sizing: border-box !important;
+  border-radius: 0.85rem !important;
+  background: #111113 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  text-align: left !important;
+  transition: border-color 0.3s cubic-bezier(0.1, 0.7, 0.5, 1), box-shadow 0.3s cubic-bezier(0.1, 0.7, 0.5, 1) !important;
+}
+
+.lc3-testimonial-box:hover {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7) !important;
+}
+
+.lc3-card-header {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.lc3-author-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+}
+
+.lc3-avatar {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+.lc3-author-text {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.lc3-name {
+  font-size: 0.825rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.1 !important;
+}
+
+.lc3-role {
+  font-size: 0.7rem !important;
+  color: #71717a !important;
+  line-height: 1.2 !important;
+}
+
+.lc3-close-icon {
+  width: 14px !important;
+  height: 14px !important;
+  color: #71717a !important;
+  cursor: pointer !important;
+  transition: color 0.2s cubic-bezier(0.1, 0.7, 0.5, 1) !important;
+}
+
+.lc3-close-icon:hover {
+  color: #ffffff !important;
+}
+
+.lc3-quote {
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+  color: #d4d4d8 !important;
+  margin: 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.lc3-mask-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12%;
+  background: linear-gradient(to right, #0c0c0e, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.lc3-mask-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 12%;
+  background: linear-gradient(to left, #0c0c0e, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ====================================================
+   2. LOGO CLOUD 2 (Grid Ecosystem)
+   ==================================================== */
+.lc2-container {
+  position: relative;
+  width: 100%;
+  padding: 2rem !important;
+  box-sizing: border-box !important;
+  border-radius: 1.5rem !important;
+  background: rgba(24, 24, 27, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+  margin: 1.5rem 0 !important;
+}
+
+.lc2-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 1.75rem auto;
+}
+
+.lc2-title {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 0 0.35rem 0 !important;
+}
+
+.lc2-desc {
+  font-size: 0.85rem !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+}
+
+.lc2-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 1rem !important;
+  width: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .lc2-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .lc2-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.lc2-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.25rem 0.85rem !important;
+  border-radius: 1rem !important;
+  background: rgba(39, 39, 42, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  text-align: center !important;
+  transition: transform 0.3s cubic-bezier(0.1, 0.7, 0.5, 1), border-color 0.3s cubic-bezier(0.1, 0.7, 0.5, 1) !important;
+}
+
+.lc2-card:hover {
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+.lc2-icon {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: rgba(245, 158, 11, 0.15) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  color: #fbbf24 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.lc2-name {
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+}
+
+.lc2-category {
+  font-size: 0.7rem !important;
+  color: #94a3b8 !important;
+  font-family: monospace;
+  margin-top: 0.25rem !important;
+}
+
+/* ====================================================
+   3. TESTIMONIALS 13 (3-Column Review Grid)
+   ==================================================== */
+.t13-container {
+  position: relative;
+  width: 100%;
+  padding: 2.5rem 0;
+  margin: 1.5rem 0;
+}
+
+.t13-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.t13-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  padding: 0.25rem 0.85rem !important;
+  border-radius: 9999px !important;
+  background: rgba(245, 158, 11, 0.12) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  color: #fbbf24 !important;
+  font-family: monospace !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+.t13-title {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+  margin: 0.5rem 0 0.25rem 0 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.t13-desc {
+  font-size: 0.9rem !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+}
+
+.t13-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 850px) {
+  .t13-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.t13-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 1.5rem !important;
+  border-radius: 1.25rem !important;
+  background: rgba(24, 24, 27, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+  text-align: left !important;
+  transition: transform 0.3s cubic-bezier(0.1, 0.7, 0.5, 1), border-color 0.3s cubic-bezier(0.1, 0.7, 0.5, 1) !important;
+}
+
+.t13-card:hover {
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+.t13-stars {
+  display: flex !important;
+  gap: 0.25rem !important;
+  color: #f59e0b !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.t13-quote {
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  color: #cbd5e1 !important;
+  margin: 0 !important;
+  font-style: italic !important;
+}
+
+.t13-author {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  margin-top: 1.25rem !important;
+  padding-top: 0.75rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.t13-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.t13-name {
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+
+.t13-role {
+  font-size: 0.75rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+
+/* ====================================================
+   4. TESTIMONIALS SECTION (Vertical Slider)
+   ==================================================== */
+.v-testimonial-section {
+  position: relative;
+  padding: 3rem 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.v-testimonial-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.v-testimonial-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.v-testimonial-title {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.03em !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.v-testimonial-desc {
+  font-size: 0.95rem !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+  max-width: 500px;
+}
+
+.v-testimonial-slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 520px;
+  max-height: 520px;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.v-testimonial-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+.v-testimonial-card {
+  width: 320px !important;
+  max-width: 320px !important;
+  min-width: 320px !important;
+  box-sizing: border-box !important;
+  padding: 1.5rem !important;
+  border-radius: 1.25rem !important;
+  background: rgba(24, 24, 27, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+  transition: transform 0.3s cubic-bezier(0.1, 0.7, 0.5, 1), border-color 0.3s cubic-bezier(0.1, 0.7, 0.5, 1) !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.v-testimonial-card:hover {
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+.v-testimonial-quote {
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  color: #cbd5e1 !important;
+  margin: 0 0 1rem 0 !important;
+  font-style: normal !important;
+  text-align: left !important;
+}
+
+.v-testimonial-author {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  margin-top: 0.75rem !important;
+  padding-top: 0.75rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.v-testimonial-avatar {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  min-height: 38px !important;
+  max-width: 38px !important;
+  max-height: 38px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.v-testimonial-info {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+}
+
+.v-testimonial-name {
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+  font-style: normal !important;
+}
+
+.v-testimonial-role {
+  font-size: 0.75rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.3 !important;
+}
+
+/* ====================================================
+   5. MARQUEE 01 CARD & TRACK (PROFESSIONAL REDESIGN)
+   ==================================================== */
+.v-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+.v-marquee-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.v-marquee-row:last-child {
+  margin-bottom: 0;
+}
+
+.v-marquee-card {
+  width: 340px !important;
+  max-width: 340px !important;
+  min-width: 340px !important;
+  padding: 1.5rem !important;
+  box-sizing: border-box !important;
+  border-radius: 1.25rem !important;
+  background: rgba(24, 24, 27, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+}
+
+.v-marquee-card:hover {
+  border-color: rgba(245, 158, 11, 0.5) !important;
+  box-shadow: 0 14px 36px rgba(245, 158, 11, 0.15) !important;
+  background: rgba(30, 30, 35, 0.95) !important;
+}
+
+.v-testimonial-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.v-testimonial-quote {
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+}
+
+.v-testimonial-avatar {
+  border: 1.5px solid rgba(245, 158, 11, 0.6) !important;
+}
+
+.v-infinite-track-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  will-change: transform;
+}
+
+.track-row-1 {
+  animation: infiniteScrollH 40s linear infinite;
+}
+
+.track-row-2 {
+  animation: infiniteScrollH 35s linear infinite reverse;
+}
+
+.v-marquee-wrapper:hover .track-row-1,
+.v-marquee-wrapper:hover .track-row-2 {
+  animation-play-state: paused;
+}
+
+/* Side Edge Fade Overlay Masks */
+.v-marquee-fade-left,
+.v-marquee-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 12%;
+  max-width: 160px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.v-marquee-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #0f0f11 0%, transparent 100%);
+}
+
+.v-marquee-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #0f0f11 0%, transparent 100%);
+}
+
+/* Light Mode Overrides for Testimonial Marquee */
+html.light .v-testimonial-title,
+body.light-mode .v-testimonial-title {
+  color: #0f0f11 !important;
+}
+
+html.light .v-testimonial-desc,
+body.light-mode .v-testimonial-desc {
+  color: #52525b !important;
+}
+
+html.light .v-marquee-card,
+body.light-mode .v-marquee-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light .v-marquee-card:hover,
+body.light-mode .v-marquee-card:hover {
+  border-color: rgba(245, 158, 11, 0.6) !important;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12) !important;
+}
+
+html.light .v-testimonial-quote,
+body.light-mode .v-testimonial-quote {
+  color: #18181b !important;
+}
+
+html.light .v-testimonial-name,
+body.light-mode .v-testimonial-name {
+  color: #0f0f11 !important;
+}
+
+html.light .v-testimonial-role,
+body.light-mode .v-testimonial-role {
+  color: #71717a !important;
+}
+
+html.light .v-marquee-fade-left,
+body.light-mode .v-marquee-fade-left {
+  background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+}
+
+html.light .v-marquee-fade-right,
+body.light-mode .v-marquee-fade-right {
+  background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+}
+
+@keyframes infiniteScrollH {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+

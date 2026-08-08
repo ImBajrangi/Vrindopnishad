@@ -4,6 +4,7 @@ import ConsensysMegaNav from './ConsensysMegaNav';
 interface HeaderProps {
   onOpenTools: () => void;
   onOpenNavMenu?: () => void;
+  onOpenAuth?: (mode?: 'signin' | 'register') => void;
   lang: 'english' | 'hindi';
   onLanguageChange: (lang: 'english' | 'hindi') => void;
 }
@@ -11,6 +12,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   onOpenTools,
   onOpenNavMenu,
+  onOpenAuth,
   lang,
   onLanguageChange
 }) => {
@@ -19,6 +21,9 @@ export const Header: React.FC<HeaderProps> = ({
       lang={lang}
       onLanguageChange={onLanguageChange}
       onOpenNavMenu={onOpenNavMenu}
+      onOpenAuth={onOpenAuth}
     />
   );
 };
+
+export default Header;

@@ -142,7 +142,7 @@ export const SideRays = ({
       if (rendererRef.current && meshRef.current) {
         try {
           rendererRef.current.render({ scene: meshRef.current });
-        } catch (e) {}
+        } catch (e) { }
       }
 
       setIsDark(darkActive);
@@ -361,7 +361,7 @@ void main() {
             if (loseCtx) loseCtx.loseContext();
             const canvas = renderer.gl.canvas;
             if (canvas && canvas.parentNode) canvas.parentNode.removeChild(canvas);
-          } catch (e) {}
+          } catch (e) { }
         }
         rendererRef.current = null;
         uniformsRef.current = null;

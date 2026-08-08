@@ -8,9 +8,9 @@ interface NotificationToastProps {
 export const NotificationToast: React.FC<NotificationToastProps> = ({ isReady = true }) => {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [timeStr, setTimeStr] = useState<string>('now');
-  const [topOffset, setTopOffset] = useState<number>(95);
+  const [topOffset, setTopOffset] = useState<number>(96);
 
-  // Dynamic vertical response relative to header state and available free space
+  // Dynamic vertical positioning relative to scroll & header state
   useEffect(() => {
     let lastScroll = 0;
 
@@ -18,11 +18,11 @@ export const NotificationToast: React.FC<NotificationToastProps> = ({ isReady = 
       const currentScroll = window.pageYOffset;
 
       if (currentScroll <= 0) {
-        setTopOffset(95); // Default top bar space
+        setTopOffset(92); // Top-right clearance below header actions
       } else if (currentScroll > lastScroll && currentScroll > 60) {
-        setTopOffset(18); // Header hidden -> smoothly glides up into free top space!
+        setTopOffset(24); // Header hidden -> glides up into free top-right space
       } else {
-        setTopOffset(76); // Compact scrolled header
+        setTopOffset(72); // Compact scrolled header clearance
       }
 
       lastScroll = currentScroll;
@@ -58,17 +58,25 @@ export const NotificationToast: React.FC<NotificationToastProps> = ({ isReady = 
   }, [isReady]);
 
   const animations = {
-    initial: { scale: 0.85, opacity: 0, y: -16 },
-    animate: { scale: 1, opacity: 1, y: 0, originY: 0 },
-    exit: { scale: 0.85, opacity: 0, y: -16 },
-    transition: { type: "spring", stiffness: 160, damping: 20, mass: 0.9 },
+    initial: { scale: 0.85, opacity: 0, x: 20, y: 0 },
+    animate: { scale: 1, opacity: 1, x: 0, y: 0 },
+    exit: { scale: 0.85, opacity: 0, x: 20, y: 0 },
+    transition: { type: "spring", stiffness: 200, damping: 22, mass: 0.8 },
   };
 
   return (
     <div 
       className="notifications"
       style={{
+        position: 'fixed',
         top: `${topOffset}px`,
+        right: '24px',
+        left: 'auto',
+        transform: 'none',
+        zIndex: 10005,
+        pointerEvents: 'none',
+        maxWidth: '340px',
+        width: 'calc(100vw - 48px)',
         transition: 'top 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
       }}
     >
@@ -86,7 +94,9 @@ export const NotificationToast: React.FC<NotificationToastProps> = ({ isReady = 
               onClick={() => setToastMessage(null)}
               aria-label="Close notification"
             >
-              &times;
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M1 1l10 10M11 1L1 11" />
+              </svg>
             </button>
 
             <div className="notification-header">

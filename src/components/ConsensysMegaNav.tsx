@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowUpRight, ArrowRight, ChevronUp, ChevronDown, Globe, Compass, ArrowLeft, X } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, ChevronUp, ChevronDown, Globe, Compass, ArrowLeft, X, LogIn, User } from 'lucide-react';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
+import { MorphingWaveIcon } from '@/components/ui/MorphingWaveIcon';
+import { useAuth } from '@/context/AuthContext';
 import './ConsensysMegaNav.css';
 
 interface ConsensysMegaNavProps {
   lang: 'english' | 'hindi';
   onLanguageChange: (lang: 'english' | 'hindi') => void;
   onOpenNavMenu?: () => void;
+  onOpenAuth?: (mode?: 'signin' | 'register') => void;
 }
 
 type TabType = 'products' | 'ecosystem' | 'company' | 'blog' | null;
@@ -15,8 +18,10 @@ type MobileLevel = 'main' | 'products' | 'ecosystem' | 'company' | 'blog' | null
 export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
   lang,
   onLanguageChange,
-  onOpenNavMenu
+  onOpenNavMenu,
+  onOpenAuth
 }) => {
+  const { user, isLoggedIn, openAuthModal } = useAuth();
   const [activeTab, setActiveTab] = useState<TabType>(null);
   const [mobileLevel, setMobileLevel] = useState<MobileLevel>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -102,6 +107,24 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
     setMobileLevel(null);
   };
 
+  const marqueeItems = lang === 'hindi'
+    ? [
+      'प्राचीन ज्ञान, आधुनिक अनुभव',
+      'नित्य साधना अब उपलब्ध',
+      'ब्रज धाम यात्रा गाइड',
+      'संत वाणी संग्रह',
+      'दिव्य कला संग्रह',
+      'भगवद्गीता एवं उपनिषद',
+    ]
+    : [
+      'Ancient Wisdom, Modern Experience',
+      'Daily Sadhana Now Live',
+      'Braj Dham Pilgrimage Guide',
+      'Sant-Vaani Collection',
+      'Divine Art Gallery',
+      'Gita & Upanishads Archive',
+    ];
+
   return (
     <div ref={navRef} className="consensys-nav-wrapper">
       {/* Backdrop overlay when desktop mega menu or mobile drawer is open */}
@@ -111,6 +134,18 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
           onClick={closeAllNav}
         />
       )}
+
+      {/* Marquee Announcement Bar */}
+      <div className={`marquee-announcement-bar ${isHidden && !activeTab && !mobileLevel ? 'marquee-hidden' : ''} ${activeTab || mobileLevel ? 'marquee-mega-open' : ''} ${isScrolled ? 'marquee-scrolled' : ''}`}>
+        <div className="marquee-track">
+          {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+            <span key={i} className={`marquee-item ${i % marqueeItems.length === 0 ? 'marquee-highlight' : ''}`}>
+              {item}
+              <span className="marquee-dot" />
+            </span>
+          ))}
+        </div>
+      </div>
 
       {/* Floating Main Header Bar */}
       <header className={`consensys-header ${isScrolled ? 'scrolled' : ''} ${isHidden && !activeTab && !mobileLevel ? 'nav-hidden' : ''} ${activeTab || mobileLevel ? 'mega-open' : ''}`}>
@@ -134,7 +169,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
                 className={`consensys-tab-btn ${activeTab === 'products' ? 'active' : ''}`}
                 onClick={() => handleTabClick('products')}
               >
-                <span>{lang === 'hindi' ? 'उत्पाद' : 'Products'}</span>
+                <span>{lang === 'hindi' ? 'दिव्य संग्रह' : 'Sacred Collection'}</span>
                 <span className="tab-caret">
                   {activeTab === 'products' ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 </span>
@@ -145,7 +180,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
                 className={`consensys-tab-btn ${activeTab === 'ecosystem' ? 'active' : ''}`}
                 onClick={() => handleTabClick('ecosystem')}
               >
-                <span>{lang === 'hindi' ? 'इकोसिस्टम' : 'Ecosystem'}</span>
+                <span>{lang === 'hindi' ? 'ज्ञान केंद्र' : 'Wisdom Hub'}</span>
                 <span className="tab-caret">
                   {activeTab === 'ecosystem' ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 </span>
@@ -156,7 +191,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
                 className={`consensys-tab-btn ${activeTab === 'company' ? 'active' : ''}`}
                 onClick={() => handleTabClick('company')}
               >
-                <span>{lang === 'hindi' ? 'संस्था' : 'Company'}</span>
+                <span>{lang === 'hindi' ? 'हमारा उद्देश्य' : 'Our Mission'}</span>
                 <span className="tab-caret">
                   {activeTab === 'company' ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 </span>
@@ -167,7 +202,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
                 className={`consensys-tab-btn ${activeTab === 'blog' ? 'active' : ''}`}
                 onClick={() => handleTabClick('blog')}
               >
-                <span>{lang === 'hindi' ? 'आलेख' : 'Blog'}</span>
+                <span>{lang === 'hindi' ? 'वैदिक विचार' : 'Sacred Insights'}</span>
                 <span className="tab-caret">
                   {activeTab === 'blog' ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 </span>
@@ -175,13 +210,10 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
             </nav>
           </div>
 
-          {/* Right Actions: Controls & Theme Toggler */}
+
+          {/* Right Actions: Controls, Panchang Tithi & Theme Toggler */}
           <div className="consensys-header-actions">
-            {/* Explore Products Right CTA Pill Button */}
-            <a href="https://path.vrindopnishad.in/" target="_blank" rel="noopener noreferrer" className="consensys-cta-pill desktop-only">
-              <span>{lang === 'hindi' ? 'उत्पाद देखें' : 'Explore products'}</span>
-              <ArrowRight size={14} />
-            </a>
+
 
             {/* Language Switcher */}
             <button
@@ -213,12 +245,43 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
               </button>
             )}
 
-            {/* Mobile Explore Products Button (Screenshot 1) */}
-            <a href="https://path.vrindopnishad.in/" target="_blank" rel="noopener noreferrer" className="consensys-mobile-explore-btn mobile-only" onClick={closeAllNav}>
-              <span>{lang === 'hindi' ? 'उत्पाद देखें' : 'Explore products'}</span>
-            </a>
+            {/* Sign In / User Account Profile Button */}
+            {isLoggedIn && user ? (
+              <button
+                type="button"
+                onClick={() => {
+                  window.location.hash = '#auth-page';
+                  if (onOpenAuth) onOpenAuth('signin');
+                  else openAuthModal('signin');
+                }}
+                className="consensys-action-btn user-profile-btn desktop-only"
+                title={`Signed in as ${user.name}`}
+              >
+                <img
+                  src={user.avatarUrl || '/v-logo-rounded/official-logo-dark.svg'}
+                  alt={user.name}
+                  className="user-avatar-mini"
+                />
+                <span className="user-name-mini">{user.name.split(' ')[0]}</span>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => {
+                  window.location.hash = '#auth-page';
+                  if (onOpenAuth) onOpenAuth('signin');
+                  else openAuthModal('signin');
+                }}
+                className="consensys-action-btn signin-btn desktop-only"
+                title="Sign In / Register"
+              >
+                <LogIn size={15} />
+                <span className="auth-btn-label">{lang === 'hindi' ? 'साइन इन' : 'Sign In'}</span>
+              </button>
+            )}
 
-            {/* Mobile Hamburger / Close Button */}
+
+            {/* Mobile Hamburger / Close Wave Button */}
             <button
               type="button"
               className={`consensys-hamburger mobile-only ${mobileLevel ? 'open' : ''}`}
@@ -231,15 +294,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
               }}
               aria-label="Toggle Menu"
             >
-              {mobileLevel ? (
-                <X size={20} color="#ffffff" />
-              ) : (
-                <>
-                  <span className="bar"></span>
-                  <span className="bar"></span>
-                  <span className="bar"></span>
-                </>
-              )}
+              <MorphingWaveIcon active={Boolean(mobileLevel)} size={18} />
             </button>
           </div>
         </div>
@@ -511,7 +566,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
       {/* MOBILE DRILL-DOWN NAVIGATION DRAWER (Target Screenshots) */}
       {mobileLevel && (
         <div className="consensys-mobile-drawer mobile-only">
-          
+
           {/* Top Sticky Header Bar inside Mobile Drawer */}
           <div className="mobile-drawer-header">
             {mobileLevel === 'main' ? (
@@ -523,9 +578,6 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
                     width="24"
                     height="24"
                   />
-                </a>
-                <a href="https://path.vrindopnishad.in/" target="_blank" rel="noopener noreferrer" className="mobile-header-explore-btn" onClick={closeAllNav}>
-                  <span>{lang === 'hindi' ? 'उत्पाद देखें' : 'Explore products'}</span>
                 </a>
                 <button
                   type="button"
@@ -637,15 +689,45 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
                   </ul>
                 </div>
 
-                {/* Mobile Quick Action Controls (Language & Theme Toggler) */}
+                {/* Mobile Quick Action Controls (Language, Auth & Theme Toggler) */}
                 <div className="mobile-controls-row">
+                  {isLoggedIn && user ? (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        closeAllNav();
+                        window.location.hash = '#auth-page';
+                        if (onOpenAuth) onOpenAuth('signin');
+                        else openAuthModal('signin');
+                      }}
+                      className="mobile-control-btn"
+                    >
+                      <User size={15} />
+                      <span>{user.name.split(' ')[0]} (Account)</span>
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        closeAllNav();
+                        window.location.hash = '#auth-page';
+                        if (onOpenAuth) onOpenAuth('signin');
+                        else openAuthModal('signin');
+                      }}
+                      className="mobile-control-btn"
+                    >
+                      <LogIn size={15} />
+                      <span>{lang === 'hindi' ? 'साइन इन / रजिस्टर' : 'Sign In / Register'}</span>
+                    </button>
+                  )}
+
                   <button
                     type="button"
                     onClick={() => onLanguageChange(lang === 'english' ? 'hindi' : 'english')}
                     className="mobile-control-btn"
                   >
                     <Globe size={15} />
-                    <span>{lang === 'english' ? 'Language: English (EN)' : 'भाषा: हिंदी (HI)'}</span>
+                    <span>{lang === 'english' ? 'EN' : 'HI'}</span>
                   </button>
 
                   <AnimatedThemeToggler
@@ -827,7 +909,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
 
                 <div className="mobile-sub-section">
                   <div className="mobile-section-title">Featured</div>
-                  
+
                   <div className="mobile-blog-cards-list">
                     {/* Card 1: Electric Blue */}
                     <div className="mobile-blog-card">

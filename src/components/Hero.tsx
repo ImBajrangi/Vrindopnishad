@@ -1,7 +1,11 @@
 import React from 'react';
 import SideRays from './SideRays';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  lang?: 'english' | 'hindi';
+}
+
+export const Hero: React.FC<HeroProps> = ({ lang = 'english' }) => {
   return (
     <section
       id="home"
@@ -9,12 +13,12 @@ export const Hero: React.FC = () => {
       style={{
         position: 'relative',
         overflow: 'hidden',
-        minHeight: '100vh',
+        minHeight: 'calc(100vh - 80px)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'flex-start',
-        padding: '85px 1.5rem 3rem',
+        justifyContent: 'center',
+        padding: 'clamp(90px, 11vh, 120px) 1.5rem clamp(2.5rem, 5vh, 4rem)',
         boxSizing: 'border-box'
       }}
     >
@@ -44,89 +48,74 @@ export const Hero: React.FC = () => {
         style={{
           position: 'relative',
           zIndex: 1,
-          maxWidth: '920px',
+          maxWidth: '1100px',
           width: '100%',
-          margin: '1rem auto 0',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'flex-start',
+          justifyContent: 'center',
           textAlign: 'center'
         }}
       >
-        {/* Main Title */}
-        <h1 className="hero-title" style={{ textAlign: 'center', margin: '0 0 1.5rem 0' }}>
-          <div className="title-row" style={{ justifyContent: 'center' }}>
-            <span className="title-small" style={{ textTransform: 'uppercase', letterSpacing: '0.25em', opacity: 0.8 }}>
-              WELCOME TO
+        {/* Top Header Group */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', justifyContent: 'center' }}>
+          <h1 className="hero-title" style={{ textAlign: 'center', margin: '0 0 1rem 0', width: '100%' }}>
+            <div className="title-row" style={{ justifyContent: 'center', marginBottom: '0.5rem' }}>
+              <span className="title-small" style={{ textTransform: 'uppercase', letterSpacing: '0.3em', opacity: 0.85, fontSize: 'clamp(0.85rem, 1.5vw, 1.05rem)', fontWeight: 600 }}>
+                WELCOME TO
+              </span>
+            </div>
+            <div className="title-row" style={{ justifyContent: 'center' }}>
+              <span className="title-main" style={{ fontSize: 'clamp(3.8rem, 10vw, 8rem)', lineHeight: 0.95 }}>Vrindopnishad</span>
+            </div>
+          </h1>
+
+          {/* Tagline */}
+          <div
+            className="hero-tagline"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              flexWrap: 'wrap',
+              margin: '0.8rem 0 0.5rem',
+              textAlign: 'center'
+            }}
+          >
+            <span style={{ fontSize: 'clamp(1.25rem, 2.8vw, 1.7rem)', color: 'var(--text-color)', fontWeight: 500, lineHeight: 1.4 }}>
+              Where <strong>ancient wisdom</strong> meets <strong>modern innovation</strong>
             </span>
           </div>
-          <div className="title-row" style={{ justifyContent: 'center' }}>
-            <span className="title-main">Vrindopnishad</span>
+
+          {/* Description */}
+          <div className="hero-description" style={{ maxWidth: '780px', margin: '1rem auto 1.5rem', textAlign: 'center' }}>
+            <p style={{ fontSize: 'clamp(1.05rem, 2.2vw, 1.28rem)', lineHeight: 1.55, color: 'var(--secondary-color)' }}>
+              {lang === 'hindi'
+                ? 'भोजन, कला, यात्रा और अध्यात्म का अनूठा संगम।'
+                : 'Connecting food, art, travel, and sacred wisdom in one sanctuary.'}
+            </p>
           </div>
-        </h1>
 
-        {/* Tagline */}
-        <div
-          className="hero-tagline"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '0.5rem',
-            flexWrap: 'wrap',
-            marginTop: '0.5rem',
-            textAlign: 'center'
-          }}
-        >
-          <span style={{ fontSize: 'clamp(1.15rem, 2.5vw, 1.45rem)', color: 'var(--text-color)', fontWeight: 500, lineHeight: 1.4 }}>
-            Where <strong>ancient wisdom</strong> meets <strong>modern innovation</strong>
-          </span>
-        </div>
-
-        {/* Description */}
-        <div className="hero-description" style={{ maxWidth: '680px', margin: '1.2rem auto 2rem', textAlign: 'center' }}>
-          <p style={{ fontSize: 'clamp(0.98rem, 1.8vw, 1.12rem)', lineHeight: 1.6, color: 'var(--secondary-color)' }}>
-            We craft digital experiences that connect food, art, travel, and spirituality under one purpose — serving you better.
-          </p>
-        </div>
-
-        {/* CTA Group */}
-        <div
-          className="hero-cta-group"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '1.2rem',
-            flexWrap: 'wrap',
-            margin: '0.5rem 0 2.5rem'
-          }}
-        >
-          <a href="#our-story" className="hero-btn hero-btn-primary">
-            <span>Discover Our Story</span>
-            <span className="btn-arrow">→</span>
-          </a>
-          <a href="#projects" className="hero-btn hero-btn-secondary">
-            <span>View Projects</span>
-          </a>
-        </div>
-
-        {/* Stats Strip */}
-        <div className="hero-stats">
-          <div className="stat" style={{ textAlign: 'center' }}>
-            <span className="stat-num">4+</span>
-            <span className="stat-text">Projects</span>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat" style={{ textAlign: 'center' }}>
-            <span className="stat-num">∞</span>
-            <span className="stat-text">Creativity</span>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat" style={{ textAlign: 'center' }}>
-            <span className="stat-num">1</span>
-            <span className="stat-text">Mission</span>
+          {/* CTA Group */}
+          <div
+            className="hero-cta-group"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '1.25rem',
+              flexWrap: 'wrap',
+              margin: '0.5rem 0'
+            }}
+          >
+            <a href="#our-story" className="hero-btn hero-btn-primary" style={{ padding: '0.85rem 2.2rem', fontSize: '1rem' }}>
+              <span>Discover Our Story</span>
+              <span className="btn-arrow">→</span>
+            </a>
+            <a href="#projects" className="hero-btn hero-btn-secondary" style={{ padding: '0.85rem 2.2rem', fontSize: '1rem' }}>
+              <span>View Projects</span>
+            </a>
           </div>
         </div>
       </div>
@@ -135,3 +124,4 @@ export const Hero: React.FC = () => {
 };
 
 export default Hero;
+

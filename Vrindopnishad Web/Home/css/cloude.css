@@ -56,7 +56,7 @@ body {
 }
 
 /* Header with Enhanced Visibility */
-header {
+header:not(.consensys-header) {
     position: fixed;
     top: 0;
     left: 0;
@@ -73,7 +73,7 @@ header {
     transition: all 0.3s var(--transition-smooth);
 }
 
-header.scrolled {
+header.scrolled:not(.consensys-header) {
     padding: 0.8rem 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }

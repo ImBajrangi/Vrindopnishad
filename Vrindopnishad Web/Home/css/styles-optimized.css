@@ -333,7 +333,7 @@ nav {
 }
 
 /* ========== Header & Navigation ========== */
-header {
+header:not(.consensys-header) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -351,7 +351,7 @@ header {
     box-shadow: var(--glass-shadow);
 }
 
-header.hide {
+header.hide:not(.consensys-header) {
     transform: translateY(-100%);
 }
 
@@ -549,7 +549,7 @@ header.hide {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: var(--spacing-md);
     opacity: 0;
-    transform: translateY(20px);
+    /* transform: translateY(20px); */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -711,7 +711,7 @@ header.hide {
 
 .language-btn-tools:hover {
     background-color: rgba(var(--text-color-rgb), 0.15);
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
 }
 
 .language-switch-nav {
@@ -737,7 +737,7 @@ header.hide {
 
 .language-btn-nav:hover {
     background-color: rgba(var(--text-color-rgb), 0.15);
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
 }
 
 /* ========== Horizontal Scrolling ========== */
@@ -872,7 +872,7 @@ header.hide {
 
 .project-item:hover {
     background-color: rgba(var(--text-color-rgb), 0.05);
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
     box-shadow: var(--shadow-md);
 }
 
@@ -972,7 +972,7 @@ footer {
 
 .footer-text:hover {
     background: rgba(var(--bg-color-rgb), 0.7);
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
 }
 
 .footer-links h3 {
@@ -1482,34 +1482,71 @@ body.cursor-click .cursor-circle {
 
 .notification-time {
     margin-left: auto;
+    margin-right: 24px;
     font-size: 11px;
     color: #8e8e93;
+    font-weight: 500;
 }
 
 .notification-content {
     padding: 4px 16px 12px;
-}
-
-.notification span {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.4;
     display: block;
 }
 
 .notification-close {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    background: rgba(0, 0, 0, 0.05);
-    border: none;
-    color: #8e8e93;
-    width: 20px;
-    height: 20px;
+    top: 10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+/* Bright Light Mode Close Button */
+html.light .notification-close,
+body.light-mode .notification-close,
+.notification-close {
+    background: rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    color: #0f0f11 !important;
+    opacity: 0.85;
+}
+
+html.light .notification-close:hover,
+body.light-mode .notification-close:hover,
+.notification-close:hover {
+    background: rgba(0, 0, 0, 0.16);
+    border-color: rgba(0, 0, 0, 0.3);
+    color: #000000 !important;
+    opacity: 1;
+}
+
+/* Dark Mode Close Button */
+html.dark .notification-close,
+body.dark-mode .notification-close {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff !important;
+    opacity: 0.85;
+}
+
+html.dark .notification-close:hover,
+body.dark-mode .notification-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #ffffff !important;
+    opacity: 1;
 }
 
 @keyframes notifSlideIn {

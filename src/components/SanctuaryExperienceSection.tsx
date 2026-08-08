@@ -29,8 +29,8 @@ const SACRED_VERSES: VerseData[] = [
     transliteration: 'Om Poornamadah Poornamidam Poornaat Poornamudachyate |\nPoornasya Poornamaadaaya Poornamevaavashishyate ||',
     translation: 'That is Infinite, This is Infinite. From Infinity, Infinity manifests.\nWhen Infinity is drawn from Infinity, Infinity alone remains.',
     duration: '03:45',
-    color: '#38bdf8',
-    glow: 'rgba(56, 189, 248, 0.4)'
+    color: '#c3f53c',
+    glow: 'rgba(195, 245, 60, 0.25)'
   },
   {
     id: 'maha-mantra',
@@ -41,8 +41,8 @@ const SACRED_VERSES: VerseData[] = [
     transliteration: 'Hare Krishna Hare Krishna Krishna Krishna Hare Hare |\nHare Rama Hare Rama Rama Rama Hare Hare ||',
     translation: 'The supreme transcendental sound vibration for spiritual enlightenment, inner clarity, and universal peace.',
     duration: '04:12',
-    color: '#eab308',
-    glow: 'rgba(234, 179, 8, 0.4)'
+    color: '#f59e0b',
+    glow: 'rgba(245, 158, 11, 0.25)'
   },
   {
     id: 'mangalacharan',
@@ -53,8 +53,8 @@ const SACRED_VERSES: VerseData[] = [
     transliteration: 'Om Bhadram Karnebhih Shrinuyaama Devaah |\nBhadram Pashyemaakshabhiryajatraah ||',
     translation: 'May we hear auspicious words with our ears, and behold divine goodness with our eyes in sacred worship.',
     duration: '02:50',
-    color: '#c084fc',
-    glow: 'rgba(192, 132, 252, 0.4)'
+    color: '#10b981',
+    glow: 'rgba(16, 185, 129, 0.25)'
   }
 ];
 
@@ -94,7 +94,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
 
   const activeVerse = SACRED_VERSES[activeVerseIndex];
 
-  // Ambient Stardust Incense Particle Canvas Engine
+  // Subtle Ambient Stardust Particle Engine
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -102,7 +102,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
     if (!ctx) return;
 
     let animationId: number;
-    const particleCount = 45;
+    const particleCount = 25;
     const particles: Array<{
       x: number;
       y: number;
@@ -110,7 +110,6 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
       speedY: number;
       speedX: number;
       alpha: number;
-      maxAlpha: number;
     }> = [];
 
     const resizeCanvas = () => {
@@ -124,11 +123,10 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 1.8 + 0.5,
-        speedY: -(Math.random() * 0.4 + 0.15),
-        speedX: (Math.random() - 0.5) * 0.3,
-        alpha: Math.random() * 0.6,
-        maxAlpha: Math.random() * 0.7 + 0.3
+        radius: Math.random() * 1.4 + 0.4,
+        speedY: -(Math.random() * 0.25 + 0.1),
+        speedX: (Math.random() - 0.5) * 0.2,
+        alpha: Math.random() * 0.4
       });
     }
 
@@ -147,7 +145,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = activeVerse.color;
-        ctx.globalAlpha = p.alpha * (isPlaying ? 0.95 : 0.4);
+        ctx.globalAlpha = p.alpha * (isPlaying ? 0.7 : 0.25);
         ctx.fill();
       });
 
@@ -175,14 +173,18 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
       id="recitation"
       className="sanctuary-section"
       style={{
-        padding: '10rem 1.5rem 9rem',
-        background: '#030509',
+        padding: '5.5rem 1.5rem 5rem',
+        background: 'rgba(10, 10, 14, 0.45)',
+        backdropFilter: 'blur(24px)',
+        WebkitBackdropFilter: 'blur(24px)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.06)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
         color: '#ffffff',
         overflow: 'hidden',
         position: 'relative'
       }}
     >
-      {/* Background Stardust Particle Canvas */}
+      {/* Background Subtle Particle Canvas */}
       <canvas
         ref={canvasRef}
         style={{
@@ -191,14 +193,15 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
           width: '100%',
           height: '100%',
           pointerEvents: 'none',
-          zIndex: 0
+          zIndex: 0,
+          opacity: 0.6
         }}
       />
 
-      {/* Dynamic Celestial Aura Glow */}
+      {/* Light Ambient Glow (No Heavy Dark Overlays) */}
       <motion.div
         animate={{
-          background: `radial-gradient(circle at 50% 45%, ${activeVerse.glow} 0%, rgba(3, 5, 9, 0.85) 45%, rgba(3, 5, 9, 0) 80%)`
+          background: `radial-gradient(circle at 50% 50%, ${activeVerse.glow} 0%, rgba(10, 10, 14, 0) 65%)`
         }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         style={{
@@ -211,15 +214,16 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
 
       <div style={{ maxWidth: '1040px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
         {/* Section Header */}
-        <div style={{ marginBottom: '4rem' }}>
+        <div style={{ marginBottom: '2.5rem' }}>
           <h2
+            className="sanctuary-title"
             style={{
-              fontSize: 'clamp(2.8rem, 6.2vw, 5.2rem)',
-              lineHeight: 1.12,
+              fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
+              lineHeight: 1.15,
               letterSpacing: '-0.02em',
               color: '#ffffff',
               maxWidth: '1000px',
-              margin: '0 auto 1.2rem',
+              margin: '0 auto 0.8rem',
               display: 'block'
             }}
           >
@@ -227,10 +231,11 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
           </h2>
 
           <p
+            className="sanctuary-subtitle"
             style={{
-              fontSize: 'clamp(1.02rem, 1.8vw, 1.25rem)',
-              color: 'rgba(255, 255, 255, 0.7)',
-              maxWidth: '640px',
+              fontSize: 'clamp(0.95rem, 1.6vw, 1.1rem)',
+              color: '#94a3b8',
+              maxWidth: '600px',
               margin: '0 auto',
               fontFamily: '"sama-latin", sans-serif',
               fontWeight: 400,
@@ -244,7 +249,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
           </p>
         </div>
 
-        {/* Creative Segmented Track Selector */}
+        {/* Minimal Segmented Track Selector */}
         <div
           className="verse-tabs-container"
           style={{
@@ -253,14 +258,14 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
             alignItems: 'center',
             justifyContent: 'center',
             gap: '0.35rem',
-            padding: '0.4rem 0.6rem',
-            borderRadius: '20px',
-            background: 'rgba(255, 255, 255, 0.08)',
-            backdropFilter: 'blur(24px)',
-            WebkitBackdropFilter: 'blur(24px)',
-            border: '1px solid rgba(255, 255, 255, 0.12)',
-            boxShadow: '0 4px 24px rgba(0, 0, 0, 0.3)',
-            margin: '0 auto 3.5rem auto',
+            padding: '0.35rem 0.5rem',
+            borderRadius: '999px',
+            background: 'rgba(255, 255, 255, 0.05)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.25)',
+            margin: '0 auto 2.5rem auto',
             maxWidth: '100%',
             boxSizing: 'border-box'
           }}
@@ -274,18 +279,19 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                   setActiveVerseIndex(i);
                   setIsPlaying(true);
                 }}
+                className={`sanctuary-pill-tab ${isActive ? 'active' : ''}`}
                 style={{
                   position: 'relative',
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.45rem',
-                  padding: '0.55rem 1.1rem',
-                  borderRadius: '14px',
+                  padding: '0.5rem 1.1rem',
+                  borderRadius: '999px',
                   fontFamily: '"sama-latin", sans-serif',
                   fontSize: '0.84rem',
                   fontWeight: isActive ? 700 : 500,
                   letterSpacing: '0.03em',
-                  color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.6)',
+                  color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.65)',
                   background: 'transparent',
                   border: 'none',
                   outline: 'none',
@@ -300,10 +306,9 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                     style={{
                       position: 'absolute',
                       inset: 0,
-                      borderRadius: '14px',
-                      background: `linear-gradient(135deg, ${v.color}25 0%, rgba(255, 255, 255, 0.06) 100%)`,
-                      border: `1px solid ${v.color}66`,
-                      boxShadow: `0 0 20px ${v.color}30, inset 0 1px 0 rgba(255, 255, 255, 0.2)`,
+                      borderRadius: '999px',
+                      background: `rgba(0, 242, 254, 0.14)`,
+                      border: `1px solid ${v.color}55`,
                       zIndex: 0
                     }}
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
@@ -334,48 +339,24 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
         <div
           style={{
             position: 'relative',
-            minHeight: '340px',
+            minHeight: '280px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            padding: '2rem 1rem'
+            padding: '1.5rem 1rem'
           }}
         >
-          {/* Subtle Celestial Ring & Watermark Om */}
-          <motion.div
-            animate={{
-              scale: isPlaying ? [1, 1.05, 1] : 1,
-              opacity: isPlaying ? [0.8, 1, 0.8] : 0.6
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: 'easeInOut'
-            }}
-            style={{
-              position: 'absolute',
-              width: '420px',
-              height: '420px',
-              borderRadius: '50%',
-              border: `1px solid ${activeVerse.color}25`,
-              boxShadow: `0 0 80px ${activeVerse.color}15`,
-              pointerEvents: 'none',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              zIndex: 0
-            }}
-          />
-
+          {/* Subtle Om Watermark */}
           <div
+            className="sanctuary-om-watermark"
             style={{
               position: 'absolute',
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              fontSize: '16rem',
-              color: `${activeVerse.color}06`,
+              fontSize: '15rem',
+              color: `rgba(255, 255, 255, 0.025)`,
               pointerEvents: 'none',
               fontFamily: 'Georgia, serif',
               userSelect: 'none',
@@ -389,9 +370,9 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={activeVerse.id}
-              initial={{ opacity: 0, y: 14 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -14 }}
+              exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               style={{ width: '100%', position: 'relative', zIndex: 1, willChange: 'opacity, transform' }}
             >
@@ -403,22 +384,22 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                 animateBy="words"
                 direction="bottom"
                 stepDuration={0.35}
-                className="devanagari-text"
+                className="devanagari-text sanctuary-shloka-text"
                 style={{
-                  fontSize: 'clamp(1.25rem, 3.2vw, 2.5rem)',
+                  fontSize: 'clamp(1.3rem, 3.2vw, 2.4rem)',
                   fontWeight: 600,
                   color: '#ffffff',
                   lineHeight: '1.6',
                   fontFamily: '"sama-devanagari", sans-serif',
                   maxWidth: '920px',
-                  margin: '0 auto 1.8rem',
-                  textShadow: `0 0 45px ${activeVerse.color}66`,
+                  margin: '0 auto 1.5rem',
+                  textShadow: `0 2px 20px ${activeVerse.color}40`,
                   letterSpacing: '0.01em',
                   justifyContent: 'center'
                 }}
               />
 
-              {/* Transliteration Text with Staggered BlurText */}
+              {/* Transliteration Text with Relatability Accent Color */}
               <BlurText
                 key={`translit-${activeVerse.id}`}
                 text={activeVerse.transliteration}
@@ -426,21 +407,22 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                 animateBy="words"
                 direction="bottom"
                 stepDuration={0.3}
+                className="sanctuary-translit-text"
                 style={{
-                  fontSize: 'clamp(0.88rem, 1.6vw, 1.12rem)',
+                  fontSize: 'clamp(0.88rem, 1.6vw, 1.08rem)',
                   fontStyle: 'italic',
                   color: activeVerse.color,
                   fontFamily: '"sama-latin", sans-serif',
                   letterSpacing: '0.02em',
                   maxWidth: '860px',
-                  margin: '0 auto 2.2rem',
+                  margin: '0 auto 1.8rem',
                   lineHeight: '1.6',
-                  textShadow: `0 0 25px ${activeVerse.color}44`,
+                  textShadow: `0 0 15px ${activeVerse.color}33`,
                   justifyContent: 'center'
                 }}
               />
 
-              {/* Translation Paragraph with Staggered BlurText */}
+              {/* Translation Paragraph */}
               <BlurText
                 key={`trans-${activeVerse.id}`}
                 text={activeVerse.translation}
@@ -448,11 +430,12 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                 animateBy="words"
                 direction="bottom"
                 stepDuration={0.3}
+                className="sanctuary-translation-text"
                 style={{
-                  fontSize: 'clamp(0.82rem, 1.3vw, 0.98rem)',
-                  color: 'rgba(255, 255, 255, 0.6)',
+                  fontSize: 'clamp(0.85rem, 1.3vw, 0.95rem)',
+                  color: '#94a3b8',
                   maxWidth: '680px',
-                  margin: '0 auto 3rem',
+                  margin: '0 auto 2.5rem',
                   lineHeight: '1.6',
                   fontFamily: '"sama-latin", sans-serif',
                   justifyContent: 'center'
@@ -461,23 +444,24 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
             </motion.div>
           </AnimatePresence>
 
-          {/* Minimalist Floating Audio Play Node */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', zIndex: 2, marginTop: '1rem' }}>
+          {/* Minimalist Floating Audio Controls */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', zIndex: 2, marginTop: '0.5rem' }}>
             <button
               onClick={handlePrevVerse}
               aria-label="Previous Verse"
+              className="sanctuary-arrow-btn"
               style={{
-                width: '46px',
-                height: '46px',
+                width: '44px',
+                height: '44px',
                 borderRadius: '50%',
-                background: 'rgba(255, 255, 255, 0.08)',
-                border: '1px solid rgba(255, 255, 255, 0.15)',
+                background: 'rgba(255, 255, 255, 0.06)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
                 color: '#ffffff',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '1.3rem',
-                cursor: 'pointer !important',
+                fontSize: '1.2rem',
+                cursor: 'pointer',
                 backdropFilter: 'blur(16px)',
                 transition: 'all 0.25s ease'
               }}
@@ -485,29 +469,30 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
               ‹
             </button>
 
-            {/* Master Glowing Audio Pill Node */}
+            {/* Master Shiny Cyan Audio Pill Button */}
             <motion.button
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               onClick={() => setIsPlaying(!isPlaying)}
+              className="sanctuary-audio-btn"
               style={{
-                padding: '0.9rem 2.2rem',
+                padding: '0.75rem 2rem',
                 borderRadius: '999px',
-                background: `linear-gradient(135deg, ${activeVerse.color} 0%, #3b82f6 100%)`,
+                background: 'linear-gradient(135deg, #00f2fe 0%, #0284c7 100%)',
                 color: '#ffffff',
                 fontWeight: 700,
-                fontSize: '0.96rem',
+                fontSize: '0.92rem',
                 fontFamily: '"sama-latin", sans-serif',
                 border: 'none',
-                boxShadow: `0 0 40px ${activeVerse.glow}`,
-                cursor: 'pointer !important',
+                boxShadow: 'none',
+                cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.75rem',
+                gap: '0.6rem',
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
               }}
             >
-              <span style={{ fontSize: '1.1rem' }}>{isPlaying ? '⏸' : '▶'}</span>
+              <span style={{ fontSize: '1rem' }}>{isPlaying ? '⏸' : '▶'}</span>
               <span>{isPlaying ? 'Pause Recitation' : 'Listen Recitation'}</span>
             </motion.button>
 
@@ -516,14 +501,15 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
               target="_blank"
               rel="noopener noreferrer"
               title="Open Bhajan Path Recitation Hub"
+              className="sanctuary-hub-btn"
               style={{
-                padding: '0.9rem 1.4rem',
+                padding: '0.75rem 1.3rem',
                 borderRadius: '999px',
-                background: 'rgba(255, 255, 255, 0.08)',
-                border: '1px solid rgba(255, 255, 255, 0.15)',
+                background: 'rgba(255, 255, 255, 0.06)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
                 color: '#ffffff',
                 fontWeight: 600,
-                fontSize: '0.88rem',
+                fontSize: '0.85rem',
                 fontFamily: '"sama-latin", sans-serif',
                 textDecoration: 'none',
                 display: 'flex',
@@ -535,24 +521,25 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
               }}
             >
               <span>Recitation Hub</span>
-              <span style={{ fontSize: '1.05rem' }}>↗</span>
+              <span style={{ fontSize: '1rem' }}>↗</span>
             </a>
 
             <button
               onClick={handleNextVerse}
               aria-label="Next Verse"
+              className="sanctuary-arrow-btn"
               style={{
-                width: '46px',
-                height: '46px',
+                width: '44px',
+                height: '44px',
                 borderRadius: '50%',
-                background: 'rgba(255, 255, 255, 0.08)',
-                border: '1px solid rgba(255, 255, 255, 0.15)',
+                background: 'rgba(255, 255, 255, 0.06)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
                 color: '#ffffff',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '1.3rem',
-                cursor: 'pointer !important',
+                fontSize: '1.2rem',
+                cursor: 'pointer',
                 backdropFilter: 'blur(16px)',
                 transition: 'all 0.25s ease'
               }}

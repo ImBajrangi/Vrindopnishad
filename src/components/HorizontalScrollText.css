@@ -1,0 +1,63 @@
+/* Sacred Text Showcase / Horizontal Scroll Text Theme Styles */
+
+.sacred-text-showcase-section {
+  position: relative;
+  width: 100%;
+  padding: 4rem 1.5rem;
+  overflow: hidden;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.sacred-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(195, 245, 60, 0.05) 0%, rgba(245, 158, 11, 0.03) 40%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Light / Bright Theme Adaptations */
+html.light .sacred-text-showcase-section,
+body.light-mode .sacred-text-showcase-section {
+  background: transparent !important;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+  color: #0f0f11 !important;
+}
+
+html.light .sacred-ambient-glow,
+body.light-mode .sacred-ambient-glow {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 75%) !important;
+}
+
+/* Hide section on mobile, touch screens, and low-performance/reduced-motion edge devices */
+@media (max-width: 900px), (pointer: coarse) and (max-width: 1024px), (prefers-reduced-motion: reduce) {
+  .sacred-text-showcase-section {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}

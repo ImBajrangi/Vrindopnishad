@@ -17,90 +17,57 @@ import { ToolsMenuModal } from './components/ToolsMenuModal';
 import { MasterNavigationModal } from './components/MasterNavigationModal';
 import { DigitalUniverseSection } from './components/DigitalUniverseSection';
 import MouseEffects from './components/MouseEffects';
+import { AuthProvider, useAuth } from './context/AuthContext';
+import { AuthModal } from './components/AuthModal';
+import { AuthPage } from './components/AuthPage';
+import { OpenAISubNav } from './components/OpenAISubNav';
+import { OpenAIAcademySection } from './components/OpenAIAcademySection';
+import { VedicAskInputBar } from './components/VedicAskInputBar';
+import { WisdomPathwayModal } from './components/WisdomPathwayModal';
+import { AmbientSoundPlayer } from './components/AmbientSoundPlayer';
+import { VedicSageModal } from './components/VedicSageModal';
+import { QuoteBuilderModal } from './components/QuoteBuilderModal';
 
-const INITIAL_PROJECTS = [
-  {
-    id: 'vrindopnishad-path',
-    title: 'Vrindopnishad Path',
-    titleHindi: 'वृंदोपनिषद पाठ',
-    category: 'Vedic Scriptures',
-    description: 'Authentic Stotras, Mantras & Sacred Spiritual Wisdom',
-    descriptionHindi: 'प्रामाणिक वैदिक पाठ, स्तोत्र एवं आध्यात्मिक साधना',
-    imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
-    link: 'https://path.vrindopnishad.in/',
-    isFlagship: true
-  },
-  {
-    id: 'foody-vrinda',
-    title: 'Foody Vrinda',
-    titleHindi: 'फुडी वृंदा',
-    category: 'Cloud Kitchen',
-    description: 'Delicious homemade meals delivered fresh to your doorstep',
-    descriptionHindi: 'स्वादिष्ट सात्विक भोजन आपके द्वार तक',
-    imageUrl: '/images/projects/foody_vrinda_hero.jpg',
-    link: '#services',
-    isFlagship: false
-  },
-  {
-    id: 'chitra-vrinda',
-    title: 'Chitra Vrinda',
-    titleHindi: 'चित्र वृंदा',
-    category: 'Digital Art',
-    description: 'Artistic photography & digital creations',
-    descriptionHindi: 'दिव्य चित्रकला एवं कलात्मक डिजिटल संग्रह',
-    imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
-    link: 'https://pic.vrindopnishad.in/',
-    isFlagship: false
-  },
-  {
-    id: 'vrinda-tours',
-    title: 'Vrinda Tours',
-    titleHindi: 'वृंदा टूर्स',
-    category: 'Pilgrimage',
-    description: 'Sacred journeys to holy destinations & Brij Dham yatra',
-    descriptionHindi: 'ब्रज धाम यात्रा मार्गदर्शन एवं तीर्थ दर्शन',
-    imageUrl: '/images/projects/vrinda_tours_hero.jpg',
-    link: 'https://to.vrindopnishad.in/',
-    isFlagship: false
-  },
-  {
-    id: 'pdf-library',
-    title: 'PDF Sacred Archive',
-    titleHindi: 'पीडीएफ ग्रन्थागार',
-    category: 'Document Archive',
-    description: 'Digital library of ancient manuscripts & publications',
-    imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
-    link: 'https://path.vrindopnishad.in/',
-    isFlagship: false
-  },
-  {
-    id: 'sant-vaani',
-    title: 'Sant-Vaani',
-    titleHindi: 'संत-वाणी',
-    category: 'Spiritual Discourses',
-    description: 'Sacred shlokas & spiritual saint discourses',
-    imageUrl: '/images/projects/chitra_vrinda_hero.jpg',
-    link: 'https://path.vrindopnishad.in/',
-    isFlagship: false
-  },
-  {
-    id: 'get-apps',
-    title: 'Vrindopnishad Apps',
-    titleHindi: 'वृंदोपनिषद ऐप्स',
-    category: 'Mobile Applications',
-    description: 'Android apps for Foody Vrinda, Bhajan Path & guides',
-    imageUrl: '/images/projects/foody_vrinda_hero.jpg',
-    link: '#download-apps',
-    isFlagship: false
-  }
-];
-
-export const App: React.FC = () => {
+const AppContent: React.FC = () => {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
+  const [view, setView] = useState<'home' | 'auth'>('home');
   const [lang, setLang] = useState<'english' | 'hindi'>('english');
   const [loadingCount, setLoadingCount] = useState(10);
   const [loadingDone, setLoadingDone] = useState(false);
+
+  // New Interactive Feature States
+  const [isWisdomModalOpen, setIsWisdomModalOpen] = useState(false);
+  const [isSageModalOpen, setIsSageModalOpen] = useState(false);
+  const [sageQuery, setSageQuery] = useState<string | null>(null);
+  const [quoteVerse, setQuoteVerse] = useState<{ shloka: string; translation: string; source: string } | null>(null);
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+
+  const { isAuthModalOpen, closeAuthModal, openAuthModal } = useAuth();
+
+  const handleOpenSageModal = (query: string) => {
+    setSageQuery(query);
+    setIsSageModalOpen(true);
+  };
+
+  const handleOpenQuoteBuilder = (verse: { shloka: string; translation: string; source: string }) => {
+    setQuoteVerse(verse);
+    setIsQuoteModalOpen(true);
+  };
+
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash;
+      if (hash === '#signin' || hash === '#register') {
+        openAuthModal(hash === '#register' ? 'register' : 'signin');
+      } else if (hash === '#auth-page' || hash === '#account') {
+        setView('auth');
+      }
+    };
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   useEffect(() => {
     const handleReady = () => {
@@ -119,6 +86,22 @@ export const App: React.FC = () => {
       };
     }
   }, []);
+
+  if (view === 'auth') {
+    return (
+      <div style={{ minHeight: '100vh', position: 'relative' }}>
+        <CustomCursor />
+        <MouseEffects color="#c3f53c" interactionMode="sniper" effectSize={35} />
+        <AuthPage
+          onBackToHome={() => {
+            setView('home');
+            window.location.hash = '';
+          }}
+          lang={lang}
+        />
+      </div>
+    );
+  }
 
   return (
     <div style={{ minHeight: '100vh', position: 'relative' }}>
@@ -153,30 +136,76 @@ export const App: React.FC = () => {
       )}
 
       <CustomCursor />
-      <MouseEffects color="#38bdf8" interactionMode="sniper" effectSize={35} />
+      <MouseEffects color="#c3f53c" interactionMode="sniper" effectSize={35} />
       <OfflineOverlay />
       <NotificationToast isReady={loadingDone} />
+
 
       <Header
         onOpenTools={() => setIsToolsOpen(true)}
         onOpenNavMenu={() => setIsNavMenuOpen(true)}
+        onOpenAuth={(mode) => {
+          setView('auth');
+          window.location.hash = '#auth-page';
+          if (mode) openAuthModal(mode);
+        }}
         lang={lang}
         onLanguageChange={setLang}
       />
 
-      <main>
-        <Hero />
-        <StorySection />
+      <main style={{ paddingBottom: '6.5rem' }}>
+        <Hero lang={lang} />
+
         <HorizontalScrollText />
-        <VedicPhilosophySection lang={lang} />
+
         <SanctuaryExperienceSection lang={lang} />
+
+        <OpenAIAcademySection
+          lang={lang}
+          onNavigateAuth={() => {
+            setView('auth');
+            window.location.hash = '#auth-page';
+          }}
+        />
+        <StorySection />
+        <VedicPhilosophySection lang={lang} />
         <DigitalUniverseSection lang={lang} />
         <ValuesSection />
         <BentoGrid />
         <AppsSection />
       </main>
 
+      {/* Floating Interactive Search Bar Pinned Across Sections Till Apps Section */}
+      <VedicAskInputBar
+        lang={lang}
+        onSearchSubmit={handleOpenSageModal}
+      />
+
       <Footer lang={lang} />
+
+      {/* Onboarding Wisdom Pathway Modal */}
+      <WisdomPathwayModal
+        isOpen={isWisdomModalOpen}
+        onClose={() => setIsWisdomModalOpen(false)}
+        lang={lang}
+      />
+
+      {/* Vedic Sage AI Scriptural Citation Drawer */}
+      <VedicSageModal
+        isOpen={isSageModalOpen}
+        query={sageQuery}
+        onClose={() => setIsSageModalOpen(false)}
+        lang={lang}
+        onOpenQuoteBuilder={handleOpenQuoteBuilder}
+      />
+
+      {/* Social Scripture Quote Builder Modal */}
+      <QuoteBuilderModal
+        isOpen={isQuoteModalOpen}
+        verse={quoteVerse}
+        onClose={() => setIsQuoteModalOpen(false)}
+        lang={lang}
+      />
 
       <MasterNavigationModal
         isOpen={isNavMenuOpen}
@@ -188,7 +217,21 @@ export const App: React.FC = () => {
         isOpen={isToolsOpen}
         onClose={() => setIsToolsOpen(false)}
       />
+
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={closeAuthModal}
+        lang={lang}
+      />
     </div>
+  );
+};
+
+export const App: React.FC = () => {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 };
 

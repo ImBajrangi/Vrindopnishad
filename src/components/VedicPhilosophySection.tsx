@@ -12,43 +12,14 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
       id="philosophy"
       className="philosophy-section"
       style={{
-        padding: '9rem 1.5rem 8rem',
-        background: '#030509',
-        color: '#ffffff',
+        padding: '7.5rem 1.5rem 6.5rem',
         overflow: 'hidden',
         position: 'relative'
       }}
     >
-      {/* Top Continuous 100% to 0% Gradient Vignette Blender */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          height: '240px',
-          background: 'linear-gradient(180deg, #030509 0%, rgba(3, 5, 9, 0.8) 40%, rgba(3, 5, 9, 0) 100%)',
-          pointerEvents: 'none',
-          zIndex: 1
-        }}
-      />
-
-      {/* Bottom Continuous 100% to 0% Gradient Vignette Blender */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: '240px',
-          background: 'linear-gradient(0deg, #030509 0%, rgba(3, 5, 9, 0.8) 40%, rgba(3, 5, 9, 0) 100%)',
-          pointerEvents: 'none',
-          zIndex: 1
-        }}
-      />
-
       {/* Background Radial Ambient Aura */}
       <div
+        className="philosophy-ambient-aura"
         style={{
           position: 'absolute',
           top: '35%',
@@ -56,24 +27,22 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
           transform: 'translate(-50%, -50%)',
           width: '850px',
           height: '850px',
-          background: 'radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.12) 0%, rgba(59, 130, 246, 0.04) 45%, rgba(3, 5, 9, 0) 75%)',
+          background: 'radial-gradient(circle at 50% 50%, rgba(195, 245, 60, 0.08) 0%, rgba(245, 158, 11, 0.03) 45%, transparent 75%)',
           pointerEvents: 'none',
-          filter: 'blur(50px)',
+          filter: 'blur(60px)',
           zIndex: 0
         }}
       />
 
-
-
       <div style={{ maxWidth: '1160px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
-        {/* Section Header with Pixel LED Display */}
-        <div style={{ textAlign: 'left', marginBottom: '4rem' }}>
+        {/* Section Header */}
+        <div style={{ textAlign: 'left', marginBottom: '3.5rem' }}>
           <span
+            className="philosophy-badge"
             style={{
               fontSize: '0.82rem',
               fontWeight: 700,
               letterSpacing: '0.2em',
-              color: '#38bdf8',
               textTransform: 'uppercase',
               fontFamily: '"sama-latin", sans-serif',
               marginBottom: '0.8rem',
@@ -92,7 +61,6 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
               fontStyle: 'normal',
               fontSize: 'clamp(2.5rem, 6.5vw, 5.2rem)',
               letterSpacing: '-0.02em',
-              color: '#ffffff',
               margin: '0.4rem 0 0.8rem 0',
               lineHeight: 1.05
             }}
@@ -101,15 +69,15 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
           </h2>
 
           <p
+            className="philosophy-desc"
             style={{
-              fontSize: 'clamp(0.85rem, 1.2vw, 0.95rem)',
-              color: 'rgba(255, 255, 255, 0.65)',
+              fontSize: 'clamp(0.85rem, 1.2vw, 0.98rem)',
               maxWidth: '1080px',
               margin: '0.8rem 0 0 0',
               textAlign: 'left',
               fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif',
               fontWeight: 400,
-              lineHeight: '1.5',
+              lineHeight: '1.55',
               letterSpacing: '0.01em'
             }}
           >
@@ -119,243 +87,253 @@ export const VedicPhilosophySection: React.FC<VedicPhilosophySectionProps> = ({ 
           </p>
         </div>
 
-        {/* 4 Pillars Interactive Grid */}
-        <div
-          className="philosophy-cards-grid"
-        >
+        {/* 2 Pillars Per Row (Bigger Bars with Picture on one side & Info on other side) */}
+        <div className="philosophy-cards-grid">
           {/* Pillar 1: Vrindopnishad Path */}
-          <a
-            href="https://path.vrindopnishad.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="philosophy-card"
+          <div
+            className="philosophy-card philosophy-split-bar"
             style={
               {
-                '--card-glow': '#38bdf8',
-                '--card-glow-border': 'rgba(56, 189, 248, 0.4)',
-                '--card-glow-shadow': 'rgba(56, 189, 248, 0.15)',
-                background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(255, 255, 255, 0.07)',
-                backdropFilter: 'blur(16px)',
-                borderRadius: '18px',
-                padding: '1.75rem 1.6rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                position: 'relative',
-                overflow: 'hidden',
-                textDecoration: 'none'
+                '--card-glow': '#c3f53c',
+                '--card-glow-border': 'rgba(195, 245, 60, 0.4)',
+                '--card-glow-shadow': 'rgba(195, 245, 60, 0.15)',
               } as React.CSSProperties
             }
           >
-            {/* Background Pixel Icon on Bottom Right */}
-            <div
-              className="card-bg-icon"
-              style={{
-                position: 'absolute',
-                bottom: '0px',
-                right: '0px',
-                opacity: 0.14,
-                pointerEvents: 'none',
-                zIndex: 0
-              }}
-            >
-              <PixelIcon name="path" color="#38bdf8" size={84} />
+            {/* Picture Container (One Side) */}
+            <div className="philosophy-card-image-wrap">
+              <img
+                src="/images/home-pics/img_rv04.png"
+                alt="Vrindopnishad Path Recitation"
+                className="philosophy-card-img"
+              />
+              <div className="philosophy-card-img-overlay" />
+              <span className="philosophy-card-img-badge">01 / SCRIPTURE</span>
             </div>
 
-            <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
-                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#38bdf8', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>01 / PATH</span>
+            {/* Information Container (Other Side) */}
+            <div className="philosophy-card-info">
+              <div className="philosophy-card-header">
+                <span className="card-badge" style={{ color: '#c3f53c' }}>
+                  {lang === 'english' ? 'RECICATON HUB' : 'पाठ अनुष्ठान'}
+                </span>
+                <h3 className="philosophy-card-title">
+                  {lang === 'english' ? 'Vrindopnishad Path' : 'वृंदोपनिषद पाठ'}
+                </h3>
               </div>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.6rem', color: '#fff', lineHeight: '1.3', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
-                {lang === 'english' ? 'Vrindopnishad Path' : 'वृंदोपनिषद पाठ'}
-              </h3>
-              <p style={{ fontSize: '0.92rem', color: 'rgba(255,255,255,0.72)', lineHeight: '1.6', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
+
+              <p className="philosophy-card-text">
                 {lang === 'english'
-                  ? 'Daily authentic Vedic recitations, audio verse commentaries, and spiritual guidance.'
+                  ? 'Daily authentic Vedic recitations, audio verse commentaries, and spiritual guidance for inner awakening.'
                   : 'दैनिक वैदिक पाठ, श्लोक व्याख्या और आत्म-साक्षात्कार का पावन मार्ग।'}
               </p>
+
+              <div className="philosophy-card-features">
+                <span className="feature-pill">
+                  <PixelIcon name="path" color="#c3f53c" size={14} />
+                  {lang === 'english' ? 'Stotra Audio' : 'स्तोत्र ऑडियो'}
+                </span>
+                <span className="feature-pill">
+                  {lang === 'english' ? 'Gita Verse Commentary' : 'गीता श्लोक व्याख्या'}
+                </span>
+              </div>
+
+              <a
+                href="https://path.vrindopnishad.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pillar-cta"
+                style={{ color: '#c3f53c' }}
+              >
+                <span>{lang === 'english' ? 'Enter Recitation Hub' : 'पाठ प्रवेश करें'}</span>
+                <span>→</span>
+              </a>
             </div>
-            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#38bdf8', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span>{lang === 'english' ? 'Recitation Hub' : 'पाठ अनुष्ठान'}</span>
-              <span>→</span>
-            </div>
-          </a>
+          </div>
 
           {/* Pillar 2: Chitra Vrinda */}
-          <a
-            href="https://pic.vrindopnishad.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="philosophy-card"
+          <div
+            className="philosophy-card philosophy-split-bar"
             style={
               {
-                '--card-glow': '#0ea5e9',
-                '--card-glow-border': 'rgba(14, 165, 233, 0.4)',
-                '--card-glow-shadow': 'rgba(14, 165, 233, 0.15)',
-                background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(255, 255, 255, 0.07)',
-                backdropFilter: 'blur(16px)',
-                borderRadius: '18px',
-                padding: '1.75rem 1.6rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                position: 'relative',
-                overflow: 'hidden',
-                textDecoration: 'none'
+                '--card-glow': '#eab308',
+                '--card-glow-border': 'rgba(234, 179, 8, 0.4)',
+                '--card-glow-shadow': 'rgba(234, 179, 8, 0.15)',
               } as React.CSSProperties
             }
           >
-            {/* Background Pixel Icon on Bottom Right */}
-            <div
-              className="card-bg-icon"
-              style={{
-                position: 'absolute',
-                bottom: '0px',
-                right: '0px',
-                opacity: 0.14,
-                pointerEvents: 'none',
-                zIndex: 0
-              }}
-            >
-              <PixelIcon name="art" color="#0ea5e9" size={84} />
+            {/* Picture Container (One Side) */}
+            <div className="philosophy-card-image-wrap">
+              <img
+                src="/images/projects/chitra_vrinda_hero.jpg"
+                alt="Chitra Vrinda Art Gallery"
+                className="philosophy-card-img"
+              />
+              <div className="philosophy-card-img-overlay" />
+              <span className="philosophy-card-img-badge">02 / VISUAL ART</span>
             </div>
 
-            <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
-                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#0ea5e9', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>02 / ART</span>
+            {/* Information Container (Other Side) */}
+            <div className="philosophy-card-info">
+              <div className="philosophy-card-header">
+                <span className="card-badge" style={{ color: '#eab308' }}>
+                  {lang === 'english' ? 'ART GALLERY' : 'कला दीर्घा'}
+                </span>
+                <h3 className="philosophy-card-title">
+                  {lang === 'english' ? 'Chitra Vrinda' : 'चित्र वृंदा'}
+                </h3>
               </div>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.6rem', color: '#fff', lineHeight: '1.3', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
-                {lang === 'english' ? 'Chitra Vrinda' : 'चित्र वृंदा'}
-              </h3>
-              <p style={{ fontSize: '0.92rem', color: 'rgba(255,255,255,0.72)', lineHeight: '1.6', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
+
+              <p className="philosophy-card-text">
                 {lang === 'english'
-                  ? 'Sacred visual art galleries and divine aesthetic expressions of Vrindavan.'
+                  ? 'Sacred visual art galleries and high-resolution aesthetic expressions of Vrindavan heritage.'
                   : 'दिव्य कलाकृतियों और कलात्मक अनुभूतियों का अनोखा संग्रह।'}
               </p>
+
+              <div className="philosophy-card-features">
+                <span className="feature-pill">
+                  <PixelIcon name="art" color="#eab308" size={14} />
+                  {lang === 'english' ? 'HD Spiritual Art' : 'दिव्य चित्र'}
+                </span>
+                <span className="feature-pill">
+                  {lang === 'english' ? 'Heritage Visuals' : 'ब्रज विरासत'}
+                </span>
+              </div>
+
+              <a
+                href="https://pic.vrindopnishad.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pillar-cta"
+                style={{ color: '#eab308' }}
+              >
+                <span>{lang === 'english' ? 'Explore Art Gallery' : 'कला दीर्घा देखें'}</span>
+                <span>→</span>
+              </a>
             </div>
-            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#0ea5e9', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span>{lang === 'english' ? 'Art Gallery' : 'कला दीर्घा'}</span>
-              <span>→</span>
-            </div>
-          </a>
+          </div>
 
           {/* Pillar 3: Foody Vrinda */}
-          <a
-            href="#services"
-            className="philosophy-card"
+          <div
+            className="philosophy-card philosophy-split-bar"
             style={
               {
-                '--card-glow': '#60a5fa',
-                '--card-glow-border': 'rgba(96, 165, 250, 0.4)',
-                '--card-glow-shadow': 'rgba(96, 165, 250, 0.15)',
-                background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(255, 255, 255, 0.07)',
-                backdropFilter: 'blur(16px)',
-                borderRadius: '18px',
-                padding: '1.75rem 1.6rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                position: 'relative',
-                overflow: 'hidden',
-                textDecoration: 'none'
+                '--card-glow': '#10b981',
+                '--card-glow-border': 'rgba(16, 185, 129, 0.4)',
+                '--card-glow-shadow': 'rgba(16, 185, 129, 0.15)',
               } as React.CSSProperties
             }
           >
-            {/* Background Pixel Icon on Bottom Right */}
-            <div
-              className="card-bg-icon"
-              style={{
-                position: 'absolute',
-                bottom: '0px',
-                right: '0px',
-                opacity: 0.14,
-                pointerEvents: 'none',
-                zIndex: 0
-              }}
-            >
-              <PixelIcon name="food" color="#60a5fa" size={84} />
+            {/* Picture Container (One Side) */}
+            <div className="philosophy-card-image-wrap">
+              <img
+                src="/images/projects/foody_vrinda_hero.jpg"
+                alt="Foody Vrinda Satvic Prasadam"
+                className="philosophy-card-img"
+              />
+              <div className="philosophy-card-img-overlay" />
+              <span className="philosophy-card-img-badge">03 / SATVIC</span>
             </div>
 
-            <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
-                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#60a5fa', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>03 / SATVIC</span>
+            {/* Information Container (Other Side) */}
+            <div className="philosophy-card-info">
+              <div className="philosophy-card-header">
+                <span className="card-badge" style={{ color: '#10b981' }}>
+                  {lang === 'english' ? 'PURE PRASADAM' : 'सात्विक आहार'}
+                </span>
+                <h3 className="philosophy-card-title">
+                  {lang === 'english' ? 'Foody Vrinda' : 'फूडी वृंदा'}
+                </h3>
               </div>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.6rem', color: '#fff', lineHeight: '1.3', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
-                {lang === 'english' ? 'Foody Vrinda' : 'फूडी वृंदा'}
-              </h3>
-              <p style={{ fontSize: '0.92rem', color: 'rgba(255,255,255,0.72)', lineHeight: '1.6', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
+
+              <p className="philosophy-card-text">
                 {lang === 'english'
-                  ? 'Satvic culinary traditions and pure, mindful dining experiences.'
+                  ? 'Satvic culinary traditions, pure prasadam guidance, and mindful dining experiences in Braj.'
                   : 'सात्विक आहार और पवित्र व्यंजनों की प्राचीन परंपरा।'}
               </p>
+
+              <div className="philosophy-card-features">
+                <span className="feature-pill">
+                  <PixelIcon name="food" color="#10b981" size={14} />
+                  {lang === 'english' ? 'Satvic Prasadam' : 'सात्विक भोजन'}
+                </span>
+                <span className="feature-pill">
+                  {lang === 'english' ? 'Pure Kitchens' : 'पवित्र रसोई'}
+                </span>
+              </div>
+
+              <a
+                href="#services"
+                className="pillar-cta"
+                style={{ color: '#10b981' }}
+              >
+                <span>{lang === 'english' ? 'Satvic Dining Guide' : 'सात्विक प्रसादम'}</span>
+                <span>→</span>
+              </a>
             </div>
-            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#60a5fa', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span>{lang === 'english' ? 'Satvic Culinary' : 'सात्विक आहार'}</span>
-              <span>→</span>
-            </div>
-          </a>
+          </div>
 
           {/* Pillar 4: Vrinda Tours */}
-          <a
-            href="https://to.vrindopnishad.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="philosophy-card"
+          <div
+            className="philosophy-card philosophy-split-bar"
             style={
               {
-                '--card-glow': '#818cf8',
-                '--card-glow-border': 'rgba(129, 140, 248, 0.4)',
-                '--card-glow-shadow': 'rgba(129, 140, 248, 0.15)',
-                background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(255, 255, 255, 0.07)',
-                backdropFilter: 'blur(16px)',
-                borderRadius: '18px',
-                padding: '1.75rem 1.6rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                position: 'relative',
-                overflow: 'hidden',
-                textDecoration: 'none'
+                '--card-glow': '#a855f7',
+                '--card-glow-border': 'rgba(168, 85, 247, 0.4)',
+                '--card-glow-shadow': 'rgba(168, 85, 247, 0.15)',
               } as React.CSSProperties
             }
           >
-            {/* Background Pixel Icon on Bottom Right */}
-            <div
-              className="card-bg-icon"
-              style={{
-                position: 'absolute',
-                bottom: '0px',
-                right: '0px',
-                opacity: 0.14,
-                pointerEvents: 'none',
-                zIndex: 0
-              }}
-            >
-              <PixelIcon name="tours" color="#818cf8" size={84} />
+            {/* Picture Container (One Side) */}
+            <div className="philosophy-card-image-wrap">
+              <img
+                src="/images/projects/vrinda_tours_hero.jpg"
+                alt="Vrinda Tours Pilgrimage Yatra"
+                className="philosophy-card-img"
+              />
+              <div className="philosophy-card-img-overlay" />
+              <span className="philosophy-card-img-badge">04 / TOURS</span>
             </div>
 
-            <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
-                <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#818cf8', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: '"sama-latin", sans-serif' }}>04 / TOURS</span>
+            {/* Information Container (Other Side) */}
+            <div className="philosophy-card-info">
+              <div className="philosophy-card-header">
+                <span className="card-badge" style={{ color: '#a855f7' }}>
+                  {lang === 'english' ? 'PILGRIMAGE YATRA' : 'पावन यात्रा'}
+                </span>
+                <h3 className="philosophy-card-title">
+                  {lang === 'english' ? 'Vrinda Tours' : 'वृंदा टूर्स'}
+                </h3>
               </div>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.6rem', color: '#fff', lineHeight: '1.3', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
-                {lang === 'english' ? 'Vrinda Tours' : 'वृंदा टूर्स'}
-              </h3>
-              <p style={{ fontSize: '0.92rem', color: 'rgba(255,255,255,0.72)', lineHeight: '1.6', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif' }}>
+
+              <p className="philosophy-card-text">
                 {lang === 'english'
-                  ? 'Spiritual pilgrimage journeys and sacred site explorations.'
+                  ? 'Spiritual pilgrimage journeys, Govardhan Parikrama maps, and sacred site explorations.'
                   : 'तीर्थ यात्राएं और पावन धामों के अलौकिक दर्शन।'}
               </p>
+
+              <div className="philosophy-card-features">
+                <span className="feature-pill">
+                  <PixelIcon name="tours" color="#a855f7" size={14} />
+                  {lang === 'english' ? 'Parikrama Routes' : 'परिक्रमा मार्ग'}
+                </span>
+                <span className="feature-pill">
+                  {lang === 'english' ? 'Yatra Booking' : 'तीर्थ यात्रा'}
+                </span>
+              </div>
+
+              <a
+                href="https://to.vrindopnishad.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pillar-cta"
+                style={{ color: '#a855f7' }}
+              >
+                <span>{lang === 'english' ? 'Explore Yatra Routes' : 'पावन यात्रा देखें'}</span>
+                <span>→</span>
+              </a>
             </div>
-            <div className="pillar-cta" style={{ marginTop: '1.5rem', color: '#818cf8', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: lang === 'hindi' ? '"sama-devanagari", sans-serif' : '"sama-latin", sans-serif', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span>{lang === 'english' ? 'Pilgrimage Journey' : 'पावन यात्रा'}</span>
-              <span>→</span>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>

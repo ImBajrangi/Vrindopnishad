@@ -1,0 +1,31 @@
+/* Infinite Slider Animation Styles */
+.animate-vertical-scroll {
+  animation: infiniteScrollVertical linear infinite;
+}
+
+.animate-horizontal-scroll {
+  animation: infiniteScrollHorizontal linear infinite;
+}
+
+@keyframes infiniteScrollVertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes infiniteScrollHorizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.mask-gradient-vertical {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
