@@ -89,17 +89,13 @@ const AppContent: React.FC = () => {
 
   if (view === 'auth') {
     return (
-      <div style={{ minHeight: '100vh', position: 'relative' }}>
-        <CustomCursor />
-        <MouseEffects color="#c3f53c" interactionMode="sniper" effectSize={35} />
-        <AuthPage
-          onBackToHome={() => {
-            setView('home');
-            window.location.hash = '';
-          }}
-          lang={lang}
-        />
-      </div>
+      <AuthPage
+        onBackToHome={() => {
+          setView('home');
+          window.location.hash = '';
+        }}
+        lang={lang}
+      />
     );
   }
 

@@ -260,16 +260,14 @@ body.light-mode .marquee-dot {
   background: rgba(15, 15, 17, 0.95) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  border: none !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3) !important;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important; */
   transition: transform 0.4s cubic-bezier(0.1, 0.7, 0.5, 1), top 0.4s cubic-bezier(0.1, 0.7, 0.5, 1), padding 0.35s cubic-bezier(0.1, 0.7, 0.5, 1), background 0.35s cubic-bezier(0.1, 0.7, 0.5, 1) !important;
 }
 
 html.dark .consensys-header {
   background: rgba(15, 15, 17, 0.95) !important;
-  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+  /* box-shadow: none !important; */
 }
 
 .consensys-header.scrolled {
@@ -1141,14 +1139,14 @@ body.light-mode .consensys-header:not(.mega-open) {
   background: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important; */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
 }
 
 html.light .consensys-header.mega-open,
 body.light-mode .consensys-header.mega-open {
   background: #ffffff !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
 
 html.light .consensys-pill-bar,
