@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowUpRight, ArrowRight, ChevronUp, ChevronDown, Globe, Compass, ArrowLeft, X, LogIn, User, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, ChevronUp, ChevronDown, Globe, Compass, ArrowLeft, X, LogIn, User, MapPin, Phone, Menu } from 'lucide-react';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
-import { MorphingWaveIcon } from '@/components/ui/MorphingWaveIcon';
 import { useAuth } from '@/context/AuthContext';
 import './ConsensysMegaNav.css';
 
@@ -288,7 +287,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
             )}
 
 
-            {/* Mobile Hamburger / Close Wave Button */}
+            {/* Mobile Hamburger / Close Button */}
             <button
               type="button"
               className={`consensys-hamburger mobile-only ${mobileLevel ? 'open' : ''}`}
@@ -301,7 +300,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
               }}
               aria-label="Toggle Menu"
             >
-              <MorphingWaveIcon active={Boolean(mobileLevel)} size={18} />
+              {mobileLevel ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -724,7 +723,7 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
                       className="mobile-control-btn"
                     >
                       <LogIn size={15} />
-                      <span>{lang === 'hindi' ? 'साइन इन / रजिस्टर' : 'Sign In / Register'}</span>
+                      <span>{lang === 'hindi' ? 'साइन इन' : 'Sign In'}</span>
                     </button>
                   )}
 

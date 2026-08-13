@@ -43,8 +43,20 @@ export const Hero: React.FC<HeroProps> = ({ lang = 'english' }) => {
                 WELCOME TO
               </span>
             </div>
-            <div className="title-row" style={{ justifyContent: 'center' }}>
-              <span className="title-main" style={{ fontSize: 'clamp(3.8rem, 10vw, 8rem)', lineHeight: 0.95 }}>Vrindopnishad</span>
+            <div className="title-row" style={{ justifyContent: 'center', width: '100%', maxWidth: '100%' }}>
+              <span
+                className="title-main"
+                style={{
+                  fontSize: 'clamp(1.85rem, 10.5vw, 8rem)',
+                  lineHeight: 0.95,
+                  maxWidth: '100%',
+                  display: 'inline-block',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word'
+                }}
+              >
+                Vrindopnishad
+              </span>
             </div>
           </h1>
 

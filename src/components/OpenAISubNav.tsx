@@ -120,7 +120,7 @@ export const OpenAISubNav: React.FC<OpenAISubNavProps> = ({
             onClick={() => scrollToSection('get-started-section', 'get-started')}
             className={`openai-subnav-tab ${activeTab === 'get-started' ? 'active' : ''}`}
           >
-            {lang === 'hindi' ? 'दैनिक दर्शन' : 'Daily Darshan'}
+            {lang === 'hindi' ? 'नित्य दर्शन' : 'Darshan'}
           </button>
 
           <button
@@ -128,7 +128,7 @@ export const OpenAISubNav: React.FC<OpenAISubNavProps> = ({
             onClick={() => scrollToSection('go-further-section', 'go-further')}
             className={`openai-subnav-tab ${activeTab === 'go-further' ? 'active' : ''}`}
           >
-            {lang === 'hindi' ? 'वैदिक ग्रन्थ (गीता एवं उपनिषद)' : 'Vedic Scriptures'}
+            {lang === 'hindi' ? 'वैदिक ग्रन्थ' : 'Scriptures'}
           </button>
 
           <button
@@ -136,7 +136,7 @@ export const OpenAISubNav: React.FC<OpenAISubNavProps> = ({
             onClick={() => scrollToSection('use-cases-section', 'use-cases')}
             className={`openai-subnav-tab ${activeTab === 'use-cases' ? 'active' : ''}`}
           >
-            {lang === 'hindi' ? 'साधना एवं मन्त्र' : 'Guided Meditation & Mantras'}
+            {lang === 'hindi' ? 'साधना एवं मन्त्र' : 'Meditation'}
           </button>
         </div>
       </div>

@@ -198,7 +198,7 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
                   <input
                     type="text"
                     required
-                    placeholder={lang === 'hindi' ? 'पहला नाम*' : 'First name*'}
+                    placeholder={lang === 'hindi' ? 'प्रथम नाम' : 'First Name'}
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     className="rivian-input"
@@ -208,7 +208,7 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
                   <input
                     type="text"
                     required
-                    placeholder={lang === 'hindi' ? 'अंतिम नाम*' : 'Last name*'}
+                    placeholder={lang === 'hindi' ? 'अंतिम नाम' : 'Last Name'}
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     className="rivian-input"
@@ -231,21 +231,15 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
                 <input
                   type="tel"
                   required
-                  placeholder={lang === 'hindi' ? 'व्हाट्सएप / फोन नंबर*' : 'Phone number*'}
+                  placeholder={lang === 'hindi' ? 'फोन नंबर*' : 'Phone Number'}
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="rivian-input"
                 />
               </div>
 
-              <p className="rivian-disclaimer-text">
-                {lang === 'hindi'
-                  ? 'सबमिट पर क्लिक करके आप नित्य पंचांग, एकादशी व्रत सूचनाएं एवं श्लोक पाठ संदेश प्राप्त करने की सहमति प्रदान करते हैं। आप किसी भी समय अपनी सदस्यता समाप्त कर सकते हैं।'
-                  : 'By clicking the "Subscribe" button below, I authorize Vrindopnishad to send daily Brahma Muhurta Panchang updates, Ekadashi Vrat alerts, and sacred Shloka audio text notifications. Opt-out anytime.'}
-              </p>
-
-              <p className="rivian-terms-text">
-                By submitting, I understand and agree to the <a href="#terms">Vrindopnishad Terms</a> and <a href="#privacy">Privacy Notice</a>.
+              <p className="rivian-terms-text" style={{ fontSize: '0.8rem', opacity: 0.75, margin: '0.65rem 0 1.2rem', textAlign: 'center' }}>
+                Daily Panchang & Ekadashi alerts. <a href="#terms">Terms</a> & <a href="#privacy">Privacy Notice</a>.
               </p>
 
               <button type="submit" className="rivian-btn-white-pill">
