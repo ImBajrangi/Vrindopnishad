@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowUpRight, ArrowRight, ChevronUp, ChevronDown, Globe, Compass, ArrowLeft, X, LogIn, User } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, ChevronUp, ChevronDown, Globe, Compass, ArrowLeft, X, LogIn, User, MapPin, Phone } from 'lucide-react';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 import { MorphingWaveIcon } from '@/components/ui/MorphingWaveIcon';
 import { useAuth } from '@/context/AuthContext';
@@ -135,15 +135,22 @@ export const ConsensysMegaNav: React.FC<ConsensysMegaNavProps> = ({
         />
       )}
 
-      {/* Marquee Announcement Bar */}
+      {/* Announcement Bar */}
       <div className={`marquee-announcement-bar ${isHidden && !activeTab && !mobileLevel ? 'marquee-hidden' : ''} ${activeTab || mobileLevel ? 'marquee-mega-open' : ''} ${isScrolled ? 'marquee-scrolled' : ''}`}>
-        <div className="marquee-track">
-          {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={i} className={`marquee-item ${i % marqueeItems.length === 0 ? 'marquee-highlight' : ''}`}>
-              {item}
-              <span className="marquee-dot" />
+        <div className="announcement-bar-inner">
+          <div className="announcement-left-info">
+            <MapPin size={13} className="announcement-icon" />
+            <span className="announcement-text">
+              {lang === 'hindi' ? 'श्री धाम वृंदावन, मथुरा, यूपी 281121' : 'Shri Dham Vrindavan, Mathura, UP 281121, India'}
             </span>
-          ))}
+          </div>
+
+          <div className="announcement-right-info">
+            <Phone size={13} className="announcement-icon" />
+            <span className="announcement-text">
+              {lang === 'hindi' ? '+91 98765-43210' : '+91 98765-43210'}
+            </span>
+          </div>
         </div>
       </div>
 

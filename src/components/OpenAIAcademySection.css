@@ -11,9 +11,9 @@
 }
 
 .openai-section {
-  margin-bottom: 5.5rem;
+  margin-bottom: 6.5rem;
   transition: opacity 0.4s ease, transform 0.4s ease;
-  scroll-margin-top: 140px;
+  scroll-margin-top: 160px !important;
 }
 
 .openai-section.is-active-section {
@@ -750,26 +750,52 @@ body.light-mode .usecase-card:hover .usecase-btn {
 }
 
 /* Color Themes - Solid Crisp Fills matching usercursor.tsx */
-.cursor-theme-lime { color: #c3f53c; }
-.cursor-theme-lime .cursor-label-text { background: #c3f53c; color: #08080a; }
+.cursor-theme-lime {
+  color: #c3f53c;
+}
 
-.cursor-theme-mint { color: #b2fcab; }
-.cursor-theme-mint .cursor-label-text { background: #b2fcab; color: #092408; }
+.cursor-theme-lime .cursor-label-text {
+  background: #c3f53c;
+  color: #08080a;
+}
 
-.cursor-theme-cyan { color: #a1e8ea; }
-.cursor-theme-cyan .cursor-label-text { background: #a1e8ea; color: #052426; }
+.cursor-theme-mint {
+  color: #b2fcab;
+}
 
-.cursor-theme-saffron { color: #ff9f1c; }
-.cursor-theme-saffron .cursor-label-text { background: #ff9f1c; color: #1a0a00; }
+.cursor-theme-mint .cursor-label-text {
+  background: #b2fcab;
+  color: #092408;
+}
+
+.cursor-theme-cyan {
+  color: #a1e8ea;
+}
+
+.cursor-theme-cyan .cursor-label-text {
+  background: #a1e8ea;
+  color: #052426;
+}
+
+.cursor-theme-saffron {
+  color: #ff9f1c;
+}
+
+.cursor-theme-saffron .cursor-label-text {
+  background: #ff9f1c;
+  color: #1a0a00;
+}
 
 /* Organic trailing pill lag/rocking motion */
 @keyframes cursorPillFollow {
   0% {
     transform: translate3d(0px, 0px, 0) rotate(0deg);
   }
+
   50% {
     transform: translate3d(5px, 2.5px, 0) rotate(1.8deg);
   }
+
   100% {
     transform: translate3d(1px, -1.5px, 0) rotate(-1.2deg);
   }
@@ -777,65 +803,515 @@ body.light-mode .usecase-card:hover .usecase-btn {
 
 /* Safe & Wide-Range Silky Smooth 60fps Organic Floating Paths (No Clipping) */
 @keyframes floatCursorFullBlock1 {
-  0%   { transform: translate3d(20px, 30px, 0); }
-  25%  { transform: translate3d(180px, 15px, 0); }
-  50%  { transform: translate3d(320px, 70px, 0); }
-  75%  { transform: translate3d(190px, 130px, 0); }
-  100% { transform: translate3d(20px, 30px, 0); }
+  0% {
+    transform: translate3d(20px, 30px, 0);
+  }
+
+  25% {
+    transform: translate3d(180px, 15px, 0);
+  }
+
+  50% {
+    transform: translate3d(320px, 70px, 0);
+  }
+
+  75% {
+    transform: translate3d(190px, 130px, 0);
+  }
+
+  100% {
+    transform: translate3d(20px, 30px, 0);
+  }
 }
 
 @keyframes floatCursorFullBlock2 {
-  0%   { transform: translate3d(-30px, 45px, 0); }
-  25%  { transform: translate3d(-170px, 20px, 0); }
-  50%  { transform: translate3d(-310px, 80px, 0); }
-  75%  { transform: translate3d(-150px, 120px, 0); }
-  100% { transform: translate3d(-30px, 45px, 0); }
+  0% {
+    transform: translate3d(-30px, 45px, 0);
+  }
+
+  25% {
+    transform: translate3d(-170px, 20px, 0);
+  }
+
+  50% {
+    transform: translate3d(-310px, 80px, 0);
+  }
+
+  75% {
+    transform: translate3d(-150px, 120px, 0);
+  }
+
+  100% {
+    transform: translate3d(-30px, 45px, 0);
+  }
 }
 
 @keyframes floatCursorFullBlock3 {
-  0%   { transform: translate3d(30px, 80px, 0); }
-  28%  { transform: translate3d(190px, 20px, 0); }
-  58%  { transform: translate3d(340px, 75px, 0); }
-  82%  { transform: translate3d(180px, 125px, 0); }
-  100% { transform: translate3d(30px, 80px, 0); }
+  0% {
+    transform: translate3d(30px, 80px, 0);
+  }
+
+  28% {
+    transform: translate3d(190px, 20px, 0);
+  }
+
+  58% {
+    transform: translate3d(340px, 75px, 0);
+  }
+
+  82% {
+    transform: translate3d(180px, 125px, 0);
+  }
+
+  100% {
+    transform: translate3d(30px, 80px, 0);
+  }
 }
 
 @keyframes floatCursorFullBlock4 {
-  0%   { transform: translate3d(-40px, 30px, 0); }
-  28%  { transform: translate3d(-170px, 105px, 0); }
-  60%  { transform: translate3d(-320px, 45px, 0); }
-  82%  { transform: translate3d(-180px, 115px, 0); }
-  100% { transform: translate3d(-40px, 30px, 0); }
+  0% {
+    transform: translate3d(-40px, 30px, 0);
+  }
+
+  28% {
+    transform: translate3d(-170px, 105px, 0);
+  }
+
+  60% {
+    transform: translate3d(-320px, 45px, 0);
+  }
+
+  82% {
+    transform: translate3d(-180px, 115px, 0);
+  }
+
+  100% {
+    transform: translate3d(-40px, 30px, 0);
+  }
 }
 
-.cursor-anim-1 { animation: floatCursorFullBlock1 14s cubic-bezier(0.7, 0.1, 0.5, 0.9) infinite; }
-.cursor-anim-2 { animation: floatCursorFullBlock2 16s cubic-bezier(0.7, 0.1, 0.5, 0.9) infinite; }
-.cursor-anim-3 { animation: floatCursorFullBlock3 15s cubic-bezier(0.7, 0.1, 0.5, 0.9) infinite; }
-.cursor-anim-4 { animation: floatCursorFullBlock4 17s cubic-bezier(0.7, 0.1, 0.5, 0.9) infinite; }
+.cursor-anim-1 {
+  animation: floatCursorFullBlock1 14s cubic-bezier(0.7, 0.1, 0.5, 0.9) infinite;
+}
+
+.cursor-anim-2 {
+  animation: floatCursorFullBlock2 16s cubic-bezier(0.7, 0.1, 0.5, 0.9) infinite;
+}
+
+.cursor-anim-3 {
+  animation: floatCursorFullBlock3 15s cubic-bezier(0.7, 0.1, 0.5, 0.9) infinite;
+}
+
+.cursor-anim-4 {
+  animation: floatCursorFullBlock4 17s cubic-bezier(0.7, 0.1, 0.5, 0.9) infinite;
+}
 
 /* Mobile Scaled Floating Animations */
 @media (max-width: 768px) {
   @keyframes floatCursorFullBlock1 {
-    0%   { transform: translate3d(10px, 15px, 0); }
-    50%  { transform: translate3d(90px, 35px, 0); }
-    100% { transform: translate3d(10px, 15px, 0); }
+    0% {
+      transform: translate3d(10px, 15px, 0);
+    }
+
+    50% {
+      transform: translate3d(90px, 35px, 0);
+    }
+
+    100% {
+      transform: translate3d(10px, 15px, 0);
+    }
   }
 
   @keyframes floatCursorFullBlock2 {
-    0%   { transform: translate3d(-10px, 20px, 0); }
-    50%  { transform: translate3d(-80px, 40px, 0); }
-    100% { transform: translate3d(-10px, 20px, 0); }
+    0% {
+      transform: translate3d(-10px, 20px, 0);
+    }
+
+    50% {
+      transform: translate3d(-80px, 40px, 0);
+    }
+
+    100% {
+      transform: translate3d(-10px, 20px, 0);
+    }
   }
 
   @keyframes floatCursorFullBlock3 {
-    0%   { transform: translate3d(15px, 30px, 0); }
-    50%  { transform: translate3d(85px, 50px, 0); }
-    100% { transform: translate3d(15px, 30px, 0); }
+    0% {
+      transform: translate3d(15px, 30px, 0);
+    }
+
+    50% {
+      transform: translate3d(85px, 50px, 0);
+    }
+
+    100% {
+      transform: translate3d(15px, 30px, 0);
+    }
   }
 
   @keyframes floatCursorFullBlock4 {
-    0%   { transform: translate3d(-15px, 15px, 0); }
-    50%  { transform: translate3d(-90px, 35px, 0); }
-    100% { transform: translate3d(-15px, 15px, 0); }
+    0% {
+      transform: translate3d(-15px, 15px, 0);
+    }
+
+    50% {
+      transform: translate3d(-90px, 35px, 0);
+    }
+
+    100% {
+      transform: translate3d(-15px, 15px, 0);
+    }
   }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   RIVIAN-GRADE SHOWCASE DUAL CARDS & CINEMATIC BANNER
+   ────────────────────────────────────────────────────────────────────────── */
+.rivian-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  align-items: stretch !important;
+  margin-bottom: 2.25rem;
+}
+
+@media (max-width: 960px) {
+  .rivian-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rivian-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+  box-sizing: border-box;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.rivian-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Card 1: Light White Card (Rivian Left Card) */
+.rivian-card-light {
+  background: #ffffff !important;
+  color: #0d0d0f !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.dark .rivian-card-light {
+  background: #ffffff !important;
+  color: #0d0d0f !important;
+}
+
+.rivian-media-wrapper {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #0d0d0f;
+}
+
+.rivian-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rivian-card-light:hover .rivian-media-img {
+  transform: scale(1.05);
+}
+
+/* Floating Glassmorphism Carousel Dots Pill */
+.rivian-carousel-dots-pill {
+  position: absolute;
+  bottom: 1.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 9999px;
+  padding: 0.4rem 0.85rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  z-index: 5;
+}
+
+.rivian-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rivian-dot.active {
+  width: 20px;
+  border-radius: 9999px;
+  background: #0d0d0f;
+}
+
+/* Card 1 Body */
+.rivian-card-body {
+  padding: 2.2rem 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+
+.rivian-card-title {
+  font-size: clamp(1.7rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #0d0d0f;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.15;
+  min-height: 5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.rivian-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.rivian-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.rivian-info-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0d0d0f;
+}
+
+.rivian-info-val {
+  font-size: 0.84rem;
+  color: #4b5563;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.rivian-whitespace-pre {
+  white-space: pre-line;
+}
+
+.rivian-action-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.rivian-btn-black-pill {
+  background: #0d0d0f !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  padding: 0.75rem 2rem !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.rivian-btn-black-pill:hover {
+  background: #27272a !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+}
+
+.rivian-text-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #0d0d0f;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.rivian-text-link:hover {
+  color: #4b5563;
+  transform: translateX(3px);
+}
+
+/* Card 2: Dark Obsidian Form Card (Rivian Right Card) */
+.rivian-card-dark {
+  background: #08080a !important;
+  color: #ffffff !important;
+  padding: 2.5rem 2.2rem 2.2rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100% !important;
+}
+
+.rivian-dark-title {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 1.75rem 0;
+  line-height: 1.12;
+}
+
+.rivian-dark-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.rivian-form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.95rem;
+}
+
+.rivian-input-group {
+  width: 100%;
+}
+
+.rivian-input {
+  width: 100%;
+  background: #242426 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 0.9rem 1.1rem !important;
+  font-size: 0.92rem !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.25s ease, background 0.25s ease !important;
+}
+
+.rivian-input::placeholder {
+  color: #9ea3ab !important;
+}
+
+.rivian-input:focus {
+  outline: none !important;
+  border-color: #ffffff !important;
+  background: #2e2e32 !important;
+}
+
+.rivian-disclaimer-text {
+  font-size: 0.76rem;
+  color: #8c929d;
+  line-height: 1.5;
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+}
+
+.rivian-terms-text {
+  font-size: 0.74rem;
+  color: #8c929d;
+  line-height: 1.45;
+  margin: 0 0 0.85rem 0;
+}
+
+.rivian-terms-text a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.rivian-btn-white-pill {
+  background: #ffffff !important;
+  color: #08080a !important;
+  border-radius: 9999px !important;
+  padding: 0.85rem 2.5rem !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  border: none !important;
+  cursor: pointer !important;
+  width: fit-content;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2) !important;
+}
+
+.rivian-btn-white-pill:hover {
+  background: #e4e4e7 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Full-Width Cinematic Banner (Rivian Banner 2) */
+.rivian-cinematic-banner {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 6.5rem 3.5rem 3rem 3.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.rivian-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rivian-cinematic-banner:hover .rivian-banner-bg {
+  transform: scale(1.04);
+}
+
+.rivian-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.9) 100%);
+  pointer-events: none;
+}
+
+.rivian-banner-content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-top: auto;
+}
+
+.rivian-banner-headline {
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8);
 }

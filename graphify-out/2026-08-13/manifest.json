@@ -150,8 +150,8 @@
     "semantic_hash": "7aa5874da376d85d2e4b4f07e769a40b"
   },
   "src/components/ConsensysMegaNav.tsx": {
-    "mtime": 1786628581.9186208,
-    "ast_hash": "b7d80f8aabc2d11ac61af2540a14c405",
+    "mtime": 1786626960.6002195,
+    "ast_hash": "da0d77c1b843d1ad9532c34814319b7a",
     "semantic_hash": ""
   },
   "src/components/CustomCursor.tsx": {
@@ -180,8 +180,8 @@
     "semantic_hash": ""
   },
   "src/components/Hero.tsx": {
-    "mtime": 1786627197.7021313,
-    "ast_hash": "199080dbe5225c3af340f1b2512447c8",
+    "mtime": 1786181844.4927115,
+    "ast_hash": "47ee21430bb1d81c610225db5bd676a3",
     "semantic_hash": ""
   },
   "src/components/HorizontalScrollText.tsx": {
@@ -1765,13 +1765,13 @@
     "semantic_hash": ""
   },
   "src/components/OpenAIAcademySection.tsx": {
-    "mtime": 1786628693.0876234,
-    "ast_hash": "2db58ccf0cb4d0366a56621184dbeaa6",
+    "mtime": 1786198525.1805704,
+    "ast_hash": "1f3a74ff36a23ee840e17d3d7987b7fe",
     "semantic_hash": ""
   },
   "src/components/OpenAISubNav.tsx": {
-    "mtime": 1786628699.8508668,
-    "ast_hash": "8ae323aebb1aca7fbfb4b14f53712f4d",
+    "mtime": 1786195210.8558893,
+    "ast_hash": "276af5a0522d791f08055b6f3233974d",
     "semantic_hash": ""
   },
   "src/components/ui/avatar.tsx": {

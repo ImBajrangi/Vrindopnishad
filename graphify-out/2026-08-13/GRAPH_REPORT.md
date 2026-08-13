@@ -1,11 +1,11 @@
 # Graph Report - Vrindopnishad  (2026-08-13)
 
 ## Corpus Check
-- 102 files · ~4,582,627 words
+- 102 files · ~4,582,673 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 657 nodes · 882 edges · 51 communities (41 shown, 10 thin omitted)
+- 657 nodes · 884 edges · 51 communities (41 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
@@ -170,8 +170,8 @@ Cohesion: 0.22
 Nodes (5): AnimatedList, AnimatedListProps, defaultNotifications, NotificationItem, notifications
 
 ### Community 21 - "App.tsx"
-Cohesion: 0.11
-Nodes (17): AppContent(), AmbientSoundPlayer(), AmbientSoundPlayerProps, AuthModal(), AuthPage(), DigitalUniverseSection(), DigitalUniverseSectionProps, Footer() (+9 more)
+Cohesion: 0.13
+Nodes (15): AppContent(), AmbientSoundPlayer(), AmbientSoundPlayerProps, AuthModal(), AuthPage(), DigitalUniverseSection(), DigitalUniverseSectionProps, Footer() (+7 more)
 
 ### Community 23 - "animations.js"
 Cohesion: 0.22
@@ -222,8 +222,8 @@ Cohesion: 0.25
 Nodes (5): firstColumn, secondColumn, Testimonial, testimonials, thirdColumn
 
 ### Community 50 - "SideRays.tsx"
-Cohesion: 0.47
-Nodes (5): hexToRgb(), Origin, originToFlip(), SideRays(), SideRaysProps
+Cohesion: 0.31
+Nodes (7): Hero(), HeroProps, hexToRgb(), Origin, originToFlip(), SideRays(), SideRaysProps
 
 ## Knowledge Gaps
 - **248 isolated node(s):** `mat4`, `contentDB`, `dbHelpers`, `PROJECT_PATHS`, `pageAssets` (+243 more)

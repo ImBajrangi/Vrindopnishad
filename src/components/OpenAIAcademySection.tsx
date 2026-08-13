@@ -20,48 +20,48 @@ interface OpenAIAcademySectionProps {
   onNavigateAuth?: () => void;
 }
 
-interface AutoMovingCursorProps {
-  theme: 'lime' | 'mint' | 'cyan' | 'saffron';
-  animClass: 'cursor-anim-1' | 'cursor-anim-2' | 'cursor-anim-3' | 'cursor-anim-4';
-  label: string;
-  style?: React.CSSProperties;
-}
-
-const AutoMovingCursor: React.FC<AutoMovingCursorProps> = ({ theme, animClass, label, style }) => (
-  <div className={`animated-floating-cursor cursor-theme-${theme} ${animClass}`} style={style}>
-    {/* Rounded Cursor Pointer Arrow (from usercursor.tsx) */}
-    <div className="cursor-arrow-wrapper">
-      <svg
-        width="30"
-        height="30"
-        viewBox="0 0 28 28"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ display: 'block', overflow: 'visible' }}
-      >
-        <path
-          d="M 5.8 3.6 Q 4.5 3.2 4.6 4.6 L 10.2 22.6 Q 10.6 23.9 11.7 23.2 L 14.2 16.6 L 21.8 14.7 Q 23.1 14.4 22.6 13.2 L 6.8 3.8 Z"
-          fill="currentColor"
-          stroke="rgba(0,0,0,0.12)"
-          strokeWidth="1.2"
-          strokeLinejoin="round"
-          strokeLinecap="round"
-        />
-      </svg>
-    </div>
-
-    {/* Fluid Trailing / Following Label Pill */}
-    <div className="cursor-label-following">
-      <span className="cursor-label-text">{label}</span>
-    </div>
-  </div>
-);
-
 export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
   lang = 'english',
   onNavigateAuth
 }) => {
   const [activeTab, setActiveTab] = useState<SubNavTabType>('get-started');
+  const [carouselIdx, setCarouselIdx] = useState(0);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: ''
+  });
+
+  const carouselImages = [
+    {
+      src: '/images/home-pics/img_rv04.png',
+      title: lang === 'hindi' ? 'श्री धाम वृंदावन' : 'Shri Dham Vrindavan',
+      addr: lang === 'hindi' ? 'श्री राधा दामोदर एवं बांके बिहारी' : 'Shri Radha Damodar & Bankey Bihari Ji',
+      schedule: lang === 'hindi' ? 'ब्रह्म मुहूर्त: 04:24 AM\nसंध्या आरती: 06:45 PM' : 'Brahma Muhurta: 04:24 AM\nSandhya Aarti: 06:45 PM'
+    },
+    {
+      src: '/images/home-pics/img_rv05.png',
+      title: lang === 'hindi' ? 'ब्रज यात्रा एवं पावन सरोवर' : 'Braj Dham & Sacred Lakes',
+      addr: lang === 'hindi' ? 'राधा कुण्ड, श्याम कुण्ड एवं गोवर्धन' : 'Radha Kund & Govardhan Hill',
+      schedule: lang === 'hindi' ? 'नित्य दर्शन: 24x7\nदीपदान: 06:30 PM' : 'Daily Darshan: Open 24/7\nSandhya Deepdan: 06:30 PM'
+    },
+    {
+      src: '/images/home-pics/img_sn01.png',
+      title: lang === 'hindi' ? 'नित्य स्तोत्र पाठ एवं श्लोक संग्रह' : 'Stotra Path & Manuscript Archive',
+      addr: lang === 'hindi' ? 'श्रीमद्भगवद्गीता एवं वृंदोपनिषद' : 'Srimad Bhagavad Gita & Upanishad',
+      schedule: lang === 'hindi' ? 'प्रातः पाठ: 05:00 AM\nसायं पाठ: 07:00 PM' : 'Morning Path: 05:00 AM\nEvening Path: 07:00 PM'
+    }
+  ];
+
+  // Auto-slide carousel images every 4.5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCarouselIdx((prev) => (prev + 1) % carouselImages.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [carouselImages.length]);
 
   // Scroll position listener for dynamic active section updates
   useEffect(() => {
@@ -92,6 +92,12 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubscribed(true);
+    setTimeout(() => setIsSubscribed(false), 4000);
+  };
+
   return (
     <div id="openai-academy-wrapper" className="openai-academy-container font-sans">
       {/* Sticky Pill Sub-Nav Bar (Dynamically Pinned on top during scrolling) */}
@@ -101,7 +107,7 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
         onTabChange={(tab) => setActiveTab(tab)}
       />
 
-      {/* SECTION 1: GET STARTED - TWIN SPLIT POWER SHOWCASE */}
+      {/* SECTION 1: GET STARTED - RIVIAN-GRADE DUAL SHOWCASE LAYOUT */}
       <section
         id="get-started-section"
         className={`openai-section ${activeTab === 'get-started' ? 'is-active-section' : 'is-inactive-section'}`}
@@ -110,97 +116,169 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
           <div className="openai-section-badge-wrapper">
             <span className="section-pill-tag">01</span>
             <h2 className="openai-section-title">
-              {lang === 'hindi' ? 'आरंभ करें' : 'Get started'}
+              {lang === 'hindi' ? 'दैनिक नित्य नियम एवं दर्शन' : 'Daily Nitya Niyam & Darshan'}
             </h2>
           </div>
           <p className="openai-section-subtitle">
             {lang === 'hindi'
-              ? 'मूल बातों से शुरुआत करें और आत्मविश्वास के साथ साधना आगे बढ़ाएं।'
-              : 'Start with authentic Vedic scriptures and build spiritual confidence.'}
+              ? 'प्रामाणिक स्तोत्र पाठ, ब्रह्म मुहूर्त पंचांग एवं ब्रज दर्शन के साथ अपनी दैनिक साधना आरंभ करें।'
+              : 'Establish your daily spiritual discipline with authentic Stotra path, Brahma Muhurta Panchang, and Braj Dham Nitya Darshan.'}
           </p>
         </div>
 
-        <div className="openai-cards-grid-2col">
-          {/* Bar 1: Exactly 1 Cursor with Full Card Travel */}
-          <div className="openai-split-bar bar-theme-chartreuse">
-            <AutoMovingCursor
-              theme="lime"
-              animClass="cursor-anim-1"
-              label={lang === 'hindi' ? '✦ प्रामाणिक पाठ' : '✦ Sacred Shlokas'}
-              style={{ top: '15%', left: '8%' }}
-            />
-            <div className="openai-bar-image-wrap">
+        {/* Rivian-Grade 2-Column Showcase Cards Grid */}
+        <div className="rivian-showcase-grid">
+          {/* LEFT CARD: Interactive Media Carousel & Details (Rivian Card 1) */}
+          <div className="rivian-card rivian-card-light">
+            <div className="rivian-media-wrapper">
               <img
-                src="/images/home-pics/img_rv04.png"
-                alt="What is Vrindopnishad"
-                className="openai-bar-img"
+                src={carouselImages[carouselIdx].src}
+                alt={carouselImages[carouselIdx].title}
+                className="rivian-media-img"
               />
-              <div className="openai-bar-img-overlay" />
+              {/* Floating Pill Carousel Dots Overlay */}
+              <div className="rivian-carousel-dots-pill">
+                {carouselImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setCarouselIdx(idx)}
+                    className={`rivian-dot ${idx === carouselIdx ? 'active' : ''}`}
+                    aria-label={`Slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
-            <div className="openai-bar-info">
-              <div>
-                <h3 className="academy-bento-title">
-                  {lang === 'hindi' ? 'वृंदोपनिषद क्या है?' : 'What is Vrindopnishad?'}
-                </h3>
-                <p className="openai-bar-desc">
-                  {lang === 'hindi'
-                    ? 'जानें कि वृंदोपनिषद क्या है और यह आपके नित्य नियम पाठ में कैसे सहायता करता है।'
-                    : 'Discover how Vrindopnishad synthesizes ancient scriptures, stotras, and daily nitya niyam.'}
-                </p>
-                <div className="openai-bar-features">
-                  <span className="openai-feature-pill">✦ Authentic Shlokas</span>
-                  <span className="openai-feature-pill">✦ Daily Tracker</span>
+
+            {/* Bottom Card Body */}
+            <div className="rivian-card-body">
+              <h3 className="rivian-card-title">{carouselImages[carouselIdx].title}</h3>
+
+              <div className="rivian-info-grid">
+                <div className="rivian-info-col">
+                  <span className="rivian-info-label">
+                    {lang === 'hindi' ? 'पावन स्थान / नित्य नियम' : 'Sacred Seat & Niyam'}
+                  </span>
+                  <span className="rivian-info-val">{carouselImages[carouselIdx].addr}</span>
+                </div>
+                <div className="rivian-info-col">
+                  <span className="rivian-info-label">
+                    {lang === 'hindi' ? 'दैनिक समय सारिणी' : 'Daily Timings'}
+                  </span>
+                  <span className="rivian-info-val rivian-whitespace-pre">
+                    {carouselImages[carouselIdx].schedule}
+                  </span>
                 </div>
               </div>
-              <div className="openai-bar-cta" onClick={onNavigateAuth}>
-                <span>{lang === 'hindi' ? 'साधना शुरू करें' : 'Start Niyam Path'}</span>
-                <span>→</span>
+
+              <div className="rivian-action-row">
+                <button
+                  type="button"
+                  className="rivian-btn-black-pill"
+                  onClick={onNavigateAuth}
+                >
+                  {lang === 'hindi' ? 'नियम देखें' : 'Explore Sadhna'}
+                </button>
+                <a href="#stotra-archive" className="rivian-text-link">
+                  {lang === 'hindi' ? 'सभी स्थान देखें →' : 'See all sacred spots →'}
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Bar 2: Exactly 1 Cursor with Full Card Travel */}
-          <div className="openai-split-bar bar-theme-saffron">
-            <AutoMovingCursor
-              theme="saffron"
-              animClass="cursor-anim-2"
-              label={lang === 'hindi' ? '⚡ 3-चरण नियम' : '⚡ 3-Step Guide'}
-              style={{ top: '25%', right: '12%' }}
-            />
-            <div className="openai-bar-image-wrap">
-              <img
-                src="/images/home-pics/img_rv05.png"
-                alt="How to get started"
-                className="openai-bar-img"
-              />
-              <div className="openai-bar-img-overlay" />
-            </div>
-            <div className="openai-bar-info">
-              <div>
-                <h3 className="academy-bento-title">
-                  {lang === 'hindi' ? 'साधना कैसे शुरू करें' : 'How to get started'}
-                </h3>
-                <p className="openai-bar-desc">
-                  {lang === 'hindi'
-                    ? 'प्रामाणिक स्तोत्र, श्रीमद्भगवद्गीता और ब्रज यात्रा मार्गदर्शिकाएं देखें।'
-                    : 'Explore daily Stotra path, digital manuscripts, and Braj Dham guides in 3 steps.'}
-                </p>
-                <div className="openai-bar-features">
-                  <span className="openai-feature-pill">✦ 01 Stotra</span>
-                  <span className="openai-feature-pill">✦ 02 Shloka</span>
-                  <span className="openai-feature-pill">✦ 03 Niyam</span>
+          {/* RIGHT CARD: Obsidian Dark Subscription Card (Rivian Card 2) */}
+          <div className="rivian-card rivian-card-dark">
+            <h3 className="rivian-dark-title">
+              {lang === 'hindi' ? 'वृंदोपनिषद के साथ जुड़े रहें' : 'Keep up with Vrindopnishad'}
+            </h3>
+
+            <form onSubmit={handleFormSubmit} className="rivian-dark-form">
+              <div className="rivian-form-row-2col">
+                <div className="rivian-input-group">
+                  <input
+                    type="text"
+                    required
+                    placeholder={lang === 'hindi' ? 'पहला नाम*' : 'First name*'}
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                    className="rivian-input"
+                  />
+                </div>
+                <div className="rivian-input-group">
+                  <input
+                    type="text"
+                    required
+                    placeholder={lang === 'hindi' ? 'अंतिम नाम*' : 'Last name*'}
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                    className="rivian-input"
+                  />
                 </div>
               </div>
-              <div className="openai-bar-cta" onClick={onNavigateAuth}>
-                <span>{lang === 'hindi' ? 'मार्गदर्शिका देखें' : 'Explore Starter Guides'}</span>
-                <span>→</span>
+
+              <div className="rivian-input-group">
+                <input
+                  type="email"
+                  required
+                  placeholder={lang === 'hindi' ? 'ईमेल पता*' : 'Email*'}
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="rivian-input"
+                />
               </div>
-            </div>
+
+              <div className="rivian-input-group">
+                <input
+                  type="tel"
+                  required
+                  placeholder={lang === 'hindi' ? 'व्हाट्सएप / फोन नंबर*' : 'Phone number*'}
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="rivian-input"
+                />
+              </div>
+
+              <p className="rivian-disclaimer-text">
+                {lang === 'hindi'
+                  ? 'सबमिट पर क्लिक करके आप नित्य पंचांग, एकादशी व्रत सूचनाएं एवं श्लोक पाठ संदेश प्राप्त करने की सहमति प्रदान करते हैं। आप किसी भी समय अपनी सदस्यता समाप्त कर सकते हैं।'
+                  : 'By clicking the "Subscribe" button below, I authorize Vrindopnishad to send daily Brahma Muhurta Panchang updates, Ekadashi Vrat alerts, and sacred Shloka audio text notifications. Opt-out anytime.'}
+              </p>
+
+              <p className="rivian-terms-text">
+                By submitting, I understand and agree to the <a href="#terms">Vrindopnishad Terms</a> and <a href="#privacy">Privacy Notice</a>.
+              </p>
+
+              <button type="submit" className="rivian-btn-white-pill">
+                {isSubscribed ? (lang === 'hindi' ? '✓ नित्य नियम से जुड़े!' : '✓ Subscribed!') : (lang === 'hindi' ? 'सब्सक्राइब करें' : 'Subscribe')}
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* FULL-WIDTH CINEMATIC HERO BANNER CARD (Rivian Banner 2) */}
+        <div className="rivian-cinematic-banner">
+          <img
+            src="/images/home-pics/img_sn01.png"
+            alt="Vrindopnishad Sacred Journey"
+            className="rivian-banner-bg"
+          />
+          <div className="rivian-banner-overlay" />
+          <div className="rivian-banner-content">
+            <h2 className="rivian-banner-headline">
+              {lang === 'hindi' ? 'अपनी पावन साधना यात्रा आरंभ करें' : 'Begin your sacred journey'}
+            </h2>
+            <button
+              type="button"
+              className="rivian-btn-white-pill rivian-banner-cta"
+              onClick={onNavigateAuth}
+            >
+              {lang === 'hindi' ? 'साधना नियम से जुड़ें' : 'Explore All Scriptures'}
+            </button>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: GO FURTHER WITH VRINDOPNISHAD - TWIN SPLIT POWER SHOWCASE */}
+      {/* SECTION 2: GO FURTHER WITH VRINDOPNISHAD */}
       <section
         id="go-further-section"
         className={`openai-section ${activeTab === 'go-further' ? 'is-active-section' : 'is-inactive-section'}`}
@@ -220,14 +298,8 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
         </div>
 
         <div className="openai-cards-grid-2col">
-          {/* Bar 1: Scheduled Stotra Tasks & Sacred Skills - Exactly 1 Cursor */}
+          {/* Card 1: Scheduled Tasks */}
           <div className="openai-split-bar bar-theme-mint">
-            <AutoMovingCursor
-              theme="mint"
-              animClass="cursor-anim-3"
-              label={lang === 'hindi' ? '🔔 नित्य नियम' : '🔔 Auto Reminders'}
-              style={{ top: '15%', left: '10%' }}
-            />
             <div className="openai-bar-image-wrap">
               <img
                 src="/images/home-pics/img_sn01.png"
@@ -252,24 +324,18 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
                 </div>
               </div>
               <div className="openai-bar-cta" onClick={onNavigateAuth}>
-                <span>{lang === 'hindi' ? 'अनुसूची सेट करें' : 'Configure Schedule'}</span>
+                <span>{lang === 'hindi' ? 'शेड्यूल सेट करें' : 'Configure Schedule'}</span>
                 <span>→</span>
               </div>
             </div>
           </div>
 
-          {/* Bar 2: Vrindopnishad Portals & Settings - Exactly 1 Cursor */}
+          {/* Card 2: Unified Portals */}
           <div className="openai-split-bar bar-theme-cyan">
-            <AutoMovingCursor
-              theme="cyan"
-              animClass="cursor-anim-4"
-              label={lang === 'hindi' ? '🌐 पावन धाम' : '🌐 Braj Dham Hub'}
-              style={{ top: '20%', right: '12%' }}
-            />
             <div className="openai-bar-image-wrap">
               <img
-                src="/images/projects/chitra_vrinda_hero.jpg"
-                alt="Vrindopnishad Portals & Settings"
+                src="/images/home-pics/img_rv04.png"
+                alt="Unified Portals & Settings"
                 className="openai-bar-img"
               />
               <div className="openai-bar-img-overlay" />
@@ -277,11 +343,11 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
             <div className="openai-bar-info">
               <div>
                 <h3 className="academy-bento-title">
-                  {lang === 'hindi' ? 'वृंदोपनिषद पोर्टल्स एवं सेटिंग्स' : 'Unified Portals & Settings'}
+                  {lang === 'hindi' ? 'एकीकृत पोर्टल एवं सेटिंग्स' : 'Unified Portals & Settings'}
                 </h3>
                 <p className="openai-bar-desc">
                   {lang === 'hindi'
-                    ? 'फुडी वृंदा, चित्र वृंदा और वृंदा टूर्स एक ही एकीकृत पोर्टल में उपयोग करें।'
+                    ? 'फुडी वृंदा, चित्रा वृंदा एवं वृंदा टूर्स को एक ही स्थान से एक्सेस करें।'
                     : 'Access Foody Vrinda, Chitra Vrinda, and Vrinda Tours in one unified sacred portal.'}
                 </p>
                 <div className="openai-bar-features">
@@ -291,7 +357,7 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
                 </div>
               </div>
               <div className="openai-bar-cta" onClick={onNavigateAuth}>
-                <span>{lang === 'hindi' ? 'पोर्टल खोलें' : 'Launch Unified Portals'}</span>
+                <span>{lang === 'hindi' ? 'पोर्टल लॉन्च करें' : 'Launch Unified Portals'}</span>
                 <span>→</span>
               </div>
             </div>
@@ -299,7 +365,7 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
         </div>
       </section>
 
-      {/* SECTION 3: USE CASES - 3-COLUMN MINIMAL EDITORIAL CARDS */}
+      {/* SECTION 3: USE CASES */}
       <section
         id="use-cases-section"
         className={`openai-section ${activeTab === 'use-cases' ? 'is-active-section' : 'is-inactive-section'}`}
@@ -308,7 +374,7 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
           <div className="openai-section-badge-wrapper">
             <span className="section-pill-tag">03</span>
             <h2 className="openai-section-title">
-              {lang === 'hindi' ? 'साधना उपयोग' : 'Use cases'}
+              {lang === 'hindi' ? 'उपयोग के अवसर' : 'Use cases'}
             </h2>
           </div>
           <p className="openai-section-subtitle">
@@ -417,13 +483,10 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
         </div>
       </section>
 
-
-
       {/* SECTION 5: CONSOLIDATED TESTIMONIALS SECTION */}
       <div className="mt-8 border-t border-white/10 pt-6">
         <TestimonialMarquee />
       </div>
-
     </div>
   );
 };

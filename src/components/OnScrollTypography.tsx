@@ -38,6 +38,7 @@ export const OnScrollTypography: React.FC<OnScrollTypographyProps> = ({
 
   useEffect(() => {
     if (!containerRef.current) return;
+    gsap.registerPlugin(ScrollTrigger);
 
     const charNodes = containerRef.current.querySelectorAll('.scroll-char');
     if (!charNodes.length) return;

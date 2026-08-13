@@ -30,7 +30,7 @@ const SACRED_VERSES: VerseData[] = [
     translation: 'That is Infinite, This is Infinite. From Infinity, Infinity manifests.\nWhen Infinity is drawn from Infinity, Infinity alone remains.',
     duration: '03:45',
     color: '#c3f53c',
-    glow: 'rgba(195, 245, 60, 0.25)'
+    glow: 'rgba(195, 245, 60, 0.28)'
   },
   {
     id: 'maha-mantra',
@@ -42,7 +42,7 @@ const SACRED_VERSES: VerseData[] = [
     translation: 'The supreme transcendental sound vibration for spiritual enlightenment, inner clarity, and universal peace.',
     duration: '04:12',
     color: '#f59e0b',
-    glow: 'rgba(245, 158, 11, 0.25)'
+    glow: 'rgba(245, 158, 11, 0.28)'
   },
   {
     id: 'mangalacharan',
@@ -54,7 +54,31 @@ const SACRED_VERSES: VerseData[] = [
     translation: 'May we hear auspicious words with our ears, and behold divine goodness with our eyes in sacred worship.',
     duration: '02:50',
     color: '#10b981',
-    glow: 'rgba(16, 185, 129, 0.25)'
+    glow: 'rgba(16, 185, 129, 0.28)'
+  },
+  {
+    id: 'gayatri-mantra',
+    number: '04',
+    title: 'Gayatri Mantra',
+    titleHindi: 'गायत्री मंत्र',
+    verseHindi: 'ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं ।\nभर्गो देवस्य धीमहि धियो यो नः प्रचोदयात् ॥',
+    transliteration: 'Om Bhur Bhuvah Swah Tat Savitur Varenyam |\nBhargo Devasya Dheemahi Dhiyo Yo Nah Prachodayaat ||',
+    translation: 'We meditate upon the spiritual radiance of the supreme divine entity. May that divine light illuminate our intellect.',
+    duration: '03:15',
+    color: '#00f2fe',
+    glow: 'rgba(0, 242, 254, 0.28)'
+  },
+  {
+    id: 'shiv-tandav',
+    number: '05',
+    title: 'Shiv Tandav',
+    titleHindi: 'शिव तांडव',
+    verseHindi: 'जटाटवीगलज्जलप्रवाहपावितस्थले\nगलेऽवलम्ब्य लम्बितां भुजङ्गतुङ्गमालिकाम् ॥',
+    transliteration: 'Jatatavee Galaj Jala Pravaha Pavitasthale |\nGaleavalambya Lambitaam Bhujanga Tunga Maalikaam ||',
+    translation: 'With his neck consecrated by the flow of water that flows from his matted hair, and a garland of serpents round his neck.',
+    duration: '05:30',
+    color: '#a855f7',
+    glow: 'rgba(168, 85, 247, 0.28)'
   }
 ];
 
@@ -102,7 +126,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
     if (!ctx) return;
 
     let animationId: number;
-    const particleCount = 25;
+    const particleCount = 28;
     const particles: Array<{
       x: number;
       y: number;
@@ -123,10 +147,10 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 1.4 + 0.4,
+        radius: Math.random() * 1.6 + 0.4,
         speedY: -(Math.random() * 0.25 + 0.1),
         speedX: (Math.random() - 0.5) * 0.2,
-        alpha: Math.random() * 0.4
+        alpha: Math.random() * 0.45
       });
     }
 
@@ -145,7 +169,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = activeVerse.color;
-        ctx.globalAlpha = p.alpha * (isPlaying ? 0.7 : 0.25);
+        ctx.globalAlpha = p.alpha * (isPlaying ? 0.8 : 0.3);
         ctx.fill();
       });
 
@@ -184,6 +208,97 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
         position: 'relative'
       }}
     >
+      {/* Mobile Responsive Overrides & Fixed Height Stage Lock */}
+      <style>{`
+        .sanctuary-stage-box {
+          min-height: 420px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: center !important;
+          align-items: center !important;
+        }
+        .sanctuary-verse-wrapper {
+          min-height: 320px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: center !important;
+          align-items: center !important;
+        }
+
+        @media (max-width: 768px) {
+          .sanctuary-stage-box {
+            min-height: 520px !important;
+          }
+          .sanctuary-verse-wrapper {
+            min-height: 420px !important;
+          }
+          .sanctuary-shloka-text {
+            font-size: clamp(1.1rem, 4.2vw, 1.8rem) !important;
+            margin-bottom: 0.9rem !important;
+          }
+          .sanctuary-translit-text {
+            font-size: clamp(0.82rem, 3.2vw, 0.95rem) !important;
+            margin-bottom: 1.1rem !important;
+          }
+          .sanctuary-translation-text {
+            font-size: clamp(0.78rem, 2.8vw, 0.88rem) !important;
+            margin-bottom: 1.5rem !important;
+          }
+          .verse-tabs-container {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            justify-content: flex-start !important;
+            max-width: 92vw !important;
+            border-radius: 20px !important;
+            padding: 0.4rem 0.6rem !important;
+            scrollbar-width: none !important;
+            -webkit-overflow-scrolling: touch !important;
+          }
+          .verse-tabs-container::-webkit-scrollbar {
+            display: none !important;
+          }
+          .sanctuary-pill-tab {
+            flex-shrink: 0 !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .sanctuary-controls-wrapper {
+            flex-direction: column !important;
+            gap: 0.85rem !important;
+            width: 100% !important;
+          }
+          .sanctuary-player-group {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.6rem !important;
+            width: 100% !important;
+          }
+          .sanctuary-audio-btn {
+            padding: 0.68rem 1.25rem !important;
+            font-size: 0.82rem !important;
+            white-space: nowrap !important;
+            flex-shrink: 0 !important;
+          }
+          .sanctuary-arrow-btn {
+            width: 38px !important;
+            height: 38px !important;
+            font-size: 1.1rem !important;
+            flex-shrink: 0 !important;
+          }
+          .sanctuary-hub-btn {
+            width: 100% !important;
+            max-width: 280px !important;
+            justify-content: center !important;
+            padding: 0.65rem 1.2rem !important;
+            font-size: 0.82rem !important;
+            box-sizing: border-box !important;
+          }
+        }
+      `}</style>
+
       {/* Background Subtle Particle Canvas */}
       <canvas
         ref={canvasRef}
@@ -198,7 +313,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
         }}
       />
 
-      {/* Light Ambient Glow (No Heavy Dark Overlays) */}
+      {/* Light Ambient Glow */}
       <motion.div
         animate={{
           background: `radial-gradient(circle at 50% 50%, ${activeVerse.glow} 0%, rgba(10, 10, 14, 0) 65%)`
@@ -212,7 +327,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
         }}
       />
 
-      <div style={{ maxWidth: '1040px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
+      <div style={{ maxWidth: '1080px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
         {/* Section Header */}
         <div style={{ marginBottom: '2.5rem' }}>
           <h2
@@ -235,7 +350,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
             style={{
               fontSize: 'clamp(0.95rem, 1.6vw, 1.1rem)',
               color: '#94a3b8',
-              maxWidth: '600px',
+              maxWidth: '620px',
               margin: '0 auto',
               fontFamily: '"sama-latin", sans-serif',
               fontWeight: 400,
@@ -275,6 +390,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
             return (
               <button
                 key={v.id}
+                type="button"
                 onClick={() => {
                   setActiveVerseIndex(i);
                   setIsPlaying(true);
@@ -337,9 +453,10 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
 
         {/* Unboxed Spatial Sanctuary Stage */}
         <div
+          className="sanctuary-stage-box"
           style={{
             position: 'relative',
-            minHeight: '280px',
+            minHeight: '420px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -366,15 +483,16 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
             ॐ
           </div>
 
-          {/* Verse Text Content with Smooth Transition */}
+          {/* Verse Text Content with Blur-Out-Up Smooth Transition */}
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={activeVerse.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              style={{ width: '100%', position: 'relative', zIndex: 1, willChange: 'opacity, transform' }}
+              className="sanctuary-verse-wrapper"
+              initial={{ opacity: 0, y: 28, filter: 'blur(12px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              exit={{ opacity: 0, y: -28, filter: 'blur(12px)' }}
+              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              style={{ width: '100%', minHeight: '320px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative', zIndex: 1, willChange: 'opacity, transform, filter' }}
             >
               {/* Devanagari Verse Text with Staggered BlurText */}
               <BlurText
@@ -445,56 +563,105 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
           </AnimatePresence>
 
           {/* Minimalist Floating Audio Controls */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', zIndex: 2, marginTop: '0.5rem' }}>
-            <button
-              onClick={handlePrevVerse}
-              aria-label="Previous Verse"
-              className="sanctuary-arrow-btn"
-              style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '50%',
-                background: 'rgba(255, 255, 255, 0.06)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-                color: '#ffffff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '1.2rem',
-                cursor: 'pointer',
-                backdropFilter: 'blur(16px)',
-                transition: 'all 0.25s ease'
-              }}
-            >
-              ‹
-            </button>
+          <div className="sanctuary-controls-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.25rem', zIndex: 2, marginTop: '0.5rem' }}>
+            <div className="sanctuary-player-group" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <button
+                type="button"
+                onClick={handlePrevVerse}
+                aria-label="Previous Verse"
+                className="sanctuary-arrow-btn"
+                style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '50%',
+                  background: 'rgba(255, 255, 255, 0.06)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.2rem',
+                  cursor: 'pointer',
+                  backdropFilter: 'blur(16px)',
+                  transition: 'all 0.25s ease'
+                }}
+              >
+                ‹
+              </button>
 
-            {/* Master Shiny Cyan Audio Pill Button */}
-            <motion.button
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.96 }}
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="sanctuary-audio-btn"
-              style={{
-                padding: '0.75rem 2rem',
-                borderRadius: '999px',
-                background: 'linear-gradient(135deg, #00f2fe 0%, #0284c7 100%)',
-                color: '#ffffff',
-                fontWeight: 700,
-                fontSize: '0.92rem',
-                fontFamily: '"sama-latin", sans-serif',
-                border: 'none',
-                boxShadow: 'none',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.6rem',
-                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
-              }}
-            >
-              <span style={{ fontSize: '1rem' }}>{isPlaying ? '⏸' : '▶'}</span>
-              <span>{isPlaying ? 'Pause Recitation' : 'Listen Recitation'}</span>
-            </motion.button>
+              {/* Master Audio Pill Button */}
+              <motion.button
+                type="button"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                onClick={() => setIsPlaying(!isPlaying)}
+                className="sanctuary-audio-btn"
+                style={{
+                  padding: '0.75rem 2rem',
+                  borderRadius: '999px',
+                  background: 'linear-gradient(135deg, #00f2fe 0%, #0284c7 100%)',
+                  color: '#ffffff',
+                  fontWeight: 700,
+                  fontSize: '0.92rem',
+                  fontFamily: '"sama-latin", sans-serif',
+                  border: 'none',
+                  boxShadow: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                }}
+              >
+                <span style={{ fontSize: '1rem' }}>{isPlaying ? '⏸' : '▶'}</span>
+                <span>{isPlaying ? 'Pause Recitation' : 'Listen Recitation'}</span>
+
+                {/* Animated Waveform Equalizer indicator when playing */}
+                {isPlaying && (
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', marginLeft: '4px' }}>
+                    <motion.span
+                      animate={{ height: ['6px', '14px', '6px'] }}
+                      transition={{ repeat: Infinity, duration: 0.6, ease: 'easeInOut' }}
+                      style={{ width: '2px', background: '#ffffff', borderRadius: '1px' }}
+                    />
+                    <motion.span
+                      animate={{ height: ['14px', '6px', '14px'] }}
+                      transition={{ repeat: Infinity, duration: 0.8, ease: 'easeInOut', delay: 0.2 }}
+                      style={{ width: '2px', background: '#ffffff', borderRadius: '1px' }}
+                    />
+                    <motion.span
+                      animate={{ height: ['8px', '16px', '8px'] }}
+                      transition={{ repeat: Infinity, duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
+                      style={{ width: '2px', background: '#ffffff', borderRadius: '1px' }}
+                    />
+                  </span>
+                )}
+              </motion.button>
+
+              <button
+                type="button"
+                onClick={handleNextVerse}
+                aria-label="Next Verse"
+                className="sanctuary-arrow-btn"
+                style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '50%',
+                  background: 'rgba(255, 255, 255, 0.06)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.2rem',
+                  cursor: 'pointer',
+                  backdropFilter: 'blur(16px)',
+                  transition: 'all 0.25s ease'
+                }}
+              >
+                ›
+              </button>
+            </div>
 
             <a
               href="https://path.vrindopnishad.in/"
@@ -523,29 +690,6 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
               <span>Recitation Hub</span>
               <span style={{ fontSize: '1rem' }}>↗</span>
             </a>
-
-            <button
-              onClick={handleNextVerse}
-              aria-label="Next Verse"
-              className="sanctuary-arrow-btn"
-              style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '50%',
-                background: 'rgba(255, 255, 255, 0.06)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-                color: '#ffffff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '1.2rem',
-                cursor: 'pointer',
-                backdropFilter: 'blur(16px)',
-                transition: 'all 0.25s ease'
-              }}
-            >
-              ›
-            </button>
           </div>
         </div>
       </div>

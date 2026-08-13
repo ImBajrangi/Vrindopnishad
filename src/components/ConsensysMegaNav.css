@@ -8,6 +8,8 @@
   height: 0 !important;
   z-index: 9999 !important;
   pointer-events: none !important;
+  padding: 0.5rem 1.25rem 0 1.25rem !important;
+  box-sizing: border-box !important;
 }
 
 .consensys-backdrop,
@@ -18,45 +20,65 @@
   pointer-events: auto !important;
 }
 
-/* ─── Marquee Announcement Bar (Inverted High-Contrast Theme) ─── */
+/* ─── Top Utility Announcement Header Bar (Matching Reference Image 2: Rounded Top Corners) ─── */
 .marquee-announcement-bar {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
+  position: relative !important;
   width: 100% !important;
-  height: 36px !important;
+  max-width: 1520px !important;
+  margin: 0 auto !important;
+  height: 38px !important;
   z-index: 9995 !important;
-  pointer-events: none !important;
-  /* Dark Mode Default -> Pure White / Bright Background */
-  background: linear-gradient(90deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+  pointer-events: auto !important;
+  background: #000000 !important;
+  border-top-left-radius: 14px !important;
+  border-top-right-radius: 14px !important;
   overflow: hidden !important;
   display: flex !important;
   align-items: center !important;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, height 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  padding: 0 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, height 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Soft edge fade masks */
-.marquee-announcement-bar::before,
-.marquee-announcement-bar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100px;
+html.dark .marquee-announcement-bar,
+html.light .marquee-announcement-bar {
+  background: #000000 !important;
+}
+
+.announcement-bar-inner {
+  width: 100%;
   height: 100%;
-  z-index: 2;
-  pointer-events: none;
+  padding: 0 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.marquee-announcement-bar::before {
-  left: 0;
-  background: linear-gradient(90deg, #ffffff 0%, transparent 100%);
+.announcement-left-info,
+.announcement-right-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  user-select: none;
 }
 
-.marquee-announcement-bar::after {
-  right: 0;
-  background: linear-gradient(-90deg, #ffffff 0%, transparent 100%);
+.announcement-icon {
+  color: #ffffff;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.announcement-text {
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .marquee-announcement-bar.marquee-hidden {
@@ -65,12 +87,7 @@
   pointer-events: none !important;
 }
 
-.marquee-announcement-bar.marquee-scrolled {
-  height: 0 !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
+.marquee-announcement-bar.marquee-scrolled,
 .marquee-announcement-bar.marquee-mega-open {
   height: 0 !important;
   opacity: 0 !important;
@@ -240,13 +257,23 @@ body.light-mode .marquee-dot {
   padding: 0.6rem 2.5rem !important;
   box-sizing: border-box;
   transform: translateY(0);
-  background: rgba(15, 15, 17, 0.85) !important;
+  background: rgba(15, 15, 17, 0.95) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
   border: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3) !important;
   transition: transform 0.4s cubic-bezier(0.1, 0.7, 0.5, 1), top 0.4s cubic-bezier(0.1, 0.7, 0.5, 1), padding 0.35s cubic-bezier(0.1, 0.7, 0.5, 1), background 0.35s cubic-bezier(0.1, 0.7, 0.5, 1) !important;
+}
+
+html.dark .consensys-header {
+  background: rgba(15, 15, 17, 0.95) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.consensys-header.scrolled {
+  top: 0 !important;
 }
 
 .consensys-header.mega-open {
@@ -290,23 +317,27 @@ body.light-mode .marquee-dot {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #c3f53c;
-  /* Consensys Lime Accent */
-  color: #0f0f11;
+  background: #0f0f11 !important;
+  border: 1.5px solid #c3f53c !important;
+  color: #ffffff;
   text-decoration: none;
-  box-shadow: 0 4px 16px rgba(195, 245, 60, 0.35);
-  transition: transform 0.25s ease, background 0.25s ease;
+  box-shadow: 0 0 14px rgba(195, 245, 60, 0.35) !important;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease !important;
   flex-shrink: 0;
 }
 
 .consensys-logo-badge:hover {
-  background: #d4fe3f;
+  background: #18181c !important;
+  border-color: #d4fe3f !important;
+  transform: scale(1.06);
+  box-shadow: 0 0 18px rgba(195, 245, 60, 0.5) !important;
 }
 
 .consensys-logo-badge img {
   width: 26px;
   height: 26px;
   object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* Center: Floating Pill Nav Bar */
@@ -1291,6 +1322,37 @@ body.light-mode .social-links-row a {
 html.light .social-links-row a:hover,
 body.light-mode .social-links-row a:hover {
   color: #000000 !important;
+}
+
+/* Light Mode Overrides for Blog Split Cards & Text Visibility */
+html.light .consensys-split-card,
+body.light-mode .consensys-split-card {
+  color: #0f172a !important;
+}
+
+html.light .card-title,
+body.light-mode .card-title {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+html.light .card-category,
+body.light-mode .card-category {
+  color: #475569 !important;
+  opacity: 1 !important;
+}
+
+html.light .card-date,
+body.light-mode .card-date {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+html.light .consensys-logo-badge,
+body.light-mode .consensys-logo-badge {
+  background: #0f0f11 !important;
+  border: 1.5px solid #0f0f11 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
 }
 
 html.light .consensys-mobile-drawer,
