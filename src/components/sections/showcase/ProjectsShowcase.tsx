@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { ProjectItem } from '../types';
-import LEDTicker from './originkit/ui/pixel-led-display';
-import InfiniteMenu from './InfiniteMenu';
-import OptionWheel from './OptionWheel';
-import GradualBlur from './GradualBlur';
+import { ProjectItem } from '../../../types';
+import LEDTicker from '../../originkit/ui/pixel-led-display';
+import { InfiniteMenu, OptionWheel, GradualBlur } from '../../effects';
 
 interface ProjectsShowcaseProps {
   projects: ProjectItem[];

@@ -37,9 +37,9 @@ export const Hero: React.FC<HeroProps> = ({ lang = 'english' }) => {
       >
         {/* Top Header Group */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', justifyContent: 'center' }}>
-          <h1 className="hero-title" style={{ textAlign: 'center', margin: '0 0 1rem 0', width: '100%' }}>
-            <div className="title-row" style={{ justifyContent: 'center', marginBottom: '0.5rem' }}>
-              <span className="title-small" style={{ textTransform: 'uppercase', letterSpacing: '0.3em', opacity: 0.85, fontSize: 'clamp(0.85rem, 1.5vw, 1.05rem)', fontWeight: 600 }}>
+          <h1 className="hero-title" style={{ textAlign: 'center', margin: '0 0 1.25rem 0', width: '100%' }}>
+            <div className="title-row" style={{ justifyContent: 'center', marginBottom: '0.65rem' }}>
+              <span className="title-small" style={{ textTransform: 'uppercase', letterSpacing: '0.32em', opacity: 0.9, fontSize: 'clamp(0.95rem, 1.8vw, 1.25rem)', fontWeight: 600 }}>
                 WELCOME TO
               </span>
             </div>
@@ -47,12 +47,13 @@ export const Hero: React.FC<HeroProps> = ({ lang = 'english' }) => {
               <span
                 className="title-main"
                 style={{
-                  fontSize: 'clamp(1.85rem, 10.5vw, 8rem)',
-                  lineHeight: 0.95,
+                  fontSize: 'clamp(2.8rem, 12.5vw, 8.8rem)',
+                  lineHeight: 0.94,
                   maxWidth: '100%',
                   display: 'inline-block',
                   wordBreak: 'break-word',
-                  overflowWrap: 'break-word'
+                  overflowWrap: 'break-word',
+                  letterSpacing: '-0.02em'
                 }}
               >
                 Vrindopnishad
@@ -69,18 +70,18 @@ export const Hero: React.FC<HeroProps> = ({ lang = 'english' }) => {
               justifyContent: 'center',
               gap: '0.5rem',
               flexWrap: 'wrap',
-              margin: '0.8rem 0 0.5rem',
+              margin: '0.9rem 0 0.6rem',
               textAlign: 'center'
             }}
           >
-            <span style={{ fontSize: 'clamp(1.25rem, 2.8vw, 1.7rem)', color: 'var(--text-color)', fontWeight: 500, lineHeight: 1.4 }}>
+            <span style={{ fontSize: 'clamp(1.4rem, 3.2vw, 2.1rem)', color: 'var(--text-color)', fontWeight: 500, lineHeight: 1.35 }}>
               Where <strong>ancient wisdom</strong> meets <strong>modern innovation</strong>
             </span>
           </div>
 
           {/* Description */}
-          <div className="hero-description" style={{ maxWidth: '780px', margin: '1rem auto 1.5rem', textAlign: 'center' }}>
-            <p style={{ fontSize: 'clamp(1.05rem, 2.2vw, 1.28rem)', lineHeight: 1.55, color: 'var(--secondary-color)' }}>
+          <div className="hero-description" style={{ maxWidth: '820px', margin: '1.2rem auto 1.8rem', textAlign: 'center' }}>
+            <p style={{ fontSize: 'clamp(1.15rem, 2.4vw, 1.45rem)', lineHeight: 1.55, color: 'var(--secondary-color)' }}>
               {lang === 'hindi'
                 ? 'भोजन, कला, यात्रा और अध्यात्म का अनूठा संगम।'
                 : 'Connecting food, art, travel, and sacred wisdom in one sanctuary.'}
@@ -99,11 +100,11 @@ export const Hero: React.FC<HeroProps> = ({ lang = 'english' }) => {
               margin: '0.5rem 0'
             }}
           >
-            <a href="#our-story" className="hero-btn hero-btn-primary" style={{ padding: '0.85rem 2.2rem', fontSize: '1rem' }}>
+            <a href="#our-story" className="hero-btn hero-btn-primary" style={{ padding: '0.85rem 2.2rem', fontSize: '1.05rem' }}>
               <span>Discover Our Story</span>
               <span className="btn-arrow">→</span>
             </a>
-            <a href="#projects" className="hero-btn hero-btn-secondary" style={{ padding: '0.85rem 2.2rem', fontSize: '1rem' }}>
+            <a href="#projects" className="hero-btn hero-btn-secondary" style={{ padding: '0.85rem 2.2rem', fontSize: '1.05rem' }}>
               <span>View Projects</span>
             </a>
           </div>

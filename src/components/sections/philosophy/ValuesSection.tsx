@@ -1,6 +1,6 @@
 import React from 'react';
-import LEDTicker from './originkit/ui/pixel-led-display';
-import OnScrollTypography from './OnScrollTypography';
+import LEDTicker from '../../originkit/ui/pixel-led-display';
+import { OnScrollTypography } from '../../effects';
 
 export const ValuesSection: React.FC = () => {
   return (

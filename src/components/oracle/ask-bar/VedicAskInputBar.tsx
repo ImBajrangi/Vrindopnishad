@@ -17,7 +17,7 @@ import {
   Radio
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { TypingAnimation } from './ui/typing-animation';
+import { TypingAnimation } from '../../ui/typing-animation';
 import './VedicAskInputBar.css';
 
 interface VedicAskInputBarProps {
@@ -328,10 +328,12 @@ export const VedicAskInputBar: React.FC<VedicAskInputBarProps> = ({
 
   const showGooeyMenu = isMenuOpen || (isFocused && query === '');
 
+  const isBarActive = isFocused || isMenuOpen || isListening || query.trim().length > 0;
+
   return (
     <div
       ref={wrapperRef}
-      className={`vedic-ask-floating-container ${isHiddenInFooter ? 'is-hidden-footer' : ''}`}
+      className={`vedic-ask-floating-container ${isBarActive ? 'is-active' : 'is-idle'} ${isHiddenInFooter ? 'is-hidden-footer' : ''}`}
     >
       {/* LIQUID GOOEY FLOATING SATELLITE TRAY (Rises Fluidly Above the Bar) */}
       <AnimatePresence>
@@ -339,19 +341,22 @@ export const VedicAskInputBar: React.FC<VedicAskInputBarProps> = ({
           <motion.div
             key="gooey-satellite-tray"
             className="gooey-satellite-tray"
-            initial={{ opacity: 0, y: 16, scale: 0.95 }}
+            initial={{ opacity: 0, y: 18, scaleY: 0.75, scaleX: 0.92 }}
             animate={{
               opacity: 1,
               y: 0,
-              scale: 1,
-              transition: { type: 'spring', stiffness: 420, damping: 28, mass: 0.8 }
+              scaleY: 1,
+              scaleX: 1,
+              transition: { type: 'spring', bounce: 0.48, duration: 0.747 }
             }}
             exit={{
               opacity: 0,
               y: 12,
-              scale: 0.96,
+              scaleY: 0.85,
+              scaleX: 0.95,
               transition: { duration: 0.18, ease: 'easeOut' }
             }}
+            style={{ transformOrigin: '24px bottom' }}
           >
             {/* Subtle Aurora Ambient Mist */}
             <div className="gooey-tray-aurora" />
@@ -385,24 +390,17 @@ export const VedicAskInputBar: React.FC<VedicAskInputBarProps> = ({
             </div>
 
             {/* Liquid Floating Bubbles Row (Horizontal Touch Scrollable) */}
-            <div className="gooey-bubbles-row">
-              {QUICK_CHIPS.map((chip, idx) => (
-                <motion.button
+            <motion.div 
+              className="gooey-bubbles-row"
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 0.05, duration: 0.28 } }}
+            >
+              {QUICK_CHIPS.map((chip) => (
+                <button
                   key={chip.id}
                   type="button"
                   onClick={() => handleChipClick(chip)}
                   className="gooey-liquid-bubble"
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      type: 'spring',
-                      stiffness: 400,
-                      damping: 26,
-                      delay: idx * 0.04
-                    }
-                  }}
                   style={{
                     '--chip-accent': chip.accent,
                   } as React.CSSProperties}
@@ -426,9 +424,9 @@ export const VedicAskInputBar: React.FC<VedicAskInputBarProps> = ({
                       {lang === 'hindi' ? chip.categoryHi : chip.categoryEn}
                     </span>
                   </div>
-                </motion.button>
+                </button>
               ))}
-            </div>
+            </motion.div>
 
             {/* Liquid Connector Droplet (Molten Bridge Illusion) */}
             <div className="gooey-connector-droplet" />
@@ -453,7 +451,7 @@ export const VedicAskInputBar: React.FC<VedicAskInputBarProps> = ({
             title={lang === 'hindi' ? 'त्वरित विकल्प' : 'Quick Sacred Topics'}
             aria-label="Toggle Quick Actions Menu"
           >
-            <Plus size={18} className="gemini-plus-icon" />
+            <Plus size={16} className="gemini-plus-icon" />
           </button>
 
           {/* Center: Dynamic Input & Non-clipping Animated Prompt Overlay */}
@@ -541,9 +539,9 @@ export const VedicAskInputBar: React.FC<VedicAskInputBarProps> = ({
               aria-label="Toggle Voice Dictation"
             >
               {isListening ? (
-                <MicOff size={17} className="text-red-400" />
+                <MicOff size={16} className="text-red-400" />
               ) : (
-                <Mic size={17} />
+                <Mic size={16} />
               )}
             </button>
 
@@ -574,7 +572,7 @@ export const VedicAskInputBar: React.FC<VedicAskInputBarProps> = ({
               aria-label="Submit Question"
               title={lang === 'hindi' ? 'उत्तर प्राप्त करें' : 'Ask Vrindopnishad AI'}
             >
-              <ArrowUp size={16} strokeWidth={2.6} />
+              <ArrowUp size={16} strokeWidth={2.4} />
             </button>
           </div>
         </div>

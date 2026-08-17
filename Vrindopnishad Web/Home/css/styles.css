@@ -6384,12 +6384,12 @@ footer {
 
 .bento-label {
     display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    font-weight: 650;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    opacity: 0.4;
-    margin-bottom: 0.5rem;
+    opacity: 0.85;
+    margin-bottom: 0.65rem;
 }
 
 .bento-title {
@@ -6556,12 +6556,12 @@ footer {
 
 .apps-label {
     display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    font-weight: 650;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    opacity: 0.4;
-    margin-bottom: 0.5rem;
+    opacity: 0.85;
+    margin-bottom: 0.65rem;
 }
 
 .apps-title {
@@ -6834,11 +6834,11 @@ footer {
 }
 
 .universe-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    font-weight: 650;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    opacity: 0.4;
+    opacity: 0.85;
 }
 
 .universe-title {
@@ -6967,12 +6967,12 @@ footer {
 
 .values-label {
     display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    font-weight: 650;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    opacity: 0.4;
-    margin-bottom: 0.5rem;
+    opacity: 0.85;
+    margin-bottom: 0.65rem;
 }
 
 .values-title {
@@ -7252,12 +7252,12 @@ footer {
 
 .showcase-label {
     display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    font-weight: 650;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    opacity: 0.4;
-    margin-bottom: 0.5rem;
+    opacity: 0.85;
+    margin-bottom: 0.65rem;
 }
 
 .showcase-title {
@@ -7597,11 +7597,11 @@ footer {
 }
 
 .story-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    font-weight: 650;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    opacity: 0.4;
+    opacity: 0.85;
 }
 
 .story-title {
@@ -7642,15 +7642,15 @@ footer {
 }
 
 .block-text h4 {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
 }
 
 .block-text p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    opacity: 0.7;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    opacity: 0.85;
 }
 
 .block-text strong {

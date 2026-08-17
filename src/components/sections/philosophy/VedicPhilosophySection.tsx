@@ -1,6 +1,6 @@
 import React from 'react';
-import LEDTicker from './originkit/ui/pixel-led-display';
-import PixelIcon from './PixelIcon';
+import LEDTicker from '../../originkit/ui/pixel-led-display';
+import { PixelIcon } from '../../effects';
 
 interface VedicPhilosophySectionProps {
   lang: 'english' | 'hindi';

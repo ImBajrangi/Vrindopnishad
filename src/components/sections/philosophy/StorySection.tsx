@@ -1,5 +1,5 @@
 import React from 'react';
-import LEDTicker from './originkit/ui/pixel-led-display';
+import LEDTicker from '../../originkit/ui/pixel-led-display';
 
 export const StorySection: React.FC = () => {
   return (

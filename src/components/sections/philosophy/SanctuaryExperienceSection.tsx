@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import BlurText from './BlurText';
+import { BlurText } from '../../effects';
 
 interface SanctuaryExperienceSectionProps {
   lang: 'english' | 'hindi';
@@ -440,12 +440,12 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
           <h2
             className="sanctuary-title"
             style={{
-              fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
-              lineHeight: 1.15,
+              fontSize: 'clamp(2.4rem, 5vw, 4.2rem)',
+              lineHeight: 1.12,
               letterSpacing: '-0.02em',
               color: '#ffffff',
               maxWidth: '1000px',
-              margin: '0 auto 0.8rem',
+              margin: '0 auto 0.9rem',
               display: 'block'
             }}
           >
@@ -455,13 +455,13 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
           <p
             className="sanctuary-subtitle"
             style={{
-              fontSize: 'clamp(0.95rem, 1.6vw, 1.1rem)',
-              color: '#94a3b8',
-              maxWidth: '620px',
+              fontSize: 'clamp(1.08rem, 1.8vw, 1.25rem)',
+              color: '#cbd5e1',
+              maxWidth: '680px',
               margin: '0 auto',
               fontFamily: '"sama-latin", sans-serif',
               fontWeight: 400,
-              lineHeight: '1.5',
+              lineHeight: '1.55',
               letterSpacing: '0.01em'
             }}
           >
@@ -479,8 +479,8 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '0.35rem',
-            padding: '0.35rem 0.5rem',
+            gap: '0.45rem',
+            padding: '0.45rem 0.65rem',
             borderRadius: '999px',
             background: 'rgba(255, 255, 255, 0.05)',
             backdropFilter: 'blur(20px)',
@@ -507,11 +507,11 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                   position: 'relative',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.45rem',
-                  padding: '0.5rem 1.1rem',
+                  gap: '0.5rem',
+                  padding: '0.55rem 1.25rem',
                   borderRadius: '999px',
                   fontFamily: '"sama-latin", sans-serif',
-                  fontSize: '0.84rem',
+                  fontSize: '0.92rem',
                   fontWeight: isActive ? 700 : 500,
                   letterSpacing: '0.03em',
                   color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.65)',
@@ -541,7 +541,7 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                   style={{
                     position: 'relative',
                     zIndex: 1,
-                    fontSize: '0.72rem',
+                    fontSize: '0.78rem',
                     opacity: isActive ? 1 : 0.6,
                     fontFamily: 'monospace',
                     color: isActive ? v.color : 'inherit',
@@ -611,13 +611,13 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                 stepDuration={0.35}
                 className="devanagari-text sanctuary-shloka-text"
                 style={{
-                  fontSize: 'clamp(1.3rem, 3.2vw, 2.4rem)',
+                  fontSize: 'clamp(1.6rem, 3.6vw, 2.8rem)',
                   fontWeight: 600,
                   color: '#ffffff',
                   lineHeight: '1.6',
                   fontFamily: '"sama-devanagari", sans-serif',
-                  maxWidth: '920px',
-                  margin: '0 auto 1.5rem',
+                  maxWidth: '960px',
+                  margin: '0 auto 1.6rem',
                   textShadow: `0 2px 20px ${activeVerse.color}40`,
                   letterSpacing: '0.01em',
                   justifyContent: 'center'
@@ -634,12 +634,12 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                 stepDuration={0.3}
                 className="sanctuary-translit-text"
                 style={{
-                  fontSize: 'clamp(0.88rem, 1.6vw, 1.08rem)',
+                  fontSize: 'clamp(1.05rem, 1.8vw, 1.25rem)',
                   fontStyle: 'italic',
                   color: activeVerse.color,
                   fontFamily: '"sama-latin", sans-serif',
                   letterSpacing: '0.02em',
-                  maxWidth: '860px',
+                  maxWidth: '900px',
                   margin: '0 auto 1.8rem',
                   lineHeight: '1.6',
                   textShadow: `0 0 15px ${activeVerse.color}33`,
@@ -657,12 +657,14 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
                 stepDuration={0.3}
                 className="sanctuary-translation-text"
                 style={{
-                  fontSize: 'clamp(0.85rem, 1.3vw, 0.95rem)',
-                  color: '#94a3b8',
-                  maxWidth: '680px',
+                  fontSize: 'clamp(1.02rem, 1.6vw, 1.18rem)',
+                  fontWeight: 400,
+                  color: 'rgba(255, 255, 255, 0.88)',
+                  maxWidth: '820px',
                   margin: '0 auto 2.5rem',
-                  lineHeight: '1.6',
+                  lineHeight: '1.7',
                   fontFamily: '"sama-latin", sans-serif',
+                  textAlign: 'center',
                   justifyContent: 'center'
                 }}
               />

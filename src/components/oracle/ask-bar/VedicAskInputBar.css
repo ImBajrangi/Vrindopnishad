@@ -1,18 +1,25 @@
-/* VedicAskInputBar.css - Liquid Floating Satellite Bubble System */
+/* VedicAskInputBar.css - Liquid Floating Dynamic Island Satellite System */
 
 .vedic-ask-floating-container {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 1.6rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99998;
-  width: min(660px, calc(100vw - 2rem));
+  width: min(440px, calc(100vw - 2rem));
   display: flex;
   flex-direction: column;
   align-items: center;
   pointer-events: auto;
-  transition: opacity 0.25s ease, bottom 0.25s ease;
+  transition: width 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.25s ease, 
+              bottom 0.25s ease;
   box-sizing: border-box;
+}
+
+/* Expanded State when Focused, Typing, Speaking, or Quick Menu Open */
+.vedic-ask-floating-container.is-active {
+  width: min(660px, calc(100vw - 2rem));
 }
 
 /* Footer Scroll Docking / Hide */
@@ -31,17 +38,23 @@
   bottom: calc(100% + 12px);
   left: 0;
   right: 0;
-  background: rgba(14, 15, 20, 0.94);
+  background: rgba(13, 14, 19, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 22px;
-  padding: 0.75rem 0.9rem 0.85rem 0.9rem;
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  padding: 0.85rem 1rem 0.95rem 1rem;
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
   box-shadow: 
-    0 20px 48px rgba(0, 0, 0, 0.65),
-    0 2px 8px rgba(0, 0, 0, 0.4);
+    0 20px 48px rgba(0, 0, 0, 0.8),
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
   overflow: hidden;
   box-sizing: border-box;
+  transform-origin: 22px bottom;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Subtle Aurora Ambient Mist */
@@ -51,7 +64,7 @@
   left: 20%;
   right: 20%;
   height: 60px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(56, 189, 248, 0.1) 60%, transparent 80%);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(56, 189, 248, 0.08) 60%, transparent 80%);
   filter: blur(20px);
   pointer-events: none;
 }
@@ -71,8 +84,8 @@
 .gooey-tray-badge {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.78rem;
+  gap: 0.5rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: #f1f5f9;
   letter-spacing: 0.01em;
@@ -81,21 +94,21 @@
 .gooey-tray-right-meta {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 .gooey-kbd-hint {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  font-size: 0.7rem;
+  gap: 0.35rem;
+  font-size: 0.72rem;
   color: #64748b;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 .gooey-tray-close {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -104,7 +117,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .gooey-tray-close:hover {
@@ -112,12 +125,13 @@
   color: #ffffff;
 }
 
-/* Bubbles Container Row (Horizontal Touch Scrollable) */
+/* Horizontal Scrollable Quick Chips */
 .gooey-bubbles-row {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.55rem;
   overflow-x: auto;
-  padding: 0.2rem 0.1rem 0.3rem 0.1rem;
+  padding-bottom: 0.25rem;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   position: relative;
@@ -128,37 +142,38 @@
   display: none;
 }
 
-/* Individual Liquid Topic Bubble Card */
 .gooey-liquid-bubble {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.5rem 0.8rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.45rem 0.75rem 0.45rem 0.5rem;
   cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  text-align: left;
   transition: background 0.15s ease, border-color 0.15s ease;
+  color: #f1f5f9;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .gooey-liquid-bubble:hover {
-  background: rgba(255, 255, 255, 0.09);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--chip-accent, rgba(255, 255, 255, 0.2));
 }
 
 .bubble-icon-pill {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid;
   flex-shrink: 0;
 }
 
@@ -169,56 +184,56 @@
 }
 
 .bubble-title {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: #ffffff;
-  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .bubble-category {
-  font-size: 0.66rem;
+  font-size: 0.68rem;
   color: #94a3b8;
+  line-height: 1;
 }
 
-/* Liquid Connector Droplet (Molten Bridge Illusion) */
+/* Molten Connector Droplet */
 .gooey-connector-droplet {
   position: absolute;
   bottom: -6px;
-  left: 26px;
+  left: 24px;
   width: 12px;
   height: 12px;
-  background: rgba(14, 15, 20, 0.94);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(13, 14, 19, 0.96);
   transform: rotate(45deg);
   border-radius: 2px;
   pointer-events: none;
 }
 
 /* ==========================================================================
-   2. SLEEK MAIN CAPSULE BAR (Pure Unbloated Pill)
+   2. REFINED OBSIDIAN CAPSULE BAR (Proportional Luxury Physics)
    ========================================================================== */
 
 .gemini-ask-bar {
   position: relative;
   width: 100%;
-  background: rgba(18, 19, 23, 0.94);
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: rgba(13, 14, 19, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 9999px;
-  padding: 0.35rem 0.45rem;
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  padding: 0.35rem 0.48rem;
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
   box-shadow: 
-    0 14px 36px rgba(0, 0, 0, 0.5),
-    0 2px 6px rgba(0, 0, 0, 0.3);
+    0 16px 40px rgba(0, 0, 0, 0.7),
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   margin: 0 auto;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .gemini-ask-bar:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  background: rgba(22, 23, 28, 0.96);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(16, 17, 24, 0.96);
 }
 
 .gemini-ask-bar.is-listening {
@@ -231,39 +246,38 @@
   justify-content: space-between;
   gap: 0.45rem;
   width: 100%;
-  min-height: 44px;
+  min-height: 38px;
 }
 
-/* Plus Toggle Button */
+/* Plus Toggle Button (34px) */
 .gemini-action-plus-btn {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   color: #cbd5e1;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   flex-shrink: 0;
-  margin-left: 0.1rem;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .gemini-action-plus-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
   color: #ffffff;
 }
 
 .gemini-action-plus-btn.is-open {
-  background: rgba(245, 158, 11, 0.15);
+  background: rgba(245, 158, 11, 0.18);
   border-color: rgba(245, 158, 11, 0.4);
   color: #f59e0b;
 }
 
 .gemini-plus-icon {
-  transition: transform 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .gemini-action-plus-btn.is-open .gemini-plus-icon {
@@ -277,16 +291,17 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 0.35rem;
+  padding: 0 0.4rem;
 }
 
 .gemini-typing-placeholder {
   position: absolute;
-  left: 0.35rem;
-  right: 0.35rem;
+  left: 0.4rem;
+  right: 0.4rem;
   cursor: text;
-  color: #94a3b8;
-  font-size: 0.9rem;
+  color: rgba(226, 232, 240, 0.85);
+  font-size: 0.92rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -295,7 +310,7 @@
   z-index: 2;
   pointer-events: auto;
   user-select: none;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .truncate-text {
@@ -307,12 +322,12 @@
 
 .gemini-listening-label {
   position: absolute;
-  left: 0.35rem;
+  left: 0.4rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
   color: #f87171;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-weight: 500;
   z-index: 2;
   pointer-events: none;
@@ -325,18 +340,19 @@
   outline: none !important;
   box-shadow: none !important;
   color: #ffffff !important;
-  font-size: 0.92rem;
+  font-size: 0.94rem;
+  font-weight: 500;
   font-family: inherit;
-  padding: 0.45rem 0 !important;
+  padding: 0.3rem 0 !important;
   margin: 0 !important;
   position: relative;
   z-index: 3;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .gemini-text-input::placeholder {
   color: #64748b;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
 }
 
 /* Right Control Suite */
@@ -347,24 +363,9 @@
   flex-shrink: 0;
 }
 
-.gemini-kbd-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #94a3b8;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.2rem 0.45rem;
-  border-radius: 5px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  user-select: none;
-}
-
 .gemini-clear-btn {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   border: none;
@@ -382,11 +383,11 @@
 }
 
 .gemini-mic-btn {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   color: #cbd5e1;
   display: flex;
   align-items: center;
@@ -396,7 +397,7 @@
 }
 
 .gemini-mic-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
   color: #ffffff;
 }
 
@@ -406,13 +407,13 @@
   color: #ef4444;
 }
 
-/* Gemini Live Equalizer Waveform Button */
+/* Equalizer Live Waveform Button (34px) */
 .gemini-live-wave-btn {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.26);
   color: #38bdf8;
   display: flex;
   align-items: center;
@@ -422,8 +423,8 @@
 }
 
 .gemini-live-wave-btn:hover {
-  background: rgba(56, 189, 248, 0.2);
-  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(56, 189, 248, 0.22);
+  border-color: rgba(56, 189, 248, 0.5);
   color: #ffffff;
 }
 
@@ -431,6 +432,7 @@
   background: #0284c7;
   color: #ffffff;
   border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
 }
 
 .gemini-wave-bars {
@@ -445,57 +447,60 @@
   width: 2px;
   background: currentColor;
   border-radius: 999px;
-  transition: height 0.2s ease;
+  transition: height 0.25s ease;
 }
 
-.gemini-live-wave-btn:not(.is-playing) .wave-bar {
-  height: 4px;
-}
+/* Static Idle Heights (Clearly Visible Glyph) */
+.wave-bar.bar-1 { height: 6px; }
+.wave-bar.bar-2 { height: 13px; }
+.wave-bar.bar-3 { height: 7px; }
+.wave-bar.bar-4 { height: 10px; }
 
-.gemini-live-wave-btn:not(.is-playing) .wave-bar.bar-2,
-.gemini-live-wave-btn:not(.is-playing) .wave-bar.bar-3 {
-  height: 8px;
-}
-
+/* Live Waveform Animations When Playing */
 .gemini-live-wave-btn.is-playing .bar-1 {
-  animation: liveWave1 0.75s infinite ease-in-out;
+  animation: liveWave1 0.8s ease-in-out infinite;
 }
+
 .gemini-live-wave-btn.is-playing .bar-2 {
-  animation: liveWave2 0.6s infinite ease-in-out 0.15s;
+  animation: liveWave2 0.6s ease-in-out infinite 0.1s;
 }
+
 .gemini-live-wave-btn.is-playing .bar-3 {
-  animation: liveWave3 0.85s infinite ease-in-out 0.3s;
+  animation: liveWave3 0.9s ease-in-out infinite 0.2s;
 }
+
 .gemini-live-wave-btn.is-playing .bar-4 {
-  animation: liveWave1 0.65s infinite ease-in-out 0.45s;
+  animation: liveWave1 0.7s ease-in-out infinite 0.3s;
 }
 
 @keyframes liveWave1 {
-  0%, 100% { height: 4px; }
+  0%, 100% { height: 5px; }
   50% { height: 14px; }
 }
+
 @keyframes liveWave2 {
-  0%, 100% { height: 6px; }
-  50% { height: 16px; }
+  0%, 100% { height: 13px; }
+  50% { height: 6px; }
 }
+
 @keyframes liveWave3 {
-  0%, 100% { height: 5px; }
+  0%, 100% { height: 6px; }
   50% { height: 12px; }
 }
 
-/* Send Arrow Button */
+/* Send Arrow Button (34px) */
 .gemini-send-btn {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.09);
   color: #64748b;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   flex-shrink: 0;
 }
 
@@ -503,26 +508,30 @@
   background: #f59e0b;
   border-color: #d97706;
   color: #ffffff;
+  box-shadow: 0 2px 12px rgba(245, 158, 11, 0.5);
 }
 
 .gemini-send-btn.is-ready:hover {
   background: #d97706;
 }
 
-/* Responsive Scaling for Mobile Screens */
+/* Mobile Screens */
 @media (max-width: 640px) {
   .vedic-ask-floating-container {
     bottom: 1rem;
+    width: min(340px, calc(100vw - 1.5rem));
+  }
+
+  .vedic-ask-floating-container.is-active {
     width: calc(100vw - 1.25rem);
   }
 
   .gooey-satellite-tray {
     bottom: calc(100% + 8px);
     border-radius: 18px;
-    padding: 0.65rem 0.75rem;
+    padding: 0.7rem 0.8rem;
   }
 
-  .gemini-kbd-badge,
   .gooey-kbd-hint {
     display: none;
   }
@@ -531,12 +540,12 @@
   .gemini-mic-btn,
   .gemini-live-wave-btn,
   .gemini-send-btn {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 
   .gemini-typing-placeholder,
   .gemini-text-input {
-    font-size: 0.86rem;
+    font-size: 0.88rem;
   }
 }

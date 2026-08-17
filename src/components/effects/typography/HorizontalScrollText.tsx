@@ -1,5 +1,5 @@
 import React from 'react';
-import TextMorph from './originkit/ui/text-morph';
+import TextMorph from '../../originkit/ui/text-morph';
 import './HorizontalScrollText.css';
 
 interface HorizontalScrollTextProps {

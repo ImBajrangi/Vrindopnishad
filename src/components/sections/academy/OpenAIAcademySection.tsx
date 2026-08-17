@@ -11,9 +11,9 @@ import {
   Compass,
   Headphones,
 } from 'lucide-react';
-import { OpenAISubNav, SubNavTabType } from './OpenAISubNav';
+import { OpenAISubNav, SubNavTabType } from '../../navigation';
 import './OpenAIAcademySection.css';
-import TestimonialMarquee from './ui/marquee-01';
+import TestimonialMarquee from '../../ui/marquee-01';
 
 interface OpenAIAcademySectionProps {
   lang?: 'english' | 'hindi';

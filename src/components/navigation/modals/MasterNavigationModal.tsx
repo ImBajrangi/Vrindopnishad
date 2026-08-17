@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
-import InfiniteMenu from './InfiniteMenu';
+import { InfiniteMenu } from '../../effects';
 
 interface MasterNavigationModalProps {
   isOpen: boolean;

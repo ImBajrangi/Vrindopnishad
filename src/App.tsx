@@ -1,32 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { StorySection } from './components/StorySection';
-import { ProjectsShowcase } from './components/ProjectsShowcase';
-import { ValuesSection } from './components/ValuesSection';
-import { BentoGrid } from './components/BentoGrid';
-import { AppsSection } from './components/AppsSection';
-import { VedicPhilosophySection } from './components/VedicPhilosophySection';
-import { SanctuaryExperienceSection } from './components/SanctuaryExperienceSection';
-import { HorizontalScrollText } from './components/HorizontalScrollText';
-import { Footer } from './components/Footer';
-import { CustomCursor } from './components/CustomCursor';
-import { OfflineOverlay } from './components/OfflineOverlay';
-import { NotificationToast } from './components/NotificationToast';
-import { ToolsMenuModal } from './components/ToolsMenuModal';
-import { MasterNavigationModal } from './components/MasterNavigationModal';
-import { DigitalUniverseSection } from './components/DigitalUniverseSection';
-import MouseEffects from './components/MouseEffects';
+import {
+  Header,
+  Hero,
+  StorySection,
+  ProjectsShowcase,
+  ValuesSection,
+  BentoGrid,
+  AppsSection,
+  VedicPhilosophySection,
+  SanctuaryExperienceSection,
+  HorizontalScrollText,
+  Footer,
+  CustomCursor,
+  OfflineOverlay,
+  NotificationToast,
+  ToolsMenuModal,
+  MasterNavigationModal,
+  DigitalUniverseSection,
+  MouseEffects,
+  AuthModal,
+  AuthPage,
+  OpenAISubNav,
+  OpenAIAcademySection,
+  VedicAskInputBar,
+  WisdomPathwayModal,
+  AmbientSoundPlayer,
+  VedicSageModal,
+  QuoteBuilderModal,
+} from './components';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import { AuthModal } from './components/AuthModal';
-import { AuthPage } from './components/AuthPage';
-import { OpenAISubNav } from './components/OpenAISubNav';
-import { OpenAIAcademySection } from './components/OpenAIAcademySection';
-import { VedicAskInputBar } from './components/VedicAskInputBar';
-import { WisdomPathwayModal } from './components/WisdomPathwayModal';
-import { AmbientSoundPlayer } from './components/AmbientSoundPlayer';
-import { VedicSageModal } from './components/VedicSageModal';
-import { QuoteBuilderModal } from './components/QuoteBuilderModal';
 
 const AppContent: React.FC = () => {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
