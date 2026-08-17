@@ -859,7 +859,7 @@ body.light-mode .consensys-hamburger.open {
   height: 100vh !important;
   height: 100dvh !important;
   background: #0f0f11 !important;
-  z-index: 10010 !important;
+  z-index: 10090 !important;
   padding: 0 !important;
   margin: 0 !important;
   box-sizing: border-box !important;
@@ -875,16 +875,20 @@ body.light-mode .consensys-hamburger.open {
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  height: 75px !important;
+  min-height: 96px !important;
+  height: auto !important;
   flex-shrink: 0 !important;
   background: #0f0f11 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 0 1.25rem !important;
+  padding-top: max(32px, env(safe-area-inset-top, 32px)) !important;
+  padding-bottom: 1.1rem !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
   box-sizing: border-box !important;
-  z-index: 10020 !important;
+  z-index: 10100 !important;
 }
 
 .mobile-header-explore-btn {
@@ -905,11 +909,11 @@ body.light-mode .consensys-hamburger.open {
 
 .mobile-back-btn,
 .mobile-close-btn {
-  width: 40px !important;
-  height: 40px !important;
+  width: 42px !important;
+  height: 42px !important;
   border-radius: 50% !important;
   background: rgba(255, 255, 255, 0.08) !important;
-  border: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   color: #ffffff !important;
   display: flex !important;
   align-items: center !important;
@@ -920,12 +924,12 @@ body.light-mode .consensys-hamburger.open {
 
 .mobile-back-btn:hover,
 .mobile-close-btn:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
 }
 
 .mobile-sub-title {
   font-size: 1.1rem !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   color: #ffffff !important;
 }
 
@@ -933,8 +937,8 @@ body.light-mode .consensys-hamburger.open {
 .mobile-drawer-body {
   flex: 1 1 auto !important;
   width: 100% !important;
-  height: calc(100% - 75px) !important;
-  padding: 1.75rem 1.5rem 3.5rem !important;
+  height: calc(100% - 96px) !important;
+  padding: 1.75rem 1.5rem 4rem !important;
   overflow-y: auto !important;
   overflow-x: hidden !important;
   display: flex !important;

@@ -172,14 +172,16 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
               </div>
 
               <div className="rivian-action-row">
-                <button
-                  type="button"
+                <a
+                  href="https://path.vrindopnishad.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rivian-btn-black-pill"
-                  onClick={onNavigateAuth}
+                  style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                 >
                   {lang === 'hindi' ? 'नियम देखें' : 'Explore Sadhna'}
-                </button>
-                <a href="#stotra-archive" className="rivian-text-link">
+                </a>
+                <a href="https://to.vrindopnishad.in/" target="_blank" rel="noopener noreferrer" className="rivian-text-link">
                   {lang === 'hindi' ? 'सभी स्थान देखें →' : 'See all sacred spots →'}
                 </a>
               </div>
@@ -261,13 +263,15 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
             <h2 className="rivian-banner-headline">
               {lang === 'hindi' ? 'अपनी पावन साधना यात्रा आरंभ करें' : 'Begin your sacred journey'}
             </h2>
-            <button
-              type="button"
+            <a
+              href="https://path.vrindopnishad.in/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rivian-btn-white-pill rivian-banner-cta"
-              onClick={onNavigateAuth}
+              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
             >
               {lang === 'hindi' ? 'साधना नियम से जुड़ें' : 'Explore All Scriptures'}
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -317,10 +321,16 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
                   <span className="openai-feature-pill">✦ Audio Waveforms</span>
                 </div>
               </div>
-              <div className="openai-bar-cta" onClick={onNavigateAuth}>
+              <a
+                href="https://path.vrindopnishad.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="openai-bar-cta"
+                style={{ textDecoration: 'none' }}
+              >
                 <span>{lang === 'hindi' ? 'शेड्यूल सेट करें' : 'Configure Schedule'}</span>
                 <span>→</span>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -350,10 +360,14 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
                   <span className="openai-feature-pill">✦ Vrinda Tours</span>
                 </div>
               </div>
-              <div className="openai-bar-cta" onClick={onNavigateAuth}>
+              <a
+                href="#projects"
+                className="openai-bar-cta"
+                style={{ textDecoration: 'none' }}
+              >
                 <span>{lang === 'hindi' ? 'पोर्टल लॉन्च करें' : 'Launch Unified Portals'}</span>
                 <span>→</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -405,10 +419,16 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
               </div>
             </div>
 
-            <div className="usecase-btn usecase-btn-sadhana" onClick={onNavigateAuth}>
+            <a
+              href="https://path.vrindopnishad.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="usecase-btn usecase-btn-sadhana"
+              style={{ textDecoration: 'none' }}
+            >
               <span>{lang === 'hindi' ? 'मार्गदर्शिका देखें' : 'View Guide'}</span>
               <span>→</span>
-            </div>
+            </a>
           </div>
 
           {/* Card 2: Foody Vrinda Satvic Meals */}
@@ -437,10 +457,14 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
               </div>
             </div>
 
-            <div className="usecase-btn usecase-btn-meals" onClick={onNavigateAuth}>
+            <a
+              href="#services"
+              className="usecase-btn usecase-btn-meals"
+              style={{ textDecoration: 'none' }}
+            >
               <span>{lang === 'hindi' ? 'भोजन ऑर्डर करें' : 'Order Meals'}</span>
               <span>→</span>
-            </div>
+            </a>
           </div>
 
           {/* Card 3: Vrinda Tours Pilgrimages */}
@@ -469,10 +493,16 @@ export const OpenAIAcademySection: React.FC<OpenAIAcademySectionProps> = ({
               </div>
             </div>
 
-            <div className="usecase-btn usecase-btn-yatra" onClick={onNavigateAuth}>
+            <a
+              href="https://to.vrindopnishad.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="usecase-btn usecase-btn-yatra"
+              style={{ textDecoration: 'none' }}
+            >
               <span>{lang === 'hindi' ? 'यात्रा मार्ग देखें' : 'Explore Routes'}</span>
               <span>→</span>
-            </div>
+            </a>
           </div>
         </div>
       </section>

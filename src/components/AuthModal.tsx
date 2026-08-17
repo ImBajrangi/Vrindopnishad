@@ -29,6 +29,14 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, lang = 'e
     setMode(authMode);
     setError('');
     setSuccessMsg('');
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [authMode, isOpen]);
 
   if (!isOpen) return null;

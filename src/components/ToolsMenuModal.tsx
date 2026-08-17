@@ -8,6 +8,17 @@ interface ToolsMenuModalProps {
 
 export const ToolsMenuModal: React.FC<ToolsMenuModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) onClose();
     };

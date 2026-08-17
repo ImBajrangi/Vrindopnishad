@@ -33,32 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 2000);
 
-    // Emergency fix for scrolling issues
-    setInterval(() => {
-        if (!document.querySelector('.tools-menu.active') &&
-            !document.querySelector('nav.active')) {
-
-            document.documentElement.style.removeProperty('overflow');
-            document.body.style.removeProperty('overflow');
-            document.documentElement.style.removeProperty('height');
-            document.body.style.removeProperty('height');
-            document.documentElement.style.overflowY = 'auto';
-            document.body.style.overflowY = 'auto';
-            document.body.classList.remove('tools-menu-open');
-        }
-    }, 1000);
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.tools-menu') &&
-            !e.target.closest('.tools-icon') &&
-            !e.target.closest('nav') &&
-            !e.target.closest('.mobile-menu-btn')) {
-
-            document.documentElement.style.overflowY = 'auto';
-            document.body.style.overflowY = 'auto';
-            document.body.classList.remove('tools-menu-open');
-        }
-    });
+    // Legacy scrolling override removed to allow React dialogs and drawers to manage overflow: hidden reliably.
 
     // Smart Header Logic
     let lastScroll = 0;

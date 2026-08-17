@@ -27,7 +27,7 @@ const PATHWAYS: PathwayOption[] = [
     descEn: 'Sacred stotras, daily bhajan path, and Bhagavad Gita wisdom.',
     descHi: 'पवित्र स्तोत्र पाठ, नित्य भजन एवं भगवद्गीता सार।',
     icon: <Heart className="w-5 h-5 text-amber-400" />,
-    targetAnchor: '#vedic-philosophy',
+    targetAnchor: '#recitation',
   },
   {
     id: 'travel',
@@ -45,7 +45,7 @@ const PATHWAYS: PathwayOption[] = [
     descEn: 'Pure cloud kitchen prasadam, Ayurvedic diet, and sattvic living.',
     descHi: 'शुद्ध सात्विक व्यंजन, आयुर्वेदिक आहार एवं जीवन शैली।',
     icon: <Utensils className="w-5 h-5 text-emerald-400" />,
-    targetAnchor: '#projects',
+    targetAnchor: '#services',
   },
   {
     id: 'art',
@@ -54,7 +54,7 @@ const PATHWAYS: PathwayOption[] = [
     descEn: 'High-res digital art galleries of Sri Radha Krishna & Braj Dham.',
     descHi: 'श्री राधा कृष्ण एवं ब्रज धाम के दिव्य चित्र एवं कलाकृतियां।',
     icon: <Palette className="w-5 h-5 text-purple-400" />,
-    targetAnchor: '#digital-universe',
+    targetAnchor: '#about',
   },
 ];
 
@@ -65,6 +65,17 @@ export const WisdomPathwayModal: React.FC<WisdomPathwayModalProps> = ({
   onSelectPathway,
 }) => {
   const [selectedId, setSelectedId] = useState<string>('spiritual');
+
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 

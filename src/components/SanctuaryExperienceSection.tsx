@@ -82,6 +82,14 @@ const SACRED_VERSES: VerseData[] = [
   }
 ];
 
+const VERSE_FREQUENCIES: Record<string, { base: number; harmonic: number; third: number }> = {
+  'shanti-path': { base: 136.1, harmonic: 272.2, third: 408.3 }, // Cosmic Om / Pranava
+  'maha-mantra': { base: 216.0, harmonic: 324.0, third: 432.0 }, // Krishna 432Hz harmonic
+  'mangalacharan': { base: 174.0, harmonic: 261.0, third: 348.0 }, // Solfeggio Aura
+  'gayatri-mantra': { base: 256.0, harmonic: 384.0, third: 512.0 }, // Solar C scale
+  'shiv-tandav': { base: 144.0, harmonic: 216.0, third: 288.0 }, // Resonant Tandava scale
+};
+
 const renderAgamaResonanceHeadline = () => {
   const critterStyle: React.CSSProperties = {
     fontFamily: '"critter-std", sans-serif',
@@ -115,8 +123,107 @@ export const SanctuaryExperienceSection: React.FC<SanctuaryExperienceSectionProp
   const [activeVerseIndex, setActiveVerseIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+  const oscillatorsRef = useRef<OscillatorNode[]>([]);
+  const gainNodeRef = useRef<GainNode | null>(null);
 
   const activeVerse = SACRED_VERSES[activeVerseIndex];
+
+  // Authentic Web Audio Meditation Synthesizer
+  const startVerseAudio = (verseId: string) => {
+    try {
+      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+      if (!audioCtxRef.current) {
+        audioCtxRef.current = new AudioCtx();
+      }
+      const ctx = audioCtxRef.current;
+      if (ctx.state === 'suspended') {
+        ctx.resume();
+      }
+
+      // Stop previous oscillators if any
+      oscillatorsRef.current.forEach(osc => {
+        try { osc.stop(); osc.disconnect(); } catch (_) {}
+      });
+      oscillatorsRef.current = [];
+
+      const masterGain = ctx.createGain();
+      gainNodeRef.current = masterGain;
+      masterGain.gain.setValueAtTime(0.001, ctx.currentTime);
+      masterGain.gain.exponentialRampToValueAtTime(0.08, ctx.currentTime + 1.2);
+      masterGain.connect(ctx.destination);
+
+      const freqs = VERSE_FREQUENCIES[verseId] || { base: 136.1, harmonic: 272.2, third: 408.3 };
+
+      // Base Sine Oscillator (Warm Drone)
+      const osc1 = ctx.createOscillator();
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(freqs.base, ctx.currentTime);
+      const gain1 = ctx.createGain();
+      gain1.gain.setValueAtTime(0.7, ctx.currentTime);
+      osc1.connect(gain1);
+      gain1.connect(masterGain);
+      osc1.start();
+      oscillatorsRef.current.push(osc1);
+
+      // Harmonic Oscillator (Soft Overtone)
+      const osc2 = ctx.createOscillator();
+      osc2.type = 'triangle';
+      osc2.frequency.setValueAtTime(freqs.harmonic, ctx.currentTime);
+      const gain2 = ctx.createGain();
+      gain2.gain.setValueAtTime(0.25, ctx.currentTime);
+      osc2.connect(gain2);
+      gain2.connect(masterGain);
+      osc2.start();
+      oscillatorsRef.current.push(osc2);
+
+      // Third Shimmer Oscillator (High Ethereal)
+      const osc3 = ctx.createOscillator();
+      osc3.type = 'sine';
+      osc3.frequency.setValueAtTime(freqs.third, ctx.currentTime);
+      const gain3 = ctx.createGain();
+      gain3.gain.setValueAtTime(0.12, ctx.currentTime);
+      osc3.connect(gain3);
+      gain3.connect(masterGain);
+      osc3.start();
+      oscillatorsRef.current.push(osc3);
+
+    } catch (err) {
+      console.warn('Sanctuary AudioContext error:', err);
+    }
+  };
+
+  const stopVerseAudio = () => {
+    if (gainNodeRef.current && audioCtxRef.current) {
+      const ctx = audioCtxRef.current;
+      gainNodeRef.current.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.6);
+      setTimeout(() => {
+        oscillatorsRef.current.forEach(osc => {
+          try { osc.stop(); osc.disconnect(); } catch (_) {}
+        });
+        oscillatorsRef.current = [];
+      }, 600);
+    }
+  };
+
+  useEffect(() => {
+    if (isPlaying) {
+      startVerseAudio(activeVerse.id);
+    } else {
+      stopVerseAudio();
+    }
+  }, [isPlaying, activeVerse.id]);
+
+  useEffect(() => {
+    return () => {
+      oscillatorsRef.current.forEach(osc => {
+        try { osc.stop(); osc.disconnect(); } catch (_) {}
+      });
+      if (audioCtxRef.current && audioCtxRef.current.state !== 'closed') {
+        audioCtxRef.current.close().catch(() => {});
+      }
+    };
+  }, []);
 
   // Subtle Ambient Stardust Particle Engine
   useEffect(() => {

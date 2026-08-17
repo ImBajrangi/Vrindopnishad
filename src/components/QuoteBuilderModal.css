@@ -1,212 +1,359 @@
-/* QuoteBuilderModal.css */
+/* QuoteBuilderModal.css - Borderless Minimal Luxury Scripture Studio */
 
-.quote-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  background: rgba(0, 0, 0, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  animation: fadeInBackdrop 0.3s ease forwards;
+.quote-studio-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  background: rgba(0, 0, 0, 0.68) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.25rem !important;
+  box-sizing: border-box !important;
 }
 
-.quote-modal-card {
-  width: min(580px, 100%);
-  background: #0d0d10;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
-  padding: 1.5rem 1.75rem;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85);
-  box-sizing: border-box;
+/* Master Studio Modal (Ultra-subtle, no high outlines) */
+.quote-studio-modal {
+  position: relative !important;
+  width: min(540px, 100%) !important;
+  background: rgba(12, 13, 17, 0.96) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 26px !important;
+  padding: 1.15rem 1.4rem 1.1rem 1.4rem !important;
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.9),
+    0 4px 18px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.95rem !important;
+  overflow: hidden !important;
 }
 
-.quote-modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.25rem;
+/* Ambient Top Halo */
+.quote-studio-halo {
+  position: absolute !important;
+  top: -35px !important;
+  left: 20% !important;
+  right: 20% !important;
+  height: 75px !important;
+  filter: blur(24px) !important;
+  pointer-events: none !important;
+  transition: background 0.4s ease !important;
 }
 
-.quote-modal-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #ffffff;
+/* Studio Header with Aspect Ratio Switcher */
+.quote-studio-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.5rem !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-.quote-close-btn {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #a1a1aa;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.aspect-switcher-pills {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 0.2rem 0.3rem !important;
+  border-radius: 9999px !important;
 }
 
-.quote-close-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
-  color: #ffffff;
+.aspect-pill {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 9999px !important;
+  padding: 0.25rem 0.6rem !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  color: #94a3b8 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
 }
 
-.quote-preview-canvas {
-  border: 1px solid rgba(245, 158, 11, 0.5);
-  border-radius: 20px;
-  padding: 1.75rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-  margin-bottom: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.35s ease, border-color 0.35s ease;
+.aspect-pill:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.04) !important;
 }
 
-.quote-canvas-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #ffffff;
+.aspect-pill.is-active {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
 }
 
-.quote-canvas-shloka {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #ffffff;
-  line-height: 1.6;
+.studio-header-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
 }
 
-.quote-canvas-trans {
-  font-size: 0.88rem;
-  color: #e2e8f0;
-  line-height: 1.5;
+/* Swatches Group */
+.studio-swatches-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 0.18rem 0.3rem !important;
+  border-radius: 9999px !important;
 }
 
-.quote-canvas-source {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-align: right;
-  letter-spacing: 0.02em;
+.studio-swatch-btn {
+  width: 17px !important;
+  height: 17px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  border: 1.5px solid transparent !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
 }
 
-.quote-theme-selector {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
+.studio-swatch-btn.is-active {
+  border-color: #ffffff !important;
+  transform: scale(1.15) !important;
 }
 
-.theme-label {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  font-weight: 600;
+.studio-swatch-color {
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 50% !important;
+  display: block !important;
 }
 
-.theme-options {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+.studio-close-btn {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  color: #a1a1aa !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
 }
 
-.theme-pill {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 9999px;
-  padding: 0.3rem 0.75rem;
-  font-size: 0.76rem;
-  font-weight: 500;
-  color: #cbd5e1;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.studio-close-btn:hover {
+  background: rgba(239, 68, 68, 0.2) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  color: #f87171 !important;
 }
 
-.theme-pill.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  font-weight: 600;
+/* ==========================================================================
+   Borderless Adaptive Social Canvas Preview
+   ========================================================================== */
+
+.social-canvas-preview {
+  position: relative !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 1.35rem 1.45rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  transition: background 0.35s ease, box-shadow 0.35s ease !important;
 }
 
-.theme-color-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+/* Format Variations */
+.social-canvas-preview.format-story {
+  min-height: 270px !important;
 }
 
-.quote-modal-footer {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+.social-canvas-preview.format-post {
+  min-height: 240px !important;
 }
 
-.quote-action-secondary {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 9999px;
-  padding: 0.65rem 1rem;
-  color: #e2e8f0;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.social-canvas-preview.format-landscape {
+  min-height: 210px !important;
 }
 
-.quote-action-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+.preview-ambient-halo {
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  transition: background 0.35s ease !important;
 }
 
-.quote-action-primary {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-  border: none;
-  border-radius: 9999px;
-  padding: 0.65rem 1rem;
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
-  transition: all 0.2s ease;
+/* Top Watermark */
+.preview-top-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1px !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-.quote-action-primary:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+.brand-title-line {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+}
+
+.brand-sub {
+  font-size: 0.62rem !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Center Block */
+.preview-center-block {
+  border-left: 2.5px solid !important;
+  padding-left: 0.85rem !important;
+  margin: 0.75rem 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.preview-shloka-text {
+  font-family: inherit !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  line-height: 1.75 !important;
+  margin: 0 !important;
+  white-space: pre-line !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Translation & Source */
+.preview-translation-block {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.35rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.preview-trans-text {
+  font-size: 0.82rem !important;
+  color: #cbd5e1 !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+}
+
+.preview-source-tag {
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Modern Gen-Z Footer (Subtle, no harsh dashed lines) */
+.preview-footer-line {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 0.75rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  margin-top: 0.75rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.footer-url {
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  letter-spacing: 0.05em !important;
+}
+
+.footer-badge {
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+}
+
+/* Action Footer */
+.quote-studio-footer {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  padding-top: 0.2rem !important;
+}
+
+.studio-action-btn {
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+  border-radius: 9999px !important;
+  padding: 0.5rem 0.95rem !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: all 0.15s ease !important;
+}
+
+.studio-action-btn.secondary {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #e2e8f0 !important;
+}
+
+.studio-action-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.studio-action-btn.primary {
+  transition: opacity 0.15s ease !important;
+}
+
+.studio-action-btn.primary:hover {
+  opacity: 0.92 !important;
 }
 
 @media (max-width: 640px) {
-  .quote-modal-card {
-    padding: 1.25rem 1rem;
+  .quote-studio-modal {
+    padding: 1rem !important;
+    border-radius: 20px !important;
+  }
+
+  .quote-studio-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.65rem !important;
+  }
+
+  .studio-header-right {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .preview-shloka-text {
+    font-size: 1rem !important;
+  }
+
+  .quote-studio-footer {
+    flex-direction: column !important;
+  }
+
+  .studio-action-btn {
+    width: 100% !important;
+    justify-content: center !important;
   }
 }
